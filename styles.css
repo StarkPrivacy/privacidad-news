@@ -124,7 +124,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   align-items: start;
 }
 
-/* Cards — imagen compacta */
+/* Cards */
 .news-feed { display: flex; flex-direction: column; gap: 1rem; }
 
 .news-card {
@@ -144,7 +144,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .card-image {
   background: var(--bg-elevated);
   overflow: hidden;
-  /* hereda el radio del card solo en el lado izquierdo */
   border-radius: var(--radius) 0 0 var(--radius);
 }
 .card-image img {
@@ -231,32 +230,72 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: var(--text-muted);
   margin-bottom: 0.85rem;
 }
-.service-list { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
-.service-list a {
-  display: flex;
-  flex-direction: column;
-  gap: 0.12rem;
-  padding: 0.4rem 0;
-  border-bottom: 1px solid var(--border);
-  transition: opacity 0.15s ease;
-}
-.service-list li:last-child a { border-bottom: none; padding-bottom: 0; }
-.service-list a:hover { opacity: 0.85; }
-.service-list strong { font-size: 0.9rem; color: var(--text); }
-.service-list .sep { color: var(--text-muted); font-weight: 400; }
-.service-list span { font-size: 0.78rem; color: var(--text-muted); }
 
-.tag-cloud { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+/* Categorías — cómodo con muchas */
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  max-height: 11.5rem;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+.tag-cloud::-webkit-scrollbar {
+  width: 4px;
+}
+.tag-cloud::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
 .tag-cloud a {
   font-size: 0.75rem;
-  padding: 0.25rem 0.6rem;
+  padding: 0.28rem 0.65rem;
   background: var(--bg-elevated);
   border: 1px solid var(--border);
   border-radius: 999px;
   color: var(--text-secondary);
   transition: all 0.15s ease;
+  white-space: nowrap;
+  line-height: 1.3;
 }
-.tag-cloud a:hover { border-color: var(--accent); color: var(--accent); }
+.tag-cloud a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* Botón Servicios recomendados */
+.services-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 550;
+  color: var(--text);
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+.services-btn svg {
+  flex-shrink: 0;
+  color: var(--text-muted);
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+.services-btn:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.services-btn:hover svg {
+  color: var(--accent);
+  transform: translate(2px, -2px);
+}
 
 .product-list { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
 .product-list a {
@@ -290,7 +329,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   line-height: 1.55;
 }
 
-/* Donaciones — estilo website */
+/* Donaciones */
 .donations-section {
   border-top: 1px solid var(--border);
   padding: 3rem 0;
