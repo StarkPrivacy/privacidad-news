@@ -19,6 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
       .replace(/[\u0300-\u036f]/g, '');
   }
 
+  function filterLabel(link) {
+    return normalize(link.dataset.filter || link.textContent.trim());
+  }
+
   function clearAllFilters() {
     activeCategory = '';
     tagLinks.forEach(l => l.classList.remove('is-active'));
@@ -73,14 +77,14 @@ document.addEventListener('DOMContentLoaded', () => {
   tagLinks.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
-      const label = normalize(link.textContent.trim());
+      const label = filterLabel(link);
       if (activeCategory === label) {
         activeCategory = '';
         tagLinks.forEach(l => l.classList.remove('is-active'));
       } else {
         activeCategory = label;
         tagLinks.forEach(l => {
-          l.classList.toggle('is-active', normalize(l.textContent.trim()) === label);
+          l.classList.toggle('is-active', filterLabel(l) === label);
         });
       }
       applyFilters();
@@ -98,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const label = normalize(badge.textContent.trim());
       activeCategory = label;
       tagLinks.forEach(l => {
-        l.classList.toggle('is-active', normalize(l.textContent.trim()) === label);
+        l.classList.toggle('is-active', filterLabel(l) === label);
       });
       applyFilters();
     });

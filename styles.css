@@ -345,20 +345,39 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin-bottom: 0.85rem;
 }
 
-.tag-cloud {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  max-height: 11.5rem;
+/* Categorías agrupadas */
+.categories-block {
+  max-height: min(70vh, 420px);
   overflow-y: auto;
-  padding-right: 0.25rem;
   scrollbar-width: thin;
   scrollbar-color: var(--border) transparent;
 }
-.tag-cloud::-webkit-scrollbar { width: 4px; }
-.tag-cloud::-webkit-scrollbar-thumb {
+.categories-block::-webkit-scrollbar { width: 4px; }
+.categories-block::-webkit-scrollbar-thumb {
   background: var(--border);
   border-radius: 4px;
+}
+
+.cat-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cat-group-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 0.45rem;
+  opacity: 0.85;
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
 }
 .tag-cloud a {
   font-size: 0.75rem;
@@ -613,6 +632,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .news-card { grid-template-columns: 100px 1fr; }
   .card-image { aspect-ratio: 1 / 1; }
   .donation-grid { grid-template-columns: 1fr; }
+  .categories-block { max-height: none; }
 }
 @media (max-width: 600px) {
   .header-inner { gap: 0.75rem; }
