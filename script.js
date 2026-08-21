@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const shareMenu = document.getElementById('shareMenu');
 
   let activeCategory = '';
-  let shareContext = null; // { title, url }
+  let shareContext = null;
 
   function normalize(str) {
     return (str || '')
@@ -33,6 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
       'Privacidad.news';
     const url = `${SITE_URL}#noticia-${id}`;
     return { title, url, text: `${title} — Privacidad.news` };
+  }
+
+  function xShareUrl(data) {
+    return `https://twitter.com/intent/tweet?text=${encodeURIComponent(data.text)}&url=${encodeURIComponent(data.url)}`;
+  }
+
+  function tgShareUrl(data) {
+    return `https://t.me/share/url?url=${encodeURIComponent(data.url)}&text=${encodeURIComponent(data.text)}`;
   }
 
   function clearAllFilters() {
@@ -120,7 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   applyFilters();
 
-  // ——— Modal ———
   function openModal(card) {
     const template = card.querySelector('template.full-content');
     if (!template || !modal || !modalContent) return;
@@ -129,16 +136,14 @@ document.addEventListener('DOMContentLoaded', () => {
     modalContent.innerHTML = '';
     modalContent.appendChild(template.content.cloneNode(true));
 
-    // Barra de compartir dentro del artículo
     const bar = document.createElement('div');
     bar.className = 'article-share-bar';
     bar.innerHTML = `
-      <span class="label">Compartir</span>
-      <button type="button" class="share-btn" data-share-modal>
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
-        Compartir
-      </button>
+      <span class="label">Compartir esta noticia</span>
+      <a class="share-btn" href="${xShareUrl(data)}" target="_blank" rel="noopener">X</a>
+      <a class="share-btn" href="${tgShareUrl(data)}" target="_blank" rel="noopener">Telegram</a>
       <button type="button" class="share-btn" data-copy-link>Copiar enlace</button>
+      <button type="button" class="share-btn" data-share-modal>Más…</button>
     `;
     modalContent.appendChild(bar);
 
@@ -190,14 +195,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Abrir por hash al cargar
   if (location.hash.startsWith('#noticia-')) {
     const id = location.hash.replace('#noticia-', '');
     const card = document.querySelector(`.news-card[data-id="${id}"]`);
     if (card) openModal(card);
   }
 
-  // ——— Compartir ———
   async function copyText(text) {
     try {
       await navigator.clipboard.writeText(text);
@@ -229,12 +232,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const xLink = shareMenu.querySelector('[data-share-action="x"]');
     const tgLink = shareMenu.querySelector('[data-share-action="telegram"]');
-    if (xLink) {
-      xLink.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(data.text)}&url=${encodeURIComponent(data.url)}`;
-    }
-    if (tgLink) {
-      tgLink.href = `https://t.me/share/url?url=${encodeURIComponent(data.url)}&text=${encodeURIComponent(data.text)}`;
-    }
+    if (xLink) xLink.href = xShareUrl(data);
+    if (tgLink) tgLink.href = tgShareUrl(data);
   }
 
   document.querySelectorAll('[data-share]').forEach(btn => {
@@ -275,7 +274,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => { btn.textContent = prev; hideShareMenu(); }, 900);
       } else hideShareMenu();
     }
-    // x / telegram: enlace nativo, no preventDefault
   });
 
   document.addEventListener('click', e => {
@@ -285,7 +283,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ——— Donaciones copiar ———
   document.querySelectorAll('[data-copy]').forEach(btn => {
     btn.addEventListener('click', async () => {
       const code = btn.closest('.donation-item')?.querySelector('code');
