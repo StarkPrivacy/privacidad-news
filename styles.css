@@ -143,13 +143,19 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   align-items: start;
 }
 
+.feed-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+}
+
 /* Feed header */
 .feed-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 0.25rem;
   flex-wrap: wrap;
 }
 .feed-header h1 {
@@ -175,6 +181,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: var(--accent);
   font-size: 0.75rem;
   font-weight: 500;
+  text-transform: capitalize;
 }
 .active-filter button {
   display: flex;

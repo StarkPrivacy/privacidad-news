@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const emptyState = document.getElementById('emptyState');
   const feedCount = document.getElementById('feedCount');
   const activeFilterEl = document.getElementById('activeFilter');
-  const clearFilterBtn = document.getElementById('clearFilter');
 
   let activeCategory = '';
 
@@ -18,6 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
       .toLowerCase()
       .normalize('NFD')
       .replace(/[\u0300-\u036f]/g, '');
+  }
+
+  function clearAllFilters() {
+    activeCategory = '';
+    tagLinks.forEach(l => l.classList.remove('is-active'));
+    if (input) input.value = '';
+    applyFilters();
   }
 
   function applyFilters() {
@@ -47,32 +53,27 @@ document.addEventListener('DOMContentLoaded', () => {
       if (show) visible++;
     });
 
-    if (emptyState) {
-      emptyState.hidden = visible > 0;
-    }
+    if (emptyState) emptyState.hidden = visible > 0;
     if (feedCount) {
-      feedCount.textContent =
-        visible === 1 ? '1 noticia' : `${visible} noticias`;
+      feedCount.textContent = visible === 1 ? '1 noticia' : `${visible} noticias`;
     }
     if (activeFilterEl) {
       if (activeCategory) {
         activeFilterEl.hidden = false;
-        activeFilterEl.querySelector('span').textContent = activeCategory;
+        const label = activeFilterEl.querySelector('span');
+        if (label) label.textContent = activeCategory;
       } else {
         activeFilterEl.hidden = true;
       }
     }
   }
 
-  // ——— Búsqueda ———
   input?.addEventListener('input', applyFilters);
 
-  // ——— Categorías ———
   tagLinks.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
       const label = normalize(link.textContent.trim());
-
       if (activeCategory === label) {
         activeCategory = '';
         tagLinks.forEach(l => l.classList.remove('is-active'));
@@ -86,14 +87,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  clearFilterBtn?.addEventListener('click', () => {
-    activeCategory = '';
-    tagLinks.forEach(l => l.classList.remove('is-active'));
-    if (input) input.value = '';
-    applyFilters();
+  document.querySelectorAll('[data-clear-filters]').forEach(btn => {
+    btn.addEventListener('click', clearAllFilters);
   });
 
-  // Clic en badge de categoría de la tarjeta
   document.querySelectorAll('.news-card .category').forEach(badge => {
     badge.style.cursor = 'pointer';
     badge.title = 'Filtrar por esta categoría';
@@ -104,17 +101,14 @@ document.addEventListener('DOMContentLoaded', () => {
         l.classList.toggle('is-active', normalize(l.textContent.trim()) === label);
       });
       applyFilters();
-      document.querySelector('.sidebar')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     });
   });
 
   applyFilters();
 
-  // ——— Modal de lectura ———
   function openModal(card) {
     const template = card.querySelector('template.full-content');
     if (!template || !modal || !modalContent) return;
-
     modalContent.innerHTML = '';
     modalContent.appendChild(template.content.cloneNode(true));
     modal.hidden = false;
@@ -147,14 +141,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape' && modal && !modal.hidden) closeModal();
   });
 
-  // ——— Copiar direcciones de donación ———
   document.querySelectorAll('[data-copy]').forEach(btn => {
     btn.addEventListener('click', async () => {
       const code = btn.closest('.donation-item')?.querySelector('code');
       if (!code) return;
-      const text = code.textContent.trim();
       try {
-        await navigator.clipboard.writeText(text);
+        await navigator.clipboard.writeText(code.textContent.trim());
         const original = btn.textContent;
         btn.textContent = 'Copiado';
         btn.classList.add('copied');
@@ -163,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
           btn.classList.remove('copied');
         }, 1600);
       } catch {
-        // fallback silencioso
+        /* ignore */
       }
     });
   });
