@@ -212,42 +212,31 @@
     </section>
 
     <aside class="sidebar" aria-label="Sidebar">
-      <!-- Categorías arriba -->
+      <!-- Categorías (escalable) -->
       <div class="sidebar-block">
         <h3 class="sidebar-title">Categorías</h3>
-        <div class="tag-cloud">
-          <a href="#">Legislación</a>
-          <a href="#">VPN</a>
-          <a href="#">Seguridad</a>
-          <a href="#">Herramientas</a>
-          <a href="#">Identidad digital</a>
-          <a href="#">Dispositivos</a>
+        <div class="tag-cloud" role="list">
+          <a href="#" role="listitem">Legislación</a>
+          <a href="#" role="listitem">VPN</a>
+          <a href="#" role="listitem">Seguridad</a>
+          <a href="#" role="listitem">Herramientas</a>
+          <a href="#" role="listitem">Identidad digital</a>
+          <a href="#" role="listitem">Dispositivos</a>
+          <a href="#" role="listitem">Cifrado</a>
+          <a href="#" role="listitem">Hardware</a>
+          <a href="#" role="listitem">OSINT</a>
+          <a href="#" role="listitem">Legislación UE</a>
         </div>
       </div>
 
-      <!-- Otras webs de interés -->
+      <!-- Servicios recomendados → botón a privtr.ee/@stark -->
       <div class="sidebar-block">
-        <h3 class="sidebar-title">Otras webs de interés</h3>
-        <ul class="service-list">
-          <li>
-            <a href="https://privacidad.me" target="_blank" rel="noopener">
-              <strong>Privacidad <span class="sep">/</span> Me</strong>
-              <span>Identidad digital sin rastreo</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://privacidad.me" target="_blank" rel="noopener">
-              <strong>Privacidad <span class="sep">/</span> Tools</strong>
-              <span>Herramientas y recursos</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://boringprivacy.io" target="_blank" rel="noopener">
-              <strong>Boringprivacy <span class="sep">/</span> io</strong>
-              <span>Academia de privacidad</span>
-            </a>
-          </li>
-        </ul>
+        <a href="https://privtr.ee/@stark" class="services-btn" target="_blank" rel="noopener">
+          Servicios recomendados
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M7 17L17 7M17 7H7M17 7v10"/>
+          </svg>
+        </a>
       </div>
 
       <!-- Productos recomendados -->
@@ -293,7 +282,6 @@
     </aside>
   </main>
 
-  <!-- Donaciones (estilo website) -->
   <section class="donations-section" id="donaciones">
     <div class="container">
       <div class="donaciones-box">
