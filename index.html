@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacidad.news — Noticias de privacidad</title>
+  <meta name="description" content="Noticias de privacidad, soberanía digital y seguridad. Contenido ampliado a partir del canal de Telegram de Stark Privacy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <span class="logo-main">Privacidad</span><span class="logo-sep">/</span><span class="logo-sub">news</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#">Inicio</a>
+        <a href="#">Categorías</a>
+        <a href="#">Recursos</a>
+        <a href="https://boringprivacy.io" target="_blank" rel="noopener">Academia</a>
+      </nav>
+
+      <div class="header-actions">
+        <form class="search-form" role="search" onsubmit="return false;">
+          <input type="search" id="searchInput" placeholder="Buscar noticias..." autocomplete="off" />
+          <button type="submit" aria-label="Buscar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="container main-layout">
+    <!-- News feed -->
+    <section class="news-feed" id="newsFeed" aria-label="Listado de noticias">
+      <article class="news-card" data-tags="vpn legislación europa">
+        <div class="card-meta">
+          <span class="category">Legislación</span>
+          <time datetime="2026-08-20">20 ago 2026</time>
+        </div>
+        <h2 class="card-title">
+          <a href="#">La Unión Europea intensifica el control sobre el uso de VPN para eludir verificaciones de edad</a>
+        </h2>
+        <p class="card-excerpt">
+          Las autoridades europeas han expresado su preocupación por el uso de redes privadas virtuales como mecanismo para eludir los sistemas de verificación de edad en plataformas digitales. Este movimiento forma parte de un debate más amplio sobre la regulación de Internet y la protección de menores, que podría tener implicaciones directas sobre la privacidad de todos los usuarios.
+        </p>
+        <a href="#" class="read-more">Leer artículo completo →</a>
+      </article>
+
+      <article class="news-card" data-tags="telegram seguridad tracking">
+        <div class="card-meta">
+          <span class="category">Seguridad</span>
+          <time datetime="2026-08-18">18 ago 2026</time>
+        </div>
+        <h2 class="card-title">
+          <a href="#">Nuevo análisis confirma que el protocolo MTProto de Telegram expone un identificador de dispositivo estable</a>
+        </h2>
+        <p class="card-excerpt">
+          Una revisión independiente ha corroborado que el tráfico de Telegram permite a un observador pasivo extraer un identificador único y persistente del dispositivo. Este hallazgo refuerza las advertencias previas sobre la posibilidad de seguimiento a largo plazo sin necesidad de romper el cifrado de las conversaciones.
+        </p>
+        <a href="#" class="read-more">Leer artículo completo →</a>
+      </article>
+
+      <article class="news-card" data-tags="vpn windscribe holanda">
+        <div class="card-meta">
+          <span class="category">VPN</span>
+          <time datetime="2026-08-15">15 ago 2026</time>
+        </div>
+        <h2 class="card-title">
+          <a href="#">Windscribe denuncia la incautación de un servidor en Países Bajos sin orden judicial visible</a>
+        </h2>
+        <p class="card-excerpt">
+          El proveedor de VPN Windscribe ha informado que las autoridades neerlandesas se hicieron con uno de sus servidores sin presentar una orden judicial clara ni seguir el procedimiento habitual. El incidente vuelve a poner sobre la mesa la fragilidad de la infraestructura de privacidad cuando se opera bajo jurisdicciones con alto nivel de cooperación policial.
+        </p>
+        <a href="#" class="read-more">Leer artículo completo →</a>
+      </article>
+
+      <article class="news-card" data-tags="apple ios fbi">
+        <div class="card-meta">
+          <span class="category">Dispositivos</span>
+          <time datetime="2026-08-12">12 ago 2026</time>
+        </div>
+        <h2 class="card-title">
+          <a href="#">El FBI no consigue acceder al iPhone de un periodista del Washington Post</a>
+        </h2>
+        <p class="card-excerpt">
+          En el marco de una investigación federal, el dispositivo de un periodista fue incautado. A pesar de los recursos técnicos del FBI, no se logró el acceso a los datos. El caso ilustra tanto las fortalezas actuales del cifrado de Apple como los límites de las técnicas de extracción forense disponibles públicamente.
+        </p>
+        <a href="#" class="read-more">Leer artículo completo →</a>
+      </article>
+
+      <article class="news-card" data-tags="tuta drive almacenamiento">
+        <div class="card-meta">
+          <span class="category">Herramientas</span>
+          <time datetime="2026-08-10">10 ago 2026</time>
+        </div>
+        <h2 class="card-title">
+          <a href="#">Tuta lanza Tuta Drive: almacenamiento cifrado de origen alemán</a>
+        </h2>
+        <p class="card-excerpt">
+          El conocido servicio de correo centrado en la privacidad amplía su oferta con un sistema de almacenamiento en la nube. Tuta Drive mantiene el enfoque de cifrado de extremo a extremo y se presenta como una alternativa más coherente para quienes ya utilizan el ecosistema de Tuta para el correo electrónico.
+        </p>
+        <a href="#" class="read-more">Leer artículo completo →</a>
+      </article>
+
+      <article class="news-card" data-tags="identificación digital sistemas operativos">
+        <div class="card-meta">
+          <span class="category">Identidad digital</span>
+          <time datetime="2026-08-08">08 ago 2026</time>
+        </div>
+        <h2 class="card-title">
+          <a href="#">Propuesta en Colorado para integrar verificación de edad de forma nativa en los sistemas operativos</a>
+        </h2>
+        <p class="card-excerpt">
+          Un grupo de legisladores ha presentado una iniciativa que busca que los sistemas operativos más utilizados incorporen mecanismos de control de edad desde el arranque. De prosperar, este tipo de medidas podría trasladar la verificación de identidad a un nivel mucho más profundo del dispositivo, con consecuencias difíciles de revertir para la privacidad del usuario.
+        </p>
+        <a href="#" class="read-more">Leer artículo completo →</a>
+      </article>
+    </section>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" aria-label="Servicios recomendados">
+      <div class="sidebar-block">
+        <h3 class="sidebar-title">Servicios recomendados</h3>
+        <ul class="service-list">
+          <li>
+            <a href="https://privacidad.me" target="_blank" rel="noopener">
+              <strong>privacidad.me</strong>
+              <span>Tu identidad digital sin ser el producto</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://boringprivacy.io" target="_blank" rel="noopener">
+              <strong>Boring Privacy</strong>
+              <span>Academia de privacidad pragmática</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://t.me/StarkPrivacy" target="_blank" rel="noopener">
+              <strong>Canal de Telegram</strong>
+              <span>Alertas y noticias diarias</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener">
+              <strong>VPN recomendada</strong>
+              <span>Configuración centrada en privacidad</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-block">
+        <h3 class="sidebar-title">Categorías</h3>
+        <div class="tag-cloud">
+          <a href="#">Legislación</a>
+          <a href="#">VPN</a>
+          <a href="#">Seguridad</a>
+          <a href="#">Herramientas</a>
+          <a href="#">Identidad digital</a>
+          <a href="#">Dispositivos</a>
+        </div>
+      </div>
+
+      <div class="sidebar-block highlight">
+        <h3 class="sidebar-title">Sobre este sitio</h3>
+        <p class="sidebar-text">
+          Privacidad.news amplía las noticias publicadas en el canal de Telegram de Stark Privacy. Aquí encontrarás versiones más redactadas, con contexto y estructura, manteniendo el mismo enfoque pragmático.
+        </p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Privacidad.news · Contenido basado en el canal <a href="https://t.me/StarkPrivacy" target="_blank" rel="noopener">@StarkPrivacy</a></p>
+      <p class="footer-links">
+        <a href="https://privacidad.me">privacidad.me</a> ·
+        <a href="https://boringprivacy.io">boringprivacy.io</a> ·
+        <a href="https://github.com/StarkPrivacy/privacidad-news">Código del prototipo</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
