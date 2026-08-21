@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  document.querySelectorAll('[data-clear-filters]').forEach(btn => {
+  document.querySelectorAll('#clearFilter, [data-clear-filters]').forEach(btn => {
     btn.addEventListener('click', clearAllFilters);
   });
 
