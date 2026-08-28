@@ -1,0 +1,8 @@
+body{font-family:Inter,system-ui,sans-serif;background:#0a0a0f;color:#f1f5f9;margin:0}
+.container{max-width:1200px;margin:0 auto;padding:1rem 1.25rem}
+.version-bar{border-bottom:1px solid #1f1f2a;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#64748b}
+.version-bar .container{display:flex;justify-content:space-between;height:32px;align-items:center}
+.version-bar a{color:#94a3b8;text-decoration:none}
+.version-bar .is-current{color:#3b82f6}
+a{color:#3b82f6}
+.v1-note{color:#94a3b8}
