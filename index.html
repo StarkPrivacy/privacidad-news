@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260828v2" />
+  <link rel="stylesheet" href="styles.css?v=20260828v2c" />
 </head>
 <body>
   <div class="version-bar">
@@ -32,6 +32,24 @@
     </div>
   </header>
   <main class="container main-layout">
+    <aside class="sidebar sidebar-left" aria-label="Categorías">
+      <div class="sidebar-block">
+        <h3 class="sidebar-title">Categorías</h3>
+        <div class="tag-cloud" role="list">
+          <a href="#" role="listitem" data-filter="cifrado">Cifrado</a>
+          <a href="#" role="listitem" data-filter="empresas">Empresas</a>
+          <a href="#" role="listitem" data-filter="herramientas">Herramientas</a>
+          <a href="#" role="listitem" data-filter="identidad digital">Identidad digital</a>
+          <a href="#" role="listitem" data-filter="legislación">Legislación</a>
+          <a href="#" role="listitem" data-filter="países">Países</a>
+          <a href="#" role="listitem" data-filter="productos">Productos</a>
+          <a href="#" role="listitem" data-filter="proyectos">Proyectos</a>
+          <a href="#" role="listitem" data-filter="seguridad">Seguridad</a>
+          <a href="#" role="listitem" data-filter="servicios">Servicios</a>
+        </div>
+      </div>
+    </aside>
+
     <div class="feed-column">
       <div class="feed-header">
         <h1>Últimas noticias</h1>
@@ -141,32 +159,36 @@
       </section>
       <div id="emptyState" class="empty-state" hidden><p>No hay noticias que coincidan con tu búsqueda o filtro.</p><button type="button" id="clearFilter">Ver todas las noticias</button></div>
     </div>
-    <aside class="sidebar">
-      <div class="sidebar-block categories-block">
-        <h3 class="sidebar-title">Categorías</h3>
-        <div class="tag-cloud" role="list">
-          <a href="#" role="listitem" data-filter="cifrado">Cifrado</a>
-          <a href="#" role="listitem" data-filter="empresas">Empresas</a>
-          <a href="#" role="listitem" data-filter="herramientas">Herramientas</a>
-          <a href="#" role="listitem" data-filter="identidad digital">Identidad digital</a>
-          <a href="#" role="listitem" data-filter="legislación">Legislación</a>
-          <a href="#" role="listitem" data-filter="países">Países</a>
-          <a href="#" role="listitem" data-filter="productos">Productos</a>
-          <a href="#" role="listitem" data-filter="proyectos">Proyectos</a>
-          <a href="#" role="listitem" data-filter="seguridad">Seguridad</a>
-          <a href="#" role="listitem" data-filter="servicios">Servicios</a>
-        </div>
-      </div>
-      <div class="sidebar-block services-block">
-        <a href="https://privtr.ee/@stark" class="services-cta" target="_blank" rel="noopener">
-          <div class="services-cta-icon" aria-hidden="true"></div>
-          <div class="services-cta-text"><strong>Servicios recomendados</strong><span>Herramientas y recursos que uso y confío</span></div>
-        </a>
-      </div>
-      <div class="sidebar-block highlight">
+
+    <aside class="sidebar sidebar-right" aria-label="Enlaces de interés">
+      <a class="promo-box" href="https://privtr.ee/@stark" target="_blank" rel="noopener">
+        <em class="promo-kicker">Interés</em>
+        <strong>Servicios recomendados</strong>
+        <span>Herramientas y recursos que uso y confío</span>
+      </a>
+      <a class="promo-box" href="https://boringprivacy.io" target="_blank" rel="noopener">
+        <em class="promo-kicker">Academia</em>
+        <strong>Boring Privacy</strong>
+        <span>Formación para cambiar tu vida digital</span>
+      </a>
+      <a class="promo-box" href="https://t.me/starkprivacy" target="_blank" rel="noopener">
+        <em class="promo-kicker">Canal</em>
+        <strong>Telegram</strong>
+        <span>Noticias cortas al momento</span>
+      </a>
+      <a class="promo-box" href="https://privacidad.me" target="_blank" rel="noopener">
+        <em class="promo-kicker">Web</em>
+        <strong>Privacidad.me</strong>
+        <span>Guías y recursos de privacidad</span>
+      </a>
+      <a class="promo-box" href="#donaciones">
+        <em class="promo-kicker">Apoyo</em>
+        <strong>Donaciones</strong>
+        <span>Bitcoin y Monero para mantener el medio</span>
+      </a>
+      <div class="sidebar-block">
         <h3 class="sidebar-title">Sobre este sitio</h3>
-        <p class="sidebar-text">Privacidad.news es un medio independiente centrado en privacidad, soberanía digital y seguridad.</p>
-        <p class="sidebar-text">Si te resulta útil, puedes apoyarlo con <a href="#donaciones">donaciones</a>, adquiriendo <a href="https://privtr.ee/@stark" target="_blank" rel="noopener">servicios recomendados</a> o compartiendo las noticias.</p>
+        <p class="sidebar-text">Medio independiente centrado en privacidad, soberanía digital y seguridad.</p>
       </div>
     </aside>
   </main>
@@ -198,6 +220,6 @@
     <a href="#" data-share-action="x" target="_blank" rel="noopener">Compartir en X</a>
     <a href="#" data-share-action="telegram" target="_blank" rel="noopener">Compartir en Telegram</a>
   </div>
-  <script src="script.js?v=20260828v2"></script>
+  <script src="script.js?v=20260828v2c"></script>
 </body>
 </html>
