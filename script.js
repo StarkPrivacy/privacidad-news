@@ -1,5 +1,3 @@
-// Privacidad.news — carga desde data/news.json
-
 document.addEventListener('DOMContentLoaded', async () => {
   const SITE_URL = 'https://starkprivacy.github.io/privacidad-news/';
   const MONTHS = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
@@ -12,8 +10,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   const feedCount = document.getElementById('feedCount');
   const activeFilterEl = document.getElementById('activeFilter');
   const shareMenu = document.getElementById('shareMenu');
+  const numerosList = document.getElementById('numerosList');
+  const numerosMeta = document.getElementById('numerosMeta');
 
   let cards = [];
+  let articlesById = {};
   let activeCategory = '';
   let shareContext = null;
 
@@ -27,11 +28,18 @@ document.addEventListener('DOMContentLoaded', async () => {
   const articleShareData = (card) => {
     const id = card.dataset.id || '';
     const title = card.querySelector('.card-title')?.textContent.trim() || 'Privacidad.news';
-    const url = `${SITE_URL}#noticia-${id}`;
-    return { title, url, text: `${title} — Privacidad.news` };
+    return { title, url: `${SITE_URL}#noticia-${id}`, text: `${title} — Privacidad.news` };
   };
   const xShareUrl = (data) => `https://twitter.com/intent/tweet?text=${encodeURIComponent(data.text)}&url=${encodeURIComponent(data.url)}`;
   const tgShareUrl = (data) => `https://t.me/share/url?url=${encodeURIComponent(data.url)}&text=${encodeURIComponent(data.text)}`;
+
+  function mediaBlock(item) {
+    if (item.youtube_id) {
+      return `<div class="yt-embed"><iframe src="https://www.youtube-nocookie.com/embed/${escapeHtml(item.youtube_id)}" title="YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>`;
+    }
+    if (item.image) return `<img src="${escapeHtml(item.image)}" alt="" class="article-hero" />`;
+    return '';
+  }
 
   function renderArticle(item) {
     const id = item.id;
@@ -40,25 +48,29 @@ document.addEventListener('DOMContentLoaded', async () => {
     const excerpt = escapeHtml(item.excerpt || '');
     const image = escapeHtml(item.image || '');
     const dateLabel = formatDate(item.date);
+    const isYt = Boolean(item.youtube_id);
     const body = (item.body || []).map(p => `<p>${escapeHtml(p).replace(/\n/g, '<br>')}</p>`).join('');
     const source = item.source_url ? `<p><a href="${escapeHtml(item.source_url)}" target="_blank" rel="noopener">Ver publicación original</a></p>` : '';
     const article = document.createElement('article');
-    article.className = 'news-card';
+    article.className = 'news-card' + (isYt ? ' is-video' : '');
     article.dataset.id = id;
     article.dataset.tags = normalize(item.tags || '');
     article.id = `noticia-${id}`;
     article.innerHTML = `
-      <div class="card-image"><img src="${image}" alt="" loading="lazy" width="400" height="400" /></div>
+      <div class="card-image${isYt ? ' is-video' : ''}">
+        <img src="${image}" alt="" loading="lazy" width="400" height="400" />
+        ${isYt ? '<span class="play-badge" aria-hidden="true">▶</span>' : ''}
+      </div>
       <div class="card-body">
         <h2 class="card-title"><a href="#noticia-${id}" class="open-article">${title}</a></h2>
-        <div class="card-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time><span class="meta-sep">·</span><span class="category">${category}</span></div>
+        <div class="card-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time><span class="meta-sep">·</span><span class="category">${category}</span>${isYt ? '<span class="meta-sep">·</span><span class="category">Vídeo</span>' : ''}</div>
         <p class="card-excerpt">${excerpt}</p>
-        <div class="card-actions"><button type="button" class="read-more open-article">Leer artículo completo →</button><button type="button" class="share-btn" data-share>Compartir</button></div>
+        <div class="card-actions"><button type="button" class="read-more open-article">${isYt ? 'Ver vídeo →' : 'Leer artículo completo →'}</button><button type="button" class="share-btn" data-share>Compartir</button></div>
       </div>
       <template class="full-content">
         <h1>${title}</h1>
         <p class="article-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time> · <span class="category">${category}</span></p>
-        <img src="${image}" alt="" class="article-hero" />
+        ${mediaBlock(item)}
         <div class="article-body">${body}${source}</div>
       </template>`;
     return article;
@@ -71,9 +83,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       const title = normalize(card.querySelector('.card-title')?.textContent);
       const excerpt = normalize(card.querySelector('.card-excerpt')?.textContent);
       const tags = normalize(card.dataset.tags);
-      const category = normalize(card.querySelector('.category')?.textContent);
+      const category = normalize([...card.querySelectorAll('.category')].map(n => n.textContent).join(' '));
       const show = (!query || title.includes(query) || excerpt.includes(query) || tags.includes(query) || category.includes(query))
-        && (!activeCategory || category.includes(activeCategory) || tags.includes(activeCategory));
+        && (!activeCategory || category.includes(activeCategory) || tags.includes(activeCategory) || (activeCategory === 'video' && card.classList.contains('is-video')));
       card.hidden = !show;
       if (show) visible++;
     });
@@ -86,8 +98,35 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  function filterLabel(link) {
-    return normalize(link.dataset.filter || link.textContent.trim());
+  const filterLabel = (link) => normalize(link.dataset.filter || link.textContent.trim());
+
+  function openModal(card) {
+    const template = card.querySelector('template.full-content');
+    if (!template || !modal || !modalContent) return;
+    const data = articleShareData(card);
+    modalContent.innerHTML = '';
+    modalContent.appendChild(template.content.cloneNode(true));
+    const bar = document.createElement('div');
+    bar.className = 'article-share-bar';
+    bar.innerHTML = `<span class="label">Compartir esta noticia</span>
+      <a class="share-btn" href="${xShareUrl(data)}" target="_blank" rel="noopener">X</a>
+      <a class="share-btn" href="${tgShareUrl(data)}" target="_blank" rel="noopener">Telegram</a>
+      <button type="button" class="share-btn" data-copy-link>Copiar enlace</button>`;
+    modalContent.appendChild(bar);
+    bar.querySelector('[data-copy-link]')?.addEventListener('click', async e => {
+      try { await navigator.clipboard.writeText(data.url); e.currentTarget.textContent = 'Copiado'; } catch {}
+    });
+    modal.hidden = false;
+    document.body.classList.add('modal-open');
+    history.replaceState(null, '', `#noticia-${card.dataset.id}`);
+  }
+
+  function closeModal() {
+    if (!modal || modal.hidden) return;
+    modal.hidden = true;
+    document.body.classList.remove('modal-open');
+    modalContent.innerHTML = '';
+    if (location.hash.startsWith('#noticia-')) history.replaceState(null, '', location.pathname + location.search);
   }
 
   function bindCardEvents() {
@@ -121,11 +160,41 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
+  function renderArchive(archive) {
+    if (!numerosList) return;
+    numerosList.innerHTML = '';
+    archive.forEach(item => {
+      const li = document.createElement('li');
+      const href = articlesById[item.id] ? `#noticia-${item.id}` : item.url;
+      li.innerHTML = `<a class="${item.youtube_id ? 'is-video' : ''}" href="${escapeHtml(href)}" data-archive-id="${item.id}" ${articlesById[item.id] ? '' : 'target="_blank" rel="noopener"'}>
+        <span class="num">#${item.id}</span>
+        <span class="ttl">${escapeHtml(item.title)}</span>
+        <time class="when" datetime="${escapeHtml(item.date || '')}">${formatDate(item.date)}</time>
+      </a>`;
+      numerosList.appendChild(li);
+    });
+    if (numerosMeta) numerosMeta.textContent = `${archive.length} publicaciones`;
+    numerosList.addEventListener('click', e => {
+      const link = e.target.closest('a[data-archive-id]');
+      if (!link) return;
+      const card = document.querySelector(`.news-card[data-id="${link.dataset.archiveId}"]`);
+      if (card) {
+        e.preventDefault();
+        openModal(card);
+      }
+    });
+  }
+
   try {
     const res = await fetch(`data/news.json?t=${Date.now()}`);
     const data = await res.json();
     feed.innerHTML = '';
-    (data.articles || []).forEach(item => feed.appendChild(renderArticle(item)));
+    (data.articles || []).forEach(item => {
+      if (!item.image && !item.youtube_id) return;
+      articlesById[item.id] = item;
+      feed.appendChild(renderArticle(item));
+    });
+    renderArchive(data.archive || []);
   } catch (err) {
     console.error(err);
     if (feed) feed.innerHTML = '<p class="card-excerpt">No se pudieron cargar las noticias.</p>';
@@ -155,56 +224,13 @@ document.addEventListener('DOMContentLoaded', async () => {
       applyFilters();
     });
   });
-
-  function openModal(card) {
-    const template = card.querySelector('template.full-content');
-    if (!template || !modal || !modalContent) return;
-    const data = articleShareData(card);
-    modalContent.innerHTML = '';
-    modalContent.appendChild(template.content.cloneNode(true));
-    const bar = document.createElement('div');
-    bar.className = 'article-share-bar';
-    bar.innerHTML = `<span class="label">Compartir esta noticia</span>
-      <a class="share-btn" href="${xShareUrl(data)}" target="_blank" rel="noopener">X</a>
-      <a class="share-btn" href="${tgShareUrl(data)}" target="_blank" rel="noopener">Telegram</a>
-      <button type="button" class="share-btn" data-copy-link>Copiar enlace</button>
-      <button type="button" class="share-btn" data-share-modal>Más…</button>`;
-    modalContent.appendChild(bar);
-    bar.querySelector('[data-share-modal]')?.addEventListener('click', e => openShareMenu(e.currentTarget, data));
-    bar.querySelector('[data-copy-link]')?.addEventListener('click', async e => {
-      await copyText(data.url);
-      const btn = e.currentTarget;
-      const prev = btn.textContent;
-      btn.textContent = 'Copiado';
-      setTimeout(() => { btn.textContent = prev; }, 1500);
-    });
-    modal.hidden = false;
-    document.body.classList.add('modal-open');
-    history.replaceState(null, '', `#noticia-${card.dataset.id}`);
-    modal.querySelector('.modal-close')?.focus();
-  }
-
-  function closeModal() {
-    if (!modal || modal.hidden) return;
-    modal.hidden = true;
-    document.body.classList.remove('modal-open');
-    modalContent.innerHTML = '';
-    if (location.hash.startsWith('#noticia-')) history.replaceState(null, '', location.pathname + location.search);
-  }
-
   modal?.addEventListener('click', e => {
     if (e.target.hasAttribute('data-close') || e.target.closest('[data-close]')) closeModal();
   });
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      if (shareMenu && !shareMenu.hidden) hideShareMenu();
-      else if (modal && !modal.hidden) closeModal();
-    }
+    if (e.key === 'Escape' && modal && !modal.hidden) closeModal();
   });
 
-  async function copyText(text) {
-    try { await navigator.clipboard.writeText(text); return true; } catch { return false; }
-  }
   function hideShareMenu() {
     if (!shareMenu) return;
     shareMenu.hidden = true;
@@ -215,51 +241,35 @@ document.addEventListener('DOMContentLoaded', async () => {
     shareContext = data;
     const rect = anchor.getBoundingClientRect();
     shareMenu.hidden = false;
-    const menuW = shareMenu.offsetWidth || 180;
-    let left = rect.left;
-    let top = rect.bottom + 6;
-    if (left + menuW > window.innerWidth - 8) left = window.innerWidth - menuW - 8;
-    if (top + 160 > window.innerHeight) top = rect.top - 160;
-    shareMenu.style.left = `${Math.max(8, left)}px`;
-    shareMenu.style.top = `${Math.max(8, top)}px`;
+    shareMenu.style.left = `${Math.max(8, rect.left)}px`;
+    shareMenu.style.top = `${rect.bottom + 6}px`;
     const xLink = shareMenu.querySelector('[data-share-action="x"]');
     const tgLink = shareMenu.querySelector('[data-share-action="telegram"]');
     if (xLink) xLink.href = xShareUrl(data);
     if (tgLink) tgLink.href = tgShareUrl(data);
   }
-
   shareMenu?.addEventListener('click', async e => {
     const action = e.target.closest('[data-share-action]')?.dataset.shareAction;
     if (!action || !shareContext) return;
-    if (action === 'native') {
+    if (action === 'copy' || action === 'native') {
       e.preventDefault();
-      if (navigator.share) {
+      if (action === 'native' && navigator.share) {
         try { await navigator.share({ title: shareContext.title, text: shareContext.text, url: shareContext.url }); } catch {}
-      } else await copyText(shareContext.url);
-      hideShareMenu();
-    } else if (action === 'copy') {
-      e.preventDefault();
-      await copyText(shareContext.url);
+      } else {
+        try { await navigator.clipboard.writeText(shareContext.url); } catch {}
+      }
       hideShareMenu();
     }
   });
-
   document.addEventListener('click', e => {
     if (!shareMenu || shareMenu.hidden) return;
-    if (!shareMenu.contains(e.target) && !e.target.closest('[data-share], [data-share-modal]')) hideShareMenu();
+    if (!shareMenu.contains(e.target) && !e.target.closest('[data-share]')) hideShareMenu();
   });
-
   document.querySelectorAll('[data-copy]').forEach(btn => {
     btn.addEventListener('click', async () => {
       const code = btn.closest('.donation-item')?.querySelector('code');
       if (!code) return;
-      try {
-        await navigator.clipboard.writeText(code.textContent.trim());
-        const original = btn.textContent;
-        btn.textContent = 'Copiado';
-        btn.classList.add('copied');
-        setTimeout(() => { btn.textContent = original; btn.classList.remove('copied'); }, 1600);
-      } catch {}
+      try { await navigator.clipboard.writeText(code.textContent.trim()); btn.textContent = 'Copiado'; } catch {}
     });
   });
 });
