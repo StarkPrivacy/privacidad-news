@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     return `<div class="yt-actions"><a class="btn yt-subscribe" href="https://www.youtube.com/channel/${YT_CHANNEL_ID}?sub_confirmation=1" target="_blank" rel="noopener">Suscribirse al canal</a><a class="btn btn-ghost" href="https://www.youtube.com/watch?v=${encodeURIComponent(id)}" target="_blank" rel="noopener">Ver en YouTube</a>${cine}</div>`;
   }
   function ytFacade(id, title, cinemaReady) {
-    return `<div class="yt-player" data-yt-id="${escapeHtml(id)}"><button type="button" class="yt-facade" data-yt-play="${escapeHtml(id)}" data-yt-title="${escapeHtml(title || 'YouTube')}" aria-label="Reproducir vídeo"><img src="${ytThumb(id)}" alt="" width="1280" height="720" decoding="async" /><span class="play-badge" aria-hidden="true">▶</span></button>${ytSubscribeRow(id, title, cinemaReady)}</div>`;
+    return `<div class="yt-player" data-yt-id="${escapeHtml(id)}"><button type="button" class="yt-facade" data-yt-play="${escapeHtml(id)}" data-yt-title="${escapeHtml(title || 'YouTube')}" aria-label="Reproducir vídeo"><img src="${ytThumb(id)}" alt="" /><span class="play-badge" aria-hidden="true">▶</span></button>${ytSubscribeRow(id, title, cinemaReady)}</div>`;
   }
   function ytEmbed(id, title, autoplay, cinemaReady) {
     return `<div class="yt-player" data-yt-id="${escapeHtml(id)}"><div class="yt-embed"><iframe src="${ytSrc(id, autoplay)}" title="${escapeHtml(title || 'YouTube')}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>${ytSubscribeRow(id, title, cinemaReady)}</div>`;
@@ -74,6 +74,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     const sources = sourcesOf(item); if (!sources.length) return '';
     return `<section class="article-sources"><h3>Fuentes</h3><ul>${sources.map(url => `<li><a href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(url)}</a></li>`).join('')}</ul></section>`;
   }
+  function articleTagsHtml(item) {
+    const bits = [];
+    if (item.category) bits.push(item.category);
+    parseTags(item).forEach(t => { if (!bits.some(b => normalize(b) === normalize(t))) bits.push(t); });
+    if (!bits.length) return '';
+    return `<div class="article-end-tags">${bits.map(t => `<button type="button" class="end-tag" data-filter="${escapeHtml(normalize(t))}">#${escapeHtml(t)}</button>`).join('')}</div>`;
+  }
   function renderArticle(item) {
     const id = item.id; const title = escapeHtml(stripLeadEmoji(item.title));
     const excerpt = escapeHtml(stripLeadEmoji(item.excerpt || '')); const dateLabel = formatDate(item.date);
@@ -83,8 +90,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const article = document.createElement('article');
     article.className = 'news-card' + (isVideo ? ' is-video' : '') + (!image && !isVideo ? ' is-text' : '');
     article.dataset.id = id; article.dataset.tags = normalize(parseTags(item).join(' ')); article.dataset.category = normalize(item.category || ''); article.id = `noticia-${id}`;
-    const media = image ? `<div class="card-image${isVideo ? ' is-video' : ''}"><img src="${image}" alt="" loading="lazy" width="400" height="400" />${isVideo ? '<span class="play-badge" aria-hidden="true">▶</span>' : ''}</div>` : '';
-    article.innerHTML = `${media}<div class="card-body"><h2 class="card-title"><a href="#noticia-${id}">${title}</a></h2><p class="byline">${AUTHOR_HTML}</p><div class="card-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time></div><p class="card-excerpt">${excerpt}</p><div class="card-actions"><button type="button" class="btn btn-ghost share-btn" data-share>Compartir</button></div></div><template class="full-content"><h1>${title}</h1><p class="article-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time></p><p class="article-byline">${AUTHOR_HTML}</p>${mediaBlock(item)}<div class="article-body">${body}</div>${sourcesHtml(item)}</template>`;
+    const media = image ? `<div class="card-image${isVideo ? ' is-video' : ''}"><img src="${image}" alt="" loading="lazy" />${isVideo ? '<span class="play-badge" aria-hidden="true">▶</span>' : ''}</div>` : '';
+    article.innerHTML = `${media}<div class="card-body"><h2 class="card-title"><a href="#noticia-${id}">${title}</a></h2><p class="byline">${AUTHOR_HTML}</p><div class="card-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time></div><p class="card-excerpt">${excerpt}</p><div class="card-actions"><button type="button" class="btn btn-ghost share-btn" data-share>Compartir</button></div></div><template class="full-content"><h1>${title}</h1><p class="article-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time></p><p class="article-byline">${AUTHOR_HTML}</p>${mediaBlock(item)}<div class="article-body">${body}</div>${sourcesHtml(item)}${articleTagsHtml(item)}</template>`;
     return article;
   }
   function matchingCards() {
@@ -133,17 +140,28 @@ document.addEventListener('DOMContentLoaded', async () => {
     modalContent.appendChild(bar);
     bar.querySelector('[data-copy-link]')?.addEventListener('click', async e => { try { await navigator.clipboard.writeText(data.url); e.currentTarget.textContent = 'Copiado'; } catch {} });
   }
+  function bindEndTags() {
+    modalContent.querySelectorAll('.end-tag').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        activeCategory = normalize(btn.dataset.filter || btn.textContent.replace(/^#/, ''));
+        closeModal();
+        tagLinks.forEach(l => l.classList.toggle('is-active', filterLabel(l) === activeCategory));
+        applyFilters(true);
+      });
+    });
+  }
   function openModalFromItem(item) {
     if (!modal || !modalContent || !item) return;
     const data = articleShareData(item.id, stripLeadEmoji(item.title)); const dateLabel = formatDate(item.date);
     const body = cleanParagraphs(item).map(p => `<p>${escapeHtml(p)}</p>`).join('') || '<p>Sin texto ampliado.</p>';
-    modalContent.innerHTML = `<h1>${escapeHtml(stripLeadEmoji(item.title))}</h1><p class="article-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time></p><p class="article-byline">${AUTHOR_HTML}</p>${mediaBlock(item)}<div class="article-body">${body}</div>${sourcesHtml(item)}`;
-    appendShareBar(data); bindYoutubePosters(modalContent); modal.hidden = false; document.body.classList.add('modal-open'); history.replaceState(null, '', `#noticia-${item.id}`);
+    modalContent.innerHTML = `<h1>${escapeHtml(stripLeadEmoji(item.title))}</h1><p class="article-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time></p><p class="article-byline">${AUTHOR_HTML}</p>${mediaBlock(item)}<div class="article-body">${body}</div>${sourcesHtml(item)}${articleTagsHtml(item)}`;
+    appendShareBar(data); bindYoutubePosters(modalContent); bindEndTags(); modal.hidden = false; document.body.classList.add('modal-open'); history.replaceState(null, '', `#noticia-${item.id}`);
   }
   function openModal(card) {
     const template = card.querySelector('template.full-content'); if (!template || !modal || !modalContent) return;
     const data = articleShareData(card.dataset.id, card.querySelector('.card-title')?.textContent.trim());
-    modalContent.innerHTML = ''; modalContent.appendChild(template.content.cloneNode(true)); appendShareBar(data); bindYoutubePosters(modalContent);
+    modalContent.innerHTML = ''; modalContent.appendChild(template.content.cloneNode(true)); appendShareBar(data); bindYoutubePosters(modalContent); bindEndTags();
     modal.hidden = false; document.body.classList.add('modal-open'); history.replaceState(null, '', `#noticia-${card.dataset.id}`);
   }
   function closeModal() {
