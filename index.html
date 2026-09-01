@@ -18,8 +18,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260901num2" />
-  <link rel="stylesheet" href="extras.css?v=20260901num2" />
+  <link rel="stylesheet" href="styles.css?v=20260901yt1" />
+  <link rel="stylesheet" href="extras.css?v=20260901yt1" />
 </head>
 <body>
   <div class="version-bar">
@@ -44,19 +44,11 @@
     <aside class="sidebar sidebar-left" aria-label="Categorías">
       <div class="sidebar-block">
         <h3 class="sidebar-title">Categorías</h3>
-        <div class="tag-cloud" role="list">
-          <a href="#" role="listitem" data-filter="cifrado">Cifrado</a>
-          <a href="#" role="listitem" data-filter="empresas">Empresas</a>
-          <a href="#" role="listitem" data-filter="herramientas">Herramientas</a>
-          <a href="#" role="listitem" data-filter="identidad digital">Identidad digital</a>
-          <a href="#" role="listitem" data-filter="legislación">Legislación</a>
-          <a href="#" role="listitem" data-filter="países">Países</a>
-          <a href="#" role="listitem" data-filter="productos">Productos</a>
-          <a href="#" role="listitem" data-filter="proyectos">Proyectos</a>
-          <a href="#" role="listitem" data-filter="seguridad">Seguridad</a>
-          <a href="#" role="listitem" data-filter="servicios">Servicios</a>
-          <a href="#" role="listitem" data-filter="video">Vídeo</a>
-        </div>
+        <div class="tag-cloud" role="list"></div>
+      </div>
+      <div class="sidebar-block">
+        <h3 class="sidebar-title">Etiquetas</h3>
+        <div class="tag-cloud tag-cloud-dynamic" id="tagList" role="list"></div>
       </div>
     </aside>
     <div class="feed-column">
@@ -95,14 +87,17 @@
       </a>
       <div class="sidebar-block">
         <h3 class="sidebar-title">Sobre este sitio</h3>
-        <p class="sidebar-text">Medio independiente centrado en privacidad, soberanía digital y seguridad. Puedes apoyarlo con donaciones.</p>
+        <p class="sidebar-text">El feed muestra solo publicaciones con foto o vídeo. El índice de números, abajo, lista todo el canal.</p>
       </div>
     </aside>
   </main>
   <section class="numeros-section" id="numeros">
     <div class="container">
       <h2>Números</h2>
-      <p class="numeros-lead">Archivo de todas las publicaciones. Las que tienen foto o vídeo se leen aquí; el resto también se abre si hay texto guardado.</p>
+      <p class="numeros-lead">Todas las publicaciones del canal de Telegram, ordenadas por número. Las que tienen foto o vídeo se abren aquí; el resto enlaza al original si no hay texto guardado.</p>
+      <form class="numeros-tools" onsubmit="return false;">
+        <input type="search" id="numerosSearch" placeholder="Buscar título o ir al nº 1668" autocomplete="off" />
+      </form>
       <p class="numeros-lead" id="numerosMeta"></p>
       <ol class="numeros-list" id="numerosList"></ol>
       <div class="numeros-pager" id="numerosPager" hidden></div>
@@ -136,6 +131,6 @@
     <a href="#" data-share-action="x" target="_blank" rel="noopener">Compartir en X</a>
     <a href="#" data-share-action="telegram" target="_blank" rel="noopener">Compartir en Telegram</a>
   </div>
-  <script src="script.js?v=20260901num2"></script>
+  <script src="script.js?v=20260901yt1"></script>
 </body>
 </html>
