@@ -18,8 +18,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260901yt1" />
-  <link rel="stylesheet" href="extras.css?v=20260901yt1" />
+  <link rel="stylesheet" href="styles.css?v=20260901ux1" />
+  <link rel="stylesheet" href="extras.css?v=20260901ux1" />
 </head>
 <body>
   <div class="version-bar">
@@ -49,6 +49,7 @@
       <div class="sidebar-block">
         <h3 class="sidebar-title">Etiquetas</h3>
         <div class="tag-cloud tag-cloud-dynamic" id="tagList" role="list"></div>
+        <p class="sidebar-note">Las etiquetas se generan solas a partir de hashtags del canal y palabras clave del texto.</p>
       </div>
     </aside>
     <div class="feed-column">
@@ -57,37 +58,37 @@
         <div class="feed-meta"><span id="feedCount">…</span><span id="activeFilter" class="active-filter" hidden><span></span><button type="button" id="clearFilter">×</button></span></div>
       </div>
       <section class="news-feed" id="newsFeed"></section>
-      <div id="emptyState" class="empty-state" hidden><p>No hay noticias que coincidan con tu búsqueda o filtro.</p><button type="button" id="clearAll" data-clear-filters>Ver todas las noticias</button></div>
+      <nav class="feed-pager" id="feedPager" hidden aria-label="Paginación de noticias"></nav>
+      <div id="emptyState" class="empty-state" hidden><p>No hay noticias que coincidan con tu búsqueda o filtro.</p><button type="button" class="btn" id="clearAll" data-clear-filters>Ver todas las noticias</button></div>
     </div>
     <aside class="sidebar sidebar-right" aria-label="Enlaces de interés">
-      <a class="promo-box" href="https://privtr.ee/@stark" target="_blank" rel="noopener">
-        <em class="promo-kicker">Interés</em>
-        <strong>Servicios recomendados</strong>
-        <span>Herramientas y recursos que uso y confío</span>
+      <div class="sidebar-block">
+        <h3 class="sidebar-title">Sobre este sitio</h3>
+        <p class="sidebar-text">Privacidad.news es un medio independiente de privacidad, soberanía digital y seguridad. El feed muestra publicaciones con foto o vídeo; el índice de números, abajo, lista todo el canal.</p>
+      </div>
+      <a class="promo-box" href="https://privacidad.me" target="_blank" rel="noopener">
+        <em class="promo-kicker">Hub de Privacidad</em>
+        <strong>Privacidad.me</strong>
+        <span>Guías, herramientas y el mapa del ecosistema</span>
       </a>
       <a class="promo-box" href="https://boringprivacy.io" target="_blank" rel="noopener">
         <em class="promo-kicker">Academia</em>
         <strong>Boring Privacy</strong>
         <span>Formación para cambiar tu vida digital</span>
       </a>
-      <a class="promo-box" href="https://t.me/starkprivacy" target="_blank" rel="noopener">
-        <em class="promo-kicker">Canal</em>
-        <strong>Telegram</strong>
-        <span>Noticias cortas al momento</span>
+      <a class="promo-box" href="https://privtr.ee/@stark" target="_blank" rel="noopener">
+        <em class="promo-kicker">Interés</em>
+        <strong>Servicios recomendados</strong>
+        <span>Herramientas y recursos que uso y confío</span>
       </a>
-      <a class="promo-box" href="https://privacidad.me" target="_blank" rel="noopener">
-        <em class="promo-kicker">Web</em>
-        <strong>Privacidad.me</strong>
-        <span>Guías y recursos de privacidad</span>
-      </a>
-      <a class="promo-box" href="#donaciones">
-        <em class="promo-kicker">Apoyo</em>
-        <strong>Donaciones</strong>
-        <span>Bitcoin y Monero para mantener el medio</span>
-      </a>
-      <div class="sidebar-block">
-        <h3 class="sidebar-title">Sobre este sitio</h3>
-        <p class="sidebar-text">El feed muestra solo publicaciones con foto o vídeo. El índice de números, abajo, lista todo el canal.</p>
+      <div class="sidebar-block allies-block">
+        <h3 class="sidebar-title">Aliados</h3>
+        <p class="sidebar-text">Proyectos que empujan en la misma dirección. Abren en su web oficial.</p>
+        <a class="ally-card proton-ally" href="https://protonvpn.com" target="_blank" rel="noopener" aria-label="Proton VPN">
+          <span class="proton-mark" aria-hidden="true"></span>
+          <span class="proton-name">Proton <em>VPN</em></span>
+          <span class="ally-label">Visitar protonvpn.com</span>
+        </a>
       </div>
     </aside>
   </main>
@@ -108,8 +109,8 @@
       <h2>Donaciones</h2>
       <p>Todo el contenido de Privacidad.news es independiente. Puedes apoyar con Bitcoin o Monero.</p>
       <div class="donation-grid">
-        <div class="donation-item btc"><h3>₿ Bitcoin <button type="button" class="copy-btn" data-copy>Copiar</button></h3><code>bc1qxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code></div>
-        <div class="donation-item xmr"><h3>ɱ Monero <button type="button" class="copy-btn" data-copy>Copiar</button></h3><code>4xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code></div>
+        <div class="donation-item btc"><h3>₿ Bitcoin <button type="button" class="btn btn-ghost copy-btn" data-copy>Copiar</button></h3><code>bc1qxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code></div>
+        <div class="donation-item xmr"><h3>ɱ Monero <button type="button" class="btn btn-ghost copy-btn" data-copy>Copiar</button></h3><code>4xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code></div>
       </div>
       <p class="donation-note">Sustituye las direcciones de ejemplo por las reales cuando las tengas listas.</p>
     </div></div>
@@ -125,12 +126,22 @@
       <div class="modal-content" id="modalContent"></div>
     </div>
   </div>
+  <div id="cinema" class="cinema" hidden>
+    <div class="cinema-backdrop" data-cinema-close></div>
+    <div class="cinema-stage" role="dialog" aria-modal="true" aria-label="Reproductor en modo cine">
+      <div class="cinema-toolbar">
+        <span>Modo cine</span>
+        <button type="button" class="btn btn-ghost" data-cinema-close>Cerrar</button>
+      </div>
+      <div class="cinema-player" id="cinemaPlayer"></div>
+    </div>
+  </div>
   <div id="shareMenu" class="share-menu" hidden>
     <button type="button" data-share-action="native">Compartir…</button>
     <button type="button" data-share-action="copy">Copiar enlace</button>
     <a href="#" data-share-action="x" target="_blank" rel="noopener">Compartir en X</a>
     <a href="#" data-share-action="telegram" target="_blank" rel="noopener">Compartir en Telegram</a>
   </div>
-  <script src="script.js?v=20260901yt1"></script>
+  <script src="script.js?v=20260901ux1"></script>
 </body>
 </html>
