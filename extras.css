@@ -1,8 +1,7 @@
 .card-image{position:relative;width:var(--thumb);height:72px;overflow:hidden;background:#111;border:1px solid #2a2a2a}
 .card-image img{width:100%;height:100%;object-fit:cover}
 .news-card,.news-card.is-video{grid-template-columns:var(--thumb) minmax(0,1fr);gap:.85rem;padding:.8rem .15rem;border-bottom:1px solid #1f1f1f}
-.news-card.is-video .card-media,.news-card.is-video .card-image{width:var(--thumb);height:72px}
-.play-badge{position:absolute;left:50%;top:50%;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;background:#f5a623;color:#111;display:flex;align-items:center;justify-content:center;z-index:1;font-size:10px;pointer-events:none;font-weight:700}
+.play-badge{position:absolute;left:50%;top:50%;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;background:#3b82f6;color:#fff;display:flex;align-items:center;justify-content:center;z-index:1;font-size:10px;pointer-events:none}
 .yt-embed{position:relative;width:100%;aspect-ratio:16/9;margin:0 0 1.1rem;background:#000}
 .yt-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .card-tags,.news-card .category,.modal-content .category{display:none !important}
@@ -11,42 +10,44 @@
 .news-card{cursor:pointer}
 .news-card.is-text{grid-template-columns:1fr}
 .news-card:hover{background:#0d0d0d}
-.card-title{font-size:1.02rem;margin:0 0 .2rem}
 .byline,.article-byline{font-size:.68rem;letter-spacing:.04em;text-transform:uppercase;color:#8a8a8a;margin:0 0 .28rem}
-.author-link{color:#f5a623;font-weight:600}
-.author-link:hover{color:#ffc45c}
-.article-gallery{display:grid;gap:.7rem;margin:0 0 1.15rem}
+.author-link{color:#c5c5c5;font-weight:500;text-decoration:none}
+.author-link:hover{color:#93c5fd}
+.signoff-link{color:#9ca3af;font-weight:500;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#333}
+.signoff-link:hover{color:#93c5fd;text-decoration-color:#3b82f6}
+.article-end-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin:1.1rem 0 0;padding-top:.85rem;border-top:1px solid #222}
+.article-end-tags .end-tag{display:inline-flex;border:1px solid #2a2a2a;color:#9aa4b2;padding:.2rem .45rem;font-size:.68rem;background:transparent}
+.article-end-tags .end-tag:hover{border-color:#3b82f6;color:#93c5fd}
 .yt-facade{position:relative;display:block;width:100%;aspect-ratio:16/9;padding:0;border:0;background:#000;cursor:pointer;overflow:hidden}
 .yt-facade img{width:100%;height:100%;object-fit:cover}
 .yt-actions{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.55rem}
 .yt-subscribe{background:#ff0033;border-color:#ff0033;color:#fff}
-.cinema-image{width:100%;height:auto;max-height:82vh;object-fit:contain;background:#000}
 .cinema{position:fixed;inset:0;z-index:400;display:flex;align-items:center;justify-content:center;padding:4vh 1.2rem}
 .cinema[hidden]{display:none}
 .cinema-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.88)}
 .cinema-stage{position:relative;width:min(920px,86vw);z-index:1}
 .sidebar{position:static;gap:1rem}
 .sidebar-left{position:sticky;top:84px}
-.sidebar-right{position:static}
-.sidebar-block{padding:0;overflow:hidden;background:#080808}
-.sidebar-title{margin:0;padding:.55rem .75rem;background:#141414;border-bottom:2px solid #f5a623;color:#f5a623;font-size:.68rem;letter-spacing:.14em}
+.sidebar-block{padding:0 0 .85rem;overflow:hidden;background:#080808}
+.sidebar-title{margin:0 0 .55rem;padding:.55rem .75rem;background:#101820;border-bottom:2px solid #3b82f6;color:#93c5fd;font-size:.68rem;letter-spacing:.14em}
 .sidebar-text,.mail-hint,.mail-form,.ally-card,.links-block .side-btn{margin-left:.75rem;margin-right:.75rem}
 .sidebar-text{margin-top:.65rem}
-.signoff{margin-bottom:.85rem}
 .mail-form{display:flex;flex-direction:column;gap:.45rem;margin:.7rem .75rem .45rem}
 .mail-input{width:100%;background:#050505;border:1px solid #2a2a2a;color:#eee;padding:.55rem .6rem;font:inherit;font-size:.82rem}
-.mail-input:focus{outline:1px solid #f5a623;border-color:#f5a623}
+.mail-input:focus{outline:1px solid #3b82f6;border-color:#3b82f6}
 .mail-submit{min-height:38px;margin:0}
 .mail-hint{font-size:.68rem;color:#6f6f6f;margin:.15rem .75rem .75rem;line-height:1.4}
-.links-block{display:flex;flex-direction:column;gap:.45rem;padding-bottom:.75rem}
-.links-block .sidebar-title{margin-bottom:.55rem}
+.captcha-wrap{margin:.15rem 0 .2rem;min-height:78px}
+.links-block{display:flex;flex-direction:column;gap:.45rem}
 .side-btn{display:flex;align-items:center;justify-content:center;min-height:40px;padding:.55rem .7rem;border:1px solid #2a2a2a;background:#101010;text-align:center;font-family:var(--font-display);font-size:.86rem;font-weight:600}
-.side-btn:hover{border-color:#f5a623;color:#f5a623}
-.filter-drop summary{cursor:pointer;list-style:none;padding:.55rem .75rem;background:#141414;border-bottom:2px solid #3b82f6;color:#9ec1ff;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+.side-btn:hover{border-color:#3b82f6;color:#93c5fd}
+.filter-drop summary{cursor:pointer;list-style:none;padding:.55rem .75rem;background:#101820;border-bottom:2px solid #3b82f6;color:#93c5fd;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
 .filter-drop summary::-webkit-details-marker{display:none}
 .filter-drop .tag-cloud{padding:.55rem .75rem .75rem;max-height:52vh;overflow:auto}
+.support-section{padding:2rem 0 0}
+.support-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .feed-pager{display:flex;flex-wrap:wrap;gap:.35rem;justify-content:center;padding:1.25rem 0 .4rem;border-top:1px solid #1f1f1f}
 .feed-pager .page-btn{min-width:2rem;height:2rem;padding:0 .45rem;border:1px solid #2a2a2a;background:#101010;color:#bbb;font-size:.78rem}
-.feed-pager .page-btn:hover,.feed-pager .page-btn.is-current{background:#f5a623;border-color:#f5a623;color:#111}
-@media (max-width:1100px){.sidebar-left{position:static;order:-1;grid-column:1 / -1}.filter-drop .tag-cloud{max-height:30vh}}
-@media (max-width:560px){.news-card,.news-card.is-video{grid-template-columns:1fr}.card-image,.news-card.is-video .card-image{width:100%;height:140px}}
+.feed-pager .page-btn:hover,.feed-pager .page-btn.is-current{background:#3b82f6;border-color:#3b82f6;color:#fff}
+@media (max-width:1100px){.sidebar-left{position:static;order:-1;grid-column:1 / -1}.support-grid{grid-template-columns:1fr}}
+@media (max-width:560px){.news-card,.news-card.is-video{grid-template-columns:1fr}.card-image{width:100%;height:140px}}
