@@ -1,5 +1,54 @@
 {
-  "updated": "2026-09-01T20:45:00Z",
+  "updated": "2026-09-01T20:47:00Z",
   "source": "https://t.me/s/starkprivacy",
-  "articles": []
+  "articles": [
+    {
+      "id": 1668,
+      "title": "El Pixel 11 empeora algún aspecto respecto a modelos anteriores",
+      "date": "2026-09-01T19:39:02+00:00",
+      "category": "Herramientas",
+      "tags": "grapheneos herramientas pixel",
+      "excerpt": "GrapheneOS en Pixel 11: la pregunta es si compensa el salto o conviene esperar.",
+      "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=500&fit=crop&q=80",
+      "source_url": "https://t.me/StarkPrivacy/1668",
+      "body": ["El Pixel 11 empeora algún aspecto respecto a modelos anteriores.", "La pregunta es clara: GrapheneOS en Pixel 11, ¿sí o no?"],
+      "locked": false
+    },
+    {
+      "id": 1667,
+      "title": "Proton vuelve a caerse",
+      "date": "2026-09-01T16:35:36+00:00",
+      "category": "Servicios",
+      "tags": "proton servicios",
+      "excerpt": "Segunda caída en poco tiempo: Proton opera a capacidad reducida por fallos de hardware.",
+      "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=500&fit=crop&q=80",
+      "source_url": "https://t.me/StarkPrivacy/1667",
+      "body": ["Proton ha vuelto a registrar una caída. Según su estado, trabajan en fallos de hardware residuales.", "Operan a capacidad reducida. No es una caída total, pero hay intentos de acceso fallidos."],
+      "locked": false
+    },
+    {
+      "id": 1666,
+      "title": "El intento de bloqueo de VPNs en Rusia afecta a GrapheneOS",
+      "date": "2026-08-31T12:14:00+00:00",
+      "category": "Países",
+      "tags": "grapheneos países vpn",
+      "excerpt": "Rusia filtra IPs de hosting y GrapheneOS dejó de ser accesible en varios proveedores europeos.",
+      "image": "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?w=800&h=500&fit=crop&q=80",
+      "source_url": "https://t.me/StarkPrivacy/1666",
+      "body": ["Rusia filtra el espacio IP de varios proveedores con una lista blanca de dominios.", "GrapheneOS no figura en esa lista y dejó de ser accesible en DataPacket y Cherry Servers."],
+      "locked": false
+    },
+    {
+      "id": 1664,
+      "title": "Brave incorpora protección de email con alias",
+      "date": "2026-08-28T14:18:00+00:00",
+      "category": "Herramientas",
+      "tags": "brave herramientas email",
+      "excerpt": "En escritorio 1.94 se pueden crear alias desde el formulario para no entregar el correo real.",
+      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=500&fit=crop&q=80",
+      "source_url": "https://t.me/StarkPrivacy/1664",
+      "body": ["Brave ha incorporado alias de email en la versión de escritorio 1.94.", "Genera direcciones únicas que reenvían al buzón principal."],
+      "locked": false
+    }
+  ]
 }
