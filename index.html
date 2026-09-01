@@ -20,8 +20,8 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://i.ytimg.com" />
   <link rel="preconnect" href="https://www.youtube-nocookie.com" />
-  <link rel="stylesheet" href="styles.css?v=20260902p6" />
-  <link rel="stylesheet" href="extras.css?v=20260902p6" />
+  <link rel="stylesheet" href="styles.css?v=20260902p7" />
+  <link rel="stylesheet" href="extras.css?v=20260902p7" />
   <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 </head>
 <body>
@@ -55,25 +55,12 @@
       <nav class="feed-pager" id="feedPager" hidden aria-label="Paginación de noticias"></nav>
       <div id="emptyState" class="empty-state" hidden><p>No hay noticias que coincidan con tu búsqueda o filtro.</p><button type="button" class="btn" id="clearAll" data-clear-filters>Ver todas las noticias</button></div>
     </div>
-    <aside class="sidebar sidebar-right" aria-label="Enlaces de interés">
+    <aside class="sidebar sidebar-right" aria-label="Sobre el sitio">
       <div class="sidebar-block about-block">
         <h3 class="sidebar-title">Sobre este sitio</h3>
         <p class="sidebar-text">Privacidad/news es un portal independiente de noticias sobre privacidad, seguridad, soberanía y libertad en el ámbito digital.</p>
         <p class="sidebar-text">Se mantiene gracias al apoyo de aliados y a las donaciones de quienes lo sostienen. Gracias, de corazón.</p>
-        <p class="sidebar-text signoff">Atentamente,<br><a class="author-link" href="https://x.com/StarkPrivacy" target="_blank" rel="noopener">Stark</a></p>
-      </div>
-      <div class="sidebar-block mail-block" id="lista-correo">
-        <h3 class="sidebar-title">Lista de correo</h3>
-        <p class="sidebar-text">Avisos cortos cuando haya algo que merezca la pena. Misma lista que en el resto de proyectos.</p>
-        <form id="newsletter-form" class="mail-form" method="post" target="_blank" action="https://newsletter.boringprivacy.io/subscription/form">
-          <input class="mail-input" type="email" name="email" required placeholder="alias@proton.me" autocomplete="email" />
-          <button type="submit" class="side-btn mail-submit">Apuntarme</button>
-          <div id="captcha-wrap" class="captcha-wrap" hidden><div class="h-captcha" data-sitekey="7beaf856-25f0-43a4-b09a-8c26bfaed3fe" data-theme="dark" data-callback="onMailCaptcha"></div></div>
-          <p id="captcha-error" class="mail-hint" hidden>Completa el captcha para continuar.</p>
-          <input type="hidden" name="nonce" />
-          <input type="hidden" name="l" value="9a838c12-bfab-4de3-a771-6bbd876ade77" />
-        </form>
-        <p class="mail-hint">Autogestionado. Sin espionaje. Envío ocasional.</p>
+        <p class="sidebar-text signoff">Atentamente,<br><a class="signoff-link" href="https://starkprivacy.com" target="_blank" rel="noopener">Stark</a></p>
       </div>
       <div class="sidebar-block allies-block">
         <h3 class="sidebar-title">Aliados</h3>
@@ -84,14 +71,31 @@
           <span class="ally-label">Visitar protonvpn.com</span>
         </a>
       </div>
+    </aside>
+  </main>
+  <section class="support-section" id="lista-correo">
+    <div class="container support-grid">
+      <div class="sidebar-block mail-block">
+        <h3 class="sidebar-title">Lista de correo</h3>
+        <p class="sidebar-text">Avisos cortos cuando haya algo que merezca la pena. Misma lista que en el resto de proyectos.</p>
+        <form id="newsletter-form" class="mail-form" method="post" target="_blank" action="https://newsletter.boringprivacy.io/subscription/form">
+          <input class="mail-input" type="email" name="email" required placeholder="alias@proton.me" autocomplete="email" />
+          <button type="submit" class="side-btn mail-submit">Apuntarme</button>
+          <div id="captcha-wrap" class="captcha-wrap"><div class="h-captcha" data-sitekey="7beaf856-25f0-43a4-b09a-8c26bfaed3fe" data-theme="dark" data-callback="onMailCaptcha"></div></div>
+          <p id="captcha-error" class="mail-hint" hidden>Completa el captcha para continuar.</p>
+          <input type="hidden" name="nonce" />
+          <input type="hidden" name="l" value="9a838c12-bfab-4de3-a771-6bbd876ade77" />
+        </form>
+        <p class="mail-hint">Autogestionado. Sin espionaje. Envío ocasional.</p>
+      </div>
       <div class="sidebar-block links-block">
         <h3 class="sidebar-title">Webs de interés</h3>
         <a class="side-btn" href="https://privacidad.me" target="_blank" rel="noopener">Privacidad.me</a>
         <a class="side-btn" href="https://boringprivacy.io" target="_blank" rel="noopener">Boring Privacy</a>
         <a class="side-btn" href="https://privtr.ee/@stark" target="_blank" rel="noopener">Servicios recomendados</a>
       </div>
-    </aside>
-  </main>
+    </div>
+  </section>
   <section class="donations-section" id="donaciones">
     <div class="container"><div class="donaciones-box">
       <h2>Donaciones</h2>
@@ -130,6 +134,6 @@
     <a href="#" data-share-action="x" target="_blank" rel="noopener">Compartir en X</a>
     <a href="#" data-share-action="telegram" target="_blank" rel="noopener">Compartir en Telegram</a>
   </div>
-  <script src="script.js?v=20260902p6"></script>
+  <script src="script.js?v=20260902p7"></script>
 </body>
 </html>
