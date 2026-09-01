@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260901sync" />
+  <link rel="stylesheet" href="styles.css?v=20260901num" />
 </head>
 <body>
   <div class="version-bar">
@@ -22,7 +22,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="./" class="logo"><span class="logo-main">Privacidad</span><span class="logo-sep">/</span><span class="logo-sub">news</span></a>
-      <nav class="main-nav"><a href="./">Inicio</a><a href="#donaciones">Donaciones</a><a href="https://boringprivacy.io" target="_blank" rel="noopener">Academia</a></nav>
+      <nav class="main-nav"><a href="./">Inicio</a><a href="#numeros">Números</a><a href="#donaciones">Donaciones</a><a href="https://boringprivacy.io" target="_blank" rel="noopener">Academia</a></nav>
       <div class="header-actions">
         <form class="search-form" role="search" onsubmit="return false;">
           <input type="search" id="searchInput" placeholder="Buscar" autocomplete="off" />
@@ -46,6 +46,7 @@
           <a href="#" role="listitem" data-filter="proyectos">Proyectos</a>
           <a href="#" role="listitem" data-filter="seguridad">Seguridad</a>
           <a href="#" role="listitem" data-filter="servicios">Servicios</a>
+          <a href="#" role="listitem" data-filter="video">Vídeo</a>
         </div>
       </div>
     </aside>
@@ -89,6 +90,14 @@
       </div>
     </aside>
   </main>
+  <section class="numeros-section" id="numeros">
+    <div class="container">
+      <h2>Números</h2>
+      <p class="numeros-lead">Archivo de todas las publicaciones del canal. Las que tienen foto o vídeo se abren aquí; el resto lleva al original.</p>
+      <p class="numeros-lead" id="numerosMeta"></p>
+      <ol class="numeros-list" id="numerosList"></ol>
+    </div>
+  </section>
   <section class="donations-section" id="donaciones">
     <div class="container"><div class="donaciones-box">
       <h2>Donaciones</h2>
@@ -117,6 +126,6 @@
     <a href="#" data-share-action="x" target="_blank" rel="noopener">Compartir en X</a>
     <a href="#" data-share-action="telegram" target="_blank" rel="noopener">Compartir en Telegram</a>
   </div>
-  <script src="script.js?v=20260901sync"></script>
+  <script src="script.js?v=20260901num"></script>
 </body>
 </html>
