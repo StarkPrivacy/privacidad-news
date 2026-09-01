@@ -55,6 +55,56 @@
 .yt-player .cinema-btn{margin-top:.45rem}
 .modal-content .yt-player{margin-bottom:1rem}
 .modal-content .yt-embed{margin-bottom:.5rem}
+.yt-facade{
+  position:relative;
+  display:block;
+  width:100%;
+  aspect-ratio:16/9;
+  padding:0;
+  border:0;
+  background:#000;
+  cursor:pointer;
+  overflow:hidden;
+}
+.yt-facade img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.yt-facade .play-badge{pointer-events:none}
+.yt-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.45rem;
+  margin-top:.55rem;
+}
+.yt-subscribe{
+  background:#ff0033;
+  border-color:#ff0033;
+  color:#fff;
+}
+.yt-subscribe:hover{
+  background:#ff2d55;
+  border-color:#ff2d55;
+  color:#fff;
+}
+.cinema-image{
+  width:100%;
+  height:auto;
+  max-height:82vh;
+  object-fit:contain;
+  background:#000;
+}
+.news-card.is-video .video-poster{
+  display:block;
+  width:100%;
+  height:100%;
+  position:relative;
+  padding:0;
+  border:0;
+  background:#000;
+  cursor:pointer;
+}
 
 .cinema{
   position:fixed;
