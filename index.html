@@ -20,8 +20,8 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://i.ytimg.com" />
   <link rel="preconnect" href="https://www.youtube-nocookie.com" />
-  <link rel="stylesheet" href="styles.css?v=20260902p1" />
-  <link rel="stylesheet" href="extras.css?v=20260902p1" />
+  <link rel="stylesheet" href="styles.css?v=20260902p3" />
+  <link rel="stylesheet" href="extras.css?v=20260902p3" />
 </head>
 <body>
   <div class="version-bar">
@@ -43,15 +43,13 @@
     </div>
   </header>
   <main class="container main-layout">
-    <aside class="sidebar sidebar-left" aria-label="Categorías">
+    <aside class="sidebar sidebar-left" aria-label="Filtros">
       <div class="sidebar-block">
-        <h3 class="sidebar-title">Categorías</h3>
-        <div class="tag-cloud" role="list"></div>
-      </div>
-      <div class="sidebar-block">
-        <h3 class="sidebar-title">Etiquetas</h3>
-        <div class="tag-cloud tag-cloud-dynamic" id="tagList" role="list"></div>
-        <p class="sidebar-note">Las etiquetas se generan solas a partir de hashtags del canal y palabras clave del texto.</p>
+        <h3 class="sidebar-title">Filtros</h3>
+        <details class="filter-drop" open>
+          <summary>Categorías y etiquetas</summary>
+          <div class="tag-cloud" id="filterList" role="list"></div>
+        </details>
       </div>
     </aside>
     <div class="feed-column">
@@ -68,29 +66,13 @@
         <h3 class="sidebar-title">Sobre este sitio</h3>
         <p class="sidebar-text">Privacidad.news es un medio independiente de privacidad, soberanía digital y seguridad. Puedes apoyarlo con donaciones, usando los servicios recomendados y compartiendo las noticias.</p>
       </div>
-      <a class="promo-box" href="https://privacidad.me" target="_blank" rel="noopener">
-        <em class="promo-kicker">Hub de Privacidad</em>
-        <strong>Privacidad.me</strong>
-        <span>Guías, herramientas y el mapa del ecosistema</span>
-      </a>
-      <a class="promo-box" href="https://boringprivacy.io" target="_blank" rel="noopener">
-        <em class="promo-kicker">Academia</em>
-        <strong>Boring Privacy</strong>
-        <span>Formación para cambiar tu vida digital</span>
-      </a>
-      <a class="promo-box" href="https://privtr.ee/@stark" target="_blank" rel="noopener">
-        <em class="promo-kicker">Interés</em>
-        <strong>Servicios recomendados</strong>
-        <span>Herramientas y recursos que uso y confío</span>
-      </a>
+      <a class="side-btn" href="https://privacidad.me" target="_blank" rel="noopener">Privacidad.me</a>
+      <a class="side-btn" href="https://boringprivacy.io" target="_blank" rel="noopener">Boring Privacy</a>
+      <a class="side-btn" href="https://privtr.ee/@stark" target="_blank" rel="noopener">Servicios recomendados</a>
       <div class="sidebar-block allies-block">
         <h3 class="sidebar-title">Aliados</h3>
-        <p class="sidebar-text">Proyectos que empujan en la misma dirección. Abren en su web oficial.</p>
-        <a class="ally-card proton-ally" href="https://protonvpn.com" target="_blank" rel="noopener" aria-label="Proton VPN">
-          <span class="proton-mark" aria-hidden="true"></span>
-          <span class="proton-name">Proton <em>VPN</em></span>
-          <span class="ally-label">Visitar protonvpn.com</span>
-        </a>
+        <p class="sidebar-text">Servicios que apoyan nuestro enfoque de privacidad.</p>
+        <a class="side-btn ally-btn" href="https://protonvpn.com" target="_blank" rel="noopener">Proton VPN</a>
       </div>
     </aside>
   </main>
@@ -132,6 +114,6 @@
     <a href="#" data-share-action="x" target="_blank" rel="noopener">Compartir en X</a>
     <a href="#" data-share-action="telegram" target="_blank" rel="noopener">Compartir en Telegram</a>
   </div>
-  <script src="script.js?v=20260902p1"></script>
+  <script src="script.js?v=20260902p3"></script>
 </body>
 </html>
