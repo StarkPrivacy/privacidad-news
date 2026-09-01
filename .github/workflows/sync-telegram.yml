@@ -2,7 +2,7 @@ name: Sync Telegram
 
 on:
   schedule:
-    - cron: "25 */2 * * *"
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -11,11 +11,11 @@ permissions:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - name: Fetch channel posts
-        run: python3 scripts/sync_telegram.py
+      - name: Fetch latest channel posts
+        run: python3 scripts/sync_telegram.py 3
       - name: Commit news.json if changed
         run: |
           git config user.name "github-actions[bot]"
