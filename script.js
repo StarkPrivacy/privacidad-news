@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const SITE_URL = 'https://starkprivacy.github.io/privacidad-news/';
   const YT_CHANNEL_ID = 'UCiWK5LDY5nmnMpfGsL7KENQ';
+  const AUTHOR_HTML = 'Escrito por: <a class="author-link" href="https://x.com/StarkPrivacy" target="_blank" rel="noopener">Stark</a>';
   const MONTHS = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
   const FEED_PAGE = 10;
   const input = document.getElementById('searchInput');
   const feed = document.getElementById('newsFeed');
   const feedPager = document.getElementById('feedPager');
-  const tagCloud = document.getElementById('filterList') || document.querySelector('.tag-cloud');
+  const tagCloud = document.getElementById('filterList');
   const modal = document.getElementById('articleModal');
   const modalContent = document.getElementById('modalContent');
   const cinema = document.getElementById('cinema');
@@ -73,13 +74,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const sources = sourcesOf(item); if (!sources.length) return '';
     return `<section class="article-sources"><h3>Fuentes</h3><ul>${sources.map(url => `<li><a href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(url)}</a></li>`).join('')}</ul></section>`;
   }
-  function tagChips(item) {
-    const tags = parseTags(item).slice().sort((a, b) => b.length - a.length).slice(0, 4);
-    if (!tags.length) return '';
-    return `<div class="card-tags">${tags.map(t => `<button type="button" class="tag-chip" data-filter="${escapeHtml(t)}">#${escapeHtml(t)}</button>`).join('')}</div>`;
-  }
   function renderArticle(item) {
-    const id = item.id; const title = escapeHtml(stripLeadEmoji(item.title)); const category = escapeHtml(item.category || 'Seguridad');
+    const id = item.id; const title = escapeHtml(stripLeadEmoji(item.title));
     const excerpt = escapeHtml(stripLeadEmoji(item.excerpt || '')); const dateLabel = formatDate(item.date);
     const isYt = Boolean(item.youtube_id); const isVideo = isYt || Boolean(item.video_url);
     const image = isYt ? ytThumb(item.youtube_id) : escapeHtml(item.video_thumb || item.image || '');
@@ -88,7 +84,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     article.className = 'news-card' + (isVideo ? ' is-video' : '') + (!image && !isVideo ? ' is-text' : '');
     article.dataset.id = id; article.dataset.tags = normalize(parseTags(item).join(' ')); article.dataset.category = normalize(item.category || ''); article.id = `noticia-${id}`;
     const media = image ? `<div class="card-image${isVideo ? ' is-video' : ''}"><img src="${image}" alt="" loading="lazy" width="400" height="400" />${isVideo ? '<span class="play-badge" aria-hidden="true">▶</span>' : ''}</div>` : '';
-    article.innerHTML = `${media}<div class="card-body"><div class="card-head"><h2 class="card-title"><a href="#noticia-${id}">${title}</a></h2>${tagChips(item)}</div><div class="card-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time><span class="meta-sep">·</span><span class="category">${category}</span>${isVideo ? '<span class="meta-sep">·</span><span class="category" data-filter="video">Vídeo</span>' : ''}</div><p class="card-excerpt">${excerpt}</p><div class="card-actions"><button type="button" class="btn btn-ghost share-btn" data-share>Compartir</button></div></div><template class="full-content"><h1>${title}</h1><p class="article-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time> · <span class="category">${category}</span></p>${mediaBlock(item)}<div class="article-body">${body}</div>${sourcesHtml(item)}</template>`;
+    article.innerHTML = `${media}<div class="card-body"><h2 class="card-title"><a href="#noticia-${id}">${title}</a></h2><p class="byline">${AUTHOR_HTML}</p><div class="card-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time></div><p class="card-excerpt">${excerpt}</p><div class="card-actions"><button type="button" class="btn btn-ghost share-btn" data-share>Compartir</button></div></div><template class="full-content"><h1>${title}</h1><p class="article-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time></p><p class="article-byline">${AUTHOR_HTML}</p>${mediaBlock(item)}<div class="article-body">${body}</div>${sourcesHtml(item)}</template>`;
     return article;
   }
   function matchingCards() {
@@ -97,7 +93,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const title = normalize(card.querySelector('.card-title')?.textContent);
       const excerpt = normalize(card.querySelector('.card-excerpt')?.textContent);
       const tags = normalize(card.dataset.tags);
-      const category = normalize(card.dataset.category + ' ' + [...card.querySelectorAll('.category')].map(n => n.textContent).join(' '));
+      const category = normalize(card.dataset.category);
       return (!query || title.includes(query) || excerpt.includes(query) || tags.includes(query) || category.includes(query) || String(card.dataset.id).includes(query)) && (!activeCategory || category.includes(activeCategory) || tags.includes(activeCategory) || (activeCategory === 'video' && card.classList.contains('is-video')));
     });
   }
@@ -141,7 +137,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!modal || !modalContent || !item) return;
     const data = articleShareData(item.id, stripLeadEmoji(item.title)); const dateLabel = formatDate(item.date);
     const body = cleanParagraphs(item).map(p => `<p>${escapeHtml(p)}</p>`).join('') || '<p>Sin texto ampliado.</p>';
-    modalContent.innerHTML = `<h1>${escapeHtml(stripLeadEmoji(item.title))}</h1><p class="article-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time> · <span class="category">${escapeHtml(item.category || '')}</span></p>${mediaBlock(item)}<div class="article-body">${body}</div>${sourcesHtml(item)}`;
+    modalContent.innerHTML = `<h1>${escapeHtml(stripLeadEmoji(item.title))}</h1><p class="article-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time></p><p class="article-byline">${AUTHOR_HTML}</p>${mediaBlock(item)}<div class="article-body">${body}</div>${sourcesHtml(item)}`;
     appendShareBar(data); bindYoutubePosters(modalContent); modal.hidden = false; document.body.classList.add('modal-open'); history.replaceState(null, '', `#noticia-${item.id}`);
   }
   function openModal(card) {
@@ -169,16 +165,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     cards = Array.from(document.querySelectorAll('.news-card'));
     cards.forEach(card => {
       card.addEventListener('click', e => {
-        if (e.target.closest('[data-share], .tag-chip, .category, a[target="_blank"]')) return;
+        if (e.target.closest('[data-share], .author-link, a[target="_blank"]')) return;
         e.preventDefault(); openModal(card);
-      });
-    });
-    document.querySelectorAll('.news-card .category, .tag-chip').forEach(badge => {
-      badge.addEventListener('click', e => {
-        e.preventDefault(); e.stopPropagation();
-        activeCategory = normalize(badge.dataset.filter || badge.textContent.trim().replace(/^#/, ''));
-        tagLinks.forEach(l => l.classList.toggle('is-active', filterLabel(l) === activeCategory));
-        applyFilters(true);
       });
     });
     document.querySelectorAll('[data-share]').forEach(btn => {
@@ -206,18 +194,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       });
     });
   }
-  function renderUnifiedFilters(items) {
+  function renderUnifiedFilters() {
     if (!tagCloud) return;
-    const labels = new Map();
-    ['Cifrado','Empresas','Herramientas','Identidad digital','Legislación','Países','Productos','Proyectos','Seguridad','Servicios','Vídeo'].forEach(name => labels.set(normalize(name), name));
-    items.forEach(item => {
-      const cat = (item.category || '').trim();
-      if (cat) labels.set(normalize(cat), cat);
-      parseTags(item).forEach(tag => { const key = normalize(tag); if (!labels.has(key)) labels.set(key, tag); });
-    });
-    const preset = new Set(['cifrado','empresas','herramientas','identidad digital','legislacion','paises','productos','proyectos','seguridad','servicios','video']);
-    const entries = [...labels.entries()].sort((a, b) => a[1].localeCompare(b[1], 'es', { sensitivity: 'base' }));
-    tagCloud.innerHTML = entries.map(([key, name]) => `<a href="#" role="listitem" data-filter="${escapeHtml(key === 'video' ? 'video' : key)}">${preset.has(key) ? '' : '#'}${escapeHtml(name)}</a>`).join('');
+    const names = ['Cifrado','Empresas','Herramientas','Identidad digital','Legislación','Países','Productos','Proyectos','Seguridad','Servicios','Vídeo'];
+    tagCloud.innerHTML = names.map(name => `<a href="#" role="listitem" data-filter="${escapeHtml(normalize(name) === 'video' ? 'video' : normalize(name))}">${escapeHtml(name)}</a>`).join('');
     tagLinks = Array.from(tagCloud.querySelectorAll('a'));
     bindFilterLinks(tagLinks);
   }
@@ -228,9 +208,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     posts.forEach(item => { articlesById[item.id] = item; });
     feed.innerHTML = '';
     posts.forEach(item => feed.appendChild(renderArticle(item)));
-    renderUnifiedFilters(posts);
+    renderUnifiedFilters();
   } catch (err) { console.error(err); if (feed) feed.innerHTML = '<p class="card-excerpt">No se pudieron cargar las noticias.</p>'; }
   bindCardEvents();
+  const filterPanel = document.getElementById('filterPanel');
+  const compactMq = window.matchMedia('(max-width: 1100px)');
+  function syncFilterPanel() { if (!filterPanel) return; if (compactMq.matches) filterPanel.removeAttribute('open'); else filterPanel.setAttribute('open', ''); }
+  syncFilterPanel();
+  compactMq.addEventListener('change', syncFilterPanel);
+  window.addEventListener('resize', () => { if (compactMq.matches) filterPanel?.removeAttribute('open'); });
+  const mailForm = document.getElementById('newsletter-form');
+  const captchaWrap = document.getElementById('captcha-wrap');
+  const captchaErr = document.getElementById('captcha-error');
+  window.onMailCaptcha = function () { if (captchaErr) captchaErr.hidden = true; if (mailForm && mailForm.checkValidity()) mailForm.submit(); };
+  mailForm?.addEventListener('submit', e => { let token = ''; try { token = (typeof hcaptcha !== 'undefined' && hcaptcha.getResponse()) || ''; } catch (err) {} if (!token) { e.preventDefault(); if (captchaWrap) captchaWrap.hidden = false; if (captchaErr) captchaErr.hidden = false; } });
   input?.addEventListener('input', () => applyFilters(true));
   document.querySelectorAll('#clearFilter, [data-clear-filters]').forEach(btn => { btn.addEventListener('click', () => { activeCategory = ''; tagLinks.forEach(l => l.classList.remove('is-active')); if (input) input.value = ''; applyFilters(true); }); });
   feedPager?.addEventListener('click', e => { const btn = e.target.closest('[data-feed-page]'); if (!btn || btn.disabled) return; feedPage = Number(btn.dataset.feedPage); applyFilters(false); document.querySelector('.feed-header')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
