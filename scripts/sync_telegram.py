@@ -26,7 +26,7 @@ CATEGORIES = [
     ("Productos", ["pixel", "iphone", "android", "gafas", "router", "xbox", "playstation"]),
     ("Empresas", ["apple", "google", "meta", "openai", "microsoft", "comcast", "amazon", "sony", "aliexpress"]),
     ("Paises", ["rusia", "reino unido", "ee.uu", "eeuu", "espana", "alemania", "union europea", "ue exige", "la ue"]),
-    ("Legislacion", ["ley", "norma", "reglamento", "etsi", "gdpr", "dsa", "requisitos minimos"]),
+    ("Legislacion", ["ley", "norma", "reglamento", "etsi", "gdpr", "dsa", "requisitos minimos", "chat control"]),
     ("Seguridad", ["spyware", "malware", "ataque", "vulnerabilidad", "hack", "vigil", "identificarte"]),
     ("Proyectos", ["proyecto", "open source", "codigo abierto", "grapheneos"]),
     ("Identidad digital", ["identidad", "dni", "reconocimiento facial", "biometric", "kyc"]),
@@ -38,10 +38,18 @@ KEYWORD_TAGS = {
     "mullvad": "mullvad", "graphene": "grapheneos", "pixel": "pixel", "brave": "brave",
     "firefox": "firefox", "microsoft": "microsoft", "sony": "sony", "xbox": "xbox",
     "aliexpress": "aliexpress", "comcast": "comcast", "kyc": "kyc", "youtube": "youtube",
+    "tor": "tor", "grapheneos": "grapheneos", "whatsapp": "whatsapp", "telegram": "telegram",
+    "icloud": "icloud", "android": "android", "iphone": "iphone", "linux": "linux",
+    "spyware": "spyware", "malware": "malware", "cifrado": "cifrado",
+    "chat control": "chat-control", "etsi": "etsi", "gdpr": "gdpr",
 }
 
-YT_RE = re.compile(r"(?:https?://)?(?:www\.)?(?:youtube\.com/watch\?v=|youtu\.be/|youtube\.com/shorts/)([A-Za-z0-9_-]{11})", re.I)
+YT_RE = re.compile(
+    r"(?:https?://)?(?:www\.)?(?:youtube\.com/watch\?v=|youtu\.be/|youtube\.com/shorts/)([A-Za-z0-9_-]{11})",
+    re.I,
+)
 HASH_RE = re.compile(r"(?:^|\s)#([A-Za-z][\w-]{1,39})")
+TG_HASH_RE = re.compile(r"[?&]q=%23([A-Za-z][\w-]{1,39})", re.I)
 COLOR_RE = re.compile(r"^[0-9a-f]{3,8}$", re.I)
 
 
@@ -54,8 +62,8 @@ def fetch(url: str) -> str:
 def strip_tags(raw: str) -> str:
     text = re.sub(r"<br\s*/?>", "\n", raw, flags=re.I)
     text = re.sub(r"</(div|p|h[1-6])>", "\n", text, flags=re.I)
-    text = re.sub(r"<a[^>]+href=\"([^\"]+)\"[^>]*>", r"\1 ", text, flags=re.I)
-    text = re.sub(r"<[^>]+>", "", text)
+    text = re.sub(r'<a[^>]+href="([^"]+)"[^>]*>', r"\1 ", text, flags=re.I)
+    text = re.sub(r"<[^>]+", "", text)
     return re.sub(r"\n{3,}", "\n\n", html_lib.unescape(text)).strip()
 
 
@@ -72,9 +80,9 @@ def guess_title(text: str) -> str:
     return first or "Publicacion"
 
 
-def telegram_hashtags(text: str) -> list[str]:
+def telegram_hashtags(text: str, raw_html: str = "") -> list[str]:
     out = []
-    for raw in HASH_RE.findall(text or ""):
+    for raw in HASH_RE.findall(text or "") + TG_HASH_RE.findall(raw_html or ""):
         tag = raw.lower()
         if COLOR_RE.match(tag) or tag.isdigit():
             continue
@@ -107,13 +115,20 @@ def guess_category(text: str, tags: list[str]) -> str:
     return "Seguridad"
 
 
+def category_slug(category: str) -> str:
+    table = str.maketrans("áéíóúüñ", "aeiouun")
+    slug = (category or "").lower().translate(table)
+    slug = re.sub(r"[^a-z0-9]+", "-", slug).strip("-")
+    return slug or "seguridad"
+
+
 def guess_keyword_tags(text: str, category: str, hashtags: list[str], youtube: bool) -> list[str]:
     found = []
     for tag in hashtags:
         if tag not in found:
             found.append(tag)
-    cat = category.lower()
-    if cat not in found:
+    cat = category_slug(category)
+    if cat and cat not in found:
         found.append(cat)
     n = text.lower()
     for key, tag in KEYWORD_TAGS.items():
@@ -121,6 +136,8 @@ def guess_keyword_tags(text: str, category: str, hashtags: list[str], youtube: b
             found.append(tag)
     if youtube and "youtube" not in found:
         found.append("youtube")
+    if youtube and "video" not in found:
+        found.append("video")
     return found
 
 
@@ -152,7 +169,7 @@ def parse_posts(page: str) -> list[dict]:
         vid_m = re.search(r"tgme_widget_message_video_thumb[^>]+background-image:url\(['\"]([^'\"]+)['\"]\)", block)
         video_thumb = vid_m.group(1) if vid_m else None
         yt = youtube_id(text) or youtube_id(block)
-        hashtags = telegram_hashtags(text)
+        hashtags = telegram_hashtags(text, block)
         title = guess_title(text) if text else f"Publicacion #{pid}"
         category = guess_category(text, hashtags)
         tags = guess_keyword_tags(text, category, hashtags, bool(yt))
