@@ -63,7 +63,7 @@ def strip_tags(raw: str) -> str:
     text = re.sub(r"<br\s*/?>", "\n", raw, flags=re.I)
     text = re.sub(r"</(div|p|h[1-6])>", "\n", text, flags=re.I)
     text = re.sub(r'<a[^>]+href="([^"]+)"[^>]*>', r"\1 ", text, flags=re.I)
-    text = re.sub(r"<[^>]+", "", text)
+    text = re.sub(r"<[^>]+>", "", text)
     return re.sub(r"\n{3,}", "\n\n", html_lib.unescape(text)).strip()
 
 
