@@ -55,18 +55,27 @@ document.addEventListener('DOMContentLoaded', async () => {
   function ytEmbed(id, title, autoplay, cinemaReady) {
     return `<div class="yt-player" data-yt-id="${escapeHtml(id)}"><div class="yt-embed"><iframe src="${ytSrc(id, autoplay)}" title="${escapeHtml(title || 'YouTube')}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>${ytSubscribeRow(id, title, cinemaReady)}</div>`;
   }
+  function itemImages(item) {
+    const list = [];
+    (Array.isArray(item.images) ? item.images : []).forEach(src => { if (src) list.push(src); });
+    if (item.image) list.unshift(item.image);
+    return list.filter((src, i, arr) => src && arr.indexOf(src) === i);
+  }
   function mediaBlock(item) {
     if (item.youtube_id) return ytFacade(item.youtube_id, item.title, true);
     if (item.video_url) return `<div class="native-player"><video class="article-video" controls playsinline preload="metadata" poster="${escapeHtml(item.video_thumb || item.image || '')}" src="${escapeHtml(item.video_url)}"></video><a class="btn btn-ghost" href="${escapeHtml(item.source_url || '#')}" target="_blank" rel="noopener">Abrir vídeo en Telegram</a></div>`;
-    if (item.image) return `<figure class="article-figure"><img src="${escapeHtml(item.image)}" alt="" class="article-hero" data-full-image="${escapeHtml(item.image)}" /></figure>`;
-    return '';
+    const imgs = itemImages(item);
+    if (!imgs.length) return '';
+    if (imgs.length === 1) return `<figure class="article-figure"><img src="${escapeHtml(imgs[0])}" alt="" class="article-hero" data-full-image="${escapeHtml(imgs[0])}" /></figure>`;
+    return `<div class="article-gallery">${imgs.map(src => `<figure class="article-figure"><img src="${escapeHtml(src)}" alt="" class="article-hero" data-full-image="${escapeHtml(src)}" /></figure>`).join('')}</div>`;
   }
   function sourcesHtml(item) {
     const sources = sourcesOf(item); if (!sources.length) return '';
     return `<section class="article-sources"><h3>Fuentes</h3><ul>${sources.map(url => `<li><a href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(url)}</a></li>`).join('')}</ul></section>`;
   }
   function tagChips(item) {
-    const tags = parseTags(item).slice(0, 3); if (!tags.length) return '';
+    const tags = parseTags(item).slice().sort((a, b) => b.length - a.length).slice(0, 4);
+    if (!tags.length) return '';
     return `<div class="card-tags">${tags.map(t => `<button type="button" class="tag-chip" data-filter="${escapeHtml(t)}">#${escapeHtml(t)}</button>`).join('')}</div>`;
   }
   function renderArticle(item) {
@@ -78,7 +87,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const article = document.createElement('article');
     article.className = 'news-card' + (isVideo ? ' is-video' : '') + (!image && !isVideo ? ' is-text' : '');
     article.dataset.id = id; article.dataset.tags = normalize(parseTags(item).join(' ')); article.dataset.category = normalize(item.category || ''); article.id = `noticia-${id}`;
-    const media = isVideo ? `<div class="card-media"><span class="${isYt ? 'yt-poster' : 'video-poster'}">${image ? `<img src="${image}" alt="" loading="lazy" width="640" height="360" />` : ''}<span class="play-badge" aria-hidden="true">▶</span></span></div>` : (image ? `<div class="card-image"><img src="${image}" alt="" loading="lazy" width="400" height="400" /></div>` : '');
+    const media = image ? `<div class="card-image${isVideo ? ' is-video' : ''}"><img src="${image}" alt="" loading="lazy" width="400" height="400" />${isVideo ? '<span class="play-badge" aria-hidden="true">▶</span>' : ''}</div>` : '';
     article.innerHTML = `${media}<div class="card-body"><div class="card-head"><h2 class="card-title"><a href="#noticia-${id}">${title}</a></h2>${tagChips(item)}</div><div class="card-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time><span class="meta-sep">·</span><span class="category">${category}</span>${isVideo ? '<span class="meta-sep">·</span><span class="category" data-filter="video">Vídeo</span>' : ''}</div><p class="card-excerpt">${excerpt}</p><div class="card-actions"><button type="button" class="btn btn-ghost share-btn" data-share>Compartir</button></div></div><template class="full-content"><h1>${title}</h1><p class="article-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time> · <span class="category">${category}</span></p>${mediaBlock(item)}<div class="article-body">${body}</div>${sourcesHtml(item)}</template>`;
     return article;
   }
