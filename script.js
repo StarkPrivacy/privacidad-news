@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     article.className = 'news-card' + (isVideo ? ' is-video' : '') + (!image && !isVideo ? ' is-text' : '');
     article.dataset.id = id; article.dataset.tags = normalize(parseTags(item).join(' ')); article.dataset.category = normalize(item.category || ''); article.id = `noticia-${id}`;
     const media = image ? `<div class="card-image${isVideo ? ' is-video' : ''}"><img src="${image}" alt="" loading="lazy" />${isVideo ? '<span class="play-badge" aria-hidden="true">▶</span>' : ''}</div>` : '';
-    article.innerHTML = `${media}<div class="card-body"><h2 class="card-title"><a href="#noticia-${id}">${title}</a></h2><p class="byline">${AUTHOR_HTML}</p><div class="card-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time></div><p class="card-excerpt">${excerpt}</p><div class="card-actions"><button type="button" class="btn btn-ghost share-btn" data-share>Compartir</button></div></div><template class="full-content"><h1>${title}</h1><p class="article-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time></p><p class="article-byline">${AUTHOR_HTML}</p>${mediaBlock(item)}<div class="article-body">${body}</div>${sourcesHtml(item)}${articleTagsHtml(item)}</template>`;
+    article.innerHTML = `${media}<div class="card-body"><h2 class="card-title"><a href="#noticia-${id}">${title}</a></h2><div class="card-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time></div><p class="card-excerpt">${excerpt}</p><div class="card-actions"><p class="byline">${AUTHOR_HTML}</p><button type="button" class="btn btn-ghost share-btn" data-share>Compartir</button></div></div><template class="full-content"><h1>${title}</h1><p class="article-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time></p><p class="article-byline">${AUTHOR_HTML}</p>${mediaBlock(item)}<div class="article-body">${body}</div>${sourcesHtml(item)}${articleTagsHtml(item)}</template>`;
     return article;
   }
   function matchingCards() {
@@ -212,10 +212,17 @@ document.addEventListener('DOMContentLoaded', async () => {
       });
     });
   }
-  function renderUnifiedFilters() {
+  function renderUnifiedFilters(items) {
     if (!tagCloud) return;
-    const names = ['Cifrado','Empresas','Herramientas','Identidad digital','Legislación','Países','Productos','Proyectos','Seguridad','Servicios','Vídeo'];
-    tagCloud.innerHTML = names.map(name => `<a href="#" role="listitem" data-filter="${escapeHtml(normalize(name) === 'video' ? 'video' : normalize(name))}">${escapeHtml(name)}</a>`).join('');
+    const labels = new Map();
+    (items || []).forEach(item => {
+      const cat = (item.category || '').trim();
+      if (cat) labels.set(normalize(cat), cat);
+      parseTags(item).forEach(tag => labels.set(normalize(tag), tag));
+      if (item.youtube_id || item.video_url) labels.set('video', 'Vídeo');
+    });
+    const entries = [...labels.entries()].sort((a, b) => a[1].localeCompare(b[1], 'es', { sensitivity: 'base' }));
+    tagCloud.innerHTML = entries.map(([key, name]) => `<a href="#" role="listitem" data-filter="${escapeHtml(key)}">#${escapeHtml(name)}</a>`).join('') || '<p class="sidebar-text">Aún no hay etiquetas.</p>';
     tagLinks = Array.from(tagCloud.querySelectorAll('a'));
     bindFilterLinks(tagLinks);
   }
@@ -226,7 +233,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     posts.forEach(item => { articlesById[item.id] = item; });
     feed.innerHTML = '';
     posts.forEach(item => feed.appendChild(renderArticle(item)));
-    renderUnifiedFilters();
+    renderUnifiedFilters(posts);
   } catch (err) { console.error(err); if (feed) feed.innerHTML = '<p class="card-excerpt">No se pudieron cargar las noticias.</p>'; }
   bindCardEvents();
   const filterPanel = document.getElementById('filterPanel');
@@ -235,6 +242,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   syncFilterPanel();
   compactMq.addEventListener('change', syncFilterPanel);
   window.addEventListener('resize', () => { if (compactMq.matches) filterPanel?.removeAttribute('open'); });
+  function applyTheme(theme) {
+    const next = ['dark','blue','light'].includes(theme) ? theme : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('pn-theme', next); } catch (err) {}
+    document.querySelectorAll('[data-theme-set]').forEach(btn => btn.classList.toggle('is-active', btn.dataset.themeSet === next));
+  }
+  applyTheme(document.documentElement.getAttribute('data-theme') || 'dark');
+  document.querySelectorAll('[data-theme-set]').forEach(btn => btn.addEventListener('click', () => applyTheme(btn.dataset.themeSet)));
   const mailForm = document.getElementById('newsletter-form');
   const captchaWrap = document.getElementById('captcha-wrap');
   const captchaErr = document.getElementById('captcha-error');
