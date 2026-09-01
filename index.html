@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacidad.news — Noticias de privacidad</title>
   <meta name="description" content="Medio independiente de noticias sobre privacidad, soberanía digital y seguridad." />
-  <meta name="theme-color" content="#000000" />
-  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#0c0c0e" />
+  <meta name="color-scheme" content="dark light" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Privacidad.news" />
   <meta property="og:title" content="Privacidad.news — Noticias de privacidad" />
@@ -20,8 +20,19 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://i.ytimg.com" />
   <link rel="preconnect" href="https://www.youtube-nocookie.com" />
-  <link rel="stylesheet" href="styles.css?v=20260902p7" />
-  <link rel="stylesheet" href="extras.css?v=20260902p7" />
+  <link rel="stylesheet" href="styles.css?v=20260902p8" />
+  <link rel="stylesheet" href="extras.css?v=20260902p8" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('pn-theme') || 'dark';
+        if (['dark','blue','light'].indexOf(t) === -1) t = 'dark';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
   <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 </head>
 <body>
@@ -30,6 +41,11 @@
       <a href="./" class="logo"><span class="logo-main">Privacidad</span><span class="logo-sep">/</span><span class="logo-sub">news</span></a>
       <nav class="main-nav"><a href="./">Inicio</a><a href="#lista-correo">Lista</a><a href="#donaciones">Donaciones</a><a href="https://boringprivacy.io" target="_blank" rel="noopener">Academia</a></nav>
       <div class="header-actions">
+        <div class="theme-switch" role="group" aria-label="Apariencia">
+          <button type="button" data-theme-set="dark" title="Negro">Oscuro</button>
+          <button type="button" data-theme-set="blue" title="Azul oscuro">Azul</button>
+          <button type="button" data-theme-set="light" title="Claro">Claro</button>
+        </div>
         <form class="search-form" role="search" onsubmit="return false;">
           <input type="search" id="searchInput" placeholder="Buscar" autocomplete="off" />
           <button type="submit" aria-label="Buscar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg></button>
@@ -38,10 +54,10 @@
     </div>
   </header>
   <main class="container main-layout">
-    <aside class="sidebar sidebar-left" aria-label="Filtros">
+    <aside class="sidebar sidebar-left" aria-label="Etiquetas">
       <div class="sidebar-block filter-block">
         <details class="filter-drop" id="filterPanel">
-          <summary>Filtros</summary>
+          <summary>Etiquetas</summary>
           <div class="tag-cloud" id="filterList" role="list"></div>
         </details>
       </div>
@@ -68,7 +84,6 @@
         <a class="ally-card proton-ally" href="https://protonvpn.com" target="_blank" rel="noopener" aria-label="Proton VPN">
           <span class="proton-mark" aria-hidden="true"></span>
           <span class="proton-name">Proton <em>VPN</em></span>
-          <span class="ally-label">Visitar protonvpn.com</span>
         </a>
       </div>
     </aside>
@@ -81,7 +96,7 @@
         <form id="newsletter-form" class="mail-form" method="post" target="_blank" action="https://newsletter.boringprivacy.io/subscription/form">
           <input class="mail-input" type="email" name="email" required placeholder="alias@proton.me" autocomplete="email" />
           <button type="submit" class="side-btn mail-submit">Apuntarme</button>
-          <div id="captcha-wrap" class="captcha-wrap"><div class="h-captcha" data-sitekey="7beaf856-25f0-43a4-b09a-8c26bfaed3fe" data-theme="dark" data-callback="onMailCaptcha"></div></div>
+          <div id="captcha-wrap" class="captcha-wrap" hidden><div class="h-captcha" data-sitekey="7beaf856-25f0-43a4-b09a-8c26bfaed3fe" data-theme="dark" data-callback="onMailCaptcha"></div></div>
           <p id="captcha-error" class="mail-hint" hidden>Completa el captcha para continuar.</p>
           <input type="hidden" name="nonce" />
           <input type="hidden" name="l" value="9a838c12-bfab-4de3-a771-6bbd876ade77" />
@@ -134,6 +149,6 @@
     <a href="#" data-share-action="x" target="_blank" rel="noopener">Compartir en X</a>
     <a href="#" data-share-action="telegram" target="_blank" rel="noopener">Compartir en Telegram</a>
   </div>
-  <script src="script.js?v=20260902p7"></script>
+  <script src="script.js?v=20260902p8"></script>
 </body>
 </html>
