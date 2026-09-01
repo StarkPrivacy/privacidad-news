@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-01T20:47:00Z",
+  "updated": "2026-09-01T20:48:19Z",
   "source": "https://t.me/s/starkprivacy",
   "articles": [
     {
@@ -11,7 +11,10 @@
       "excerpt": "GrapheneOS en Pixel 11: la pregunta es si compensa el salto o conviene esperar.",
       "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=500&fit=crop&q=80",
       "source_url": "https://t.me/StarkPrivacy/1668",
-      "body": ["El Pixel 11 empeora algún aspecto respecto a modelos anteriores.", "La pregunta es clara: GrapheneOS en Pixel 11, ¿sí o no?"],
+      "body": [
+        "El Pixel 11 empeora algún aspecto respecto a modelos anteriores.",
+        "La pregunta es clara: GrapheneOS en Pixel 11, ¿sí o no?"
+      ],
       "locked": false
     },
     {
@@ -21,9 +24,12 @@
       "category": "Servicios",
       "tags": "proton servicios",
       "excerpt": "Segunda caída en poco tiempo: Proton opera a capacidad reducida por fallos de hardware.",
-      "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=500&fit=crop&q=80",
+      "image": "https://cdn4.telesco.pe/file/fna6OST4M2o81KCETuxUeuzD_gRzy3qOtGQW1yW4bcqW-6SGDMspYPS3aEAqfgKACreNtdPBgRrcBr_UhlBEvFtsSrd7ukHKaXtriJXwJ8thRJIsFMry-CDOT0Pbfx0HTSO4J5N1vfoXlQiCFOJIlhJI2swV8S__y5QQInMfvUOM-STb9Uy97tXbskoxBZ7QZhPq-1pahoH5OSIe0u8hbypkNLKRy-cDQ46IfGdIHW3NBPOAv_kA61_O-1fPodPQQAUHEq5qDe2A7B7mGjmMdMwz5JAOUbSBxMPwb1DclenPXqM76hYUPGAFoODPt7_sQYWMtMKYWh8RXhAhjRWh8g.jpg",
       "source_url": "https://t.me/StarkPrivacy/1667",
-      "body": ["Proton ha vuelto a registrar una caída. Según su estado, trabajan en fallos de hardware residuales.", "Operan a capacidad reducida. No es una caída total, pero hay intentos de acceso fallidos."],
+      "body": [
+        "Proton ha vuelto a registrar una caída. Según su estado, trabajan en fallos de hardware residuales.",
+        "Operan a capacidad reducida. No es una caída total, pero hay intentos de acceso fallidos."
+      ],
       "locked": false
     },
     {
@@ -33,9 +39,27 @@
       "category": "Países",
       "tags": "grapheneos países vpn",
       "excerpt": "Rusia filtra IPs de hosting y GrapheneOS dejó de ser accesible en varios proveedores europeos.",
-      "image": "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?w=800&h=500&fit=crop&q=80",
+      "image": "https://cdn4.telesco.pe/file/uoCJpaj1usIEUh85CNnwr02xpjovUr31K_gE_gkLE0DMYvShMSquK4THu4ZzrYoOzBBheC0VKQgnZHxV34HIQdlrllikFc_g7BW7ajVf4QgO4wUIAHRUOWsIThiXZI7f8CTkgC7TuGPCNoTNWGGtUaGgt4S7kxJVYf36hfTpKaNpLUo4ild0phioiDPkUPdLOOiVBNzTrM0jp_bAs-dbgXhybRM0xWz4WQYKc3mW6Jjq2PKxlKBPH__N7QXSpMUcbZxYemyMihDPjuISyM9n-CPMBEJls01bmDt94UGHVdcUudbi7bhgd8IhRPYgOoIeYKBpVgh7hGbD1eljFcoR8Q.jpg",
       "source_url": "https://t.me/StarkPrivacy/1666",
-      "body": ["Rusia filtra el espacio IP de varios proveedores con una lista blanca de dominios.", "GrapheneOS no figura en esa lista y dejó de ser accesible en DataPacket y Cherry Servers."],
+      "body": [
+        "Rusia filtra el espacio IP de varios proveedores con una lista blanca de dominios.",
+        "GrapheneOS no figura en esa lista y dejó de ser accesible en DataPacket y Cherry Servers."
+      ],
+      "locked": false
+    },
+    {
+      "id": 1665,
+      "title": "Xbox podría abrazar más el formato físico mientras que Sony evidenciaría que le dan igual sus…",
+      "date": "2026-08-30T17:39:30+00:00",
+      "category": "Empresas",
+      "tags": "empresas ia ue",
+      "excerpt": "👾 Xbox podría abrazar más el formato físico mientras que Sony evidenciaría que le dan igual sus usuariosSegún se ha rumores recogidos en un podcast de Eurogamer España, algunos editores habrían comentado que Sony podría …",
+      "image": "https://cdn4.telesco.pe/file/vpqoTmvoAIr_Gn1K3CL9Gq1i7SJAJPgi7_as8u8qsV9dqzWInDGdgw4SSvFKq1r-44RpaJxbciNTiXQvEn1NOVkO160oYssvNiZH5BiPFkTiPMGfpb49Cs6jO5OeGhg-opP9BM5MlOPhLb-shKHshZi9phemTjJzzKhd_AgoLATk0cZLgLXYk44bt3PvD6sWbfmUpFw2vemCTJTPR3zceU3jzO4_cwoKR92gIeqZ_kZGJBFl2bo7_7RE3o6vTOsTsA6pnIcA91CwTbuLqJ8R_thbX0qL-T1dCuUlmawyFLx5VTExkdmCOEVsf8PtVohsoGx0I6QkBtE62SWa_Kptow.jpg",
+      "source_url": "https://t.me/StarkPrivacy/1665",
+      "body": [
+        "👾 Xbox podría abrazar más el formato físico mientras que Sony evidenciaría que le dan igual sus usuariosSegún se ha rumores recogidos en un podcast de Eurogamer España, algunos editores habrían comentado que Sony podría estar reconsiderando la fecha establecida sobre la digitalización absoluta de su plataforma.Al parecer en un inicio sería en 2028, pero podría retrasarse 1-2 años. El motivo sería lo que Microsoft estaría comunicando a las editoras respecto a Project Helix, su próxima generación de consolas y alguna amenaza.Microsoft, según esas mismas fuentes no verificadas, estaría indicando a los publishers que Helix será “100 % físico”, con la posibilidad de convertir copias físicas en licencias digitales, luego lo explico más en detalle.",
+        "Sony temería que esa postura deje un hueco competitivo: jugadores y algunos estudios descontentos con la desaparición de los discos podrían decantarse por Xbox.El artículo añade otro rumor: un estudio de videojuegos importante (no identificado; se descarta que sea Rockstar) habría comunicado a Sony que podría no lanzar uno de sus títulos más grandes en PlayStation si no se garantiza una edición física, y que en ese caso priorizaría las plataformas de Microsoft y Nintendo.Se dice que podría se CD Projekt Red, con su juego \"The Witcher 4\". Pues la compañía siempre ha tenido una clara postura sobre la posesión de los juegos, siendo conocida por vender juegos sin DRM, es decir, pudiendo ser dueño real de juegos incluso en formato digital.Se trata de rumores no confirmados. Microsoft no ha declarado de forma oficial que Project Helix vaya a incluir lector de discos; de hecho, su CEO Asha Sharma evitó responder a esa pregunta en Gamescom y enfatizó la necesidad de eficiencia y asequibilidad.Lo que sí ha anunciado Xbox es un programa de conversión de disco a digital (conocido internamente como Positron), que comenzará a probarse con Insiders a finales de agosto de 2026.De ser cierta la noticia, estaría evidenciando algo:A Sony no le importan sus jugadores pues toda la presión ejercida hubiese valido para nada, sino que le preocupa que a causa de no tener ciertos juegos en el catálogo, perdiese potenciales clientes.También que Xbox vería un potencial % de jugadores que se vería \"huérfanos\".Pero lo más importante, que la presión de la gente realmente se nota y tiene efecto."
+      ],
       "locked": false
     },
     {
@@ -47,7 +71,195 @@
       "excerpt": "En escritorio 1.94 se pueden crear alias desde el formulario para no entregar el correo real.",
       "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=500&fit=crop&q=80",
       "source_url": "https://t.me/StarkPrivacy/1664",
-      "body": ["Brave ha incorporado alias de email en la versión de escritorio 1.94.", "Genera direcciones únicas que reenvían al buzón principal."],
+      "body": [
+        "Brave ha incorporado alias de email en la versión de escritorio 1.94.",
+        "Genera direcciones únicas que reenvían al buzón principal."
+      ],
+      "locked": false
+    },
+    {
+      "id": 1663,
+      "title": "Apple revierte su decisión de modificar Hide my emailFinalmente Apple no modificará el dominio de las…",
+      "date": "2026-08-27T19:10:53+00:00",
+      "category": "Servicios",
+      "tags": "apple ia servicios ue",
+      "excerpt": "📱 Apple revierte su decisión de modificar Hide my emailFinalmente Apple no modificará el dominio de las nuevas direcciones generadas por Hide My Email, la función de iCloud+ que crea correos aleatorios para ocultar la di…",
+      "image": "https://cdn4.telesco.pe/file/oYx2xzVyK1PFYCmRlcE3Czhkqyvgc5mwg2Vss0DbiDl-gQNRhjlrpCIlZpRlYJsUig7TfBO8EU3SpOIgv7fY9JXuN5YdvFIGiQJ78Sx8Zk1-Lch18ceT2J91qAWYZnJwOfNySdq8-ttI2OCCIPAJvs7eCQpeoMhYZ3ImyF46Q9dbx8jzW49y_wkR-17aNYZQM_vb-TlBKRB_yUvcmxPTEFXVSUXZyCNW0YzGtXOv-vwqDagC3Rl7_LW1fY3I2ofPJJJKoXs-kPnsJxFB5caOuf4uhw902ZDsqLFs8D_I1mJ8z97rVaN-CA90pUijnO8YheuZAFf_l7IySwqMnYigjg.jpg",
+      "source_url": "https://t.me/StarkPrivacy/1663",
+      "body": [
+        "📱 Apple revierte su decisión de modificar Hide my emailFinalmente Apple no modificará el dominio de las nuevas direcciones generadas por Hide My Email, la función de iCloud+ que crea correos aleatorios para ocultar la dirección real del usuario.El plan consistía en pasar de @icloud.com a @private.icloud.com.Esa distinción permitiría a sitios web y empresas detectar y bloquear si quisieras las direcciones generadas mediante \"Hide my email\", lo cual debilitaría mucho su utilidad y propósito.La compañía anunció la reversión el 24 de agosto de 2026 en una nota para desarrolladores.Según se ha informado, el propio equipo de Hide My Email se opuso con firmeza al cambio y también hubo críticas por partes de los usuarios.No se ha dado una explicación pública detallada sobre por qué se contempló inicialmente esa modificación.Sí se mantendrá un ajuste distinto: las nuevas direcciones asociadas a Iniciar sesión con Apple migrarán a @private.icloud.com más adelante en 2026 (El servicio ya sabría que el usuario se autentica mediante Apple, así que no es algo especialmente relevante).Hide My Email, en cambio, seguirá utilizando @icloud.com."
+      ],
+      "locked": false
+    },
+    {
+      "id": 1661,
+      "title": "La mayoría de servicios de Proton se encuentran caídos en estos momentos para la mayoría de sus usuarios,…",
+      "date": "2026-08-26T22:34:34+00:00",
+      "category": "Servicios",
+      "tags": "proton servicios ue",
+      "excerpt": "⚠️ La mayoría de servicios de Proton se encuentran caídos en estos momentos para la mayoría de sus usuarios, desde hace más de 20 minutos",
+      "image": "https://cdn4.telesco.pe/file/l8Uru7CxAUXzcMKUu2Y0RRymFL9VwusumpVSDEuHRZQXSYBfl97lLAv7CeMU7Q-bzTS95tOAuASL9afADejNmV3yARwmCWGctiqktzDcTJFTHzz4iqROQXsiKu_nEwR_AjPe7_ZgxdkgULQgdKFYH_zOAduILW1x2G9qaiY0WF0ZKBSvPVVoFcbpwY0gKi-xcO7rKfBEzoUJ_um0PkQnGj0Q7PaW9-qDvtKPJvOTXlKJWSTR4ZgMtxyH_aC6zUeHw7gFHsFOEvqlXFtsZU_Hv1nlPUu5K5ujYXMlktMnkYVEpbSGcbAE8p0Gjg42DMHh0j7_LkikXgNS1XB8af-4XA.jpg",
+      "source_url": "https://t.me/StarkPrivacy/1661",
+      "body": [
+        "⚠️ La mayoría de servicios de Proton se encuentran caídos en estos momentos para la mayoría de sus usuarios, desde hace más de 20 minutos"
+      ],
+      "locked": false
+    },
+    {
+      "id": 1660,
+      "title": "Cuando una máquina virtual ya no es suficiente…Trail of Bits (una empresa estadounidense de…",
+      "date": "2026-08-26T18:57:32+00:00",
+      "category": "Países",
+      "tags": "ia países ue",
+      "excerpt": "⌨️ Cuando una máquina virtual ya no es suficiente…Trail of Bits (una empresa estadounidense de ciberseguridad) evaluó las capacidades ofensivas de GPT 5.6-Cyber y le encargó escapar de una máquina virtual QEMU/KVM utiliz…",
+      "image": "https://cdn4.telesco.pe/file/h7djTOPC44yRsvz5pUgMlwsPqf46PisHWL_7_w7jD4ivB58YR_bPMmMTgrbX4p22bTzgMPUTEUKEwqr9XQzZ0zDzBX7aWTUYPVl_wufywflxd9QKZQFvxpBA0kek6SvNCYqLSP_J9k5rf1qUYbjASZk0DyTHWnIgr9vyW-73FSOHFx1cmj39P8uMlH2SjPUHwNW53Yc3X-T-cD9RoaHGo2wIfDdp_6JSLry65LBAndRThXP0BJXz_fb3HaDZ7tCWhEya8czbWePfmuXilwC9jDBn-V6XqCKZNa3fQXy4T5n1vbt50e47_VMsxFFdIKdLJaxvKuS8WsNF3gtmns7oWw.jpg",
+      "source_url": "https://t.me/StarkPrivacy/1660",
+      "body": [
+        "⌨️ Cuando una máquina virtual ya no es suficiente…Trail of Bits (una empresa estadounidense de ciberseguridad) evaluó las capacidades ofensivas de GPT 5.6-Cyber y le encargó escapar de una máquina virtual QEMU/KVM utilizada como sandbox en un host Debian 12.El agente logró escapar en tres ocasiones.En la primera aprovechó una vulnerabilidad reciente del kernel del host.En la segunda combinó fallos presentes en la biblioteca libslirp de la distribución.En la tercera descubrió por sí mismo tres vulnerabilidades de día cero, las encadenó con otra debilidad ya corregida en upstream pero no distribuida, y construyó un exploit funcional y fiable.El modelo operó de forma casi completamente autónoma durante varias horas, investigando, descartando caminos fallidos y generando su propio código de explotación.La conclusión del informe es: una máquina virtual convencional ya no resulta suficiente para contener agentes de inteligencia artificial con capacidades avanzadas, por lo que deben tratarse como amenazas persistentes y se recomienda el uso de entornos de virtualización con menor superficie de ataque."
+      ],
+      "locked": false
+    },
+    {
+      "id": 1658,
+      "title": "Internet móvil sin KYCHice uso de este servicio tras encontrarme con problemas de conexión a causa de mi…",
+      "date": "2026-08-25T18:59:59+00:00",
+      "category": "Servicios",
+      "tags": "ia servicios ue",
+      "excerpt": "🌐 Internet móvil sin KYCHice uso de este servicio tras encontrarme con problemas de conexión a causa de mi compañía, de hecho el último vídeo pude subirlo gracias a ellos.Solo hice una cosa: Seleccionar lo que quería y p…",
+      "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=500&fit=crop&q=80",
+      "source_url": "https://t.me/StarkPrivacy/1658",
+      "body": [
+        "🌐 Internet móvil sin KYCHice uso de este servicio tras encontrarme con problemas de conexión a causa de mi compañía, de hecho el último vídeo pude subirlo gracias a ellos.Solo hice una cosa: Seleccionar lo que quería y pagarlo, sin más información.Rápidamente pude tener internet y hacer lo que necesitaba.Espero que os guste 👇https://youtu.be/UM8-s9w4k_I"
+      ],
+      "locked": false
+    },
+    {
+      "id": 1657,
+      "title": "Aliexpress utiliza el audio del dispositivo para identificarteSe ha detectado que AliExpress emplea un…",
+      "date": "2026-08-25T17:16:27+00:00",
+      "category": "Herramientas",
+      "tags": "herramientas ia ue",
+      "excerpt": "🛒Aliexpress utiliza el audio del dispositivo para identificarteSe ha detectado que AliExpress emplea un método silencioso para identificar de forma única los dispositivos de quienes visitan su página. Genera internamente…",
+      "image": "https://cdn4.telesco.pe/file/RLpDtOHgEAsQe5YA8puVxZWTMoFYgSINLmw7jHy6gva9HhKvVf8c2NWK7xBagohRXf70QcYDZ1jeH7wC-_b1jTUKWKnuDCKLp_rszPlioXnqya1lPM-Ouca6mo08a5zkcwYpqvgIXyVBSX8etApw8gILUK8a-lBfkKQ5LjLWIxISpfRD-xfxvQC-gx1LbSpTTdy-AlLgIuEZvpqLWwXSJxNXDud0OzpZFMKFgQJpaXUG8FWcV1Hs3XF7TGl_x2HqRcrkGQMV3takUPTlbLMmAj_GuFEYHxpopwRXxDQpZDPtcTd2v41IzSsVAW6Do-_8MIdkR8AvSqg4HDDRC4OuWw.jpg",
+      "source_url": "https://t.me/StarkPrivacy/1657",
+      "body": [
+        "🛒Aliexpress utiliza el audio del dispositivo para identificarteSe ha detectado que AliExpress emplea un método silencioso para identificar de forma única los dispositivos de quienes visitan su página. Genera internamente una señal de sonido que el usuario no escucha, la procesa a través del sistema de audio del navegador y analiza las mínimas diferencias en cómo cada equipo la maneja.Esas variaciones, combinadas con otros datos del hardware y del software (capacidad gráfica, memoria, resolución de pantalla, comportamiento del ratón o del tacto, entre otros), permiten crear una huella digital bastante precisa sin necesidad de cookies.El hallazgo surgió de forma casual: un desarrollador notó que sus auriculares Bluetooth con conexión multipunto dejaban de cambiar correctamente entre el ordenador y el móvil cada vez que tenía abierta la pestaña de la tienda.",
+        "Al cerrarla, el problema desaparecía de inmediato. Investigando descubrió que scripts de Alibaba mantenían activo el canal de audio en segundo plano, aunque el volumen estuviese desactivado.Esta técnica puede servir tanto para combatir fraudes, bots o abusos de promociones como para seguir a los usuarios de manera más persistente (Que me da la sensación que ha sido la intención).Navegadores  como Brave o Firefox, además de ciertas extensiones de bloqueo limitan o evitan por completo este tipo de seguimiento."
+      ],
+      "locked": false
+    },
+    {
+      "id": 1656,
+      "title": "Mullvad mejora la función de multi-hopMullvad ha mejorado su sistema de conexión a través de varios…",
+      "date": "2026-08-25T16:23:30+00:00",
+      "category": "Servicios",
+      "tags": "ia servicios ue",
+      "excerpt": "🌐 Mullvad mejora la función de multi-hopMullvad ha mejorado su sistema de conexión a través de varios servidores (Multi-hop), añadiendo opciones más adaptables y sencillas de gestionar.Ahora se puede elegir entre tres co…",
+      "image": "https://cdn4.telesco.pe/file/tlTdTPToApPo04DWgYzmdVB0IfQV3MjBncZ2Y2bIJVxd1pjDhzUw-ILpw01DTgSpK3-hbljIK-Mc5QrRN8vJl9w2uPmdKjFkIY-J9wEZOLI2um76QZJlBGazkuhR-r8FexiMVyJHG1Lcn0s7j__-SdKNkuQtZa-tj6WcLaUEuUVJLblWgzqCaPqPW5xV3oxY6V1PCIuLizRf6bsKYfbhi_8HmEBke6sfXIUzvAIXrn0SY4kk8wo0hQB2tIJeYJOvXs-U28ug2cqdxI-Qy39ZWNeNMcHlAzBvMyxfpFASYtH1b4AJbOe614YzrVAgBi7ecCGWCze3K80wG7eIKHzt7w.jpg",
+      "source_url": "https://t.me/StarkPrivacy/1656",
+      "body": [
+        "🌐 Mullvad mejora la función de multi-hopMullvad ha mejorado su sistema de conexión a través de varios servidores (Multi-hop), añadiendo opciones más adaptables y sencillas de gestionar.Ahora se puede elegir entre tres comportamientos:1. Que se active solo cuando haga falta, por ejemplo si la ubicación elegida no admite alguna función de privacidad avanzada. En ese caso la aplicación busca automáticamente un servidor compatible cercano y redirige el tráfico de forma transparente.2. Que esté siempre en marcha, pasando por dos servidores distintos.",
+        "Esto refuerza el anonimato, aunque puede influir un poco en la velocidad. También existe la posibilidad de dejar que la aplicación seleccione sola el servidor de entrada más adecuado. 3. Que permanezca desactivado por completo, usando un único servidor. Así se gana rendimiento, pero se reduce el nivel de privacidad y se limitan las ubicaciones disponibles si se usan funciones especiales.Al actualizar la aplicación, las configuraciones anteriores se adaptan de forma automática a uno de estos nuevos comportamientos y se avisa al usuario la primera vez que se abre."
+      ],
+      "locked": false
+    },
+    {
+      "id": 1655,
+      "title": "Más detalles sobre los nuevos teléfonos de GrapheneOSSegún han indicado, al principio se centrarán en…",
+      "date": "2026-08-23T18:31:49+00:00",
+      "category": "Herramientas",
+      "tags": "grapheneos herramientas ia pixel ue",
+      "excerpt": "🤖 Más detalles sobre los nuevos teléfonos de GrapheneOSSegún han indicado, al principio se centrarán en modelos de gama alta con procesadores Snapdragon de última generación, porque ofrecen  más aislamiento de componente…",
+      "image": "https://cdn4.telesco.pe/file/prFp7bLSSbGuzd2FSw_V8qiqJrmAFI8S7DDqu5WeCBMwDeSqtA4nKsxJwexcmyqgBTI425HDwcTgr_gCmUBx4BjF3ab9bo4uH984O4CiLFBkjHBsw9FX68mrVb-gZdbc5EAixzBbMH4jbOk1vDG7fU25xM5XviSwluhwg-0gzz0ydeyQ5SHq6GFlrfBz1Q2PbZetYg3gIxptyFngfBOV2fmAMrHUwXBc60mKQc4gS8IoDN7_6C37Ere0u2LNO-AtlVlV3npNBda_yJmK-O139P96gfnSKbjjMMdJ1OtK9Z-IjQUm2aDXn4I5BbBh271TxAmcxbzwwmg9yzaOxcOk5A.jpg",
+      "source_url": "https://t.me/StarkPrivacy/1655",
+      "body": [
+        "🤖 Más detalles sobre los nuevos teléfonos de GrapheneOSSegún han indicado, al principio se centrarán en modelos de gama alta con procesadores Snapdragon de última generación, porque ofrecen  más aislamiento de componentes y las características de seguridad que necesitan (como el etiquetado de memoria y un elemento seguro decente).Los dispositivos de 2026 de Motorola se quedan un poco cortos.También tienen previsto dar soporte a las versiones plegables (tanto las de tipo tableta como las de tipo flip). Motorola se encargará de gran parte del trabajo de adaptación del sistema, lo que les facilitará las cosas respecto a lo que ocurre ahora con los Pixel, que se han vuelto más complicados de mantener.Los móviles cumplirán sus requisitos de actualizaciones largas (al menos siete años) y de protección avanzada. Los modelos más baratos tendrán que esperar más tiempo hasta que el hardware y el soporte de actualizaciones estén a la altura."
+      ],
+      "locked": false
+    },
+    {
+      "id": 1654,
+      "title": "ChatGPT ahora se conecta a la aplicación de mensaje de AppleOpenAI a presentado recientemente una…",
+      "date": "2026-08-21T16:35:56+00:00",
+      "category": "Empresas",
+      "tags": "apple chatgpt empresas ia ue",
+      "excerpt": "💬 ChatGPT ahora se conecta a la aplicación de mensaje de AppleOpenAI a presentado recientemente una integración nueva que conecta ChatGPT con la app de Mensajes de Apple en ordenadores Mac.A partir de ahora, desde las ve…",
+      "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=500&fit=crop&q=80",
+      "source_url": "https://t.me/StarkPrivacy/1654",
+      "body": [
+        "💬 ChatGPT ahora se conecta a la aplicación de mensaje de AppleOpenAI a presentado recientemente una integración nueva que conecta ChatGPT con la app de Mensajes de Apple en ordenadores Mac.A partir de ahora, desde las versiones de ChatGPT orientadas a trabajo y desde Codex en escritorio, el asistente puede revisar tus conversaciones, buscar información dentro de ellas, proponerte respuestas, ayudarte a ponerte al día con lo pendiente e incluso enviar mensajes (siempre con tu confirmación previa).También permite cruzar datos con el calendario, detectar posibles cumpleaños o identificar mensajes sospechosos."
+      ],
+      "locked": false
+    },
+    {
+      "id": 1653,
+      "title": "Apple no podrá desincentivar el seguimiento en las aplicaciones que instalesApple modificará en iPhones y…",
+      "date": "2026-08-20T15:43:30+00:00",
+      "category": "Productos",
+      "tags": "apple ia productos ue",
+      "excerpt": "📱 Apple no podrá desincentivar el seguimiento en las aplicaciones que instalesApple modificará en iPhones y iPads la forma en que se pide permiso a los usuarios para que las aplicaciones de terceros utilicen sus datos co…",
+      "image": "https://cdn4.telesco.pe/file/s4Y9rfY_vk6yIoxS72YxDhrSYXWb6Tu0Hn3UZ7u85ayii2FeRFRiEzgudu1m_oK8j9ah1N5ToXnv-RzwaGvqnXnpCyZdpEbcn3g3W2KWrZCPd5cRZ8k0PIVxnNVimcAQHgG_yqlomNc9JPxmS0LZJ9WVO5CxwulhiPihDfCA4pM6fIDcfch2DtqJ4MnklshOLmyw39NxbNvANLWx3VfSD16oRpUryT_BHjRG46MvSRsVo6kSuRGpCfIgKZcSU-TtZeMdS3s-yOmE7svyjhw5zp8OJnV1YGYz2k6je08YJ-WnmtoHlzCd33EKkyHEuAhn4zzfWxBW7GjZrAIg1T2kIg.jpg",
+      "source_url": "https://t.me/StarkPrivacy/1653",
+      "body": [
+        "📱 Apple no podrá desincentivar el seguimiento en las aplicaciones que instalesApple modificará en iPhones y iPads la forma en que se pide permiso a los usuarios para que las aplicaciones de terceros utilicen sus datos con fines publicitarios personalizados.La autoridad alemana de competencia cerró una investigación de varios años al detectar que el sistema de consentimiento de la compañía favorecía a sus propias apps frente a las de otros desarrolladores, lo que podía vulnerar las normas de competencia.A partir de ahora, las ventanas de solicitud de permiso para apps externas deberán ser neutrales tanto en el lenguaje como en el diseño, eliminando elementos que desincentiven la aceptación. Además, los desarrolladores tendrán más margen para combinar estas peticiones con otras exigencias de privacidad.La empresa dispone de cuatro meses para aplicar los cambios una vez notificada la decisión, y el compromiso se mantendrá durante siete años bajo supervisión de un monitor independiente. Las modificaciones se extenderán a casi todos los países de la Unión Europea."
+      ],
+      "locked": false
+    },
+    {
+      "id": 1652,
+      "title": "La UE exige requisitos mínimos que deben cumplir las VPNsLa Unión Europea acaba de fijar un nivel mínimo…",
+      "date": "2026-08-20T12:08:23+00:00",
+      "category": "Cifrado",
+      "tags": "cifrado google ia ue vpn",
+      "excerpt": "🌐 La UE exige requisitos mínimos que deben cumplir las VPNsLa Unión Europea acaba de fijar un nivel mínimo de protección que deben cumplir todos los servicios de VPN que se comercialicen en su territorio.Un organismo téc…",
+      "image": "https://cdn4.telesco.pe/file/TzJlL0B1f7bBz8V72N4AX3rsE5R1T_NYl_Ql3ki7IB9yZMI_Cwp90tPP39mAQEnuvyRAGSjIHPIoM9sJ1CqB_X-ycfQBKDmdhrUfXRffHXNEOB5vksoicRz9WAQteXCTUIOBHOQYDjGo9YY2NNAxk0zFHtkCN1PwjmaPUdyzY-jIGmaXTRiBSGQm9gZUUgJgB6NYM94zcjNmzFfVSGtZH0B-_A1KYRNQz1qJy-g2pTWyewKdBZAGu9mSjR_hwV0RSJGzg7AyhRDtWvfMnalEaylJJSNIUlharnudbc-gLNnq_9inSs5Y2XsxxJZE0zXuwDxyAeWwAdLqdCN8rembWw.jpg",
+      "source_url": "https://t.me/StarkPrivacy/1652",
+      "body": [
+        "🌐 La UE exige requisitos mínimos que deben cumplir las VPNsLa Unión Europea acaba de fijar un nivel mínimo de protección que deben cumplir todos los servicios de VPN que se comercialicen en su territorio.Un organismo técnico europeo (El Instituto Europeo de Normas de Telecomunicaciones (ETSI)) ha definido unos requisitos claros y comprobables sobre cómo deben cifrarse los datos, autenticarse los usuarios, gestionarse las claves y reaccionarse ante fallos de seguridad.Estas exigencias se enmarcan dentro de una norma más amplia que obligará a los fabricantes de productos digitales a garantizar un umbral básico de seguridad a partir de finales de 2027.Varias empresas del sector, han colaborado en la redacción de estos criterios para que resulten realistas y aplicables.El resultado práctico es que cualquier aplicación de este tipo que se ofrezca a los europeos tendrá que demostrar que protege la confidencialidad de la información y responde con rapidez a posibles amenazas (Veremos como acaba aplicándose todo esto...)Las soluciones más dudosas o gratuitas que no alcancen ese nivel se verán obligadas a mejorar o a abandonar el mercado.Empresas que han participado en ello:NordSecurityPalo Alto NetworksCiscoGoogleAirbusZTE"
+      ],
+      "locked": false
+    },
+    {
+      "id": 1651,
+      "title": "Estaré de ponente en la Watch out, BitcoinUn evento presencial para aprender sobre Bitcoin y el mundo…",
+      "date": "2026-08-19T19:26:09+00:00",
+      "category": "Países",
+      "tags": "ia países ue",
+      "excerpt": "💸 Estaré de ponente en la Watch out, BitcoinUn evento presencial para aprender sobre Bitcoin y el mundo actual, conocerse y cooperar. Este año es el 2,3 y 4 de Octubre.Desde el evento me indican que aquel que quiera veni…",
+      "image": "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?w=800&h=500&fit=crop&q=80",
+      "source_url": "https://t.me/StarkPrivacy/1651",
+      "body": [
+        "💸 Estaré de ponente en la Watch out, BitcoinUn evento presencial para aprender sobre Bitcoin y el mundo actual, conocerse y cooperar. Este año es el 2,3 y 4 de Octubre.Desde el evento me indican que aquel que quiera venir tiene un 10% de descuento con el código STARKPRIVACY en las entradas \"normal\" y \"running\".Podéis ver más sobre el envento en:https://wobitcoin.org/Será un gusto veros por allí 👀"
+      ],
+      "locked": false
+    },
+    {
+      "id": 1650,
+      "title": "Utilizando las ondas Wi-Fi para vigilar físicamenteComcast, una enorme empresa de telecomunicaciones, ha…",
+      "date": "2026-08-19T10:44:27+00:00",
+      "category": "Productos",
+      "tags": "ia productos ue",
+      "excerpt": "📶 Utilizando las ondas Wi-Fi para vigilar físicamenteComcast, una enorme empresa de telecomunicaciones, ha lanzado una \"función de seguridad\" para el hogar que convierte el router Wi-Fi en un detector de movimiento.La id…",
+      "image": "https://cdn4.telesco.pe/file/AOn1YKIXf1clUtqrH3fFPsaKOxG_boym6tQ1goi20A7Cw1FbYgS5KuEiviMGAfjFeHljPcbtMdDHLD2HynNLhWdfOaLnEeM7D_vt3jhX5_wHQaLkcUBdDI0no-cXB7GvygvmeM_US_UFFWZOkw2EF1LWXzUXrVsod_ImHwpIkYiCoaBm3N_4BXUgwXyYAId0RcAYaWAWuuytrbwx0qLJ_h2BKFLr6BbDxd1UDCZjZFSy4hhYZJalMFdjrJ1xdBexC3evMJ6ocVLDmMeLf3s3vo2Lg6lYMX8VBiH5uKiilxlu53sxwLu4s43aq9j9b4OgcrBxN_PqwFChdsJqGytp9w.jpg",
+      "source_url": "https://t.me/StarkPrivacy/1650",
+      "body": [
+        "📶 Utilizando las ondas Wi-Fi para vigilar físicamenteComcast, una enorme empresa de telecomunicaciones, ha lanzado una \"función de seguridad\" para el hogar que convierte el router Wi-Fi en un detector de movimiento.La idea consiste en aprovechar las alteraciones que provoca el cuerpo humano en las ondas de radio entre el router y otros aparatos conectados. Así se puede saber si hay alguien moviéndose por la casa sin instalar cámaras ni sensores extra.Está disponible para los clientes de Xfinity Internet que tengan un gateway compatible.",
+        "El sistema envía avisos personalizados y permite elegir distintos modos de vigilancia según si la persona está en casa, fuera o quiere un control más estricto.Funciona mejor en zonas con buena cobertura Wi-Fi. No identifica a quién se mueve ni su posición exacta, solo detecta actividad. También se puede combinar con inteligencia artificial y otros dispositivos (cámaras, sensores de puertas o almacenamiento en la nube) para reforzar la protección.Comcast asegura que no se recopilan datos de identificación de las personas¿Qué te parece?"
+      ],
+      "locked": false
+    },
+    {
+      "id": 1649,
+      "title": "Cuanta información entregas a la IA?Proton ha lanzado una herramienta gratuita que permite analizar los…",
+      "date": "2026-08-17T17:37:31+00:00",
+      "category": "Herramientas",
+      "tags": "herramientas ia proton ue",
+      "excerpt": "🤖 ¿Cuanta información entregas a la IA?Proton ha lanzado una herramienta gratuita que permite analizar los historiales de conversaciones exportados de asistentes de inteligencia artificial populares.Al subir esos archivo…",
+      "image": "https://cdn4.telesco.pe/file/hv0D9bSotkQMoUZg-ndwL37eWSEXsKFIIrqiQYL4pGfM1oYis5bs7DedsxP--FF7r8kiIgvFDC1caGX0LdUycIjnzWOU2ZL9_-rqATUY9YGYWMCNEL0kxFOiyV-74lJS5aTFpftS_3MlWcMEEuBxSQP61YewdL1whEvL77J60It-zZcJGIIfdQ_qDynUTkejRy7Xp3w_NDciT5H7LsUoQpsypoMOZgjfAi9ncTKwQzlzEub0Oinb401wVNW4aPbtC2P0QaHFYM3LtWsHLOhkIJRGVpWDeltcOFDG9WBd0o7TDSHmdmCQR4QwE2MaQEXGvkHu1Y3KZCtnCZa1tCzNqg.jpg",
+      "source_url": "https://t.me/StarkPrivacy/1649",
+      "body": [
+        "🤖 ¿Cuanta información entregas a la IA?Proton ha lanzado una herramienta gratuita que permite analizar los historiales de conversaciones exportados de asistentes de inteligencia artificial populares.Al subir esos archivos, genera un informe personal que revela cuánta información privada se ha ido acumulando a lo largo del tiempo: detalles sobre trabajo, vida familiar, hábitos, preocupaciones de salud, planes o incluso rasgos de identidad que se deducen de las preguntas realizadas.El sistema también calcula un valor estimado de esos datos para empresas publicitarias y ofrece una puntuación de exposición, junto con la posibilidad de crear un resumen compartible que no incluye información sensible.La herramienta borra los archivos una vez procesados y no los almacena. Proton busca concienciar sobre los riesgos de privacidad de los chatbots habituales y promover su propio asistente, que no guarda registros ni utiliza las conversaciones para entrenar modelos.¿Eres consciente de toda la información que entregas?"
+      ],
       "locked": false
     }
   ]
