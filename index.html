@@ -7,11 +7,19 @@
   <meta name="description" content="Medio independiente de noticias sobre privacidad, soberanía digital y seguridad." />
   <meta name="theme-color" content="#000000" />
   <meta name="color-scheme" content="dark" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Privacidad.news" />
+  <meta property="og:title" content="Privacidad.news — Noticias de privacidad" />
+  <meta property="og:description" content="Medio independiente de noticias sobre privacidad, soberanía digital y seguridad." />
+  <meta property="og:url" content="https://starkprivacy.github.io/privacidad-news/" />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Privacidad.news — Noticias de privacidad" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260901num" />
-  <link rel="stylesheet" href="extras.css?v=20260901num" />
+  <link rel="stylesheet" href="styles.css?v=20260901num2" />
+  <link rel="stylesheet" href="extras.css?v=20260901num2" />
 </head>
 <body>
   <div class="version-bar">
@@ -57,7 +65,7 @@
         <div class="feed-meta"><span id="feedCount">…</span><span id="activeFilter" class="active-filter" hidden><span></span><button type="button" id="clearFilter">×</button></span></div>
       </div>
       <section class="news-feed" id="newsFeed"></section>
-      <div id="emptyState" class="empty-state" hidden><p>No hay noticias que coincidan con tu búsqueda o filtro.</p><button type="button" id="clearFilter">Ver todas las noticias</button></div>
+      <div id="emptyState" class="empty-state" hidden><p>No hay noticias que coincidan con tu búsqueda o filtro.</p><button type="button" id="clearAll" data-clear-filters>Ver todas las noticias</button></div>
     </div>
     <aside class="sidebar sidebar-right" aria-label="Enlaces de interés">
       <a class="promo-box" href="https://privtr.ee/@stark" target="_blank" rel="noopener">
@@ -87,16 +95,17 @@
       </a>
       <div class="sidebar-block">
         <h3 class="sidebar-title">Sobre este sitio</h3>
-        <p class="sidebar-text">Medio independiente centrado en privacidad, soberanía digital y seguridad.</p>
+        <p class="sidebar-text">Medio independiente centrado en privacidad, soberanía digital y seguridad. Puedes apoyarlo con donaciones.</p>
       </div>
     </aside>
   </main>
   <section class="numeros-section" id="numeros">
     <div class="container">
       <h2>Números</h2>
-      <p class="numeros-lead">Archivo de todas las publicaciones del canal. Las que tienen foto o vídeo se abren aquí; el resto lleva al original.</p>
+      <p class="numeros-lead">Archivo de todas las publicaciones. Las que tienen foto o vídeo se leen aquí; el resto también se abre si hay texto guardado.</p>
       <p class="numeros-lead" id="numerosMeta"></p>
       <ol class="numeros-list" id="numerosList"></ol>
+      <div class="numeros-pager" id="numerosPager" hidden></div>
     </div>
   </section>
   <section class="donations-section" id="donaciones">
@@ -127,6 +136,6 @@
     <a href="#" data-share-action="x" target="_blank" rel="noopener">Compartir en X</a>
     <a href="#" data-share-action="telegram" target="_blank" rel="noopener">Compartir en Telegram</a>
   </div>
-  <script src="script.js?v=20260901num"></script>
+  <script src="script.js?v=20260901num2"></script>
 </body>
 </html>
