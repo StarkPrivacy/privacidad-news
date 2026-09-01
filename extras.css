@@ -10,14 +10,14 @@
 .post-num{color:var(--text-muted)}
 
 .news-card.is-video{
-  grid-template-columns:1fr;
-  gap:.7rem;
-  padding:1.2rem 0 1.35rem;
+  grid-template-columns:168px minmax(0,1fr);
+  gap:.95rem;
+  padding:1.05rem 0;
 }
 .news-card.is-video .card-media{
   position:relative;
-  width:100%;
-  aspect-ratio:16/9;
+  width:168px;
+  height:94px;
   overflow:hidden;
   background:#000;
   border:1px solid var(--border);
@@ -46,8 +46,55 @@
   inset:0;
   background:linear-gradient(to top,rgba(0,0,0,.45),transparent 42%);
 }
-.news-card.is-video .yt-embed{margin:0;height:100%}
-.news-card.is-video .card-title{font-size:1.28rem}
+.news-card.is-video .yt-player{width:168px}
+.news-card.is-video .yt-embed{margin:0;height:94px;aspect-ratio:auto}
+.news-card.is-video .cinema-btn{margin-top:.35rem;width:100%}
+.news-card.is-video .card-title{font-size:1.18rem}
+.news-card.is-video .play-badge{width:36px;height:36px;margin:-18px 0 0 -18px;font-size:13px;box-shadow:0 0 0 4px rgba(59,130,246,.25)}
+
+.yt-player .cinema-btn{margin-top:.45rem}
+.modal-content .yt-player{margin-bottom:1rem}
+.modal-content .yt-embed{margin-bottom:.5rem}
+
+.cinema{
+  position:fixed;
+  inset:0;
+  z-index:400;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:4vh 1.2rem;
+}
+.cinema[hidden]{display:none}
+.cinema-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.88);
+}
+.cinema-stage{
+  position:relative;
+  width:min(920px,86vw);
+  z-index:1;
+}
+.cinema-toolbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:.55rem;
+  font-size:.72rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:#cfcfcf;
+}
+.cinema-player .yt-embed{margin:0}
+
+@media (max-width:560px){
+  .news-card.is-video{grid-template-columns:1fr}
+  .news-card.is-video .card-media,
+  .news-card.is-video .yt-player{width:100%;height:auto}
+  .news-card.is-video .card-media{aspect-ratio:16/9;height:auto}
+  .news-card.is-video .yt-embed{height:auto;aspect-ratio:16/9}
+}
 
 .tag-cloud-dynamic a em{
   color:var(--text-muted);
