@@ -20,46 +20,28 @@ MAX_PAGES = 16
 ARCHIVE_LIMIT = 400
 
 CATEGORIES = [
-    ("Cifrado", ["cifrado", "encryption", "e2ee", "pgp", "gpg", "clave pública"]),
+    ("Cifrado", ["cifrado", "encryption", "e2ee", "pgp", "gpg", "clave publica"]),
     ("Herramientas", ["herramienta", "graphene", "brave", "firefox", "extensi", "navegador", "tor browser"]),
     ("Servicios", ["vpn", "proton", "mullvad", "servicio", "email", "alias", "icloud", "hide my email"]),
     ("Productos", ["pixel", "iphone", "android", "gafas", "router", "xbox", "playstation"]),
     ("Empresas", ["apple", "google", "meta", "openai", "microsoft", "comcast", "amazon", "sony", "aliexpress"]),
-    ("Países", ["rusia", "reino unido", "ee.uu", "eeuu", "españa", "alemania", "unión europea", "ue exige", "la ue"]),
-    ("Legislación", ["ley", "norma", "reglamento", "etsi", "gdpr", "dsa", "requisitos mínimos"]),
+    ("Paises", ["rusia", "reino unido", "ee.uu", "eeuu", "espana", "alemania", "union europea", "ue exige", "la ue"]),
+    ("Legislacion", ["ley", "norma", "reglamento", "etsi", "gdpr", "dsa", "requisitos minimos"]),
     ("Seguridad", ["spyware", "malware", "ataque", "vulnerabilidad", "hack", "vigil", "identificarte"]),
-    ("Proyectos", ["proyecto", "open source", "código abierto", "grapheneos"]),
+    ("Proyectos", ["proyecto", "open source", "codigo abierto", "grapheneos"]),
     ("Identidad digital", ["identidad", "dni", "reconocimiento facial", "biometric", "kyc"]),
 ]
 
 KEYWORD_TAGS = {
-    "apple": "apple",
-    "google": "google",
-    "meta": "meta",
-    "openai": "openai",
-    "chatgpt": "chatgpt",
-    "proton": "proton",
-    "signal": "signal",
-    "vpn": "vpn",
-    "mullvad": "mullvad",
-    "graphene": "grapheneos",
-    "pixel": "pixel",
-    "brave": "brave",
-    "firefox": "firefox",
-    "microsoft": "microsoft",
-    "sony": "sony",
-    "xbox": "xbox",
-    "aliexpress": "aliexpress",
-    "comcast": "comcast",
-    "kyc": "kyc",
-    "youtube": "youtube",
+    "apple": "apple", "google": "google", "meta": "meta", "openai": "openai",
+    "chatgpt": "chatgpt", "proton": "proton", "signal": "signal", "vpn": "vpn",
+    "mullvad": "mullvad", "graphene": "grapheneos", "pixel": "pixel", "brave": "brave",
+    "firefox": "firefox", "microsoft": "microsoft", "sony": "sony", "xbox": "xbox",
+    "aliexpress": "aliexpress", "comcast": "comcast", "kyc": "kyc", "youtube": "youtube",
 }
 
-YT_RE = re.compile(
-    r"(?:https?://)?(?:www\.)?(?:youtube\.com/watch\?v=|youtu\.be/|youtube\.com/shorts/)([A-Za-z0-9_-]{11})",
-    re.I,
-)
-HASH_RE = re.compile(r"(?:^|\s)#([A-Za-zÁÉÍÓÚÜÑáéíóúüñ][\wÁÉÍÓÚÜÑáéíóúüñ-]{1,39})")
+YT_RE = re.compile(r"(?:https?://)?(?:www\.)?(?:youtube\.com/watch\?v=|youtu\.be/|youtube\.com/shorts/)([A-Za-z0-9_-]{11})", re.I)
+HASH_RE = re.compile(r"(?:^|\s)#([A-Za-z][\w-]{1,39})")
 COLOR_RE = re.compile(r"^[0-9a-f]{3,8}$", re.I)
 
 
@@ -73,23 +55,21 @@ def strip_tags(raw: str) -> str:
     text = re.sub(r"<br\s*/?>", "\n", raw, flags=re.I)
     text = re.sub(r"</(div|p|h[1-6])>", "\n", text, flags=re.I)
     text = re.sub(r"<a[^>]+href=\"([^\"]+)\"[^>]*>", r"\1 ", text, flags=re.I)
-    text = re.sub(r"<[^>]+", "", text)
-    text = re.sub(r"<[^>]+", "", text)
     text = re.sub(r"<[^>]+>", "", text)
     return re.sub(r"\n{3,}", "\n\n", html_lib.unescape(text)).strip()
 
 
 def guess_title(text: str) -> str:
-    lines = [re.sub(r"\s+", " ", ln).strip(" -–—*") for ln in text.splitlines() if ln.strip()]
+    lines = [re.sub(r"\s+", " ", ln).strip(" -*") for ln in text.splitlines() if ln.strip()]
     if not lines:
-        return "Publicación"
-    first = re.sub(r"^[^\wÁÉÍÓÚÜÑáéíóúüñ¿¡]+", "", lines[0]).strip()
+        return "Publicacion"
+    first = re.sub(r"^[^\w?]+", "", lines[0]).strip()
     if len(first) < 8 and len(lines) > 1:
-        first = re.sub(r"^[^\wÁÉÍÓÚÜÑáéíóúüñ¿¡]+", "", lines[1]).strip()
+        first = re.sub(r"^[^\w?]+", "", lines[1]).strip()
     first = re.sub(r"^https?://\S+", "", first).strip() or first
     if len(first) > 110:
-        first = first[:107].rsplit(" ", 1)[0] + "…"
-    return first or "Publicación"
+        first = first[:107].rsplit(" ", 1)[0] + "..."
+    return first or "Publicacion"
 
 
 def telegram_hashtags(text: str) -> list[str]:
@@ -105,14 +85,30 @@ def telegram_hashtags(text: str) -> list[str]:
 
 def guess_category(text: str, tags: list[str]) -> str:
     blob = " ".join(tags + [text.lower()])
-    for name, keys in CATEGORIES:
+    mapping = {
+        "Cifrado": CATEGORIES[0][1],
+        "Herramientas": CATEGORIES[1][1],
+        "Servicios": CATEGORIES[2][1],
+        "Productos": CATEGORIES[3][1],
+        "Empresas": CATEGORIES[4][1],
+        "Paises": CATEGORIES[5][1],
+        "Legislacion": CATEGORIES[6][1],
+        "Seguridad": CATEGORIES[7][1],
+        "Proyectos": CATEGORIES[8][1],
+        "Identidad digital": CATEGORIES[9][1],
+    }
+    pretty = {
+        "Paises": "Países",
+        "Legislacion": "Legislación",
+    }
+    for name, keys in mapping.items():
         if any(k in blob for k in keys):
-            return name
+            return pretty.get(name, name)
     return "Seguridad"
 
 
 def guess_keyword_tags(text: str, category: str, hashtags: list[str], youtube: bool) -> list[str]:
-    found: list[str] = []
+    found = []
     for tag in hashtags:
         if tag not in found:
             found.append(tag)
@@ -150,30 +146,21 @@ def parse_posts(page: str) -> list[dict]:
         date_m = re.search(r'<time datetime="([^"]+)"', block)
         date = date_m.group(1) if date_m else datetime.now(timezone.utc).isoformat()
         photo = None
-        img_m = re.search(
-            r"tgme_widget_message_photo_wrap[^>]+background-image:url\(['\"]([^'\"]+)['\"]\)",
-            block,
-        )
+        img_m = re.search(r"tgme_widget_message_photo_wrap[^>]+background-image:url\(['\"]([^'\"]+)['\"]\)", block)
         if img_m:
             photo = img_m.group(1)
-        vid_m = re.search(
-            r"tgme_widget_message_video_thumb[^>]+background-image:url\(['\"]([^'\"]+)['\"]\)",
-            block,
-        )
+        vid_m = re.search(r"tgme_widget_message_video_thumb[^>]+background-image:url\(['\"]([^'\"]+)['\"]\)", block)
         video_thumb = vid_m.group(1) if vid_m else None
         yt = youtube_id(text) or youtube_id(block)
         hashtags = telegram_hashtags(text)
-        title = guess_title(text) if text else f"Publicación #{pid}"
+        title = guess_title(text) if text else f"Publicacion #{pid}"
         category = guess_category(text, hashtags)
         tags = guess_keyword_tags(text, category, hashtags, bool(yt))
         body = paragraphs(text)
         excerpt_src = body[1] if len(body) > 1 else (body[0] if body else title)
         excerpt = excerpt_src[:220]
         has_media = bool(photo or video_thumb or yt)
-        if yt:
-            image = f"https://i.ytimg.com/vi/{yt}/hqdefault.jpg"
-        else:
-            image = photo or video_thumb
+        image = f"https://i.ytimg.com/vi/{yt}/hqdefault.jpg" if yt else (photo or video_thumb)
         posts.append({
             "id": pid,
             "title": title,
@@ -194,7 +181,7 @@ def parse_posts(page: str) -> list[dict]:
 
 def fetch_pages(max_pages: int = MAX_PAGES) -> list[dict]:
     url = PREVIEW
-    all_posts: dict[int, dict] = {}
+    all_posts = {}
     for _ in range(max_pages):
         html = fetch(url)
         batch = parse_posts(html)
@@ -214,17 +201,13 @@ def load_existing(dest: Path) -> list[dict]:
     if not dest.exists():
         return []
     old = json.loads(dest.read_text(encoding="utf-8"))
-    known: dict[int, dict] = {}
-    for item in old.get("articles") or []:
-        try:
-            known[int(item["id"])] = item
-        except (KeyError, TypeError, ValueError):
-            continue
-    for item in old.get("posts") or []:
-        try:
-            known[int(item["id"])] = item
-        except (KeyError, TypeError, ValueError):
-            continue
+    known = {}
+    for key in ("articles", "posts"):
+        for item in old.get(key) or []:
+            try:
+                known[int(item["id"])] = item
+            except (KeyError, TypeError, ValueError):
+                continue
     for item in old.get("archive") or []:
         try:
             pid = int(item["id"])
@@ -234,7 +217,7 @@ def load_existing(dest: Path) -> list[dict]:
             continue
         known[pid] = {
             "id": pid,
-            "title": item.get("title") or f"Publicación #{pid}",
+            "title": item.get("title") or f"Publicacion #{pid}",
             "date": item.get("date") or "",
             "category": "Seguridad",
             "tags": "",
