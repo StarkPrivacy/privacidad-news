@@ -6,8 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const input = document.getElementById('searchInput');
   const feed = document.getElementById('newsFeed');
   const feedPager = document.getElementById('feedPager');
-  const tagCloud = document.querySelector('.tag-cloud');
-  const tagList = document.getElementById('tagList');
+  const tagCloud = document.getElementById('filterList') || document.querySelector('.tag-cloud');
   const modal = document.getElementById('articleModal');
   const modalContent = document.getElementById('modalContent');
   const cinema = document.getElementById('cinema');
@@ -25,7 +24,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   const xShareUrl = (data) => `https://twitter.com/intent/tweet?text=${encodeURIComponent(data.text)}&url=${encodeURIComponent(data.url)}`;
   const tgShareUrl = (data) => `https://t.me/share/url?url=${encodeURIComponent(data.url)}&text=${encodeURIComponent(data.text)}`;
   const ytThumb = (id) => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
-  const hasVisual = (item) => Boolean(item.youtube_id || item.video_url || item.image);
   const stripLeadEmoji = (str) => String(str || '').replace(/^(?:[\s\u200d\ufe0f\u20e3]*(?:[\u{1F000}-\u{1FAFF}]|[\u2300-\u23FF]|[\u2600-\u27BF]|[\u2B00-\u2BFF]|[\u25A0-\u25FF]|[\u{1F1E6}-\u{1F1FF}])+)+[\s\u200d\ufe0f\u20e3]*/u, '').replace(/^[^\p{L}\p{N}¿¡«“"'(]+/u, '').trim();
   const isTelegramHost = (host) => /(?:^|\.)(?:t\.me|telegram\.(?:org|me)|telesco\.pe)$/i.test(host || '');
   const isYoutubeHost = (host) => /(?:^|\.)(?:youtube\.com|youtu\.be|youtube-nocookie\.com)$/i.test(host || '');
@@ -68,7 +66,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     return `<section class="article-sources"><h3>Fuentes</h3><ul>${sources.map(url => `<li><a href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(url)}</a></li>`).join('')}</ul></section>`;
   }
   function tagChips(item) {
-    const tags = parseTags(item).slice(0, 8); if (!tags.length) return '';
+    const tags = parseTags(item).slice(0, 3); if (!tags.length) return '';
     return `<div class="card-tags">${tags.map(t => `<button type="button" class="tag-chip" data-filter="${escapeHtml(t)}">#${escapeHtml(t)}</button>`).join('')}</div>`;
   }
   function renderArticle(item) {
@@ -78,10 +76,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     const image = isYt ? ytThumb(item.youtube_id) : escapeHtml(item.video_thumb || item.image || '');
     const body = cleanParagraphs(item).map(p => `<p>${escapeHtml(p)}</p>`).join('');
     const article = document.createElement('article');
-    article.className = 'news-card' + (isVideo ? ' is-video' : '');
+    article.className = 'news-card' + (isVideo ? ' is-video' : '') + (!image && !isVideo ? ' is-text' : '');
     article.dataset.id = id; article.dataset.tags = normalize(parseTags(item).join(' ')); article.dataset.category = normalize(item.category || ''); article.id = `noticia-${id}`;
-    const media = isVideo ? `<div class="card-media"><button type="button" class="${isYt ? 'yt-poster' : 'video-poster'}" ${isYt ? `data-yt-play="${escapeHtml(item.youtube_id)}" data-yt-title="${title}"` : ''} aria-label="Abrir"><img src="${image}" alt="" loading="lazy" width="640" height="360" /><span class="play-badge" aria-hidden="true">▶</span></button></div>` : `<div class="card-image"><img src="${image}" alt="" loading="lazy" width="400" height="400" /></div>`;
-    article.innerHTML = `${media}<div class="card-body"><h2 class="card-title"><a href="#noticia-${id}" class="open-article">${title}</a></h2><div class="card-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time><span class="meta-sep">·</span><span class="category">${category}</span>${isVideo ? '<span class="meta-sep">·</span><span class="category" data-filter="video">Vídeo</span>' : ''}</div><p class="card-excerpt">${excerpt}</p>${tagChips(item)}<div class="card-actions"><button type="button" class="btn read-more open-article">${isVideo ? 'Abrir con vídeo' : 'Leer artículo'}</button><button type="button" class="btn btn-ghost share-btn" data-share>Compartir</button></div></div><template class="full-content"><h1>${title}</h1><p class="article-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time> · <span class="category">${category}</span></p>${mediaBlock(item)}<div class="article-body">${body}</div>${sourcesHtml(item)}</template>`;
+    const media = isVideo ? `<div class="card-media"><span class="${isYt ? 'yt-poster' : 'video-poster'}">${image ? `<img src="${image}" alt="" loading="lazy" width="640" height="360" />` : ''}<span class="play-badge" aria-hidden="true">▶</span></span></div>` : (image ? `<div class="card-image"><img src="${image}" alt="" loading="lazy" width="400" height="400" /></div>` : '');
+    article.innerHTML = `${media}<div class="card-body"><div class="card-head"><h2 class="card-title"><a href="#noticia-${id}">${title}</a></h2>${tagChips(item)}</div><div class="card-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time><span class="meta-sep">·</span><span class="category">${category}</span>${isVideo ? '<span class="meta-sep">·</span><span class="category" data-filter="video">Vídeo</span>' : ''}</div><p class="card-excerpt">${excerpt}</p><div class="card-actions"><button type="button" class="btn btn-ghost share-btn" data-share>Compartir</button></div></div><template class="full-content"><h1>${title}</h1><p class="article-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time> · <span class="category">${category}</span></p>${mediaBlock(item)}<div class="article-body">${body}</div>${sourcesHtml(item)}</template>`;
     return article;
   }
   function matchingCards() {
@@ -154,46 +152,74 @@ document.addEventListener('DOMContentLoaded', async () => {
       btn.addEventListener('click', e => {
         e.preventDefault(); e.stopPropagation();
         const id = btn.dataset.ytPlay; const title = btn.dataset.ytTitle || 'YouTube'; if (!id) return;
-        if (btn.classList.contains('yt-facade')) { const player = btn.closest('.yt-player'); if (player) player.innerHTML = ytEmbed(id, title, true, true); return; }
-        const card = btn.closest('.news-card'); if (card) openModal(card);
+        if (btn.classList.contains('yt-facade')) { const player = btn.closest('.yt-player'); if (player) player.innerHTML = ytEmbed(id, title, true, true); }
       });
     });
   }
   function bindCardEvents() {
     cards = Array.from(document.querySelectorAll('.news-card'));
-    document.querySelectorAll('.open-article, .video-poster').forEach(el => { el.addEventListener('click', e => { e.preventDefault(); const card = el.closest('.news-card'); if (card) openModal(card); }); });
-    document.querySelectorAll('.news-card .category, .tag-chip').forEach(badge => { badge.addEventListener('click', () => { activeCategory = normalize(badge.dataset.filter || badge.textContent.trim().replace(/^#/, '')); tagLinks.forEach(l => l.classList.toggle('is-active', filterLabel(l) === activeCategory)); applyFilters(true); }); });
-    document.querySelectorAll('[data-share]').forEach(btn => { btn.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); const card = btn.closest('.news-card'); if (card) openShareMenu(btn, articleShareData(card.dataset.id, card.querySelector('.card-title')?.textContent.trim())); }); });
+    cards.forEach(card => {
+      card.addEventListener('click', e => {
+        if (e.target.closest('[data-share], .tag-chip, .category, a[target="_blank"]')) return;
+        e.preventDefault(); openModal(card);
+      });
+    });
+    document.querySelectorAll('.news-card .category, .tag-chip').forEach(badge => {
+      badge.addEventListener('click', e => {
+        e.preventDefault(); e.stopPropagation();
+        activeCategory = normalize(badge.dataset.filter || badge.textContent.trim().replace(/^#/, ''));
+        tagLinks.forEach(l => l.classList.toggle('is-active', filterLabel(l) === activeCategory));
+        applyFilters(true);
+      });
+    });
+    document.querySelectorAll('[data-share]').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault(); e.stopPropagation();
+        const card = btn.closest('.news-card');
+        if (card) openShareMenu(btn, articleShareData(card.dataset.id, card.querySelector('.card-title')?.textContent.trim()));
+      });
+    });
     bindYoutubePosters(feed); applyFilters(true);
-    if (location.hash.startsWith('#noticia-')) { const id = location.hash.replace('#noticia-', ''); const card = document.querySelector('.news-card[data-id="'+id+'"]'); if (card) openModal(card); else if (articlesById[id]) openModalFromItem(articlesById[id]); }
+    if (location.hash.startsWith('#noticia-')) {
+      const id = location.hash.replace('#noticia-', '');
+      const card = document.querySelector('.news-card[data-id="'+id+'"]');
+      if (card) openModal(card); else if (articlesById[id]) openModalFromItem(articlesById[id]);
+    }
   }
   function bindFilterLinks(links) {
-    links.forEach(link => { link.addEventListener('click', e => { e.preventDefault(); const label = filterLabel(link); if (activeCategory === label) { activeCategory = ''; tagLinks.forEach(l => l.classList.remove('is-active')); } else { activeCategory = label; tagLinks.forEach(l => l.classList.toggle('is-active', filterLabel(l) === label)); } applyFilters(true); }); });
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const label = filterLabel(link);
+        if (activeCategory === label) { activeCategory = ''; tagLinks.forEach(l => l.classList.remove('is-active')); }
+        else { activeCategory = label; tagLinks.forEach(l => l.classList.toggle('is-active', filterLabel(l) === label)); }
+        applyFilters(true);
+      });
+    });
   }
-  function renderCategories(items) {
+  function renderUnifiedFilters(items) {
     if (!tagCloud) return;
-    const preset = ['Cifrado','Empresas','Herramientas','Identidad digital','Legislación','Países','Productos','Proyectos','Seguridad','Servicios','Vídeo'];
-    const seen = new Set(preset.map(normalize));
-    items.forEach(item => { const cat = (item.category || '').trim(); if (cat && !seen.has(normalize(cat))) { preset.push(cat); seen.add(normalize(cat)); } });
-    tagCloud.innerHTML = preset.map(name => `<a href="#" role="listitem" data-filter="${normalize(name)==='video'?'video':normalize(name)}">${escapeHtml(name)}</a>`).join('');
-    const catLinks = Array.from(tagCloud.querySelectorAll('a')); bindFilterLinks(catLinks); tagLinks = catLinks.concat(tagLinks);
-  }
-  function renderTagSidebar(items) {
-    if (!tagList) return; const counts = {};
-    items.forEach(item => { parseTags(item).forEach(tag => { const key = tag.toLowerCase(); if (normalize(item.category) === normalize(tag)) return; counts[key] = (counts[key] || 0) + 1; }); });
-    const popular = Object.entries(counts).filter(([, n]) => n >= 2).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 24);
-    if (!popular.length) { tagList.innerHTML = '<span class="sidebar-text">Las etiquetas salen del texto y de los hashtags del canal.</span>'; return; }
-    tagList.innerHTML = popular.map(([tag, n]) => `<a href="#" role="listitem" data-filter="${escapeHtml(tag)}">#${escapeHtml(tag)} <em>${n}</em></a>`).join('');
-    const links = Array.from(tagList.querySelectorAll('a')); bindFilterLinks(links); tagLinks = tagLinks.concat(links);
+    const labels = new Map();
+    ['Cifrado','Empresas','Herramientas','Identidad digital','Legislación','Países','Productos','Proyectos','Seguridad','Servicios','Vídeo'].forEach(name => labels.set(normalize(name), name));
+    items.forEach(item => {
+      const cat = (item.category || '').trim();
+      if (cat) labels.set(normalize(cat), cat);
+      parseTags(item).forEach(tag => { const key = normalize(tag); if (!labels.has(key)) labels.set(key, tag); });
+    });
+    const preset = new Set(['cifrado','empresas','herramientas','identidad digital','legislacion','paises','productos','proyectos','seguridad','servicios','video']);
+    const entries = [...labels.entries()].sort((a, b) => a[1].localeCompare(b[1], 'es', { sensitivity: 'base' }));
+    tagCloud.innerHTML = entries.map(([key, name]) => `<a href="#" role="listitem" data-filter="${escapeHtml(key === 'video' ? 'video' : key)}">${preset.has(key) ? '' : '#'}${escapeHtml(name)}</a>`).join('');
+    tagLinks = Array.from(tagCloud.querySelectorAll('a'));
+    bindFilterLinks(tagLinks);
   }
   try {
     const res = await fetch('data/news.json?t=' + Date.now());
     if (!res.ok) throw new Error('news.json ' + res.status);
     const data = await res.json(); const posts = data.posts || data.articles || [];
     posts.forEach(item => { articlesById[item.id] = item; });
-    feed.innerHTML = ''; const mediaItems = posts.filter(hasVisual);
-    mediaItems.forEach(item => feed.appendChild(renderArticle(item)));
-    renderCategories(Object.values(articlesById)); renderTagSidebar(mediaItems);
+    feed.innerHTML = '';
+    posts.forEach(item => feed.appendChild(renderArticle(item)));
+    renderUnifiedFilters(posts);
   } catch (err) { console.error(err); if (feed) feed.innerHTML = '<p class="card-excerpt">No se pudieron cargar las noticias.</p>'; }
   bindCardEvents();
   input?.addEventListener('input', () => applyFilters(true));
