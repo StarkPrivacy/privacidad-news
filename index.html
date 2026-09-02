@@ -15,13 +15,24 @@
   <meta property="og:locale" content="es_ES" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Privacidad.news — Noticias de privacidad" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://i.ytimg.com" />
   <link rel="preconnect" href="https://www.youtube-nocookie.com" />
-  <link rel="stylesheet" href="styles.css?v=20260902p11" />
-  <link rel="stylesheet" href="extras.css?v=20260902p11" />
+  <link rel="stylesheet" href="styles.css?v=20260902p12" />
+  <link rel="stylesheet" href="extras.css?v=20260902p12" />
+  <style>
+    .logo{align-items:center;gap:.55rem}
+    .logo-mark{display:inline-flex;width:28px;height:28px;flex:0 0 28px}
+    .logo-mark svg{width:100%;height:100%;display:block;border-radius:7px}
+    .logo-mark-bg{fill:var(--panel)}
+    .logo-mark-stroke{stroke:var(--accent)}
+    .logo-mark-p{fill:var(--text)}
+    .logo-mark-slash{fill:none;stroke:var(--accent);stroke-width:1.8;stroke-linecap:round}
+  </style>
   <script>
     (function () {
       try {
@@ -38,7 +49,17 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="./" class="logo"><span class="logo-main">Privacidad</span><span class="logo-sep">/</span><span class="logo-sub">news</span></a>
+      <a href="./" class="logo" aria-label="Privacidad.news">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32">
+            <rect width="32" height="32" rx="8" class="logo-mark-bg"/>
+            <rect x="0.75" y="0.75" width="30.5" height="30.5" rx="7.25" fill="none" class="logo-mark-stroke" stroke-width="1.5"/>
+            <path class="logo-mark-p" d="M9.2 7.4h8.05c4.35 0 7.05 2.35 7.05 6.15 0 3.85-2.75 6.25-7.15 6.25H13.4V24.6H9.2V7.4zm4.2 8.55h3.55c2.15 0 3.3-1.1 3.3-2.45 0-1.35-1.15-2.35-3.3-2.35H13.4v4.8z"/>
+            <path class="logo-mark-slash" d="M22.4 9.2 24.6 23"/>
+          </svg>
+        </span>
+        <span class="logo-main">Privacidad</span><span class="logo-sep">/</span><span class="logo-sub">news</span>
+      </a>
       <nav class="main-nav"><a href="./">Inicio</a><a href="#webs-interes">Webs</a><a href="#lista-correo">Lista</a><a href="#donaciones">Donaciones</a><a href="https://boringprivacy.io" target="_blank" rel="noopener">Academia</a></nav>
       <div class="header-actions">
         <form class="search-form" role="search" onsubmit="return false;">
