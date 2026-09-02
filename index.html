@@ -22,8 +22,8 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://i.ytimg.com" />
   <link rel="preconnect" href="https://www.youtube-nocookie.com" />
-  <link rel="stylesheet" href="styles.css?v=20260902p12" />
-  <link rel="stylesheet" href="extras.css?v=20260902p12" />
+  <link rel="stylesheet" href="styles.css?v=20260902p13" />
+  <link rel="stylesheet" href="extras.css?v=20260902p13" />
   <style>
     .logo{align-items:center;gap:.55rem}
     .logo-mark{display:inline-flex;width:28px;height:28px;flex:0 0 28px}
@@ -32,6 +32,20 @@
     .logo-mark-stroke{stroke:var(--accent)}
     .logo-mark-p{fill:var(--text)}
     .logo-mark-slash{fill:none;stroke:var(--accent);stroke-width:1.8;stroke-linecap:round}
+    .ticker{display:grid;grid-template-columns:auto auto minmax(0,1fr);align-items:stretch;height:32px;border-bottom:1px solid var(--border);background:var(--panel-head);color:var(--text-secondary);font-size:.68rem;letter-spacing:.02em}
+    .ticker-label{display:flex;align-items:center;padding:0 .75rem;background:var(--accent);color:#fff;font-weight:700;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+    .ticker-markets{display:flex;align-items:center;gap:.85rem;padding:0 .8rem;border-right:1px solid var(--border);white-space:nowrap;font-variant-numeric:tabular-nums}
+    .ticker-px{color:var(--text);font-weight:600}
+    .ticker-chg.up{color:#34d399}.ticker-chg.down{color:#f87171}
+    .ticker-viewport{overflow:hidden;display:flex;align-items:center}
+    .ticker-track{display:flex;align-items:center;gap:0;width:max-content;animation:ticker-slide 48s linear infinite}
+    .ticker-track:hover{animation-play-state:paused}
+    .ticker-item{display:inline-flex;align-items:center;gap:.55rem;padding:0 1.1rem;color:var(--text);text-decoration:none;white-space:nowrap;border-right:1px solid var(--border)}
+    .ticker-item:hover{color:var(--accent)}
+    .ticker-dot{width:5px;height:5px;border-radius:50%;background:var(--accent);flex:0 0 5px}
+    @keyframes ticker-slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    @media (prefers-reduced-motion:reduce){.ticker-track{animation:none}}
+    @media (max-width:800px){.ticker-label{padding:0 .5rem;letter-spacing:.08em;font-size:.6rem}.ticker-markets{padding:0 .5rem;gap:.5rem}}
   </style>
   <script>
     (function () {
@@ -48,12 +62,22 @@
 </head>
 <body>
   <header class="site-header">
+    <div class="ticker" id="newsTicker" aria-label="Últimas noticias y precios">
+      <span class="ticker-label">Últimas noticias</span>
+      <div class="ticker-markets" id="tickerMarkets">
+        <span id="pxBtc">BTC · …</span>
+        <span id="pxXmr">XMR · …</span>
+      </div>
+      <div class="ticker-viewport">
+        <div class="ticker-track" id="tickerTrack"></div>
+      </div>
+    </div>
     <div class="container header-inner">
       <a href="./" class="logo" aria-label="Privacidad.news">
         <span class="logo-mark" aria-hidden="true">
           <svg viewBox="0 0 32 32">
-            <rect width="32" height="32" rx="8" class="logo-mark-bg"/>
-            <rect x="0.75" y="0.75" width="30.5" height="30.5" rx="7.25" fill="none" class="logo-mark-stroke" stroke-width="1.5"/>
+            <rect width="32" height="32" rx="8" fill="currentColor" class="logo-mark-bg"/>
+            <rect x="0.75" y="0.75" width="30.5" height="30.5" rx="7.25" fill="none" stroke="currentColor" class="logo-mark-stroke" stroke-width="1.5"/>
             <path class="logo-mark-p" d="M9.2 7.4h8.05c4.35 0 7.05 2.35 7.05 6.15 0 3.85-2.75 6.25-7.15 6.25H13.4V24.6H9.2V7.4zm4.2 8.55h3.55c2.15 0 3.3-1.1 3.3-2.45 0-1.35-1.15-2.35-3.3-2.35H13.4v4.8z"/>
             <path class="logo-mark-slash" d="M22.4 9.2 24.6 23"/>
           </svg>
@@ -187,5 +211,6 @@
   </div>
   <script src="script.js?v=20260902p11"></script>
   <script src="fixes.js?v=20260902p11"></script>
+  <script src="ticker.js?v=20260902p13"></script>
 </body>
 </html>
