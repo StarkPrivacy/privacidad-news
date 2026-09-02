@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 236 144" role="img" aria-label="Proton">
+  <rect width="236" height="144" fill="#140b2e"/>
+  <rect x="0.6" y="0.6" width="234.8" height="142.8" fill="none" stroke="#2a1f55"/>
+  <circle cx="118" cy="58" r="18" fill="none" stroke="#8b6bff" stroke-width="3"/>
+  <path d="M118 40v36M100 58h36" stroke="#6ee7f9" stroke-width="2" stroke-linecap="round"/>
+  <text x="118" y="108" text-anchor="middle" fill="#e8e4ff" font-family="Georgia, serif" font-size="22" font-weight="700">Proton</text>
+</svg>
