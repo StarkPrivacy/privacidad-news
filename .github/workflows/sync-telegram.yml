@@ -15,12 +15,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Fetch latest channel posts
-        run: python3 scripts/sync_telegram.py 8
+        run: |
+          mkdir -p images/thumbs
+          python3 scripts/sync_telegram.py 8
       - name: Commit news and thumbnails if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/news.json data/latest.json images/thumbs
+          mkdir -p images/thumbs
+          git add data/news.json data/latest.json images/thumbs || true
           if git diff --cached --quiet; then
             echo "Sin cambios"
           else
