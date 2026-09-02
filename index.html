@@ -20,8 +20,8 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://i.ytimg.com" />
   <link rel="preconnect" href="https://www.youtube-nocookie.com" />
-  <link rel="stylesheet" href="styles.css?v=20260902p9" />
-  <link rel="stylesheet" href="extras.css?v=20260902p9" />
+  <link rel="stylesheet" href="styles.css?v=20260902p10" />
+  <link rel="stylesheet" href="extras.css?v=20260902p10" />
   <script>
     (function () {
       try {
@@ -39,7 +39,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="./" class="logo"><span class="logo-main">Privacidad</span><span class="logo-sep">/</span><span class="logo-sub">news</span></a>
-      <nav class="main-nav"><a href="./">Inicio</a><a href="#lista-correo">Lista</a><a href="#donaciones">Donaciones</a><a href="https://boringprivacy.io" target="_blank" rel="noopener">Academia</a></nav>
+      <nav class="main-nav"><a href="./">Inicio</a><a href="#webs-interes">Webs</a><a href="#lista-correo">Lista</a><a href="#donaciones">Donaciones</a><a href="https://boringprivacy.io" target="_blank" rel="noopener">Academia</a></nav>
       <div class="header-actions">
         <form class="search-form" role="search" onsubmit="return false;">
           <input type="search" id="searchInput" placeholder="Buscar" autocomplete="off" />
@@ -94,9 +94,27 @@
       </div>
     </aside>
   </main>
-  <section class="support-section" id="lista-correo">
+  <section class="support-section" id="webs-interes">
     <div class="container support-grid">
-      <article class="support-card mail-block">
+      <article class="support-card links-block">
+        <h3 class="support-title">Webs de interés</h3>
+        <p class="support-copy">Proyectos hermanos y recursos que encajan con este enfoque.</p>
+        <nav class="interest-list">
+          <a class="interest-card" href="https://privacidad.me" target="_blank" rel="noopener">
+            <span class="interest-brand"><span class="brand-main">Privacidad</span><span class="brand-sep">/</span><span class="brand-sub">me</span></span>
+            <span class="interest-desc">Herramientas y recursos</span>
+          </a>
+          <a class="interest-card" href="https://boringprivacy.io" target="_blank" rel="noopener">
+            <span class="interest-brand"><span class="brand-main">BoringPrivacy</span><span class="brand-sep">/</span><span class="brand-sub">io</span></span>
+            <span class="interest-desc">Academia y formación</span>
+          </a>
+          <a class="interest-card" href="https://privtr.ee/@stark" target="_blank" rel="noopener">
+            <span class="interest-brand"><span class="brand-main">Privtr</span><span class="brand-sep">.</span><span class="brand-sub">ee</span></span>
+            <span class="interest-desc">Servicios recomendados</span>
+          </a>
+        </nav>
+      </article>
+      <article class="support-card mail-block" id="lista-correo">
         <h3 class="support-title">Lista de correo</h3>
         <p class="support-copy">Avisos cortos cuando haya algo que merezca la pena. Misma lista que en el resto de proyectos.</p>
         <form id="newsletter-form" class="mail-form" method="post" target="_blank" action="https://newsletter.boringprivacy.io/subscription/form">
@@ -108,15 +126,6 @@
           <input type="hidden" name="l" value="9a838c12-bfab-4de3-a771-6bbd876ade77" />
         </form>
         <p class="mail-hint">Autogestionado. Sin espionaje. Envío ocasional.</p>
-      </article>
-      <article class="support-card links-block">
-        <h3 class="support-title">Webs de interés</h3>
-        <p class="support-copy">Proyectos hermanos y recursos que encajan con este enfoque.</p>
-        <nav class="interest-list">
-          <a href="https://privacidad.me" target="_blank" rel="noopener">Privacidad.me</a>
-          <a href="https://boringprivacy.io" target="_blank" rel="noopener">Boring Privacy</a>
-          <a href="https://privtr.ee/@stark" target="_blank" rel="noopener">Servicios recomendados</a>
-        </nav>
       </article>
       <article class="support-card donate-block" id="donaciones">
         <h3 class="support-title">Donaciones</h3>
@@ -155,6 +164,6 @@
     <a href="#" data-share-action="x" target="_blank" rel="noopener">Compartir en X</a>
     <a href="#" data-share-action="telegram" target="_blank" rel="noopener">Compartir en Telegram</a>
   </div>
-  <script src="script.js?v=20260902p9"></script>
+  <script src="script.js?v=20260902p10"></script>
 </body>
 </html>
