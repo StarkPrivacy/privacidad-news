@@ -1,0 +1,38 @@
+{
+  "updated": "2026-09-02T17:13:34Z",
+  "articles": [
+    {
+      "id": 1670,
+      "title": "Un fallo de WhatsApp permite acceder a fotograf\u00edas en determinados m\u00f3viles Android bloqueados",
+      "date": "2026-09-02T16:29:43+00:00",
+      "category": "Herramientas",
+      "tags": "herramientas apple google meta pixel whatsapp android iphone video",
+      "excerpt": "El problema, descubierto por el investigador Jos\u00e9 Rodr\u00edguez, necesita acceso f\u00edsico al tel\u00e9fono y que se atienda una videollamada entrante desde la pantalla de bloqueo. No se trata de un ataque remoto ni requiere la inst",
+      "image": "https://cdn4.telesco.pe/file/Q7v3wdCOiinjMf0oySE52iFSO-JaRWE-BZxMDmBnDiYncbsTZhwvrue9LdGlMHPJrNSRPXMaYq49J3-p65xLT4ODozatlqSOZBgYI3e6G9fOv43fXVKFS5dUTza2U0AbFkCVWiM8xk0xk6GCrKyGBVIcm30K7M7WVBTYfeGMXI-nhIvUr7KCoCt3etbA-1_6cGsUw9OF4fVwSjYrcb5_R1YwYTWBUAw47kzIo1oOzX_Ma6ynhQ941HOKXroSLgcRfsFQdNYtaBqTSoaNo_ZTDT1UIJkSKNmQC7R3iz0Va_cx-eNPGa3M9g_hO5U_pfDyXYW9T5yTMntJPHppycgj8g",
+      "images": ["https://cdn4.telesco.pe/file/Q7v3wdCOiinjMf0oySE52iFSO-JaRWE-BZxMDmBnDiYncbsTZhwvrue9LdGlMHPJrNSRPXMaYq49J3-p65xLT4ODozatlqSOZBgYI3e6G9fOv43fXVKFS5dUTza2U0AbFkCVWiM8xk0xk6GCrKyGBVIcm30K7M7WVBTYfeGMXI-nhIvUr7KCoCt3etbA-1_6cGsUw9OF4fVwSjYrcb5_R1YwYTWBUAw47kzIo1oOzX_Ma6ynhQ941HOKXroSLgcRfsFQdNYtaBqTSoaNo_ZTDT1UIJkSKNmQC7R3iz0Va_cx-eNPGa3M9g_hO5U_pfDyXYW9T5yTMntJPHppycgj8g"],
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1670",
+      "sources": ["https://x.com/VBarraquito/status/2094729843761922276", "https://elchapuzasinformatico.com/2026/09/fallo-whatsapp-acceder-fotos-moviles-android-bloqueados/"],
+      "body": ["El problema, descubierto por el investigador Jos\u00e9 Rodr\u00edguez, necesita acceso f\u00edsico al tel\u00e9fono y que se atienda una videollamada entrante desde la pantalla de bloqueo. No se trata de un ataque remoto ni requiere la instalaci\u00f3n de software adicional, c\u00f3digos o conocimientos t\u00e9cnicos avanzados.", "El fallo se produce al utilizar la integraci\u00f3n de las herramientas de Meta AI en los efectos de videollamada.", "En los terminales afectados, al seleccionar la opci\u00f3n de editar una fotograf\u00eda mediante \u201cCrear con Meta AI\u201d en la pesta\u00f1a de fondos, la aplicaci\u00f3n abre la galer\u00eda del dispositivo sin solicitar PIN, contrase\u00f1a, huella dactilar ni reconocimiento facial.", "El investigador ha publicado una demostraci\u00f3n en v\u00eddeo y ha comunicado el hallazgo tanto a Meta como a Google. Hasta el momento no existe comunicado oficial de ninguna de las dos compa\u00f1\u00edas, ni identificador CVE ni parche anunciado.", "Las pruebas realizadas confirman el comportamiento en un Google Pixel 6 Pro con Android 17 (incluido el \u00faltimo parche de seguridad) y en un OPPO K13 con ColorOS 16. En cambio, un Samsung Galaxy S25 Ultra con One UI 8.5 bloquea el acceso y exige autenticaci\u00f3n.", "Los iPhone no se ven afectados porque WhatsApp emplea CallKit de Apple, lo que impide acceder a los efectos de la aplicaci\u00f3n desde la pantalla de bloqueo.", "La incidencia depende de c\u00f3mo cada fabricante gestiona los permisos y las actividades iniciadas desde la pantalla de bloqueo.", "Mientras no se publique una correcci\u00f3n, se recomienda no dejar el tel\u00e9fono bloqueado al alcance de terceros y mantener actualizados tanto WhatsApp como el sistema operativo Android."],
+      "locked": false
+    },
+    {
+      "id": 1669,
+      "title": "C\u00e1mara hasta para lavarte los dientes",
+      "date": "2026-09-02T15:00:03+00:00",
+      "category": "Seguridad",
+      "tags": "seguridad",
+      "excerpt": "Dyson present\u00f3 el 1 de septiembre de 2026 el CameraJet, su primer cepillo de dientes el\u00e9ctrico.",
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/dyson1.jpg?quality=90&strip=all&w=1200",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1669",
+      "sources": ["https://www.theverge.com/tech/986737/dyson-camerajet-smart-toothbrush-live-camera-flosser-pricing-availability"],
+      "body": ["Dyson present\u00f3 el 1 de septiembre de 2026 el CameraJet, su primer cepillo de dientes el\u00e9ctrico.", "El aparato integra una c\u00e1mara macro de 100.000 p\u00edxeles en el cabezal y un irrigador de precisi\u00f3n, de modo que cepilla e irriga los espacios interdentales en una sola operaci\u00f3n.", "El sistema Gap Optical Targeting analiza 28 im\u00e1genes por segundo mediante un algoritmo de inteligencia artificial entrenado con unas 470.000 im\u00e1genes dentales.", "Cuando identifica un hueco entre dientes, dispara un chorro c\u00f3nico de enjuague bucal en menos de 100 milisegundos. Dyson afirma que el dispositivo elimina hasta un 69 % m\u00e1s de placa en zonas de dif\u00edcil acceso que los cepillos el\u00e9ctricos premium de la competencia.", "El cepillado utiliza oscilaci\u00f3n s\u00f3nica variable para evitar que las cerdas se detengan.", "\u00bfSu precio? 499 d\u00f3lares (aproximadamente 479 euros).", "Tambi\u00e9n permite ver en directo el interior de la boca a trav\u00e9s de la aplicaci\u00f3n MyDyson. La compa\u00f1\u00eda indica que las im\u00e1genes no se almacenan en el dispositivo ni se env\u00edan a la nube, salvo esa visualizaci\u00f3n en vivo.", "El desarrollo dur\u00f3 seis a\u00f1os e involucr\u00f3 a 661 ingenieros. Se trata de una entrada premium de Dyson en el cuidado bucodental, con un precio elevado y una propuesta tecnol\u00f3gica diferenciada que unifica cepillado e irrigaci\u00f3n autom\u00e1tica."],
+      "locked": false
+    }
+  ]
+}
