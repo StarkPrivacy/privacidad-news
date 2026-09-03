@@ -4,29 +4,53 @@ on:
   schedule:
     - cron: "*/20 * * * *"
   workflow_dispatch:
+    inputs:
+      backfill:
+        description: "Recorrer todo el archivo (recupera media antigua)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
 
+concurrency:
+  group: sync-telegram
+  cancel-in-progress: false
+
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@v4
-      - name: Fetch latest channel posts
-        run: |
-          mkdir -p images/thumbs
-          python3 scripts/sync_telegram.py 8
-      - name: Commit news and thumbnails if changed
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install --quiet pyrogram tgcrypto
+
+      - name: Sincronizar canal
+        env:
+          TG_API_ID: ${{ secrets.TG_API_ID }}
+          TG_API_HASH: ${{ secrets.TG_API_HASH }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_SESSION_STRING: ${{ secrets.TG_SESSION_STRING }}
+          TG_CHANNEL: ${{ vars.TG_CHANNEL || 'starkprivacy' }}
+          MEDIA_BASE: ${{ vars.MEDIA_BASE || 'media' }}
+          MAX_MEDIA_MB: ${{ vars.MAX_MEDIA_MB || '48' }}
+          BACKFILL: ${{ (github.event_name == 'workflow_dispatch' && inputs.backfill) && '1' || '0' }}
+        run: python3 scripts/sync_telegram.py
+
+      - name: Commit si hay cambios
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          mkdir -p images/thumbs
-          git add data/news.json data/latest.json images/thumbs || true
+          git add data/news.json data/latest.json media || true
           if git diff --cached --quiet; then
             echo "Sin cambios"
           else
-            git commit -m "sync: noticias de t.me/starkprivacy"
+            git commit -m "sync: noticias y media de t.me/${TG_CHANNEL:-starkprivacy}"
             git push
           fi
