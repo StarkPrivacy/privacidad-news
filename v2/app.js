@@ -796,11 +796,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     const BTC = document.getElementById('pxBtc');
     const XMR = document.getElementById('pxXmr');
     if (!TRACK) return;
-    const money = (value, digits) => new Intl.NumberFormat('es-ES', { minimumFractionDigits: digits, maximumFractionDigits: digits }).format(value);
-    const changeHtml = (pct) => {
+    const money = (value, digits) => new Intl.NumberFormat('en-US', { minimumFractionDigits: digits, maximumFractionDigits: digits }).format(value);
+    const dirHtml = (pct) => {
       if (!Number.isFinite(pct)) return '';
       const up = pct >= 0;
-      return `<span class="ticker-chg ${up ? 'up' : 'down'}">${up ? '+' : ''}${pct.toFixed(1).replace('.', ',')}%</span>`;
+      return `<span class="ticker-dir ${up ? 'up' : 'down'}" title="${up ? '+' : ''}${pct.toFixed(1)}% (24h)" aria-hidden="true">${up ? '▲' : '▼'}</span>`;
     };
     const headline = (item) => {
       const raw = String(item.title || item.excerpt || '').replace(/https?:\/\/\S+/gi, ' ').replace(/\s+/g, ' ').trim();
@@ -818,8 +818,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       TRACK.style.animationDuration = `${Math.max(40, latest.length * 6)}s`;
     }
     function paintPrices(btc, xmr) {
-      if (BTC && btc) BTC.innerHTML = `<span class="ticker-px">BTC ${money(btc.eur, 0)} €</span> ${changeHtml(btc.chg)}`;
-      if (XMR && xmr) XMR.innerHTML = `<span class="ticker-px">XMR ${money(xmr.eur, 2)} €</span> ${changeHtml(xmr.chg)}`;
+      if (BTC && btc && Number.isFinite(btc.usd)) BTC.innerHTML = `<span class="ticker-px btc">BTC&nbsp;$${money(btc.usd, 0)}</span>${dirHtml(btc.chg)}`;
+      if (XMR && xmr && Number.isFinite(xmr.usd)) XMR.innerHTML = `<span class="ticker-px xmr">XMR&nbsp;$${money(xmr.usd, 2)}</span>${dirHtml(xmr.chg)}`;
     }
     async function loadNews() {
       try {
@@ -829,20 +829,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     async function loadPrices() {
       try {
-        const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,monero&vs_currencies=eur&include_24hr_change=true');
+        const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,monero&vs_currencies=usd&include_24hr_change=true');
         if (!res.ok) throw new Error('coingecko');
         const data = await res.json();
         paintPrices(
-          { eur: data.bitcoin?.eur, chg: data.bitcoin?.eur_24h_change },
-          { eur: data.monero?.eur, chg: data.monero?.eur_24h_change }
+          { usd: data.bitcoin?.usd, chg: data.bitcoin?.usd_24h_change },
+          { usd: data.monero?.usd, chg: data.monero?.usd_24h_change }
         );
       } catch (err) {
         try {
-          const res = await fetch('https://api.kraken.com/0/public/Ticker?pair=XBTEUR,XMREUR');
+          const res = await fetch('https://api.kraken.com/0/public/Ticker?pair=XBTUSD,XMRUSD');
           const data = await res.json();
-          const btc = data.result?.XXBTZEUR || data.result?.XBTEUR;
-          const xmr = data.result?.XXMRZEUR || data.result?.XMREUR;
-          paintPrices({ eur: Number(btc?.c?.[0]), chg: NaN }, { eur: Number(xmr?.c?.[0]), chg: NaN });
+          const btc = data.result?.XXBTZUSD || data.result?.XBTUSD;
+          const xmr = data.result?.XXMRZUSD || data.result?.XMRUSD;
+          paintPrices({ usd: Number(btc?.c?.[0]), chg: NaN }, { usd: Number(xmr?.c?.[0]), chg: NaN });
         } catch (fallbackErr) {}
       }
     }

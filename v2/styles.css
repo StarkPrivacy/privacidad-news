@@ -124,8 +124,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   white-space: nowrap; font-variant-numeric: tabular-nums;
 }
 .ticker-px { color: var(--text); font-weight: 600; }
-.ticker-chg.up { color: var(--up); }
-.ticker-chg.down { color: var(--down); }
+.ticker-px.btc { color: var(--btc); }
+.ticker-px.xmr { color: var(--xmr); }
+.ticker-dir { margin-left: .25rem; font-size: .78em; line-height: 1; }
+.ticker-dir.up { color: var(--up); }
+.ticker-dir.down { color: var(--down); }
 .ticker-viewport {
   overflow: hidden; display: flex; align-items: center;
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 24px, #000 calc(100% - 24px), transparent);
