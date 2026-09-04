@@ -716,6 +716,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: var(--panel);
 }
 .media-unavailable p { margin: 0; color: var(--text-secondary); font-size: .88rem; }
+.tg-video {
+  position: relative; display: block;
+  border: 1px solid var(--border); border-radius: var(--radius);
+  overflow: hidden; background: #000;
+}
+.tg-video img { width: 100%; height: auto; display: block; max-height: 62vh; object-fit: cover; }
+.tg-video .play-badge { width: 54px; height: 54px; margin: -27px 0 0 -27px; font-size: 18px; }
+.tg-video:hover { border-color: var(--accent); }
 
 .article-body p {
   color: var(--text);

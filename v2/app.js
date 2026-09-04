@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     return `${(at > 64 ? cut.slice(0, at) : cut).replace(/[.,;:\s]+$/, '')}…`;
   };
 
-  const isVideoItem = (item) => Boolean(item.youtube_id || item.video_url);
+  const isVideoItem = (item) => Boolean(item.youtube_id || item.video_url || item.video_external);
 
   const isTelegramHost = (host) => /(?:^|\.)(?:t\.me|telegram\.(?:org|me)|telesco\.pe)$/i.test(host || '');
   const isYoutubeHost = (host) => /(?:^|\.)(?:youtube\.com|youtu\.be|youtube-nocookie\.com)$/i.test(host || '');
@@ -277,6 +277,17 @@ document.addEventListener('DOMContentLoaded', async () => {
       return `<div class="native-player" data-tg-link="${tgLink}">
         <video class="article-video" controls playsinline preload="metadata" crossorigin="anonymous" poster="${escapeHtml(mediaURL(item.video_thumb || item.image || ''))}" src="${escapeHtml(mediaURL(item.video_url))}"></video>
         <a class="btn btn-ghost" href="${tgLink}" target="_blank" rel="noopener">Abrir vídeo en Telegram</a>
+      </div>`;
+    }
+    if (item.video_external) {
+      const tgLink = escapeHtml(item.source_url || '#');
+      const poster = escapeHtml(mediaURL(item.video_thumb || item.image || ''));
+      return `<div class="native-player">
+        <a class="tg-video" href="${tgLink}" target="_blank" rel="noopener" aria-label="Ver vídeo en Telegram">
+          ${poster ? `<img src="${poster}" alt="" referrerpolicy="no-referrer" />` : ''}
+          <span class="play-badge" aria-hidden="true">▶</span>
+        </a>
+        <a class="btn btn-ghost" href="${tgLink}" target="_blank" rel="noopener">Ver vídeo en Telegram</a>
       </div>`;
     }
     const imgs = itemImages(item);
