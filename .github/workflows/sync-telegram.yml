@@ -39,7 +39,9 @@ jobs:
           TG_SESSION_STRING: ${{ secrets.TG_SESSION_STRING }}
           TG_CHANNEL: ${{ vars.TG_CHANNEL || 'starkprivacy' }}
           MEDIA_BASE: ${{ vars.MEDIA_BASE || 'media' }}
-          MAX_MEDIA_MB: ${{ vars.MAX_MEDIA_MB || '48' }}
+          # 0 = no descargar vídeos al repo (solo póster + enlace). Cuando tengas
+          # servidor propio: pon la variable MAX_MEDIA_MB a 48 y MEDIA_BASE a la URL.
+          MAX_MEDIA_MB: ${{ vars.MAX_MEDIA_MB || '0' }}
           BACKFILL: ${{ (github.event_name == 'workflow_dispatch' && inputs.backfill) && '1' || '0' }}
         run: python3 scripts/sync_telegram.py
 

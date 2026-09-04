@@ -241,13 +241,15 @@ def build_article(app: Client, msgs: list, username: str, prev: dict) -> dict | 
                 art["video_thumb"] = local(f"{art_id}.jpg")
                 if not art["image"]:
                     art["image"] = local(f"{art_id}.jpg")
-            if size and size > MAX_MEDIA_BYTES:
+            # MAX_MEDIA_MB <= 0  -> nunca se descarga vídeo (solo enlace + póster).
+            too_big = MAX_MEDIA_BYTES <= 0 or (size and size > MAX_MEDIA_BYTES)
+            if too_big:
                 art["video_external"] = True
-                print(f"  vídeo {art_id} = {size/1048576:.1f} MB > límite, se deja enlace")
-            else:
-                ext = "mp4"
-                if dl(m, f"{art_id}.{ext}"):
-                    art["video_url"] = local(f"{art_id}.{ext}")
+                why = "vídeo desactivado" if MAX_MEDIA_BYTES <= 0 else \
+                    f"{size/1048576:.1f} MB > límite"
+                print(f"  vídeo {art_id}: {why}, se deja enlace a Telegram")
+            elif dl(m, f"{art_id}.mp4"):
+                art["video_url"] = local(f"{art_id}.mp4")
             idx += 1
 
     if images:

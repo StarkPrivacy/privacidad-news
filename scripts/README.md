@@ -23,7 +23,10 @@ caducan.
      historial: una sesión de usuario de Pyrogram/Telethon)*
 
    Opcional en *Variables* (no secretos): `TG_CHANNEL`, `MEDIA_BASE`,
-   `MAX_MEDIA_MB`.
+   `MAX_MEDIA_MB`. **Por defecto `MAX_MEDIA_MB` es `0`: los vídeos NO se
+   descargan al repo** (se guarda el póster y un enlace a Telegram), para no
+   inflar el repositorio ni pasarse del límite de GitHub Pages. Cuando tengas
+   servidor propio, pon `MAX_MEDIA_MB` a `48` y `MEDIA_BASE` a la URL del CDN.
 
 ## Primera carga (backfill de todo el archivo)
 
@@ -59,9 +62,9 @@ Igual que antes, con las rutas de media apuntando a `MEDIA_BASE` (por defecto
   "excerpt": "…",
   "image": "media/1669.jpg",
   "images": ["media/1669.jpg", "media/1669-2.jpg"],   // solo álbumes
-  "video_url": "media/1669.mp4",                       // vídeo nativo
+  "video_url": "media/1669.mp4",   // solo si MAX_MEDIA_MB > 0 y el vídeo cabe
   "video_thumb": "media/1669.jpg",
-  "video_external": true,   // vídeo > MAX_MEDIA_MB: sin fichero, solo enlace
+  "video_external": true,   // vídeo no descargado: póster + enlace a Telegram
   "youtube_id": null,
   "source_url": "https://t.me/StarkPrivacy/1669",
   "sources": ["https://www.theverge.com/…"],           // incl. preview del enlace
