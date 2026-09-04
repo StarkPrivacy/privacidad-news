@@ -40,7 +40,7 @@ from pathlib import Path
 
 try:
     from pyrogram import Client
-    from pyrogram.enums import MessageMediaType
+    from pyrogram.errors import FloodWait
 except ImportError:
     sys.exit("Falta Pyrogram. Instala:  pip install pyrogram tgcrypto")
 
@@ -296,7 +296,6 @@ def run() -> int:
             print(f"news.json ilegible ({e}); se reconstruye")
 
     max_known = max(existing) if existing else 0
-    stop_at = 0 if BACKFILL else max_known
     print(f"{'BACKFILL completo' if BACKFILL else 'incremental'} · "
           f"{len(existing)} noticias en archivo · último id {max_known}")
 
@@ -304,12 +303,47 @@ def run() -> int:
     processed: dict[int, dict] = {}
     with app:
         me = app.get_me()
-        if not me.is_bot and not SESSION_STRING:
-            print("Aviso: no parece un bot.")
+        is_bot = bool(getattr(me, "is_bot", False))
         chat = app.get_chat(CHANNEL)
         username = chat.username or CHANNEL
         meta_source = f"https://t.me/{username}"
-        print(f"canal: {chat.title} (@{username})")
+        print(f"canal: {chat.title} (@{username}) · {'bot' if is_bot else 'usuario'}")
+
+        def get_batch(ids: list[int]) -> list:
+            """channels.getMessages: SÍ funciona para bots (a diferencia de
+            get_chat_history)."""
+            while True:
+                try:
+                    res = app.get_messages(chat.id, ids)
+                    return res if isinstance(res, list) else [res]
+                except FloodWait as fw:  # noqa: PERF203
+                    wait = int(getattr(fw, "value", 30)) + 2
+                    print(f"  FloodWait {wait}s")
+                    time.sleep(wait)
+
+        def top_id() -> int:
+            """Descubre el id más alto sondeando hacia delante por ventanas."""
+            top = max_known
+            cur = max_known + 1
+            empty = 0
+            while empty < 2 and cur < max_known + 6000:
+                got = [m for m in get_batch(list(range(cur, cur + 100)))
+                       if m and not getattr(m, "empty", False)]
+                if got:
+                    top = max(top, max(m.id for m in got))
+                    empty = 0
+                else:
+                    empty += 1
+                cur += 100
+            return top
+
+        latest = top_id()
+        start = 1 if BACKFILL else max_known + 1
+        end = min(latest, start + ARCHIVE_LIMIT - 1)
+        if start > end:
+            print("No hay mensajes nuevos.")
+        else:
+            print(f"leyendo mensajes {start}–{end}")
 
         buf: list = []
         buf_key = object()
@@ -330,36 +364,30 @@ def run() -> int:
                 print(f"  ! error en #{gid}: {e}")
             buf = []
 
-        try:
-            for msg in app.get_chat_history(chat.id, limit=ARCHIVE_LIMIT):
-                seen += 1
-                if msg.service or msg.empty:
+        lo = start
+        while lo <= end:
+            hi = min(lo + 199, end)
+            for msg in get_batch(list(range(lo, hi + 1))):
+                if not msg or getattr(msg, "empty", False) or msg.service:
                     continue
-                if msg.id <= stop_at and group_key(msg) is None:
-                    break
+                seen += 1
                 k = group_key(msg)
-                if k is None:
-                    flush()
-                    buf = [msg]
-                    buf_key = object()
-                    flush()
-                elif k == buf_key:
+                if k is not None and k == buf_key:
                     buf.append(msg)
                 else:
                     flush()
                     buf = [msg]
-                    buf_key = k
-            flush()
-        except Exception as e:  # noqa: BLE001
-            if not processed:
-                sys.exit(
-                    f"No se pudo leer el historial: {e}\n"
-                    "Comprueba que el bot es ADMIN del canal, o define "
-                    "TG_SESSION_STRING con una sesión de usuario."
-                )
-            print(f"corte al leer historial ({e}); se guarda lo obtenido")
+                    buf_key = k if k is not None else object()
+            lo = hi + 1
+            time.sleep(0.35)
+        flush()
 
-        print(f"{seen} mensajes vistos · {len(processed)} artículos construidos")
+        if not processed and seen == 0:
+            sys.exit(
+                "No se pudo leer ningún mensaje. Revisa que el bot es admin "
+                "del canal, o define TG_SESSION_STRING con sesión de usuario."
+            )
+        print(f"{seen} mensajes leídos · {len(processed)} artículos construidos")
 
     merged = dict(existing)
     for aid, art in processed.items():
