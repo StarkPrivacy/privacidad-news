@@ -139,6 +139,12 @@ def is_photo_doc(msg) -> bool:
     return bool(doc and (doc.mime_type or "").startswith("image/"))
 
 
+def has_media(a: dict) -> bool:
+    """Solo se publican posts con foto, vídeo o enlace de YouTube."""
+    return bool(a.get("image") or a.get("images") or a.get("video_url")
+                or a.get("video_external") or a.get("youtube_id"))
+
+
 def group_key(msg):
     return getattr(msg, "media_group_id", None)
 
@@ -259,6 +265,8 @@ def build_article(app: Client, msgs: list, username: str, prev: dict) -> dict | 
     elif not art["image"]:
         art["has_media"] = bool(art.get("video_url") or art.get("video_external"))
 
+    if not has_media(art):
+        return None  # post de solo texto: no se publica
     return art
 
 
@@ -398,7 +406,11 @@ def run() -> int:
             art["category"] = old["category"]
         merged[aid] = art
 
-    articles = [merged[k] for k in sorted(merged, reverse=True)]
+    articles = [merged[k] for k in sorted(merged, reverse=True)
+                if has_media(merged[k])]
+    dropped = len(merged) - len(articles)
+    if dropped:
+        print(f"{dropped} posts sin foto/vídeo/YouTube descartados")
     DATA.mkdir(parents=True, exist_ok=True)
     NEWS_JSON.write_text(json.dumps(
         {"updated": now_iso(), "source": meta_source, "articles": articles},
