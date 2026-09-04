@@ -1,6 +1,51 @@
 {
-  "updated": "2026-09-04T13:33:43Z",
+  "updated": "2026-09-04T17:02:26Z",
   "articles": [
+    {
+      "id": 1675,
+      "title": "Buscaba un navegador \"de privacidad\" y acabó dándole el control de su PC a un desconocido",
+      "date": "2026-09-04T16:51:45+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "Investigadores de Intezer han destapado una campaña de malware que se hace pasar, precisamente, por un navegador orientado a la privacidad. Un empleado escribió \".con\" en vez de \".com\" buscando el manual de un ratón recién comprado, y…",
+      "image": "media/1675.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1675",
+      "body": [
+        "Buscaba un navegador \"de privacidad\" y acabó dándole el control de su PC a un desconocido",
+        "Investigadores de Intezer han destapado una campaña de malware que se hace pasar, precisamente, por un navegador orientado a la privacidad.",
+        "Un empleado escribió \".con\" en vez de \".com\" buscando el manual de un ratón recién comprado, y Google le mostró un anuncio patrocinado que, tras pasar por varios intermediarios publicitarios, llevaba a una web que promocionaba ese supuesto navegador privado.",
+        "Tras superar un CAPTCHA (puro teatro para dar legitimidad), la víctima descarga un instalador en formato MSIX, el mismo empaquetado que usa Microsoft para dar confianza a las apps, que aquí sirve para camuflar el malware casi sin levantar alertas en los antivirus.",
+        "Ese navegador, construido con NW.js, esconde un motor capaz de generar pulsaciones de teclado y movimientos de ratón sintéticos, es decir, controlar el ordenador como si alguien lo manejara con las manos puestas encima, algo parecido a un USB Rubber Ducky pero operado a distancia.",
+        "Espera a que el equipo lleve al menos siete minutos inactivo y mueve las ventanas fuera de la pantalla visible para no ser detectado.",
+        "Lo más inquietante es la trayectoria de esta operación, con infraestructura activa desde al menos 2016, que antes ya había suplantado a WhatsApp, Instagram, Messenger o Tinder.",
+        "Por un error propio, los atacantes dejaron al descubierto parte de su equipo de trabajo, con herramientas como Telegram, una VPN y VS Code."
+      ],
+      "locked": false
+    },
+    {
+      "id": 1674,
+      "title": "El precio de la privacidad de los menores: 17.000 millones de dólares",
+      "date": "2026-09-04T14:52:44+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "Meta ha cerrado un acuerdo con 52 fiscales generales de Estados Unidos para pagar 17.000 millones de dólares y poner fin a las demandas por el daño causado a menores en Instagram y Facebook. La cifra suena contundente, pero conviene mirar…",
+      "image": "media/1674.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1674",
+      "body": [
+        "El precio de la privacidad de los menores: 17.000 millones de dólares",
+        "Meta ha cerrado un acuerdo con 52 fiscales generales de Estados Unidos para pagar 17.000 millones de dólares y poner fin a las demandas por el daño causado a menores en Instagram y Facebook. La cifra suena contundente, pero conviene mirar la letra pequeña.",
+        "El acuerdo obliga a Meta a implementar en el plazo de un año sistemas de \"estimación de edad\" que clasifican a cada usuario en una de tres franjas (menor de 13, entre 13 y 17, o adulto). El problema es la fiabilidad de esos sistemas, los propios métodos de Meta pueden fallar hasta en un 14% de los casos al calcular la edad de adolescentes de 16 y 17 años durante el primer año, y hasta un 7% en el grupo de 13 a 15.",
+        "Y aquí está lo importante, cualquier persona que no complete esa verificación en 14 días será tratada como menor, según el propio texto, \"independientemente de la edad que haya declarado\".",
+        "Es decir, el acuerdo no solo trae restricciones para menores (bloqueo nocturno, límite de dos horas diarias, sin notificaciones en horario escolar), también empuja a todos los usuarios, tengan la edad que tengan, hacia un sistema donde demostrar quién eres pasa a ser la opción por defecto para navegar sin restricciones."
+      ],
+      "locked": false
+    },
     {
       "id": 1673,
       "title": "Pegasus infecta con un exploit zero-click el móvil de un activista serbio",
@@ -401,49 +446,6 @@
         "Los dispositivos de 2026 de Motorola se quedan un poco cortos.",
         "También tienen previsto dar soporte a las versiones plegables (tanto las de tipo tableta como las de tipo flip). Motorola se encargará de gran parte del trabajo de adaptación del sistema, lo que les facilitará las cosas respecto a lo que ocurre ahora con los Pixel, que se han vuelto más complicados de mantener.",
         "Los móviles cumplirán sus requisitos de actualizaciones largas (al menos siete años) y de protección avanzada. Los modelos más baratos tendrán que esperar más tiempo hasta que el hardware y el soporte de actualizaciones estén a la altura."
-      ],
-      "locked": false
-    },
-    {
-      "id": 1654,
-      "title": "ChatGPT ahora se conecta a la aplicación de mensaje de Apple",
-      "date": "2026-08-21T16:35:56+00:00",
-      "category": "Empresas",
-      "tags": "apple chatgpt empresas openai",
-      "excerpt": "OpenAI a presentado recientemente una integración nueva que conecta ChatGPT con la app de Mensajes de Apple en ordenadores Mac. A partir de ahora, desde las versiones de ChatGPT orientadas a trabajo y desde Codex en escritorio, el…",
-      "image": "media/1654.jpg",
-      "youtube_id": null,
-      "has_media": true,
-      "in_feed": true,
-      "source_url": "https://t.me/StarkPrivacy/1654",
-      "body": [
-        "💬 ChatGPT ahora se conecta a la aplicación de mensaje de Apple",
-        "OpenAI a presentado recientemente una integración nueva que conecta ChatGPT con la app de Mensajes de Apple en ordenadores Mac.",
-        "A partir de ahora, desde las versiones de ChatGPT orientadas a trabajo y desde Codex en escritorio, el asistente puede revisar tus conversaciones, buscar información dentro de ellas, proponerte respuestas, ayudarte a ponerte al día con lo pendiente e incluso enviar mensajes (siempre con tu confirmación previa).",
-        "También permite cruzar datos con el calendario, detectar posibles cumpleaños o identificar mensajes sospechosos."
-      ],
-      "locked": false,
-      "video_thumb": "media/1654.jpg",
-      "video_external": true
-    },
-    {
-      "id": 1653,
-      "title": "Apple no podrá desincentivar el seguimiento en las aplicaciones que instales",
-      "date": "2026-08-20T15:43:30+00:00",
-      "category": "Productos",
-      "tags": "apple productos",
-      "excerpt": "Apple modificará en iPhones y iPads la forma en que se pide permiso a los usuarios para que las aplicaciones de terceros utilicen sus datos con fines publicitarios personalizados. La autoridad alemana de competencia cerró una investigación…",
-      "image": "media/1653.jpg",
-      "youtube_id": null,
-      "has_media": true,
-      "in_feed": true,
-      "source_url": "https://t.me/StarkPrivacy/1653",
-      "body": [
-        "📱 Apple no podrá desincentivar el seguimiento en las aplicaciones que instales",
-        "Apple modificará en iPhones y iPads la forma en que se pide permiso a los usuarios para que las aplicaciones de terceros utilicen sus datos con fines publicitarios personalizados.",
-        "La autoridad alemana de competencia cerró una investigación de varios años al detectar que el sistema de consentimiento de la compañía favorecía a sus propias apps frente a las de otros desarrolladores, lo que podía vulnerar las normas de competencia.",
-        "A partir de ahora, las ventanas de solicitud de permiso para apps externas deberán ser neutrales tanto en el lenguaje como en el diseño, eliminando elementos que desincentiven la aceptación. Además, los desarrolladores tendrán más margen para combinar estas peticiones con otras exigencias de privacidad.",
-        "La empresa dispone de cuatro meses para aplicar los cambios una vez notificada la decisión, y el compromiso se mantendrá durante siete años bajo supervisión de un monitor independiente. Las modificaciones se extenderán a casi todos los países de la Unión Europea."
       ],
       "locked": false
     }
