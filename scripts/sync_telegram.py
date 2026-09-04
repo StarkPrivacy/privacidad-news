@@ -392,7 +392,10 @@ def run() -> int:
             time.sleep(0.35)
         flush()
 
-        if not processed and seen == 0:
+        # Solo es un fallo real si HABÍA mensajes que leer y no se leyó
+        # ninguno. "No hay mensajes nuevos" (start > end) es el caso normal
+        # de una sincronización incremental sin novedades y no debe abortar.
+        if start <= end and not processed and seen == 0:
             sys.exit(
                 "No se pudo leer ningún mensaje. Revisa que el bot es admin "
                 "del canal, o define TG_SESSION_STRING con sesión de usuario."
