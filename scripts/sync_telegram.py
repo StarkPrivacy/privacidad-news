@@ -49,11 +49,17 @@ DATA = ROOT / "data"
 NEWS_JSON = DATA / "news.json"
 LATEST_JSON = DATA / "latest.json"
 
-API_ID = os.environ.get("TG_API_ID", "")
-API_HASH = os.environ.get("TG_API_HASH", "")
-BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
-SESSION_STRING = os.environ.get("TG_SESSION_STRING", "")
-CHANNEL = os.environ.get("TG_CHANNEL", "starkprivacy")
+def _env(name: str, default: str = "") -> str:
+    """Lee una variable de entorno y le quita espacios/comillas/saltos de línea
+    que se cuelan fácilmente al pegar secrets."""
+    return os.environ.get(name, default).strip().strip('"').strip("'").strip()
+
+
+API_ID = _env("TG_API_ID")
+API_HASH = _env("TG_API_HASH")
+BOT_TOKEN = _env("TG_BOT_TOKEN")
+SESSION_STRING = _env("TG_SESSION_STRING")
+CHANNEL = _env("TG_CHANNEL", "starkprivacy") or "starkprivacy"
 MEDIA_DIR = ROOT / os.environ.get("MEDIA_DIR", "media")
 MEDIA_BASE = os.environ.get("MEDIA_BASE", "media").rstrip("/")
 MAX_MEDIA_BYTES = int(float(os.environ.get("MAX_MEDIA_MB", "48")) * 1024 * 1024)
@@ -259,6 +265,16 @@ def build_article(app: Client, msgs: list, username: str, prev: dict) -> dict | 
 def make_client() -> Client:
     if not API_ID or not API_HASH:
         sys.exit("Faltan TG_API_ID / TG_API_HASH (secrets de GitHub).")
+    if not API_ID.isdigit():
+        sys.exit(
+            f"TG_API_ID debe ser solo el número (7-8 cifras), pero vale "
+            f"'{API_ID[:4]}…' ({len(API_ID)} car.). ¿Lo has puesto en el "
+            "secret equivocado? El número va en TG_API_ID y la cadena hex de "
+            "32 caracteres en TG_API_HASH."
+        )
+    if len(API_HASH) != 32:
+        print(f"Aviso: TG_API_HASH tiene {len(API_HASH)} caracteres; "
+              "lo normal son 32. Revisa que esté completo y sin espacios.")
     common = dict(api_id=int(API_ID), api_hash=API_HASH, in_memory=True,
                   no_updates=True)
     if SESSION_STRING:
