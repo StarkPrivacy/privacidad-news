@@ -1,7 +1,28 @@
 {
-  "updated": "2026-09-05T06:17:15Z",
+  "updated": "2026-09-05T10:42:17Z",
   "source": "https://t.me/StarkPrivacy",
   "articles": [
+    {
+      "id": 1676,
+      "title": "Mullvad da un paso atrás en su DNS público y apuesta por reforzar a Quad9",
+      "date": "2026-09-05T06:46:06+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "Mullvad, uno de los proveedores de VPN con más peso dentro de la comunidad de privacidad, va a cerrar sus servidores públicos de DNS cifrado el próximo 2 de noviembre. Los ofrecía desde 2022, de forma gratuita, tanto para sus propios…",
+      "image": "media/1676.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1676",
+      "body": [
+        "Mullvad da un paso atrás en su DNS público y apuesta por reforzar a Quad9",
+        "Mullvad, uno de los proveedores de VPN con más peso dentro de la comunidad de privacidad, va a cerrar sus servidores públicos de DNS cifrado el próximo 2 de noviembre. Los ofrecía desde 2022, de forma gratuita, tanto para sus propios usuarios de VPN como para cualquiera que quisiera resolver sus consultas DNS sin pasar por su proveedor de internet. A partir de esa fecha, ese servicio deja de existir.",
+        "El motivo no es económico ni una presión regulatoria, es más simple: mantener esa infraestructura duplicaba un trabajo que ya hace bien otra organización, Quad9, la fundación sin ánimo de lucro detrás de uno de los resolutores DNS centrados en privacidad más usados del mundo. En vez de seguir compitiendo por el mismo terreno, según el propio anuncio de Mullvad, la compañía prefiere retirarse y destinar recursos económicos a fortalecer a Quad9.",
+        "Para quien use Mullvad Browser con la configuración de fábrica, el cambio pasará desapercibido, la migración a Quad9 se hace sola. Quien haya tocado la configuración de DNS a mano (en el sistema operativo, en el router, en una app o en el propio navegador) sí tendrá que mover sus ajustes antes del 2 de noviembre, igual que quienes usen los perfiles de configuración de iOS o macOS de Mullvad, que dejarán de funcionar ese día. Si solo usas su VPN tal cual, sin haber tocado nada de DNS, no cambia nada para ti, ese tráfico ya se resuelve dentro de su propia red.",
+        "Detrás de lo que parece un simple recorte hay una decisión poco habitual en este sector, una empresa privada prescindiendo de un servicio propio para reforzar a un tercero independiente y sin ánimo de lucro."
+      ],
+      "locked": false
+    },
     {
       "id": 1675,
       "title": "Buscaba un navegador \"de privacidad\" y acabó dándole el control de su PC a un desconocido",
