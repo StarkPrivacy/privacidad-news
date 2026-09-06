@@ -187,6 +187,9 @@ class _TgHtmlParser(HTMLParser):
                 self.stack.append(None)
             return
         mapped = _TG_TAG_MAP.get(tag)
+        # una cita a nivel superior siempre es su propio párrafo
+        if mapped == "blockquote" and not self.stack:
+            self._flush_para()
         if mapped:
             self.buf.append(f"<{mapped}>")
         self.stack.append(mapped)
@@ -199,6 +202,8 @@ class _TgHtmlParser(HTMLParser):
         mapped = self.stack.pop()
         if mapped:
             self.buf.append(f"</{mapped}>")
+        if mapped == "blockquote" and not self.stack:
+            self._flush_para()
 
     def handle_data(self, data):
         if not self.stack:
