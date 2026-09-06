@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T11:30:58Z",
+  "updated": "2026-09-06T11:34:49Z",
   "articles": [
     {
       "id": 1676,
@@ -315,7 +315,8 @@
       ],
       "body_html": [
         "🌐 <strong>Proton vuelve a caerse</strong>",
-        "<a href=\"https://status.proton.me/\" target=\"_blank\" rel=\"noopener\">Así lo informan:</a><blockquote>En estos momentos estamos solucionando algunos fallos de hardware residuales que probablemente estén relacionados con los daños sufridos a raíz del incidente de sobrecalentamiento de la semana pasada. Por el momento, estamos operando a capacidad reducida, mientras nuestros ingenieros trabajan para poner en marcha infraestructura adicional. Pedimos disculpas por el desafortunado momento en que se ha producido este incidente y por cualquier interrupción o inconveniente que esto os haya podido causar.<br><br>Sep 01, 2026 - 16:42 CEST</blockquote>",
+        "<a href=\"https://status.proton.me/\" target=\"_blank\" rel=\"noopener\">Así lo informan:</a>",
+        "<blockquote>En estos momentos estamos solucionando algunos fallos de hardware residuales que probablemente estén relacionados con los daños sufridos a raíz del incidente de sobrecalentamiento de la semana pasada. Por el momento, estamos operando a capacidad reducida, mientras nuestros ingenieros trabajan para poner en marcha infraestructura adicional. Pedimos disculpas por el desafortunado momento en que se ha producido este incidente y por cualquier interrupción o inconveniente que esto os haya podido causar.<br><br>Sep 01, 2026 - 16:42 CEST</blockquote>",
         "Sería la segunda caída en un breve periodo de tiempo.",
         "Si bien la caída no es completa, se reportan notables intentos fallidos de acceso."
       ]
