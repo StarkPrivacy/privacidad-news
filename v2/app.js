@@ -747,7 +747,16 @@ document.addEventListener('DOMContentLoaded', async () => {
   const mailReveal = document.getElementById('mailReveal');
   mailReveal?.addEventListener('click', () => {
     mailFlip?.classList.add('is-flipped');
-    setTimeout(() => mailFlip?.querySelector('.mail-input')?.focus(), 450);
+    const inner = mailFlip?.querySelector('.mail-flip-inner');
+    const settle = () => {
+      // Al terminar el giro se quita el contexto 3D: deja el formulario plano
+      // (y el captcha no sufre transformaciones raras).
+      mailFlip.classList.add('is-settled');
+      mailFlip.querySelector('.mail-input')?.focus();
+      inner?.removeEventListener('transitionend', settle);
+    };
+    inner?.addEventListener('transitionend', settle);
+    setTimeout(settle, 750);
   });
 
   /* ---------- Panel de filtros compacto ---------- */
@@ -776,7 +785,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       e.preventDefault();
       if (captchaWrap) captchaWrap.hidden = false;
       if (captchaErr) captchaErr.hidden = false;
-      mailFlip?.classList.add('with-captcha');
     }
   });
 

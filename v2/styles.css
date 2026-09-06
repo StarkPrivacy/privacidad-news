@@ -599,7 +599,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transition: transform .6s cubic-bezier(.22, 1, .36, 1);
 }
 .mail-flip.is-flipped .mail-flip-inner { transform: rotateY(180deg); }
-.mail-flip.with-captcha .mail-flip-inner { min-height: 320px; }
 .mail-face {
   position: absolute; inset: 0;
   display: flex; flex-direction: column; gap: .6rem;
@@ -607,6 +606,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   -webkit-backface-visibility: hidden;
 }
 .mail-face.mail-back { transform: rotateY(180deg); }
+/* una vez terminado el giro: formulario plano, sin contexto 3D */
+.mail-flip.is-settled .mail-flip-inner {
+  transform: none; transform-style: flat; min-height: 0;
+}
+.mail-flip.is-settled .mail-front { display: none; }
+.mail-flip.is-settled .mail-back { position: static; transform: none; }
 .mail-flip .sidebar-text { margin: .1rem 0 0; }
 .mail-form { display: flex; flex-direction: column; gap: .5rem; margin: 0; }
 .mail-input {
