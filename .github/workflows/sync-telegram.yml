@@ -29,7 +29,10 @@ jobs:
           python-version: "3.12"
 
       - name: Instalar dependencias
-        run: pip install --quiet pyrogram tgcrypto
+        # kurigram = fork mantenido de Pyrogram (capa de Telegram al día:
+        # entiende citas / blockquote y blockquote expandible). Import sigue
+        # siendo "import pyrogram".
+        run: pip install --quiet kurigram tgcrypto
 
       - name: Sincronizar canal
         env:

@@ -44,7 +44,7 @@ try:
     from pyrogram import Client
     from pyrogram.errors import FloodWait
 except ImportError:
-    sys.exit("Falta Pyrogram. Instala:  pip install pyrogram tgcrypto")
+    sys.exit("Falta la librería de Telegram. Instala:  pip install kurigram tgcrypto")
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -165,6 +165,9 @@ class _TgHtmlParser(HTMLParser):
         chunk = re.sub(r"\n{2,}", "<br><br>", chunk)
         chunk = chunk.replace("\n", "<br>")
         chunk = re.sub(r"(?:<br>\s*){3,}", "<br><br>", chunk)
+        # un <br> pegado por dentro al inicio/fin de un enlace queda feo: fuera
+        chunk = re.sub(r"(<a\b[^>]*>)\s*(?:<br>\s*)+", r"\1", chunk)
+        chunk = re.sub(r"(?:\s*<br>)+\s*(</a>)", r"\1", chunk)
         chunk = re.sub(r"^(?:<br>\s*)+|(?:\s*<br>)+$", "", chunk).strip()
         if chunk:
             self.paras.append(chunk)

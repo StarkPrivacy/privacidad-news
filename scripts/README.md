@@ -1,6 +1,6 @@
 # Sincronización con Telegram
 
-`sync_telegram.py` lee el canal con **Pyrogram** (login de bot) y reconstruye
+`sync_telegram.py` lee el canal con **kurigram** (fork mantenido de Pyrogram, login de bot) y reconstruye
 `data/news.json` + `data/latest.json`, descargando la media a `media/` con
 rutas estables. Sustituye al raspado de `t.me/s/…`, cuyas URLs de imagen
 caducan.
@@ -42,7 +42,7 @@ a bajar.
 ## Ejecutar en local
 
 ```bash
-pip install pyrogram tgcrypto
+pip install kurigram tgcrypto
 export TG_API_ID=... TG_API_HASH=... TG_BOT_TOKEN=...
 python3 scripts/sync_telegram.py --backfill      # o sin --backfill para incremental
 ```
