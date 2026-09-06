@@ -30,12 +30,14 @@ defecto):
 """
 from __future__ import annotations
 
+import html as html_lib
 import json
 import os
 import re
 import sys
 import time
 from datetime import datetime, timezone
+from html.parser import HTMLParser
 from pathlib import Path
 
 try:
@@ -134,6 +136,114 @@ def extract_sources(text: str, youtube_id: str) -> list[str]:
     return out
 
 
+_TG_TAG_MAP = {
+    "b": "strong", "strong": "strong",
+    "i": "em", "em": "em",
+    "u": "u", "ins": "u",
+    "s": "s", "strike": "s", "del": "s",
+    "code": "code",
+    "pre": "pre",
+    "blockquote": "blockquote",
+}
+
+
+class _TgHtmlParser(HTMLParser):
+    """Convierte el HTML que genera Pyrogram (message.text.html /
+    message.caption.html) en una lista de párrafos de HTML seguro
+    (strong/em/u/s/code/pre/blockquote/a/br), sin partir por una línea en
+    blanco los bloques que siguen abiertos -típicamente una cita de varias
+    líneas-, y sin dejar pasar ninguna otra etiqueta ni atributo."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.stack: list[str | None] = []
+        self.buf: list[str] = []
+        self.paras: list[str] = []
+
+    def _flush_para(self):
+        chunk = "".join(self.buf).strip()
+        chunk = re.sub(r"\n{2,}", "<br><br>", chunk)
+        chunk = chunk.replace("\n", "<br>")
+        chunk = re.sub(r"(?:<br>\s*){3,}", "<br><br>", chunk)
+        chunk = re.sub(r"^(?:<br>\s*)+|(?:\s*<br>)+$", "", chunk).strip()
+        if chunk:
+            self.paras.append(chunk)
+        self.buf = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "br":
+            self.buf.append("<br>")
+            return
+        if tag == "a":
+            href = dict(attrs).get("href", "") or ""
+            if re.match(r"^https?://", href, re.I):
+                safe = html_lib.escape(href, quote=True)
+                self.buf.append(f'<a href="{safe}" target="_blank" rel="noopener">')
+                self.stack.append("a")
+            else:
+                self.stack.append(None)
+            return
+        mapped = _TG_TAG_MAP.get(tag)
+        if mapped:
+            self.buf.append(f"<{mapped}>")
+        self.stack.append(mapped)
+
+    handle_startendtag = handle_starttag  # <br/> etc.
+
+    def handle_endtag(self, tag):
+        if tag == "br" or not self.stack:
+            return
+        mapped = self.stack.pop()
+        if mapped:
+            self.buf.append(f"</{mapped}>")
+
+    def handle_data(self, data):
+        if not self.stack:
+            parts = re.split(r"\n\s*\n", data)
+            for i, part in enumerate(parts):
+                if i > 0:
+                    self._flush_para()
+                self.buf.append(html_lib.escape(part))
+        else:
+            self.buf.append(html_lib.escape(data))
+
+    def result(self) -> list[str]:
+        self._flush_para()
+        return [p for p in self.paras if p]
+
+
+def html_paragraphs(rich_text) -> list[str]:
+    """rich_text: el .text/.caption de Pyrogram (trae .html ya renderizado
+    a partir de las entidades). Devuelve párrafos en HTML seguro."""
+    if not rich_text:
+        return []
+    try:
+        full_html = rich_text.html
+    except Exception:  # noqa: BLE001
+        full_html = html_lib.escape(str(rich_text))
+    parser = _TgHtmlParser()
+    try:
+        parser.feed(full_html)
+    except Exception as e:  # noqa: BLE001
+        print(f"  ! aviso: no se pudo interpretar el formato ({e})")
+        return []
+    return parser.result()
+
+
+def entity_link_sources(msg) -> list[str]:
+    """URLs de hipervínculos con texto propio (p.ej. "aquí" -> url), que no
+    aparecen literalmente en el texto plano y por tanto no los coge el regex
+    de extract_sources."""
+    ents = list(getattr(msg, "entities", None) or []) + \
+        list(getattr(msg, "caption_entities", None) or [])
+    out = []
+    for e in ents:
+        url = getattr(e, "url", None)
+        if url and re.match(r"^https?://", url, re.I):
+            out.append(url)
+    return out
+
+
 def is_photo_doc(msg) -> bool:
     doc = getattr(msg, "document", None)
     return bool(doc and (doc.mime_type or "").startswith("image/"))
@@ -156,10 +266,12 @@ def build_article(app: Client, msgs: list, username: str, prev: dict) -> dict | 
     lead = min(msgs, key=lambda m: m.id)
     art_id = lead.id
     text = ""
+    text_msg = None
     for m in msgs:
         t = (m.text or m.caption or "").strip()
         if t and len(t) > len(text):
             text = t
+            text_msg = m
 
     has_text = bool(text)
     media_msgs = [m for m in msgs if m.photo or m.video or m.animation
@@ -172,9 +284,24 @@ def build_article(app: Client, msgs: list, username: str, prev: dict) -> dict | 
     body = paragraphs
     excerpt = make_excerpt(paragraphs, title)
 
+    # Versión con el formato de Telegram conservado (negrita, cursiva, citas,
+    # enlaces con texto propio…), para el lector; body sigue en texto plano
+    # para el excerpt, la búsqueda y el sitio raíz.
+    rich_source = (text_msg.text or text_msg.caption) if text_msg is not None else None
+    body_html = html_paragraphs(rich_source)
+
     yt = YT_RE.search(text)
     youtube_id = yt.group(1) if yt else ""
     sources = extract_sources(text, youtube_id)
+    if text_msg is not None:
+        for url in entity_link_sources(text_msg):
+            low = url.lower()
+            if "t.me/" in low or "telegram." in low:
+                continue
+            if youtube_id and ("youtube.com" in low or "youtu.be" in low):
+                continue
+            if url not in sources:
+                sources.append(url)
 
     # link preview -> fuente, NUNCA imagen del artículo
     wp = getattr(lead, "web_page", None) or getattr(lead, "web_page_preview", None)
@@ -210,6 +337,11 @@ def build_article(app: Client, msgs: list, username: str, prev: dict) -> dict | 
     }
     if sources:
         art["sources"] = sources
+
+    # Solo se guarda body_html si aporta formato real (etiquetas): si no,
+    # sería una copia de body en texto plano.
+    if body_html and any("<" in p for p in body_html):
+        art["body_html"] = body_html
 
     if youtube_id:
         return art  # el sitio usa la miniatura de YouTube

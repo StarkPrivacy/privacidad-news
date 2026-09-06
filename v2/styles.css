@@ -734,13 +734,56 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin-bottom: 1rem;
   max-width: 68ch;
 }
-.article-body p:first-of-type::first-letter {
+.article-body > p:first-child::first-letter {
   font-family: var(--font-display);
   font-size: 3.1rem; line-height: .84;
   float: left; padding: .05em .12em .05em 0;
   color: var(--accent);
   font-weight: 600;
 }
+.article-body a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  word-break: break-word;
+}
+.article-body a:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
+.article-body strong { color: var(--text); font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body s { opacity: .7; }
+.article-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .88em;
+  background: var(--panel-head);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: .05em .35em;
+}
+.article-body pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .84rem; line-height: 1.5;
+  background: var(--panel-head);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: .8rem .9rem;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+  max-width: 100%;
+}
+.article-body pre code { background: none; border: 0; padding: 0; font-size: inherit; }
+.article-body blockquote {
+  margin: 0 0 1rem;
+  padding: .55rem 0 .55rem 1.1rem;
+  border-left: 3px solid var(--accent);
+  color: var(--text-secondary);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  max-width: 68ch;
+}
+.article-body blockquote a { font-style: normal; }
 
 .article-sources {
   margin-top: 1.5rem; padding-top: 1rem;
@@ -868,7 +911,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .modal { padding: 0; }
   .modal-panel { max-height: 100vh; height: 100%; border: 0; border-radius: 0; max-width: none; }
   .modal-content { padding: 1.3rem 1.1rem 1.9rem; }
-  .article-body p:first-of-type::first-letter { font-size: 2.5rem; }
+  .article-body > p:first-child::first-letter { font-size: 2.5rem; }
 }
 @media (max-width: 359px) {
   .search-form { display: none; }

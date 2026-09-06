@@ -152,6 +152,63 @@ document.addEventListener('DOMContentLoaded', async () => {
       .filter(p => p && normalize(p) !== title && p.replace(/[^\p{L}\p{N}]/gu, '').length >= 2);
   }
 
+  /* ---------- Cuerpo con formato de Telegram (body_html) ----------
+     El sync ya lo deja saneado a un subconjunto (strong/em/u/s/code/pre/
+     blockquote/a/br); aquí se vuelve a filtrar por si acaso antes de
+     inyectarlo como HTML. */
+  const RICH_TAGS = new Set(['STRONG', 'EM', 'U', 'S', 'CODE', 'PRE', 'BLOCKQUOTE', 'A', 'BR', 'P']);
+  function sanitizeRich(html) {
+    let root;
+    try {
+      root = new DOMParser().parseFromString(`<body>${html}</body>`, 'text/html').body;
+    } catch { return escapeHtml(String(html).replace(/<[^>]+>/g, '')); }
+    const walk = (node) => {
+      [...node.childNodes].forEach(child => {
+        if (child.nodeType === 3) return;
+        if (child.nodeType !== 1 || !RICH_TAGS.has(child.tagName)) {
+          while (child.firstChild) node.insertBefore(child.firstChild, child);
+          child.remove();
+          return;
+        }
+        [...child.attributes].forEach(a => {
+          const keep = child.tagName === 'A' && ['href', 'target', 'rel'].includes(a.name.toLowerCase());
+          if (!keep) child.removeAttribute(a.name);
+        });
+        if (child.tagName === 'A') {
+          const href = child.getAttribute('href') || '';
+          if (!/^https?:\/\//i.test(href)) {
+            while (child.firstChild) node.insertBefore(child.firstChild, child);
+            child.remove();
+            return;
+          }
+          child.setAttribute('target', '_blank');
+          child.setAttribute('rel', 'noopener nofollow');
+        }
+        walk(child);
+      });
+    };
+    walk(root);
+    return root.innerHTML;
+  }
+  function richBody(item) {
+    const paras = Array.isArray(item.body_html) ? item.body_html : null;
+    if (!paras || !paras.length) return null;
+    const title = normalize(cleanTitle(item));
+    const stripTags = (h) => String(h).replace(/<[^>]+>/g, '');
+    const out = paras
+      .map(h => String(h || '').trim())
+      .filter(h => {
+        const plain = stripLeadEmoji(stripTags(h));
+        return plain && normalize(plain) !== title
+          && plain.replace(/[^\p{L}\p{N}]/gu, '').length >= 2;
+      })
+      .map(h => {
+        const clean = sanitizeRich(h);
+        return /^\s*<blockquote[\s>]/i.test(clean) ? clean : `<p>${clean}</p>`;
+      });
+    return out.length ? out.join('') : null;
+  }
+
   /* ---------- Imágenes con cadena de respaldo ---------- */
   const catHue = (cat) => cat
     ? [...cat].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7) % 360
@@ -329,7 +386,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function fullContentHtml(item) {
     const dateLabel = formatDate(item.date);
-    const body = cleanParagraphs(item).map(p => `<p>${escapeHtml(p)}</p>`).join('') || '<p>Sin texto ampliado.</p>';
+    const body = richBody(item)
+      || cleanParagraphs(item).map(p => `<p>${escapeHtml(p)}</p>`).join('')
+      || '<p>Sin texto ampliado.</p>';
     return `
       <h1>${escapeHtml(cleanTitle(item))}</h1>
       <p class="article-meta"><time datetime="${escapeHtml(item.date || '')}">${dateLabel}</time>${item.category ? `<span>${escapeHtml(item.category)}</span>` : ''}</p>
