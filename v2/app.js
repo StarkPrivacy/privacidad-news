@@ -724,6 +724,32 @@ document.addEventListener('DOMContentLoaded', async () => {
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
+  /* ---------- Selector de proyecto en el título ---------- */
+  const siteSwitch = document.getElementById('siteSwitch');
+  const siteMenu = document.getElementById('siteMenu');
+  if (siteSwitch && siteMenu) {
+    const setMenu = (open) => {
+      siteMenu.hidden = !open;
+      siteSwitch.setAttribute('aria-expanded', String(open));
+    };
+    siteSwitch.addEventListener('click', (e) => {
+      e.stopPropagation();
+      setMenu(siteMenu.hidden);
+    });
+    document.addEventListener('click', (e) => {
+      if (!siteMenu.hidden && !siteMenu.contains(e.target) && !siteSwitch.contains(e.target)) setMenu(false);
+    });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+  }
+
+  /* ---------- Lista de correo: darle la vuelta ---------- */
+  const mailFlip = document.getElementById('mailFlip');
+  const mailReveal = document.getElementById('mailReveal');
+  mailReveal?.addEventListener('click', () => {
+    mailFlip?.classList.add('is-flipped');
+    setTimeout(() => mailFlip?.querySelector('.mail-input')?.focus(), 450);
+  });
+
   /* ---------- Panel de filtros compacto ---------- */
   const filterPanel = document.getElementById('filterPanel');
   const compactMq = window.matchMedia('(max-width: 1080px)');
@@ -750,6 +776,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       e.preventDefault();
       if (captchaWrap) captchaWrap.hidden = false;
       if (captchaErr) captchaErr.hidden = false;
+      mailFlip?.classList.add('with-captcha');
     }
   });
 

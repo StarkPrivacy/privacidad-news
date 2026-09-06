@@ -22,7 +22,7 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://i.ytimg.com" />
   <link rel="preconnect" href="https://www.youtube-nocookie.com" />
-  <link rel="stylesheet" href="styles.css?v=v2-04" />
+  <link rel="stylesheet" href="styles.css?v=v2-05" />
   <script>
     (function () {
       try {
@@ -49,11 +49,22 @@
       </div>
     </div>
     <div class="container header-inner">
-      <a href="./" class="logo" aria-label="Privacidad.news">
-        <img class="logo-mark" src="favicon.png?v=v2-05" width="30" height="30" alt="" aria-hidden="true" />
-        <span class="logo-main">Privacidad</span><span class="logo-sep">/</span><span class="logo-sub">news</span>
-      </a>
-      <nav class="main-nav"><a href="./">Inicio</a><a href="#webs-interes">Webs</a><a href="#lista-correo">Lista</a><a href="#donaciones">Donaciones</a><a href="https://boringprivacy.io" target="_blank" rel="noopener">Academia</a></nav>
+      <div class="logo" id="siteBrand">
+        <a href="./" class="logo-home" aria-label="Privacidad.news">
+          <img class="logo-mark" src="favicon.png?v=v2-05" width="30" height="30" alt="" aria-hidden="true" />
+          <span class="logo-main">Privacidad</span><span class="logo-sep">/</span>
+        </a>
+        <button type="button" class="logo-switch" id="siteSwitch" aria-haspopup="true" aria-expanded="false" aria-label="Cambiar de proyecto">
+          <span class="logo-sub">news</span>
+          <svg class="logo-caret" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="site-menu" id="siteMenu" role="menu" hidden>
+          <a role="menuitem" href="https://privacidad.me"><span class="sm-main">Privacidad</span><span class="sm-sep">/</span><span class="sm-sub">me</span></a>
+          <a role="menuitem" href="https://boringprivacy.io"><span class="sm-main">boringprivacy</span><span class="sm-sep">/</span><span class="sm-sub">io</span></a>
+          <a role="menuitem" href="https://privtr.ee"><span class="sm-main">privtr</span><span class="sm-sep">/</span><span class="sm-sub">ee</span></a>
+        </div>
+      </div>
+      <nav class="main-nav"><a href="./">Inicio</a><a href="#lista-correo">Lista</a><a href="#donaciones">Donaciones</a><a href="https://boringprivacy.io" target="_blank" rel="noopener">Academia</a></nav>
       <div class="header-actions">
         <form class="search-form" role="search" onsubmit="return false;">
           <input type="search" id="searchInput" placeholder="Buscar" autocomplete="off" />
@@ -91,13 +102,18 @@
       <nav class="feed-pager" id="feedPager" hidden aria-label="Paginación de noticias"></nav>
       <div id="emptyState" class="empty-state" hidden><p>No hay noticias que coincidan con tu búsqueda o filtro.</p><button type="button" class="btn" id="clearAll" data-clear-filters>Ver todas las noticias</button></div>
     </div>
-    <aside class="sidebar sidebar-right" aria-label="Enlaces de interés">
+    <aside class="sidebar sidebar-right" aria-label="Información y apoyo">
       <div class="sidebar-block about-block">
-        <h3 class="sidebar-title">Sobre este sitio</h3>
-        <p class="sidebar-text">Privacidad/news es un portal independiente de noticias sobre privacidad, seguridad, soberanía y libertad en el ámbito digital.</p>
-        <p class="sidebar-text">Se mantiene gracias al apoyo de aliados y a las donaciones de quienes lo sostienen. Gracias, de corazón.</p>
-        <p class="sidebar-text signoff">Atentamente,<br><a class="signoff-link" href="https://starkprivacy.com" target="_blank" rel="noopener">Stark</a></p>
+        <details class="drop about-drop">
+          <summary>Sobre este sitio</summary>
+          <div class="drop-body">
+            <p class="sidebar-text">Privacidad/news es un portal independiente de noticias sobre privacidad, seguridad, soberanía y libertad en el ámbito digital.</p>
+            <p class="sidebar-text">Se mantiene gracias al apoyo de aliados y a las donaciones de quienes lo sostienen. Gracias, de corazón.</p>
+            <p class="sidebar-text signoff">Atentamente,<br><a class="signoff-link" href="https://starkprivacy.com" target="_blank" rel="noopener">Stark</a></p>
+          </div>
+        </details>
       </div>
+
       <div class="sidebar-block allies-block">
         <h3 class="sidebar-title">Aliados</h3>
         <p class="sidebar-text">Servicios que apoyan nuestro enfoque de privacidad.</p>
@@ -106,54 +122,42 @@
           <span class="proton-name">Proton <em>VPN</em></span>
         </a>
       </div>
-    </aside>
-  </main>
-  <section class="support-section" id="webs-interes">
-    <div class="container support-grid">
-      <article class="support-card links-block">
-        <h3 class="support-title">Webs de interés</h3>
-        <p class="support-copy">Proyectos hermanos y recursos que encajan con este enfoque.</p>
-        <nav class="interest-list">
-          <a class="interest-card" href="https://privacidad.me" target="_blank" rel="noopener">
-            <span class="interest-brand"><span class="brand-main">Privacidad</span><span class="brand-sep">/</span><span class="brand-sub">me</span></span>
-            <span class="interest-desc">Herramientas y recursos</span>
-          </a>
-          <a class="interest-card" href="https://boringprivacy.io" target="_blank" rel="noopener">
-            <span class="interest-brand"><span class="brand-main">BoringPrivacy</span><span class="brand-sep">/</span><span class="brand-sub">io</span></span>
-            <span class="interest-desc">Academia y formación</span>
-          </a>
-          <a class="interest-card" href="https://privtr.ee/@stark" target="_blank" rel="noopener">
-            <span class="interest-brand"><span class="brand-main">Privtr</span><span class="brand-sep">.</span><span class="brand-sub">ee</span></span>
-            <span class="interest-desc">Servicios recomendados</span>
-          </a>
-        </nav>
-      </article>
-      <article class="support-card mail-block" id="lista-correo">
-        <h3 class="support-title">Lista de correo</h3>
-        <p class="support-copy">Avisos cortos cuando haya algo que merezca la pena. Misma lista que en el resto de proyectos.</p>
-        <form id="newsletter-form" class="mail-form" method="post" target="_blank" action="https://newsletter.boringprivacy.io/subscription/form">
-          <input class="mail-input" type="email" name="email" required placeholder="alias@proton.me" autocomplete="email" />
-          <button type="submit" class="mail-submit">Apuntarme</button>
-          <div id="captcha-wrap" class="captcha-wrap" hidden><div class="h-captcha" data-sitekey="7beaf856-25f0-43a4-b09a-8c26bfaed3fe" data-theme="dark" data-callback="onMailCaptcha"></div></div>
-          <p id="captcha-error" class="mail-hint" hidden>Completa el captcha para continuar.</p>
-          <input type="hidden" name="nonce" />
-          <input type="hidden" name="l" value="9a838c12-bfab-4de3-a771-6bbd876ade77" />
-        </form>
-        <p class="mail-hint">Autogestionado. Sin espionaje. Envío ocasional.</p>
-      </article>
-      <article class="support-card donate-block" id="donaciones">
-        <h3 class="support-title">Donaciones</h3>
-        <p class="support-copy">Si el medio te resulta útil, puedes sostenerlo con Bitcoin o Monero. Sin intermediarios.</p>
+
+      <div class="sidebar-block mail-block" id="lista-correo">
+        <h3 class="sidebar-title">Lista de correo</h3>
+        <div class="mail-flip" id="mailFlip">
+          <div class="mail-flip-inner">
+            <div class="mail-face mail-front">
+              <p class="sidebar-text">Avisos cortos cuando haya algo que merezca la pena. La misma lista que el resto de proyectos. Autogestionada, sin espionaje y de envío ocasional.</p>
+              <button type="button" class="mail-cta" id="mailReveal">Apuntarme</button>
+            </div>
+            <div class="mail-face mail-back">
+              <form id="newsletter-form" class="mail-form" method="post" target="_blank" action="https://newsletter.boringprivacy.io/subscription/form">
+                <input class="mail-input" type="email" name="email" required placeholder="alias@proton.me" autocomplete="email" />
+                <button type="submit" class="mail-cta mail-cta-flow">Apuntarme</button>
+                <div id="captcha-wrap" class="captcha-wrap" hidden><div class="h-captcha" data-sitekey="7beaf856-25f0-43a4-b09a-8c26bfaed3fe" data-theme="dark" data-callback="onMailCaptcha"></div></div>
+                <p id="captcha-error" class="mail-hint" hidden>Completa el captcha para continuar.</p>
+                <input type="hidden" name="nonce" />
+                <input type="hidden" name="l" value="9a838c12-bfab-4de3-a771-6bbd876ade77" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-block donate-block" id="donaciones">
+        <h3 class="sidebar-title">Donaciones</h3>
         <div class="donation-stack">
           <div class="donation-item btc"><h3>₿ Bitcoin <button type="button" class="copy-btn" data-copy>Copiar</button></h3><code>bc1qxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code></div>
           <div class="donation-item xmr"><h3>ɱ Monero <button type="button" class="copy-btn" data-copy>Copiar</button></h3><code>4xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code></div>
         </div>
-      </article>
-    </div>
-  </section>
+        <a class="what-is" href="donaciones.html">¿Qué es esto?</a>
+      </div>
+    </aside>
+  </main>
   <footer class="site-footer"><div class="container footer-inner">
     <p>© 2026 Privacidad.news · Escrito por <a class="author-link" href="https://x.com/StarkPrivacy" target="_blank" rel="noopener">Stark</a></p>
-    <p class="footer-links"><a href="https://privacidad.me">privacidad.me</a> · <a href="https://boringprivacy.io">boringprivacy.io</a> · <a href="../">diseño actual</a></p>
+    <p class="footer-links"><a href="donaciones.html">Cómo nos financiamos</a> · <a href="../">diseño actual</a></p>
   </div></footer>
   <div id="articleModal" class="modal" hidden>
     <div class="modal-backdrop" data-close></div>
@@ -183,6 +187,6 @@
     <a href="#" data-share-action="x" target="_blank" rel="noopener">Compartir en X</a>
     <a href="#" data-share-action="telegram" target="_blank" rel="noopener">Compartir en Telegram</a>
   </div>
-  <script src="app.js?v=v2-04"></script>
+  <script src="app.js?v=v2-05"></script>
 </body>
 </html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cómo se sostiene Privacidad.news</title>
+  <meta name="description" content="Privacidad.news se mantiene con donaciones voluntarias. Sin anuncios, sin rastreadores y sin vender tus datos." />
+  <meta name="theme-color" content="#0b0c10" />
+  <meta name="color-scheme" content="dark light" />
+  <meta property="og:title" content="Cómo se sostiene Privacidad.news" />
+  <meta property="og:description" content="Se mantiene con donaciones voluntarias. Sin anuncios, sin rastreadores y sin vender tus datos." />
+  <meta property="og:url" content="https://starkprivacy.github.io/privacidad-news/v2/donaciones.html" />
+  <link rel="icon" href="favicon.png?v=v2-05" type="image/png" sizes="256x256" />
+  <link rel="apple-touch-icon" href="favicon.png?v=v2-05" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=v2-05" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('pn-theme') || 'dark';
+        if (!['dark', 'blue', 'light'].includes(t)) t = 'dark';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) { document.documentElement.setAttribute('data-theme', 'dark'); }
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./" class="logo-home" aria-label="Privacidad.news">
+        <img class="logo-mark" src="favicon.png?v=v2-05" width="30" height="30" alt="" aria-hidden="true" />
+        <span class="logo-main">Privacidad</span><span class="logo-sep">/</span><span class="logo-sub">news</span>
+      </a>
+      <nav class="main-nav"><a href="./">Volver al portal</a></nav>
+    </div>
+  </header>
+
+  <main class="container doc-page">
+    <p class="doc-kicker">Sobre el proyecto</p>
+    <h1 class="doc-title">Cómo se sostiene Privacidad<span class="logo-sep">/</span><span class="logo-sub">news</span></h1>
+
+    <p class="doc-lead">Este medio no vive de ti como producto. Vive del apoyo voluntario
+    de quien lo considera útil.</p>
+
+    <div class="doc-points">
+      <div class="doc-point">
+        <h2>Sin anuncios</h2>
+        <p>No hay publicidad, ni banners, ni contenido patrocinado disfrazado de noticia.
+        Nada compite con lo que vienes a leer.</p>
+      </div>
+      <div class="doc-point">
+        <h2>Sin rastreadores</h2>
+        <p>Ni analítica que te perfile, ni cookies de terceros, ni píxeles de redes
+        sociales. No se registra quién eres ni qué lees.</p>
+      </div>
+      <div class="doc-point">
+        <h2>Sin vender datos</h2>
+        <p>No se recopilan datos personales para venderlos o cederlos. La única lista
+        que existe es la de correo, y solo si te apuntas tú.</p>
+      </div>
+      <div class="doc-point">
+        <h2>Sin intermediarios</h2>
+        <p>Las donaciones llegan directas en Bitcoin o Monero. Sin pasarelas de pago
+        que se queden una comisión ni que sepan de dónde vienen.</p>
+      </div>
+    </div>
+
+    <p class="doc-body">Se mantiene con dos cosas: las <strong>donaciones voluntarias</strong>
+    de los lectores y el apoyo de <strong>aliados</strong> que comparten el enfoque de
+    privacidad (y que se muestran de forma clara, nunca mezclados con las noticias).
+    Eso es todo. El objetivo de este modelo es simple: poder escribir sin deberle nada
+    a nadie.</p>
+
+    <section class="doc-donate">
+      <h2>Donar</h2>
+      <p>Cualquier cantidad ayuda a cubrir el mantenimiento y a que el proyecto siga siendo independiente.</p>
+      <div class="donation-stack">
+        <div class="donation-item btc">
+          <h3>₿ Bitcoin <button type="button" class="copy-btn" data-copy>Copiar</button></h3>
+          <code>bc1qxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code>
+        </div>
+        <div class="donation-item xmr">
+          <h3>ɱ Monero <button type="button" class="copy-btn" data-copy>Copiar</button></h3>
+          <code>4xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code>
+        </div>
+      </div>
+    </section>
+
+    <p class="doc-back"><a href="./">← Volver a las noticias</a></p>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner">
+    <p>© 2026 Privacidad.news · Escrito por <a class="author-link" href="https://x.com/StarkPrivacy" target="_blank" rel="noopener">Stark</a></p>
+  </div></footer>
+
+  <script>
+    document.querySelectorAll('[data-copy]').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const code = btn.closest('.donation-item')?.querySelector('code');
+        if (!code) return;
+        try { await navigator.clipboard.writeText(code.textContent.trim()); btn.textContent = 'Copiado'; } catch (e) {}
+      });
+    });
+  </script>
+</body>
+</html>
