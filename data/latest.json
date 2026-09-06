@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T09:05:04Z",
+  "updated": "2026-09-06T11:25:18Z",
   "articles": [
     {
       "id": 1676,
@@ -20,7 +20,17 @@
         "Para quien use Mullvad Browser con la configuración de fábrica, el cambio pasará desapercibido, la migración a Quad9 se hace sola. Quien haya tocado la configuración de DNS a mano (en el sistema operativo, en el router, en una app o en el propio navegador) sí tendrá que mover sus ajustes antes del 2 de noviembre, igual que quienes usen los perfiles de configuración de iOS o macOS de Mullvad, que dejarán de funcionar ese día. Si solo usas su VPN tal cual, sin haber tocado nada de DNS, no cambia nada para ti, ese tráfico ya se resuelve dentro de su propia red.",
         "Detrás de lo que parece un simple recorte hay una decisión poco habitual en este sector, una empresa privada prescindiendo de un servicio propio para reforzar a un tercero independiente y sin ánimo de lucro."
       ],
-      "locked": false
+      "locked": false,
+      "sources": [
+        "https://cyberinsider.com/mullvad-to-shut-down-public-encrypted-dns-servers-back-quad9-instead/"
+      ],
+      "body_html": [
+        "<strong>Mullvad da un paso atrás en su DNS público y apuesta por reforzar a Quad9</strong>",
+        "Mullvad, uno de los proveedores de VPN con más peso dentro de la comunidad de privacidad, va a cerrar sus servidores públicos de DNS cifrado el próximo 2 de noviembre. Los ofrecía desde 2022, de forma gratuita, tanto para sus propios usuarios de VPN como para cualquiera que quisiera resolver sus consultas DNS sin pasar por su proveedor de internet. A partir de esa fecha, ese servicio deja de existir.",
+        "El motivo no es económico ni una presión regulatoria, es más simple: mantener esa infraestructura duplicaba un trabajo que ya hace bien otra organización, Quad9, la fundación sin ánimo de lucro detrás de uno de los resolutores DNS centrados en privacidad más usados del mundo. En vez de seguir compitiendo por el mismo terreno, <a href=\"https://cyberinsider.com/mullvad-to-shut-down-public-encrypted-dns-servers-back-quad9-instead/\" target=\"_blank\" rel=\"noopener\">según el propio anuncio de Mullvad</a>, la compañía prefiere retirarse y destinar recursos económicos a fortalecer a Quad9.",
+        "Para quien use Mullvad Browser con la configuración de fábrica, el cambio pasará desapercibido, la migración a Quad9 se hace sola. Quien haya tocado la configuración de DNS a mano (en el sistema operativo, en el router, en una app o en el propio navegador) sí tendrá que mover sus ajustes antes del 2 de noviembre, igual que quienes usen los perfiles de configuración de iOS o macOS de Mullvad, que dejarán de funcionar ese día. Si solo usas su VPN tal cual, sin haber tocado nada de DNS, no cambia nada para ti, ese tráfico ya se resuelve dentro de su propia red.",
+        "Detrás de lo que parece un simple recorte hay una decisión poco habitual en este sector, una empresa privada prescindiendo de un servicio propio para reforzar a un tercero independiente y sin ánimo de lucro."
+      ]
     },
     {
       "id": 1675,
@@ -44,7 +54,17 @@
         "Lo más inquietante es la trayectoria de esta operación, con infraestructura activa desde al menos 2016, que antes ya había suplantado a WhatsApp, Instagram, Messenger o Tinder.",
         "Por un error propio, los atacantes dejaron al descubierto parte de su equipo de trabajo, con herramientas como Telegram, una VPN y VS Code."
       ],
-      "locked": false
+      "locked": false,
+      "body_html": [
+        "<strong>Buscaba un navegador &quot;de privacidad&quot; y acabó dándole el control de su PC a un desconocido</strong>",
+        "Investigadores de Intezer han <strong>destapado una campaña de malware</strong> que se hace pasar, precisamente, por un navegador orientado a la privacidad.",
+        "Un empleado escribió &quot;.con&quot; en vez de &quot;.com&quot; buscando el manual de un ratón recién comprado, y Google le mostró un anuncio patrocinado que, tras pasar por varios intermediarios publicitarios, llevaba a una web que promocionaba ese supuesto navegador privado.",
+        "Tras superar un CAPTCHA (puro teatro para dar legitimidad), la víctima descarga un instalador en formato MSIX, el mismo empaquetado que usa Microsoft para dar confianza a las apps, que aquí sirve para camuflar el malware casi sin levantar alertas en los antivirus.",
+        "Ese navegador, construido con NW.js, esconde un motor capaz de generar pulsaciones de teclado y movimientos de ratón sintéticos, es decir, controlar el ordenador como si alguien lo manejara con las manos puestas encima, algo parecido a un USB Rubber Ducky pero operado a distancia.",
+        "Espera a que el equipo lleve al menos siete minutos inactivo y mueve las ventanas fuera de la pantalla visible para no ser detectado.",
+        "Lo más inquietante es la trayectoria de esta operación, con infraestructura activa desde al menos 2016, que antes ya había suplantado a WhatsApp, Instagram, Messenger o Tinder.",
+        "Por un error propio, los atacantes dejaron al descubierto parte de su equipo de trabajo, con herramientas como Telegram, una VPN y VS Code."
+      ]
     },
     {
       "id": 1674,
@@ -65,7 +85,17 @@
         "Y aquí está lo importante, cualquier persona que no complete esa verificación en 14 días será tratada como menor, según el propio texto, \"independientemente de la edad que haya declarado\".",
         "Es decir, el acuerdo no solo trae restricciones para menores (bloqueo nocturno, límite de dos horas diarias, sin notificaciones en horario escolar), también empuja a todos los usuarios, tengan la edad que tengan, hacia un sistema donde demostrar quién eres pasa a ser la opción por defecto para navegar sin restricciones."
       ],
-      "locked": false
+      "locked": false,
+      "sources": [
+        "https://www.techdirt.com/2026/09/02/metas-17-billion-settlement-is-a-bad-deal-for-teens-and-all-social-media-users/"
+      ],
+      "body_html": [
+        "<strong>El precio de la privacidad de los menores: 17.000 millones de dólares </strong>",
+        "Meta ha cerrado un<a href=\"https://www.techdirt.com/2026/09/02/metas-17-billion-settlement-is-a-bad-deal-for-teens-and-all-social-media-users/\" target=\"_blank\" rel=\"noopener\"> acuerdo con 52 fiscales generales de Estados Unidos</a> para pagar 17.000 millones de dólares y poner fin a las demandas por el daño causado a menores en Instagram y Facebook. La cifra suena contundente, pero conviene mirar la letra pequeña.",
+        "El acuerdo obliga a Meta a implementar en el plazo de un año sistemas de &quot;estimación de edad&quot; que clasifican a cada usuario en una de tres franjas (menor de 13, entre 13 y 17, o adulto). El problema es la fiabilidad de esos sistemas, los propios métodos de Meta pueden fallar hasta en un 14% de los casos al calcular la edad de adolescentes de 16 y 17 años durante el primer año, y hasta un 7% en el grupo de 13 a 15.",
+        "Y aquí está lo importante, cualquier persona que no complete esa verificación en 14 días será tratada como menor, según el propio texto, &quot;independientemente de la edad que haya declarado&quot;.",
+        "Es decir, el acuerdo no solo trae restricciones para menores (bloqueo nocturno, límite de dos horas diarias, sin notificaciones en horario escolar), también empuja a todos los usuarios, tengan la edad que tengan, hacia un sistema donde demostrar quién eres pasa a ser la opción por defecto para navegar sin restricciones."
+      ]
     },
     {
       "id": 1673,
@@ -86,7 +116,17 @@
         "La fundación SHARE, especializada en derechos digitales, la califica como la mayor ola de vigilancia documentada en Serbia hasta la fecha: doce personas han acudido ya a peritos forenses digitales tras recibir avisos de amenaza directamente de Apple.",
         "Investigaciones paralelas de Citizen Lab y Amnistía Internacional encontraron además una variante local del malware, bautizada NoviSpy, instalada en dispositivos Android; en varios casos, la infección se produjo mientras el propietario del teléfono estaba bajo custodia policial, lo que apunta a acceso físico directo además del ataque remoto."
       ],
-      "locked": false
+      "locked": false,
+      "sources": [
+        "https://cyberinsider.com/pegasus-zero-click-attack-infects-serbian-activists-iphone/"
+      ],
+      "body_html": [
+        "<strong>Pegasus infecta con un exploit zero-click el móvil de un activista serbio</strong>",
+        "El teléfono de un estudiante activista prodemocracia en Serbia fue comprometido con<a href=\"https://cyberinsider.com/pegasus-zero-click-attack-infects-serbian-activists-iphone/\" target=\"_blank\" rel=\"noopener\"> Pegasus, el spyware comercial de NSO Group</a>, a través de una vulnerabilidad en iMessage que no exigía ninguna interacción por parte de la víctima: bastaba con recibir el mensaje para quedar infectado.",
+        "Citizen Lab sitúa la infección entre diciembre de 2025 y enero de 2026. Apple cerró después el agujero con iOS 18.4.1. No es un caso aislado: forma parte de una campaña contra al menos catorce estudiantes, activistas y figuras de la oposición serbia iniciada a comienzos de 2026, coincidiendo con el proceso electoral de marzo en el país.",
+        "La fundación SHARE, especializada en derechos digitales, la califica como la mayor ola de vigilancia documentada en Serbia hasta la fecha: doce personas han acudido ya a peritos forenses digitales tras recibir avisos de amenaza directamente de Apple.",
+        "Investigaciones paralelas de Citizen Lab y Amnistía Internacional encontraron además una variante local del malware, bautizada NoviSpy, instalada en dispositivos Android; en varios casos, la infección se produjo mientras el propietario del teléfono estaba bajo custodia policial, lo que apunta a acceso físico directo además del ataque remoto."
+      ]
     },
     {
       "id": 1672,
@@ -106,7 +146,15 @@
         "Fechas ya puestas: cuentas nuevas desde enero de 2027, las que ya existen desde julio de 2027.",
         "Lo relevante aquí no es tanto la ley en sí, sino el nivel al que opera: verificar edad app por app es una cosa, hacerlo desde el propio sistema operativo es otra muy distinta. Convierte al dispositivo entero en la fuente de tu identidad. Y con el peso que tiene California marcando tendencia regulatoria en EE.UU., esto probablemente no se queda ahí."
       ],
-      "locked": false
+      "locked": false,
+      "sources": [
+        "https://reclaimthenet.org/california-ab-1856-operating-system-age-signals"
+      ],
+      "body_html": [
+        "<strong>🪪 California blinda la verificación de edad… a nivel de sistema operativo<br></strong><br>La AB 1856 pasó por la Asamblea de California casi sin oposición (69-0) y solo espera la firma de Newsom. Suaviza algunos puntos de la ley anterior, pero deja intacto lo importante: <a href=\"https://reclaimthenet.org/california-ab-1856-operating-system-age-signals\" target=\"_blank\" rel=\"noopener\">tu sistema operativo tendrá que pedirte la edad al configurar el móvil</a>, y esa etiqueta viajará en tiempo real a tiendas de apps y desarrolladores. Los sistemas libres (licencias tipo GNU) se libran.",
+        "Fechas ya puestas: cuentas nuevas desde enero de 2027, las que ya existen desde julio de 2027.",
+        "Lo relevante aquí no es tanto la ley en sí, sino el nivel al que opera: verificar edad app por app es una cosa, hacerlo desde el propio sistema operativo es otra muy distinta. Convierte al dispositivo entero en la fuente de tu identidad. Y con el peso que tiene California marcando tendencia regulatoria en EE.UU., esto probablemente no se queda ahí."
+      ]
     },
     {
       "id": 1671,
@@ -126,7 +174,16 @@
         "Y aquí viene la parte que da más que pensar: parte del informe policial no lo escribió un humano, sino la IA \"Draft One\" de Axon, generando resúmenes legales a partir del audio de la bodycam. Vigilancia masiva y automatización policial trabajando en equipo, en un caso que toca directamente la salud femenina.",
         "Flock lo niega y dice que todo fue por la \"seguridad\" de la mujer. Los papeles policiales cuentan otra cosa."
       ],
-      "locked": false
+      "locked": false,
+      "sources": [
+        "https://www.404media.co/texas-police-used-ai-to-write-report-about-using-flock-to-search-for-woman-who-had-abortion/"
+      ],
+      "body_html": [
+        "<strong>🚔 Cuando la vigilancia policial se cruza con el aborto  y una IA redacta el informe</strong>",
+        "En Texas, la oficina del sheriff del condado de Johnson usó Flock (la red de cámaras lectoras de matrículas que ya cubre más de 80.000 puntos en EE.UU.) para <a href=\"https://www.404media.co/texas-police-used-ai-to-write-report-about-using-flock-to-search-for-woman-who-had-abortion/\" target=\"_blank\" rel=\"noopener\">dar con una mujer que se había tomado una píldora abortiva</a> por su cuenta. La denuncia venía de su expareja. Ni siquiera había delito que perseguir bajo la ley texana actual, pero el rastreo se hizo de todas formas.",
+        "Y aquí viene la parte que da más que pensar: parte del informe policial no lo escribió un humano, sino la IA &quot;Draft One&quot; de Axon, generando resúmenes legales a partir del audio de la bodycam. Vigilancia masiva y automatización policial trabajando en equipo, en un caso que toca directamente la salud femenina.",
+        "Flock lo niega y dice que todo fue por la &quot;seguridad&quot; de la mujer. Los papeles policiales cuentan otra cosa."
+      ]
     },
     {
       "id": 1670,
@@ -152,6 +209,20 @@
         "Mientras no se publique una corrección, se recomienda no dejar el teléfono bloqueado al alcance de terceros y mantener actualizados tanto WhatsApp como el sistema operativo Android."
       ],
       "locked": false,
+      "sources": [
+        "https://x.com/VBarraquito/status/2094729843761922276",
+        "https://elchapuzasinformatico.com/2026/09/fallo-whatsapp-acceder-fotos-moviles-android-bloqueados/"
+      ],
+      "body_html": [
+        "<strong>Un fallo de WhatsApp permite acceder a fotografías en determinados móviles Android bloqueados<br></strong><br>El problema, <a href=\"https://x.com/VBarraquito/status/2094729843761922276\" target=\"_blank\" rel=\"noopener\">descubierto por el investigador José Rodríguez</a>, necesita acceso físico al teléfono y que se atienda una videollamada entrante desde la pantalla de bloqueo. <a href=\"https://elchapuzasinformatico.com/2026/09/fallo-whatsapp-acceder-fotos-moviles-android-bloqueados/\" target=\"_blank\" rel=\"noopener\">No se trata de un ataque remoto ni requiere la instalación</a> de software adicional, códigos o conocimientos técnicos avanzados.",
+        "El fallo se produce al utilizar la integración de las herramientas de Meta AI en los efectos de videollamada.",
+        "En los terminales afectados, al seleccionar la opción de editar una fotografía mediante “Crear con Meta AI” en la pestaña de fondos, la aplicación abre la galería del dispositivo sin solicitar PIN, contraseña, huella dactilar ni reconocimiento facial.",
+        "El investigador ha publicado una demostración en vídeo y ha comunicado el hallazgo tanto a Meta como a Google. Hasta el momento no existe comunicado oficial de ninguna de las dos compañías, ni identificador CVE ni parche anunciado.",
+        "Las pruebas realizadas confirman el comportamiento en un Google Pixel 6 Pro con Android 17 (incluido el último parche de seguridad) y en un OPPO K13 con ColorOS 16. En cambio, un Samsung Galaxy S25 Ultra con One UI 8.5 bloquea el acceso y exige autenticación.",
+        "Los iPhone no se ven afectados porque WhatsApp emplea CallKit de Apple, lo que impide acceder a los efectos de la aplicación desde la pantalla de bloqueo.",
+        "La incidencia depende de cómo cada fabricante gestiona los permisos y las actividades iniciadas desde la pantalla de bloqueo.",
+        "Mientras no se publique una corrección, se recomienda no dejar el teléfono bloqueado al alcance de terceros y mantener actualizados tanto WhatsApp como el sistema operativo Android."
+      ],
       "video_thumb": "media/1670.jpg",
       "video_external": true
     },
@@ -178,7 +249,20 @@
         "También permite ver en directo el interior de la boca a través de la aplicación MyDyson. La compañía indica que las imágenes no se almacenan en el dispositivo ni se envían a la nube, salvo esa visualización en vivo.",
         "El desarrollo duró seis años e involucró a 661 ingenieros. Se trata de una entrada premium de Dyson en el cuidado bucodental, con un precio elevado y una propuesta tecnológica diferenciada que unifica cepillado e irrigación automática."
       ],
-      "locked": false
+      "locked": false,
+      "sources": [
+        "https://www.theverge.com/tech/986737/dyson-camerajet-smart-toothbrush-live-camera-flosser-pricing-availability"
+      ],
+      "body_html": [
+        "<strong>Cámara hasta para lavarte los dientes<br></strong><br>Dyson presentó el 1 de septiembre de 2026 el CameraJet, su primer cepillo de dientes eléctrico.",
+        "El aparato integra una <a href=\"https://www.theverge.com/tech/986737/dyson-camerajet-smart-toothbrush-live-camera-flosser-pricing-availability\" target=\"_blank\" rel=\"noopener\">cámara macro de 100.000 píxeles</a> en el cabezal y un irrigador de precisión, de modo que cepilla e irriga los espacios interdentales en una sola operación.",
+        "El sistema Gap Optical Targeting analiza 28 imágenes por segundo mediante un algoritmo de inteligencia artificial entrenado con unas 470.000 imágenes dentales.",
+        "Cuando identifica un hueco entre dientes, dispara un chorro cónico de enjuague bucal en menos de 100 milisegundos. Dyson afirma que el dispositivo elimina hasta un 69 % más de placa en zonas de difícil acceso que los cepillos eléctricos premium de la competencia.",
+        "El cepillado utiliza oscilación sónica variable para evitar que las cerdas se detengan.",
+        "¿Su precio? 499 dólares (aproximadamente 479 euros).",
+        "También permite ver en directo el interior de la boca a través de la aplicación MyDyson. La compañía indica que las imágenes no se almacenan en el dispositivo ni se envían a la nube, salvo esa visualización en vivo.",
+        "El desarrollo duró seis años e involucró a 661 ingenieros.<br>Se trata de una entrada premium de Dyson en el cuidado bucodental, con un precio elevado y una propuesta tecnológica diferenciada que unifica cepillado e irrigación automática."
+      ]
     },
     {
       "id": 1668,
@@ -198,7 +282,13 @@
         "GrapheneOS en Pixel 11 ¿Sí o no?",
         "Vamos a verlo: https://youtu.be/RtY2dzKbo9I"
       ],
-      "locked": false
+      "locked": false,
+      "body_html": [
+        "📱<strong> El pixel 11 empeora algún aspecto respecto a modelos anteriores</strong>",
+        "Así que la pregunta es clara:",
+        "GrapheneOS en Pixel 11 ¿Sí o no?",
+        "Vamos a verlo:<br>https://youtu.be/RtY2dzKbo9I"
+      ]
     },
     {
       "id": 1667,
@@ -219,7 +309,17 @@
         "Sería la segunda caída en un breve periodo de tiempo.",
         "Si bien la caída no es completa, se reportan notables intentos fallidos de acceso."
       ],
-      "locked": false
+      "locked": false,
+      "sources": [
+        "https://status.proton.me/"
+      ],
+      "body_html": [
+        "🌐 <strong>Proton vuelve a caerse</strong>",
+        "<a href=\"https://status.proton.me/\" target=\"_blank\" rel=\"noopener\">Así lo informan:<br></a>En estos momentos estamos solucionando algunos fallos de hardware residuales que probablemente estén relacionados con los daños sufridos a raíz del incidente de sobrecalentamiento de la semana pasada. Por el momento, estamos operando a capacidad reducida, mientras nuestros ingenieros trabajan para poner en marcha infraestructura adicional. Pedimos disculpas por el desafortunado momento en que se ha producido este incidente y por cualquier interrupción o inconveniente que esto os haya podido causar.",
+        "Sep 01, 2026 - 16:42 CEST",
+        "Sería la segunda caída en un breve periodo de tiempo.",
+        "Si bien la caída no es completa, se reportan notables intentos fallidos de acceso."
+      ]
     },
     {
       "id": 1666,
@@ -240,7 +340,16 @@
         "El DNS autoritativo, alojado en redes anycast con ASN e IPs propias, no se ha visto afectado. El sitio web, las actualizaciones del sistema, el repositorio de aplicaciones y el resto de servicios principales deberían volver a funcionar en Rusia.",
         "Si el bloqueo se extiende, los usuarios pueden configurar las comprobaciones de conectividad en modo “Standard” para utilizar los servidores de Google y mantener la detección automática de redes con Internet."
       ],
-      "locked": false
+      "locked": false,
+      "sources": [
+        "https://x.com/GrapheneOS/status/2094169461137748259?s=20"
+      ],
+      "body_html": [
+        "<strong>📱</strong><strong> El intento de bloqueo de VPNs en Rusia afecta a GrapheneOS<br></strong><br>Desde finales de mayo de 2026, Rusia filtra el espacio IP de varios proveedores de alojamiento mediante una lista blanca de dominios para HTTP y TLS SNI. <a href=\"https://x.com/GrapheneOS/status/2094169461137748259?s=20\" target=\"_blank\" rel=\"noopener\">El objetivo aparente es bloquear servicios VPN</a>. GrapheneOS no figura en esa lista, por lo que sus servicios dejaron de ser accesibles a través de DataPacket (Fráncfort) y, más tarde, de Cherry Servers (Ámsterdam).",
+        "El proyecto ha redirigido el tráfico ruso a Zare (Londres), el último servidor patrocinado en Europa del que dispone. Si también resulta filtrado, utilizará Xenyth en Toronto, donde opera su propio espacio de direcciones IP. GrapheneOS no espera un bloqueo directo de sus servicios, aunque considera improbable su inclusión en la lista blanca. El acceso a través de IPs de grandes proveedores de nube se irá degradando de forma progresiva.",
+        "El DNS autoritativo, alojado en redes anycast con ASN e IPs propias, no se ha visto afectado. El sitio web, las actualizaciones del sistema, el repositorio de aplicaciones y el resto de servicios principales deberían volver a funcionar en Rusia.",
+        "Si el bloqueo se extiende, los usuarios pueden configurar las comprobaciones de conectividad en modo “Standard” para utilizar los servidores de Google y mantener la detección automática de redes con Internet."
+      ]
     },
     {
       "id": 1665,
@@ -268,7 +377,24 @@
         "También que Xbox vería un potencial % de jugadores que se vería \"huérfanos\".",
         "Pero lo más importante, que la presión de la gente realmente se nota y tiene efecto."
       ],
-      "locked": false
+      "locked": false,
+      "sources": [
+        "https://mp1st.com/news/rumor-sony-reportedly-reconsidering-delaying-digital-only-plans-due-to-xbox-pushing-for-100-physical-strategy-for-xbox"
+      ],
+      "body_html": [
+        "👾<strong> Xbox podría abrazar más el formato físico mientras que Sony evidenciaría que le dan igual sus usuarios</strong>",
+        "Según se ha rumores recogidos en un podcast de Eurogamer España, algunos editores habrían comentado que <a href=\"https://mp1st.com/news/rumor-sony-reportedly-reconsidering-delaying-digital-only-plans-due-to-xbox-pushing-for-100-physical-strategy-for-xbox\" target=\"_blank\" rel=\"noopener\">Sony podría estar reconsiderando la fecha establecida sobre la digitalización absoluta de su plataforma</a>.",
+        "Al parecer en un inicio sería en 2028, pero podría retrasarse 1-2 años. El motivo sería lo que Microsoft estaría comunicando a las editoras respecto a Project Helix, su próxima generación de consolas y alguna amenaza.",
+        "Microsoft, según esas mismas fuentes no verificadas, estaría indicando a los publishers que Helix será “100 % físico”, con la posibilidad de convertir copias físicas en licencias digitales, luego lo explico más en detalle.",
+        "Sony temería que esa postura deje un hueco competitivo: jugadores y algunos estudios descontentos con la desaparición de los discos podrían decantarse por Xbox.",
+        "El artículo añade otro rumor: un estudio de videojuegos importante (no identificado; se descarta que sea Rockstar) habría comunicado a Sony que podría no lanzar uno de sus títulos más grandes en PlayStation si no se garantiza una edición física, y que en ese caso priorizaría las plataformas de Microsoft y Nintendo.",
+        "Se dice que podría se CD Projekt Red, con su juego &quot;The Witcher 4&quot;. Pues la compañía siempre ha tenido una clara postura sobre la posesión de los juegos, siendo conocida por vender juegos sin DRM, es decir, pudiendo ser dueño real de juegos incluso en formato digital.",
+        "Se trata de rumores no confirmados. Microsoft no ha declarado de forma oficial que Project Helix vaya a incluir lector de discos; de hecho, su CEO Asha Sharma evitó responder a esa pregunta en Gamescom y enfatizó la necesidad de eficiencia y asequibilidad.",
+        "Lo que sí ha anunciado Xbox es un programa de conversión de disco a digital (conocido internamente como Positron), que comenzará a probarse con Insiders a finales de agosto de 2026.",
+        "De ser cierta la noticia, estaría evidenciando algo:<br>A Sony no le importan sus jugadores pues toda la presión ejercida hubiese valido para nada, sino que le preocupa que a causa de no tener ciertos juegos en el catálogo, perdiese potenciales clientes.",
+        "También que Xbox vería un potencial % de jugadores que se vería &quot;huérfanos&quot;.",
+        "Pero lo más importante, que la presión de la gente realmente se nota y tiene efecto."
+      ]
     },
     {
       "id": 1664,
@@ -290,6 +416,16 @@
         "La cuenta Brave emplea el protocolo OPAQUE, de modo que la contraseña no se envía a los servidores. Brave indica que no lee el contenido de los mensajes y que estos se eliminan de sus servidores poco después de la entrega. Durante el arranque, algunos reenvíos pueden clasificarse como correo no deseado."
       ],
       "locked": false,
+      "sources": [
+        "https://brave.com/privacy-updates/39-email-aliases/"
+      ],
+      "body_html": [
+        "💻 <strong>Brave incorpora protección de email con alias en su navegador</strong>",
+        "<a href=\"https://brave.com/privacy-updates/39-email-aliases/\" target=\"_blank\" rel=\"noopener\">Brave ha incorporado &quot;Alias de email&quot;</a> en su versión de escritorio 1.94. La función genera direcciones de correo únicas que reenvían los mensajes al buzón principal, de forma que no es necesario entregar la dirección real al registrarse en un sitio.",
+        "El uso está integrado directamente en el navegador: se crea una cuenta Brave, se pulsa con el botón derecho sobre el campo de correo de un formulario y se elige «New Email Alias». Los alias también se gestionan desde Ajustes.",
+        "Actualmente hay un máximo de cinco alias gratuitos simultáneos y está prevista una versión para móviles y una modalidad de pago.",
+        "La cuenta Brave emplea el protocolo OPAQUE, de modo que la contraseña no se envía a los servidores. Brave indica que no lee el contenido de los mensajes y que estos se eliminan de sus servidores poco después de la entrega. Durante el arranque, algunos reenvíos pueden clasificarse como correo no deseado."
+      ],
       "video_thumb": "media/1664.jpg",
       "video_external": true
     },
@@ -316,7 +452,20 @@
         "Sí se mantendrá un ajuste distinto: las nuevas direcciones asociadas a Iniciar sesión con Apple migrarán a @private.icloud.com más adelante en 2026 (El servicio ya sabría que el usuario se autentica mediante Apple, así que no es algo especialmente relevante).",
         "Hide My Email, en cambio, seguirá utilizando @icloud.com."
       ],
-      "locked": false
+      "locked": false,
+      "sources": [
+        "https://developer.apple.com/news/?id=1ptvdtcm"
+      ],
+      "body_html": [
+        "<strong>📱</strong> <strong>Apple revierte su decisión de modificar Hide my email<br></strong><br>Finalmente Apple no modificará el dominio de las nuevas direcciones generadas por Hide My Email, la función de iCloud+ que crea correos aleatorios para ocultar la dirección real del usuario.",
+        "El plan consistía en pasar de @icloud.com a @private.icloud.com.",
+        "Esa distinción permitiría a sitios web y empresas detectar y bloquear si quisieras las direcciones generadas mediante &quot;Hide my email&quot;, lo cual debilitaría mucho su utilidad y propósito.",
+        "La compañía anunció la reversión el 24 de agosto de 2026 en una <a href=\"https://developer.apple.com/news/?id=1ptvdtcm\" target=\"_blank\" rel=\"noopener\">nota para desarrolladores</a>.",
+        "Según se ha informado, el propio equipo de Hide My Email se opuso con firmeza al cambio y también hubo críticas por partes de los usuarios.",
+        "No se ha dado una explicación pública detallada sobre por qué se contempló inicialmente esa modificación.",
+        "Sí se mantendrá un ajuste distinto: las nuevas direcciones asociadas a Iniciar sesión con Apple migrarán a @private.icloud.com más adelante en 2026 (El servicio ya sabría que el usuario se autentica mediante Apple, así que no es algo especialmente relevante).",
+        "Hide My Email, en cambio, seguirá utilizando @icloud.com."
+      ]
     },
     {
       "id": 1661,
@@ -334,6 +483,12 @@
         "⚠️ La mayoría de servicios de Proton se encuentran caídos en estos momentos para la mayoría de sus usuarios, desde hace más de 20 minutos"
       ],
       "locked": false,
+      "sources": [
+        "https://status.proton.me/"
+      ],
+      "body_html": [
+        "⚠️ La mayoría de servicios de Proton se encuentran <a href=\"https://status.proton.me/\" target=\"_blank\" rel=\"noopener\">caídos en estos momentos</a> para la mayoría de sus usuarios, desde hace más de 20 minutos"
+      ],
       "images": [
         "media/1661.jpg",
         "media/1661-2.jpg"
@@ -361,7 +516,20 @@
         "El modelo operó de forma casi completamente autónoma durante varias horas, investigando, descartando caminos fallidos y generando su propio código de explotación.",
         "La conclusión del informe es: una máquina virtual convencional ya no resulta suficiente para contener agentes de inteligencia artificial con capacidades avanzadas, por lo que deben tratarse como amenazas persistentes y se recomienda el uso de entornos de virtualización con menor superficie de ataque."
       ],
-      "locked": false
+      "locked": false,
+      "sources": [
+        "https://blog.trailofbits.com/2026/08/26/vms-wont-contain-cyber-capable-agents/"
+      ],
+      "body_html": [
+        "⌨️ <strong>Cuando una máquina virtual ya no es suficiente…</strong>",
+        "Trail of Bits (una empresa estadounidense de ciberseguridad) <a href=\"https://blog.trailofbits.com/2026/08/26/vms-wont-contain-cyber-capable-agents/\" target=\"_blank\" rel=\"noopener\">evaluó las capacidades ofensivas de GPT 5.6-Cyber</a> y le encargó escapar de una máquina virtual QEMU/KVM utilizada como sandbox en un host Debian 12.",
+        "El agente logró escapar en tres ocasiones.",
+        "En la primera aprovechó una vulnerabilidad reciente del kernel del host.",
+        "En la segunda combinó fallos presentes en la biblioteca <em>libslirp</em> de la distribución.",
+        "En la tercera descubrió por sí mismo tres vulnerabilidades de día cero, las encadenó con otra debilidad ya corregida en upstream pero no distribuida, y construyó un exploit funcional y fiable.",
+        "El modelo operó de forma casi completamente autónoma durante varias horas, investigando, descartando caminos fallidos y generando su propio código de explotación.",
+        "La conclusión del informe es: una máquina virtual convencional ya no resulta suficiente para contener agentes de inteligencia artificial con capacidades avanzadas, por lo que deben tratarse como amenazas persistentes y se recomienda el uso de entornos de virtualización con menor superficie de ataque."
+      ]
     },
     {
       "id": 1659,
@@ -400,7 +568,15 @@
         "Espero que os guste 👇",
         "https://youtu.be/UM8-s9w4k_I"
       ],
-      "locked": false
+      "locked": false,
+      "body_html": [
+        "🌐<strong> Internet móvil sin KYC</strong>",
+        "Hice uso de este servicio tras encontrarme con problemas de conexión a causa de mi compañía, de hecho el último vídeo pude subirlo gracias a ellos.",
+        "Solo hice una cosa: Seleccionar lo que quería y pagarlo, sin más información.",
+        "Rápidamente pude tener internet y hacer lo que necesitaba.",
+        "Espero que os guste 👇",
+        "https://youtu.be/UM8-s9w4k_I"
+      ]
     },
     {
       "id": 1657,
@@ -424,7 +600,19 @@
         "Esta técnica puede servir tanto para combatir fraudes, bots o abusos de promociones como para seguir a los usuarios de manera más persistente (Que me da la sensación que ha sido la intención).",
         "Navegadores como Brave o Firefox, además de ciertas extensiones de bloqueo limitan o evitan por completo este tipo de seguimiento."
       ],
-      "locked": false
+      "locked": false,
+      "sources": [
+        "https://elchapuzasinformatico.com/2026/08/aliexpress-audio-usuarios-rastrear-dispositivos/"
+      ],
+      "body_html": [
+        "🛒<strong>Aliexpress utiliza el audio del dispositivo para identificarte<br></strong><br>Se ha detectado que AliExpress emplea un <a href=\"https://elchapuzasinformatico.com/2026/08/aliexpress-audio-usuarios-rastrear-dispositivos/\" target=\"_blank\" rel=\"noopener\">método silencioso para identificar de forma única</a> los dispositivos de quienes visitan su página.",
+        "Genera internamente una señal de sonido que el usuario no escucha, la procesa a través del sistema de audio del navegador y analiza las mínimas diferencias en cómo cada equipo la maneja.",
+        "Esas variaciones, combinadas con otros datos del hardware y del software (capacidad gráfica, memoria, resolución de pantalla, comportamiento del ratón o del tacto, entre otros), permiten crear una huella digital bastante precisa sin necesidad de cookies.",
+        "El hallazgo surgió de forma casual: un desarrollador notó que sus auriculares Bluetooth con conexión multipunto dejaban de cambiar correctamente entre el ordenador y el móvil cada vez que tenía abierta la pestaña de la tienda. Al cerrarla, el problema desaparecía de inmediato.",
+        "Investigando descubrió que scripts de Alibaba mantenían activo el canal de audio en segundo plano, aunque el volumen estuviese desactivado.",
+        "Esta técnica puede servir tanto para combatir fraudes, bots o abusos de promociones como para seguir a los usuarios de manera más persistente (Que me da la sensación que ha sido la intención).",
+        "Navegadores  como Brave o Firefox, además de ciertas extensiones de bloqueo limitan o evitan por completo este tipo de seguimiento."
+      ]
     },
     {
       "id": 1656,
@@ -447,7 +635,19 @@
         "3. Que permanezca desactivado por completo, usando un único servidor. Así se gana rendimiento, pero se reduce el nivel de privacidad y se limitan las ubicaciones disponibles si se usan funciones especiales.",
         "Al actualizar la aplicación, las configuraciones anteriores se adaptan de forma automática a uno de estos nuevos comportamientos y se avisa al usuario la primera vez que se abre."
       ],
-      "locked": false
+      "locked": false,
+      "sources": [
+        "https://mullvad.net/es/blog/introducing-multihop-modes"
+      ],
+      "body_html": [
+        "🌐 <strong>Mullvad mejora la función de multi-hop</strong>",
+        "Mullvad ha mejorado su sistema de conexión a través de varios servidores (Multi-hop), añadiendo <a href=\"https://mullvad.net/es/blog/introducing-multihop-modes\" target=\"_blank\" rel=\"noopener\">opciones más adaptables y sencillas</a> de gestionar.",
+        "Ahora se puede elegir entre tres comportamientos:",
+        "1. Que se active solo cuando haga falta, por ejemplo si la ubicación elegida no admite alguna función de privacidad avanzada. En ese caso la aplicación busca automáticamente un servidor compatible cercano y redirige el tráfico de forma transparente.",
+        "2. Que esté siempre en marcha, pasando por dos servidores distintos. Esto refuerza el anonimato, aunque puede influir un poco en la velocidad. También existe la posibilidad de dejar que la aplicación seleccione sola el servidor de entrada más adecuado.",
+        "3. Que permanezca desactivado por completo, usando un único servidor. Así se gana rendimiento, pero se reduce el nivel de privacidad y se limitan las ubicaciones disponibles si se usan funciones especiales.",
+        "Al actualizar la aplicación, las configuraciones anteriores se adaptan de forma automática a uno de estos nuevos comportamientos y se avisa al usuario la primera vez que se abre."
+      ]
     }
   ]
 }
