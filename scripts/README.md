@@ -75,8 +75,9 @@ Igual que antes, con las rutas de media apuntando a `MEDIA_BASE` (por defecto
 }
 ```
 
-El sitio actual (raíz) sigue funcionando sin cambios porque sirve desde la
-raíz. `/v2` sube un nivel (`../media/…`) automáticamente.
+El sitio se sirve desde la raíz, así que `media/1669.jpg` resuelve directo.
+Si algún día `MEDIA_BASE` apunta a un CDN propio (URL absoluta), `news.json`
+ya llevará esas URLs completas y no hay que tocar nada más.
 
 ## Cuando pases a servidor propio
 

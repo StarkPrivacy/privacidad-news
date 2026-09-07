@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', async () => {
-  const SITE_URL = 'https://starkprivacy.github.io/privacidad-news/v2/';
+  const SITE_URL = 'https://privacidad.news/';
   const YT_CHANNEL_ID = 'UCiWK5LDY5nmnMpfGsL7KENQ';
   const MONTHS = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
   const FEED_PAGE = 12;
-  const DATA_BASE = '../data/';
+  const DATA_BASE = 'data/';
 
   /* Correcciones manuales puntuales (migradas de fixes.js) */
   const OVERRIDES = {
     1661: {
       title: 'Caída generalizada de los servicios de Proton',
       excerpt: 'La mayoría de servicios de Proton están caídos para gran parte de sus usuarios desde hace más de veinte minutos.',
-      image: '../images/proton-outage.svg',
+      image: 'images/proton-outage.svg',
       body: [
         'La mayoría de servicios de Proton se encuentran caídos en estos momentos para la mayoría de sus usuarios, desde hace más de 20 minutos.',
         'No se trata de un aviso aislado: el propio panel de estado de la compañía es la referencia para ver qué partes de la suite siguen afectadas y cuáles van recuperándose.',
@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   let cards = [];
   let tagLinks = [];
   let articlesById = {};
+  let allPosts = [];
   let activeCategory = '';
   let feedPage = 0;
   let shareContext = null;
@@ -44,13 +45,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   const normalize = (str) => (str || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   const escapeHtml = (str) => String(str || '')
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-  // news.json guarda rutas de media relativas a la ra\u00edz del repo (media/1669.jpg).
-  // Esta p\u00e1gina se sirve desde /v2/, as\u00ed que hay que subir un nivel.
-  const mediaURL = (u) => {
-    const s = String(u || '').trim();
-    if (!s || /^(https?:)?\/\//i.test(s) || /^(data:|blob:|\/|\.\.\/)/.test(s)) return s;
-    return `../${s}`;
-  };
+  // news.json guarda rutas de media relativas a la ra\u00edz (media/1669.jpg), que
+  // es donde se sirve el sitio. Solo se toca si MEDIA_BASE fuese una URL
+  // absoluta a un CDN propio (entonces ya empieza por http y pasa tal cual).
+  const mediaURL = (u) => String(u || '').trim();
   const formatDate = (iso) => {
     const d = new Date(iso);
     if (Number.isNaN(d.getTime())) return '';
@@ -231,7 +229,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // puñado de sondeos falla (carpeta aún vacía) para no llenar la consola de 404.
   // Cadena de respaldo local para cuando el CDN de Telegram ya ha caducado:
   // media/<id>.jpg (nuevo pipeline) -> images/thumbs/<id>.jpg (legado) -> tile.
-  const FALLBACK_DIRS = ['../media/', '../images/thumbs/'];
+  const FALLBACK_DIRS = ['media/', 'images/thumbs/'];
   let fbMisses = 0;
   const fbProbably = () => fbMisses < FALLBACK_DIRS.length + 3;
   function bindImageFallback(root) {
@@ -679,7 +677,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   /* ---------- Carga de datos ---------- */
   async function loadJson(name) {
-    const res = await fetch(`${DATA_BASE}${name}?t=${Date.now()}`);
+    // Cache-bust en cubos de 5 min: el navegador reutiliza dentro de la
+    // ventana y el sync corre cada 20 min, así news.json (~1,7 MB) no se
+    // vuelve a bajar en cada visita.
+    const res = await fetch(`${DATA_BASE}${name}?t=${Math.floor(Date.now() / 300000)}`);
     if (!res.ok) throw new Error(`${name} ${res.status}`);
     return res.json();
   }
@@ -706,6 +707,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     const posts = [...byId.values()].sort((a, b) => (b.id || 0) - (a.id || 0));
+    allPosts = posts;
     posts.forEach(item => { articlesById[item.id] = item; });
 
     feed.innerHTML = '';
@@ -748,27 +750,40 @@ document.addEventListener('DOMContentLoaded', async () => {
   const langSwitch = document.getElementById('langSwitch');
   if (langSwitch) {
     const loc = window.location;
+    const CANONICAL = 'https://privacidad.news';
     if (loc.hostname.endsWith('.translate.goog')) {
       langSwitch.textContent = 'ES';
       langSwitch.setAttribute('aria-label', 'Ver el original en español');
       langSwitch.setAttribute('hreflang', 'es');
       const q = loc.search.replace(/[?&]_x_tr_[a-z]+=[^&]*/g, '').replace(/^&/, '?');
-      langSwitch.href = `https://starkprivacy.github.io${loc.pathname}${q}${loc.hash}`;
-    } else if (loc.hostname === 'localhost' || /^\d/.test(loc.hostname)) {
-      langSwitch.href = 'https://starkprivacy-github-io.translate.goog/privacidad-news/v2/?_x_tr_sl=es&_x_tr_tl=en&_x_tr_hl=en';
-      langSwitch.title = 'Traducir al inglés (Google Translate)';
+      langSwitch.href = `${CANONICAL}${loc.pathname}${q}${loc.hash}`;
     } else {
-      const proxy = loc.hostname.replace(/-/g, '--').replace(/\./g, '-') + '.translate.goog';
-      const sep = loc.search ? loc.search + '&' : '?';
-      langSwitch.href = `https://${proxy}${loc.pathname}${sep}_x_tr_sl=es&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp${loc.hash}`;
       langSwitch.title = 'Traducir al inglés (Google Translate)';
+      const host = (loc.hostname === 'localhost' || /^\d/.test(loc.hostname))
+        ? 'privacidad.news' : loc.hostname;
+      const path = (loc.hostname === 'localhost' || /^\d/.test(loc.hostname))
+        ? '/' : loc.pathname;
+      const proxy = host.replace(/-/g, '--').replace(/\./g, '-') + '.translate.goog';
+      const sep = loc.search ? loc.search + '&' : '?';
+      langSwitch.href = `https://${proxy}${path}${sep}_x_tr_sl=es&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp${loc.hash}`;
     }
   }
 
   /* ---------- Lista de correo: darle la vuelta ---------- */
   const mailFlip = document.getElementById('mailFlip');
   const mailReveal = document.getElementById('mailReveal');
+  // hCaptcha solo se carga si alguien va a usar el boletín (no en cada visita).
+  let hcaptchaAsked = false;
+  function loadHcaptcha() {
+    if (hcaptchaAsked) return;
+    hcaptchaAsked = true;
+    const s = document.createElement('script');
+    s.src = 'https://js.hcaptcha.com/1/api.js';
+    s.async = true; s.defer = true;
+    document.head.appendChild(s);
+  }
   mailReveal?.addEventListener('click', () => {
+    loadHcaptcha();
     mailFlip?.classList.add('is-flipped');
     const inner = mailFlip?.querySelector('.mail-flip-inner');
     const settle = () => {
@@ -939,6 +954,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (XMR && xmr && Number.isFinite(xmr.usd)) XMR.innerHTML = `<span class="ticker-px xmr">XMR&nbsp;$${money(xmr.usd, 2)}</span>${dirHtml(xmr.chg)}`;
     }
     async function loadNews() {
+      // Reutiliza lo que ya cargó el feed en vez de bajar news.json otra vez.
+      if (allPosts.length) { paintNews(allPosts); return; }
       try {
         const data = await loadJson('news.json');
         paintNews(data.articles || data.posts || []);
