@@ -1,7 +1,70 @@
 {
-  "updated": "2026-09-07T12:38:38Z",
+  "updated": "2026-09-07T17:54:11Z",
   "source": "https://t.me/StarkPrivacy",
   "articles": [
+    {
+      "id": 1679,
+      "title": "GrapheneOS prepara Secure Paste, una mejora del portapapeles",
+      "date": "2026-09-07T15:22:32+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "GrapheneOS está desarrollando Secure Paste, un nuevo sistema de gestión del portapapeles para proteger el contenido copiado. En lugar de permitir el acceso mediante las APIs tradicionales, el usuario podrá controlar cuándo una aplicación…",
+      "image": "media/1679.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1679",
+      "body": [
+        "GrapheneOS prepara Secure Paste, una mejora del portapapeles",
+        "GrapheneOS está desarrollando Secure Paste, un nuevo sistema de gestión del portapapeles para proteger el contenido copiado. En lugar de permitir el acceso mediante las APIs tradicionales, el usuario podrá controlar cuándo una aplicación recibe el contenido que quiere pegar, evitando que una app pueda consultar información sensible que otra haya copiado anteriormente.",
+        "El funcionamiento será simple para el usuario, pero eficaz. Las aplicaciones podrán seguir accediendo a los datos que ellas mismas hayan colocado en el portapapeles, mientras que el contenido copiado por otras aplicaciones quedará protegido.",
+        "Una contraseña, un código o cualquier otro dato sensible que permanezca temporalmente en el portapapeles no estará disponible para una aplicación simplemente por encontrarse en primer plano. GrapheneOS explica que el modelo actual sigue teniendo un problema: las notificaciones de Android avisan cuando una aplicación lee el portapapeles, pero para entonces el acceso ya se ha producido.",
+        "Secure Paste estará integrado en los mecanismos habituales de Android, como la barra de selección de texto, los métodos de entrada, los servicios de accesibilidad y los atajos de teclado. GrapheneOS también ha preparado una solución para aplicaciones que utilizan sus propios controles de selección, como algunas desarrolladas con Flutter: en estos casos, el teclado incorporará un botón específico para pegar. La función también llegará al futuro teclado que GrapheneOS está desarrollando para sustituir al teclado AOSP.",
+        "El objetivo no es simplemente mejorar el portapapeles, sino dar al usuario un control mucho más directo sobre qué información puede recibir cada aplicación."
+      ],
+      "locked": false,
+      "sources": [
+        "https://www.androidauthority.com/grapheneos-messaging-rcs-support-secure-paste-3708317/?utm_source=chatgpt.com"
+      ],
+      "body_html": [
+        "<strong>GrapheneOS prepara Secure Paste, una mejora del portapapeles<br></strong><br>GrapheneOS está desarrollando Secure Paste, un <a href=\"https://www.androidauthority.com/grapheneos-messaging-rcs-support-secure-paste-3708317/?utm_source=chatgpt.com\" target=\"_blank\" rel=\"noopener\">nuevo sistema de gestión del portapapeles</a> para proteger el contenido copiado. En lugar de permitir el acceso mediante las APIs tradicionales, el usuario podrá controlar cuándo una aplicación recibe el contenido que quiere pegar, evitando que una app pueda consultar información sensible que otra haya copiado anteriormente.",
+        "El funcionamiento será simple para el usuario, pero eficaz.<br>Las aplicaciones podrán seguir accediendo a los datos que ellas mismas hayan colocado en el portapapeles, mientras que el contenido copiado por otras aplicaciones quedará protegido.",
+        "Una contraseña, un código o cualquier otro dato sensible que permanezca temporalmente en el portapapeles no estará disponible para una aplicación simplemente por encontrarse en primer plano. GrapheneOS explica que el modelo actual sigue teniendo un problema: las notificaciones de Android avisan cuando una aplicación lee el portapapeles, pero para entonces el acceso ya se ha producido.",
+        "Secure Paste estará integrado en los mecanismos habituales de Android, como la barra de selección de texto, los métodos de entrada, los servicios de accesibilidad y los atajos de teclado. GrapheneOS también ha preparado una solución para aplicaciones que utilizan sus propios controles de selección, como algunas desarrolladas con Flutter: en estos casos, el teclado incorporará un botón específico para pegar. La función también llegará al futuro teclado que GrapheneOS está desarrollando para sustituir al teclado AOSP.",
+        "El objetivo no es simplemente mejorar el portapapeles, sino dar al usuario un control mucho más directo sobre qué información puede recibir cada aplicación."
+      ]
+    },
+    {
+      "id": 1677,
+      "title": "GrapheneOS prepara una nueva aplicación de Mensajería con RCS integrado",
+      "date": "2026-09-07T14:40:14+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "GrapheneOS está preparando una importante renovación de su aplicación de Mensajería, que contará con una interfaz completamente rediseñada utilizando Jetpack Compose, además de numerosas mejoras y correcciones. El proyecto busca modernizar…",
+      "image": "media/1677.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1677",
+      "body": [
+        "GrapheneOS prepara una nueva aplicación de Mensajería con RCS integrado",
+        "GrapheneOS está preparando una importante renovación de su aplicación de Mensajería, que contará con una interfaz completamente rediseñada utilizando Jetpack Compose, además de numerosas mejoras y correcciones. El proyecto busca modernizar una de las aplicaciones básicas del sistema y reducir progresivamente su dependencia de componentes heredados de Android.",
+        "Pero el cambio más importante llegará con RCS. Aunque GrapheneOS ya permite utilizar RCS actualmente mediante Google Messages, el proyecto quiere que su propia aplicación de Mensajería pueda gestionar este estándar de comunicación. El objetivo es que los usuarios puedan disfrutar de RCS sin tener que depender de la aplicación de Google, incluyendo las funciones de mensajería moderna que ofrece este protocolo.",
+        "La transición será progresiva. GrapheneOS planea implementar inicialmente en su aplicación las partes de RCS que actualmente gestiona Google Messages para, posteriormente, avanzar hacia una implementación propia que pueda apoyarse directamente en los servicios de los operadores compatibles. De esta manera, la aplicación podría convertirse en una alternativa mucho más independiente para los usuarios que buscan utilizar GrapheneOS sin recurrir a aplicaciones de Google.",
+        "Con esta renovación, GrapheneOS no solo pretende ofrecer una aplicación de Mensajería con un diseño más moderno, sino también eliminar una de las dependencias más importantes que todavía existen en su ecosistema. La combinación de nueva interfaz, mejoras internas y RCS propio convierte a esta aplicación en uno de los próximos cambios más relevantes del proyecto."
+      ],
+      "locked": false,
+      "sources": [
+        "https://www.androidauthority.com/grapheneos-messaging-rcs-support-secure-paste-3708317/?utm_source=chatgpt.com"
+      ],
+      "body_html": [
+        "<strong>GrapheneOS prepara una nueva aplicación de Mensajería con RCS integrado</strong>",
+        "GrapheneOS está preparando una<a href=\"https://www.androidauthority.com/grapheneos-messaging-rcs-support-secure-paste-3708317/?utm_source=chatgpt.com\" target=\"_blank\" rel=\"noopener\"> importante renovación de su aplicación de Mensajería</a>, que contará con una interfaz completamente rediseñada utilizando Jetpack Compose, además de numerosas mejoras y correcciones. El proyecto busca modernizar una de las aplicaciones básicas del sistema y reducir progresivamente su dependencia de componentes heredados de Android.",
+        "Pero el cambio más importante llegará con RCS. Aunque GrapheneOS ya permite utilizar RCS actualmente mediante Google Messages, el proyecto quiere que su propia aplicación de Mensajería pueda gestionar este estándar de comunicación. El objetivo es que los usuarios puedan disfrutar de RCS sin tener que depender de la aplicación de Google, incluyendo las funciones de mensajería moderna que ofrece este protocolo.",
+        "La transición será progresiva. GrapheneOS planea implementar inicialmente en su aplicación las partes de RCS que actualmente gestiona Google Messages para, posteriormente, avanzar hacia una implementación propia que pueda apoyarse directamente en los servicios de los operadores compatibles. De esta manera, la aplicación podría convertirse en una alternativa mucho más independiente para los usuarios que buscan utilizar GrapheneOS sin recurrir a aplicaciones de Google.",
+        "Con esta renovación, GrapheneOS no solo pretende ofrecer una aplicación de Mensajería con un diseño más moderno, sino también eliminar una de las dependencias más importantes que todavía existen en su ecosistema. La combinación de nueva interfaz, mejoras internas y RCS propio convierte a esta aplicación en uno de los próximos cambios más relevantes del proyecto."
+      ]
+    },
     {
       "id": 1676,
       "title": "Mullvad da un paso atrás en su DNS público y apuesta por reforzar a Quad9",

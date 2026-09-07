@@ -1,6 +1,69 @@
 {
-  "updated": "2026-09-07T12:38:38Z",
+  "updated": "2026-09-07T17:54:11Z",
   "articles": [
+    {
+      "id": 1679,
+      "title": "GrapheneOS prepara Secure Paste, una mejora del portapapeles",
+      "date": "2026-09-07T15:22:32+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "GrapheneOS está desarrollando Secure Paste, un nuevo sistema de gestión del portapapeles para proteger el contenido copiado. En lugar de permitir el acceso mediante las APIs tradicionales, el usuario podrá controlar cuándo una aplicación…",
+      "image": "media/1679.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1679",
+      "body": [
+        "GrapheneOS prepara Secure Paste, una mejora del portapapeles",
+        "GrapheneOS está desarrollando Secure Paste, un nuevo sistema de gestión del portapapeles para proteger el contenido copiado. En lugar de permitir el acceso mediante las APIs tradicionales, el usuario podrá controlar cuándo una aplicación recibe el contenido que quiere pegar, evitando que una app pueda consultar información sensible que otra haya copiado anteriormente.",
+        "El funcionamiento será simple para el usuario, pero eficaz. Las aplicaciones podrán seguir accediendo a los datos que ellas mismas hayan colocado en el portapapeles, mientras que el contenido copiado por otras aplicaciones quedará protegido.",
+        "Una contraseña, un código o cualquier otro dato sensible que permanezca temporalmente en el portapapeles no estará disponible para una aplicación simplemente por encontrarse en primer plano. GrapheneOS explica que el modelo actual sigue teniendo un problema: las notificaciones de Android avisan cuando una aplicación lee el portapapeles, pero para entonces el acceso ya se ha producido.",
+        "Secure Paste estará integrado en los mecanismos habituales de Android, como la barra de selección de texto, los métodos de entrada, los servicios de accesibilidad y los atajos de teclado. GrapheneOS también ha preparado una solución para aplicaciones que utilizan sus propios controles de selección, como algunas desarrolladas con Flutter: en estos casos, el teclado incorporará un botón específico para pegar. La función también llegará al futuro teclado que GrapheneOS está desarrollando para sustituir al teclado AOSP.",
+        "El objetivo no es simplemente mejorar el portapapeles, sino dar al usuario un control mucho más directo sobre qué información puede recibir cada aplicación."
+      ],
+      "locked": false,
+      "sources": [
+        "https://www.androidauthority.com/grapheneos-messaging-rcs-support-secure-paste-3708317/?utm_source=chatgpt.com"
+      ],
+      "body_html": [
+        "<strong>GrapheneOS prepara Secure Paste, una mejora del portapapeles<br></strong><br>GrapheneOS está desarrollando Secure Paste, un <a href=\"https://www.androidauthority.com/grapheneos-messaging-rcs-support-secure-paste-3708317/?utm_source=chatgpt.com\" target=\"_blank\" rel=\"noopener\">nuevo sistema de gestión del portapapeles</a> para proteger el contenido copiado. En lugar de permitir el acceso mediante las APIs tradicionales, el usuario podrá controlar cuándo una aplicación recibe el contenido que quiere pegar, evitando que una app pueda consultar información sensible que otra haya copiado anteriormente.",
+        "El funcionamiento será simple para el usuario, pero eficaz.<br>Las aplicaciones podrán seguir accediendo a los datos que ellas mismas hayan colocado en el portapapeles, mientras que el contenido copiado por otras aplicaciones quedará protegido.",
+        "Una contraseña, un código o cualquier otro dato sensible que permanezca temporalmente en el portapapeles no estará disponible para una aplicación simplemente por encontrarse en primer plano. GrapheneOS explica que el modelo actual sigue teniendo un problema: las notificaciones de Android avisan cuando una aplicación lee el portapapeles, pero para entonces el acceso ya se ha producido.",
+        "Secure Paste estará integrado en los mecanismos habituales de Android, como la barra de selección de texto, los métodos de entrada, los servicios de accesibilidad y los atajos de teclado. GrapheneOS también ha preparado una solución para aplicaciones que utilizan sus propios controles de selección, como algunas desarrolladas con Flutter: en estos casos, el teclado incorporará un botón específico para pegar. La función también llegará al futuro teclado que GrapheneOS está desarrollando para sustituir al teclado AOSP.",
+        "El objetivo no es simplemente mejorar el portapapeles, sino dar al usuario un control mucho más directo sobre qué información puede recibir cada aplicación."
+      ]
+    },
+    {
+      "id": 1677,
+      "title": "GrapheneOS prepara una nueva aplicación de Mensajería con RCS integrado",
+      "date": "2026-09-07T14:40:14+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "GrapheneOS está preparando una importante renovación de su aplicación de Mensajería, que contará con una interfaz completamente rediseñada utilizando Jetpack Compose, además de numerosas mejoras y correcciones. El proyecto busca modernizar…",
+      "image": "media/1677.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1677",
+      "body": [
+        "GrapheneOS prepara una nueva aplicación de Mensajería con RCS integrado",
+        "GrapheneOS está preparando una importante renovación de su aplicación de Mensajería, que contará con una interfaz completamente rediseñada utilizando Jetpack Compose, además de numerosas mejoras y correcciones. El proyecto busca modernizar una de las aplicaciones básicas del sistema y reducir progresivamente su dependencia de componentes heredados de Android.",
+        "Pero el cambio más importante llegará con RCS. Aunque GrapheneOS ya permite utilizar RCS actualmente mediante Google Messages, el proyecto quiere que su propia aplicación de Mensajería pueda gestionar este estándar de comunicación. El objetivo es que los usuarios puedan disfrutar de RCS sin tener que depender de la aplicación de Google, incluyendo las funciones de mensajería moderna que ofrece este protocolo.",
+        "La transición será progresiva. GrapheneOS planea implementar inicialmente en su aplicación las partes de RCS que actualmente gestiona Google Messages para, posteriormente, avanzar hacia una implementación propia que pueda apoyarse directamente en los servicios de los operadores compatibles. De esta manera, la aplicación podría convertirse en una alternativa mucho más independiente para los usuarios que buscan utilizar GrapheneOS sin recurrir a aplicaciones de Google.",
+        "Con esta renovación, GrapheneOS no solo pretende ofrecer una aplicación de Mensajería con un diseño más moderno, sino también eliminar una de las dependencias más importantes que todavía existen en su ecosistema. La combinación de nueva interfaz, mejoras internas y RCS propio convierte a esta aplicación en uno de los próximos cambios más relevantes del proyecto."
+      ],
+      "locked": false,
+      "sources": [
+        "https://www.androidauthority.com/grapheneos-messaging-rcs-support-secure-paste-3708317/?utm_source=chatgpt.com"
+      ],
+      "body_html": [
+        "<strong>GrapheneOS prepara una nueva aplicación de Mensajería con RCS integrado</strong>",
+        "GrapheneOS está preparando una<a href=\"https://www.androidauthority.com/grapheneos-messaging-rcs-support-secure-paste-3708317/?utm_source=chatgpt.com\" target=\"_blank\" rel=\"noopener\"> importante renovación de su aplicación de Mensajería</a>, que contará con una interfaz completamente rediseñada utilizando Jetpack Compose, además de numerosas mejoras y correcciones. El proyecto busca modernizar una de las aplicaciones básicas del sistema y reducir progresivamente su dependencia de componentes heredados de Android.",
+        "Pero el cambio más importante llegará con RCS. Aunque GrapheneOS ya permite utilizar RCS actualmente mediante Google Messages, el proyecto quiere que su propia aplicación de Mensajería pueda gestionar este estándar de comunicación. El objetivo es que los usuarios puedan disfrutar de RCS sin tener que depender de la aplicación de Google, incluyendo las funciones de mensajería moderna que ofrece este protocolo.",
+        "La transición será progresiva. GrapheneOS planea implementar inicialmente en su aplicación las partes de RCS que actualmente gestiona Google Messages para, posteriormente, avanzar hacia una implementación propia que pueda apoyarse directamente en los servicios de los operadores compatibles. De esta manera, la aplicación podría convertirse en una alternativa mucho más independiente para los usuarios que buscan utilizar GrapheneOS sin recurrir a aplicaciones de Google.",
+        "Con esta renovación, GrapheneOS no solo pretende ofrecer una aplicación de Mensajería con un diseño más moderno, sino también eliminar una de las dependencias más importantes que todavía existen en su ecosistema. La combinación de nueva interfaz, mejoras internas y RCS propio convierte a esta aplicación en uno de los próximos cambios más relevantes del proyecto."
+      ]
+    },
     {
       "id": 1676,
       "title": "Mullvad da un paso atrás en su DNS público y apuesta por reforzar a Quad9",
@@ -576,77 +639,6 @@
         "Rápidamente pude tener internet y hacer lo que necesitaba.",
         "Espero que os guste 👇",
         "https://youtu.be/UM8-s9w4k_I"
-      ]
-    },
-    {
-      "id": 1657,
-      "title": "Aliexpress utiliza el audio del dispositivo para identificarte",
-      "date": "2026-08-25T17:16:27+00:00",
-      "category": "Herramientas",
-      "tags": "aliexpress brave firefox herramientas",
-      "excerpt": "Se ha detectado que AliExpress emplea un método silencioso para identificar de forma única los dispositivos de quienes visitan su página. Genera internamente una señal de sonido que el usuario no escucha, la procesa a través del sistema de…",
-      "image": "media/1657.jpg",
-      "youtube_id": null,
-      "has_media": true,
-      "in_feed": true,
-      "source_url": "https://t.me/StarkPrivacy/1657",
-      "body": [
-        "🛒Aliexpress utiliza el audio del dispositivo para identificarte",
-        "Se ha detectado que AliExpress emplea un método silencioso para identificar de forma única los dispositivos de quienes visitan su página.",
-        "Genera internamente una señal de sonido que el usuario no escucha, la procesa a través del sistema de audio del navegador y analiza las mínimas diferencias en cómo cada equipo la maneja.",
-        "Esas variaciones, combinadas con otros datos del hardware y del software (capacidad gráfica, memoria, resolución de pantalla, comportamiento del ratón o del tacto, entre otros), permiten crear una huella digital bastante precisa sin necesidad de cookies.",
-        "El hallazgo surgió de forma casual: un desarrollador notó que sus auriculares Bluetooth con conexión multipunto dejaban de cambiar correctamente entre el ordenador y el móvil cada vez que tenía abierta la pestaña de la tienda. Al cerrarla, el problema desaparecía de inmediato.",
-        "Investigando descubrió que scripts de Alibaba mantenían activo el canal de audio en segundo plano, aunque el volumen estuviese desactivado.",
-        "Esta técnica puede servir tanto para combatir fraudes, bots o abusos de promociones como para seguir a los usuarios de manera más persistente (Que me da la sensación que ha sido la intención).",
-        "Navegadores como Brave o Firefox, además de ciertas extensiones de bloqueo limitan o evitan por completo este tipo de seguimiento."
-      ],
-      "locked": false,
-      "sources": [
-        "https://elchapuzasinformatico.com/2026/08/aliexpress-audio-usuarios-rastrear-dispositivos/"
-      ],
-      "body_html": [
-        "🛒<strong>Aliexpress utiliza el audio del dispositivo para identificarte<br></strong><br>Se ha detectado que AliExpress emplea un <a href=\"https://elchapuzasinformatico.com/2026/08/aliexpress-audio-usuarios-rastrear-dispositivos/\" target=\"_blank\" rel=\"noopener\">método silencioso para identificar de forma única</a> los dispositivos de quienes visitan su página.",
-        "Genera internamente una señal de sonido que el usuario no escucha, la procesa a través del sistema de audio del navegador y analiza las mínimas diferencias en cómo cada equipo la maneja.",
-        "Esas variaciones, combinadas con otros datos del hardware y del software (capacidad gráfica, memoria, resolución de pantalla, comportamiento del ratón o del tacto, entre otros), permiten crear una huella digital bastante precisa sin necesidad de cookies.",
-        "El hallazgo surgió de forma casual: un desarrollador notó que sus auriculares Bluetooth con conexión multipunto dejaban de cambiar correctamente entre el ordenador y el móvil cada vez que tenía abierta la pestaña de la tienda. Al cerrarla, el problema desaparecía de inmediato.",
-        "Investigando descubrió que scripts de Alibaba mantenían activo el canal de audio en segundo plano, aunque el volumen estuviese desactivado.",
-        "Esta técnica puede servir tanto para combatir fraudes, bots o abusos de promociones como para seguir a los usuarios de manera más persistente (Que me da la sensación que ha sido la intención).",
-        "Navegadores  como Brave o Firefox, además de ciertas extensiones de bloqueo limitan o evitan por completo este tipo de seguimiento."
-      ]
-    },
-    {
-      "id": 1656,
-      "title": "Mullvad mejora la función de multi-hop",
-      "date": "2026-08-25T16:23:30+00:00",
-      "category": "Servicios",
-      "tags": "mullvad servicios",
-      "excerpt": "Mullvad ha mejorado su sistema de conexión a través de varios servidores (Multi-hop), añadiendo opciones más adaptables y sencillas de gestionar. Ahora se puede elegir entre tres comportamientos: 1. Que se active solo cuando haga falta…",
-      "image": "media/1656.jpg",
-      "youtube_id": null,
-      "has_media": true,
-      "in_feed": true,
-      "source_url": "https://t.me/StarkPrivacy/1656",
-      "body": [
-        "🌐 Mullvad mejora la función de multi-hop",
-        "Mullvad ha mejorado su sistema de conexión a través de varios servidores (Multi-hop), añadiendo opciones más adaptables y sencillas de gestionar.",
-        "Ahora se puede elegir entre tres comportamientos:",
-        "1. Que se active solo cuando haga falta, por ejemplo si la ubicación elegida no admite alguna función de privacidad avanzada. En ese caso la aplicación busca automáticamente un servidor compatible cercano y redirige el tráfico de forma transparente.",
-        "2. Que esté siempre en marcha, pasando por dos servidores distintos. Esto refuerza el anonimato, aunque puede influir un poco en la velocidad. También existe la posibilidad de dejar que la aplicación seleccione sola el servidor de entrada más adecuado.",
-        "3. Que permanezca desactivado por completo, usando un único servidor. Así se gana rendimiento, pero se reduce el nivel de privacidad y se limitan las ubicaciones disponibles si se usan funciones especiales.",
-        "Al actualizar la aplicación, las configuraciones anteriores se adaptan de forma automática a uno de estos nuevos comportamientos y se avisa al usuario la primera vez que se abre."
-      ],
-      "locked": false,
-      "sources": [
-        "https://mullvad.net/es/blog/introducing-multihop-modes"
-      ],
-      "body_html": [
-        "🌐 <strong>Mullvad mejora la función de multi-hop</strong>",
-        "Mullvad ha mejorado su sistema de conexión a través de varios servidores (Multi-hop), añadiendo <a href=\"https://mullvad.net/es/blog/introducing-multihop-modes\" target=\"_blank\" rel=\"noopener\">opciones más adaptables y sencillas</a> de gestionar.",
-        "Ahora se puede elegir entre tres comportamientos:",
-        "1. Que se active solo cuando haga falta, por ejemplo si la ubicación elegida no admite alguna función de privacidad avanzada. En ese caso la aplicación busca automáticamente un servidor compatible cercano y redirige el tráfico de forma transparente.",
-        "2. Que esté siempre en marcha, pasando por dos servidores distintos. Esto refuerza el anonimato, aunque puede influir un poco en la velocidad. También existe la posibilidad de dejar que la aplicación seleccione sola el servidor de entrada más adecuado.",
-        "3. Que permanezca desactivado por completo, usando un único servidor. Así se gana rendimiento, pero se reduce el nivel de privacidad y se limitan las ubicaciones disponibles si se usan funciones especiales.",
-        "Al actualizar la aplicación, las configuraciones anteriores se adaptan de forma automática a uno de estos nuevos comportamientos y se avisa al usuario la primera vez que se abre."
       ]
     }
   ]
