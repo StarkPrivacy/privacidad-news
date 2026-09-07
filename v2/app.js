@@ -742,6 +742,29 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
   }
 
+  /* ---------- Botón de idioma (ES <-> EN) ----------
+     Enruta la página por el proxy de traducción de Google. Es opt-in
+     explícito del lector; si algún día hay un traductor propio, es una línea. */
+  const langSwitch = document.getElementById('langSwitch');
+  if (langSwitch) {
+    const loc = window.location;
+    if (loc.hostname.endsWith('.translate.goog')) {
+      langSwitch.textContent = 'ES';
+      langSwitch.setAttribute('aria-label', 'Ver el original en español');
+      langSwitch.setAttribute('hreflang', 'es');
+      const q = loc.search.replace(/[?&]_x_tr_[a-z]+=[^&]*/g, '').replace(/^&/, '?');
+      langSwitch.href = `https://starkprivacy.github.io${loc.pathname}${q}${loc.hash}`;
+    } else if (loc.hostname === 'localhost' || /^\d/.test(loc.hostname)) {
+      langSwitch.href = 'https://starkprivacy-github-io.translate.goog/privacidad-news/v2/?_x_tr_sl=es&_x_tr_tl=en&_x_tr_hl=en';
+      langSwitch.title = 'Traducir al inglés (Google Translate)';
+    } else {
+      const proxy = loc.hostname.replace(/-/g, '--').replace(/\./g, '-') + '.translate.goog';
+      const sep = loc.search ? loc.search + '&' : '?';
+      langSwitch.href = `https://${proxy}${loc.pathname}${sep}_x_tr_sl=es&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp${loc.hash}`;
+      langSwitch.title = 'Traducir al inglés (Google Translate)';
+    }
+  }
+
   /* ---------- Lista de correo: darle la vuelta ---------- */
   const mailFlip = document.getElementById('mailFlip');
   const mailReveal = document.getElementById('mailReveal');
