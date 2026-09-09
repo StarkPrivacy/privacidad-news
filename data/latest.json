@@ -1,6 +1,65 @@
 {
-  "updated": "2026-09-09T06:38:04Z",
+  "updated": "2026-09-09T11:49:26Z",
   "articles": [
+    {
+      "id": 1681,
+      "title": "Un investigador de Anthropic dimite y alerta de que la IA podría “matarnos a todos”.",
+      "date": "2026-09-09T09:15:42+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "Jacob Coxon, investigador británico de 27 años especializado en el preentrenamiento de modelos, ha anunciado su dimisión de Anthropic. En una serie de mensajes publicados recientemente en X, afirma que ni Anthropic ni OpenAI (donde trabajó…",
+      "image": "media/1681.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1681",
+      "body": [
+        "Un investigador de Anthropic dimite y alerta de que la IA podría “matarnos a todos”.",
+        "Jacob Coxon, investigador británico de 27 años especializado en el preentrenamiento de modelos, ha anunciado su dimisión de Anthropic.",
+        "En una serie de mensajes publicados recientemente en X, afirma que ni Anthropic ni OpenAI (donde trabajó anteriormente) están actuando de forma responsable y que ambas compañías “corren de forma directa hacia una superinteligencia auto-mejorante y apuestan con nuestras vidas”.",
+        "Coxon pasó los últimos tres años entrenando sistemas de inteligencia artificial en las dos empresas. Según su relato, abandonó OpenAI a mediados de 2026 para incorporarse a Anthropic precisamente por la reputación de esta última en materia de seguridad. Esa confianza, dice que ya no es suficiente.",
+        "El temor es a sistemas que se mejoren a sí mismos.",
+        "Su principal argumento es el avance hacia modelos capaces de mejorar de forma recursiva sus propias capacidades.",
+        "Coxon advierte que esos sistemas serán pronto “sobrehumanos”, capaces de “hackear cualquier cosa, revolucionar cualquier campo de la noche a la mañana y adquirir poder y recursos reales”. El progreso en esos dominios, añade, no se está ralentizando.",
+        "En declaraciones recogidas por The Wall Street Journal, el investigador sostuvo que el sector se dirige hacia “muchos de los escenarios más agresivos”, en los que “a finales del próximo año las cosas podrían estar ya fuera de control”.",
+        "Las personas que están construyendo IA creen sinceramente que podría matarnos a todos para finales de la década. Esto no es un truco de marketing. Si acaso, muchos ejecutivos e investigadores senior moderarán su lenguaje en la prensa para sonar sensatos, pero oigo a las mismas personas expresar miedo en privado. Ninguna otra actividad humana representa este nivel de peligro”, escribió.",
+        "Una carrera que, según él, no debería decidirse en un Slack corporativo.",
+        "Coxon distingue entre ambas compañías. En OpenAI, dice, “muchos no han interiorizado profundamente las apuestas civilizatorias”. En Anthropic, “las apuestas están bien comprendidas”, pero la empresa está “atrapada en una carrera por llegar primero”: cree que nadie más actuará de forma responsable y, por tanto, debe hacerlo ella misma, a pesar del riesgo.",
+        "Aceptar esa carrera e entrar en la “fase final”, dice que, “es una apuesta soberbia que no debería lanzarse desde el Slack de una empresa privada”. Intentarlo acelerando el alineamiento de la superinteligencia, añade, exigiría una confianza extraordinaria en que no existen trayectorias mejores.",
+        "En su opinión, ninguna compañía puede desarrollar de forma responsable una inteligencia general artificial sin intervención gubernamental o una ralentización coordinada del sector.",
+        "Dirigiéndose a otros investigadores, les pidió que se pregunten si desean “iniciar una ejecución de aprendizaje por refuerzo superinteligente sin una comprensión rigurosa de su mente” o si prefieren “agachar la cabeza porque ‘de todos modos está sucediendo”.",
+        "Evan Hubinger, responsable de ciencia del alineamiento en Anthropic, respondió públicamente a Coxon sin abandonar la empresa:",
+        "Jacob tiene razón: realmente creemos con sinceridad que la IA podría matar a todos los humanos. Personalmente pienso que es más del 10 % en la próxima década",
+        "Añadió que Anthropic “está haciendo lo mejor que puede”, pero que “aún no tenemos un plan para resolver el alineamiento de la superinteligencia y no estamos claramente en camino de lograrlo”.",
+        "La dimisión de Coxon no es el primer caso de este tipo en Anthropic. En febrero, Mrinank Sharma, entonces responsable del equipo de investigación de salvaguardas, dejó la compañía con una carta en la que afirmaba que “el mundo está en peligro”, no solo por la inteligencia artificial o las armas biológicas, sino por “una serie de crisis interconectadas”. Sharma anunció que se dedicaría a la escritura y al estudio de la poesía.",
+        "¿Tú que opinas?"
+      ],
+      "locked": false,
+      "sources": [
+        "https://www.lavanguardia.com/vida/20260909/11630677/ingeniero-anthropic-dimite-ia-matarnos-todos-final-decada.html"
+      ],
+      "body_html": [
+        "<strong>Un investigador de Anthropic dimite y alerta de que la IA podría “matarnos a todos”.</strong>",
+        "Jacob Coxon, investigador británico de 27 años especializado en el preentrenamiento de modelos, <a href=\"https://www.lavanguardia.com/vida/20260909/11630677/ingeniero-anthropic-dimite-ia-matarnos-todos-final-decada.html\" target=\"_blank\" rel=\"noopener\">ha anunciado su dimisión de Anthropic</a>.",
+        "En una serie de mensajes publicados recientemente en X, afirma que ni Anthropic ni OpenAI (donde trabajó anteriormente) están actuando de forma responsable y que ambas compañías “corren de forma directa hacia una superinteligencia auto-mejorante y apuestan con nuestras vidas”.",
+        "Coxon pasó los últimos tres años entrenando sistemas de inteligencia artificial en las dos empresas. Según su relato, abandonó OpenAI a mediados de 2026 para incorporarse a Anthropic precisamente por la reputación de esta última en materia de seguridad. Esa confianza, dice que ya no es suficiente.",
+        "El temor es a sistemas que se mejoren a sí mismos.",
+        "Su principal argumento es el avance hacia modelos capaces de mejorar de forma recursiva sus propias capacidades.",
+        "Coxon advierte que esos sistemas serán pronto “sobrehumanos”, capaces de <em>“hackear cualquier cosa, revolucionar cualquier campo de la noche a la mañana y adquirir poder y recursos reales”</em>. El progreso en esos dominios, añade, no se está ralentizando.",
+        "En declaraciones recogidas por The Wall Street Journal, el investigador sostuvo que el sector se dirige hacia <em>“muchos de los escenarios más agresivos”</em>, en los que <em>“a finales del próximo año las cosas podrían estar ya fuera de control”</em>.",
+        "<blockquote>Las personas que están construyendo IA creen sinceramente que podría matarnos a todos para finales de la década. Esto no es un truco de marketing. Si acaso, muchos ejecutivos e investigadores senior moderarán su lenguaje en la prensa para sonar sensatos, pero oigo a las mismas personas expresar miedo en privado. Ninguna otra actividad humana representa este nivel de peligro”, escribió.</blockquote>",
+        "Una carrera que, según él, no debería decidirse en un Slack corporativo.",
+        "Coxon distingue entre ambas compañías. En OpenAI, dice, “muchos no han interiorizado profundamente las apuestas civilizatorias”. En Anthropic, “las apuestas están bien comprendidas”, pero la empresa está “atrapada en una carrera por llegar primero”: cree que nadie más actuará de forma responsable y, por tanto, debe hacerlo ella misma, a pesar del riesgo.",
+        "Aceptar esa carrera e entrar en la <em>“fase final”</em>, dice que, <em>“es una apuesta soberbia que no debería lanzarse desde el Slack de una empresa privada”</em>. Intentarlo acelerando el alineamiento de la superinteligencia, añade, exigiría una confianza extraordinaria en que no existen trayectorias mejores.",
+        "En su opinión, ninguna compañía puede desarrollar de forma responsable una inteligencia general artificial sin intervención gubernamental o una ralentización coordinada del sector.",
+        "Dirigiéndose a otros investigadores, les pidió que se pregunten si desean <em>“iniciar una ejecución de aprendizaje por refuerzo superinteligente sin una comprensión rigurosa de su mente”</em> o si prefieren <em>“agachar la cabeza porque ‘de todos modos está sucediendo”</em>.",
+        "Evan Hubinger, responsable de ciencia del alineamiento en Anthropic, respondió públicamente a Coxon sin abandonar la empresa:",
+        "<blockquote>Jacob tiene razón: realmente creemos con sinceridad que la IA podría matar a todos los humanos. Personalmente pienso que es más del 10 % en la próxima década</blockquote>",
+        "Añadió que Anthropic <em>“está haciendo lo mejor que puede”</em>, pero que <em>“aún no tenemos un plan para resolver el alineamiento de la superinteligencia y no estamos claramente en camino de lograrlo”</em>.",
+        "La dimisión de Coxon no es el primer caso de este tipo en Anthropic. En febrero, Mrinank Sharma, entonces responsable del equipo de investigación de salvaguardas, dejó la compañía con una carta en la que afirmaba que <em>“el mundo está en peligro”</em>, no solo por la inteligencia artificial o las armas biológicas, sino por <em>“una serie de crisis interconectadas”</em>. Sharma anunció que se dedicaría a la escritura y al estudio de la poesía.",
+        "¿Tú que opinas?"
+      ]
+    },
     {
       "id": 1680,
       "title": "Ya disponible privacidad/me",
@@ -627,23 +686,6 @@
         "El modelo operó de forma casi completamente autónoma durante varias horas, investigando, descartando caminos fallidos y generando su propio código de explotación.",
         "La conclusión del informe es: una máquina virtual convencional ya no resulta suficiente para contener agentes de inteligencia artificial con capacidades avanzadas, por lo que deben tratarse como amenazas persistentes y se recomienda el uso de entornos de virtualización con menor superficie de ataque."
       ]
-    },
-    {
-      "id": 1659,
-      "title": "Así es.",
-      "date": "2026-08-26T17:25:51+00:00",
-      "category": "Seguridad",
-      "tags": "seguridad",
-      "excerpt": "Así es.",
-      "image": "media/1659.jpg",
-      "youtube_id": null,
-      "has_media": true,
-      "in_feed": true,
-      "source_url": "https://t.me/StarkPrivacy/1659",
-      "body": [
-        "Así es."
-      ],
-      "locked": false
     }
   ]
 }
