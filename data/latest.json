@@ -1,6 +1,32 @@
 {
-  "updated": "2026-09-09T18:50:33Z",
+  "updated": "2026-09-09T21:24:49Z",
   "articles": [
+    {
+      "id": 1682,
+      "title": "Tarjeta sin KYC, gasta fácil y rápidamente",
+      "date": "2026-09-09T19:43:45+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "Sabéis que siempre he sido precavido a la hora de hablar de estas tarjetas, pero con la cantidad de personas que me lo han pedido, tocaba hacerlo. Espero que os guste👇",
+      "image": "",
+      "youtube_id": "9R_EXaepNaU",
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1682",
+      "body": [
+        "Tarjeta sin KYC, gasta fácil y rápidamente",
+        "Sabéis que siempre he sido precavido a la hora de hablar de estas tarjetas, pero con la cantidad de personas que me lo han pedido, tocaba hacerlo.",
+        "Espero que os guste👇 https://youtu.be/9R_EXaepNaU"
+      ],
+      "locked": false,
+      "sources": [
+        "https://t.co/XbpXVPfYWF"
+      ],
+      "body_html": [
+        "<strong>Tarjeta sin KYC, gasta fácil y rápidamente<br></strong><br>Sabéis que siempre he sido precavido a la hora de hablar de estas tarjetas, pero con la cantidad de personas que me lo han pedido, tocaba hacerlo.",
+        "Espero que os guste👇<br><a href=\"https://t.co/XbpXVPfYWF\" target=\"_blank\" rel=\"noopener\">https://youtu.be/9R_EXaepNaU</a>"
+      ]
+    },
     {
       "id": 1681,
       "title": "Un investigador de Anthropic dimite y alerta de que la IA podría “matarnos a todos”.",
@@ -648,43 +674,6 @@
       "images": [
         "media/1661.jpg",
         "media/1661-2.jpg"
-      ]
-    },
-    {
-      "id": 1660,
-      "title": "Cuando una máquina virtual ya no es suficiente…",
-      "date": "2026-08-26T18:57:32+00:00",
-      "category": "Seguridad",
-      "tags": "seguridad",
-      "excerpt": "Trail of Bits (una empresa estadounidense de ciberseguridad) evaluó las capacidades ofensivas de GPT 5.6-Cyber y le encargó escapar de una máquina virtual QEMU/KVM utilizada como sandbox en un host Debian 12. El agente logró escapar en…",
-      "image": "media/1660.jpg",
-      "youtube_id": null,
-      "has_media": true,
-      "in_feed": true,
-      "source_url": "https://t.me/StarkPrivacy/1660",
-      "body": [
-        "⌨️ Cuando una máquina virtual ya no es suficiente…",
-        "Trail of Bits (una empresa estadounidense de ciberseguridad) evaluó las capacidades ofensivas de GPT 5.6-Cyber y le encargó escapar de una máquina virtual QEMU/KVM utilizada como sandbox en un host Debian 12.",
-        "El agente logró escapar en tres ocasiones.",
-        "En la primera aprovechó una vulnerabilidad reciente del kernel del host.",
-        "En la segunda combinó fallos presentes en la biblioteca libslirp de la distribución.",
-        "En la tercera descubrió por sí mismo tres vulnerabilidades de día cero, las encadenó con otra debilidad ya corregida en upstream pero no distribuida, y construyó un exploit funcional y fiable.",
-        "El modelo operó de forma casi completamente autónoma durante varias horas, investigando, descartando caminos fallidos y generando su propio código de explotación.",
-        "La conclusión del informe es: una máquina virtual convencional ya no resulta suficiente para contener agentes de inteligencia artificial con capacidades avanzadas, por lo que deben tratarse como amenazas persistentes y se recomienda el uso de entornos de virtualización con menor superficie de ataque."
-      ],
-      "locked": false,
-      "sources": [
-        "https://blog.trailofbits.com/2026/08/26/vms-wont-contain-cyber-capable-agents/"
-      ],
-      "body_html": [
-        "⌨️ <strong>Cuando una máquina virtual ya no es suficiente…</strong>",
-        "Trail of Bits (una empresa estadounidense de ciberseguridad) <a href=\"https://blog.trailofbits.com/2026/08/26/vms-wont-contain-cyber-capable-agents/\" target=\"_blank\" rel=\"noopener\">evaluó las capacidades ofensivas de GPT 5.6-Cyber</a> y le encargó escapar de una máquina virtual QEMU/KVM utilizada como sandbox en un host Debian 12.",
-        "El agente logró escapar en tres ocasiones.",
-        "En la primera aprovechó una vulnerabilidad reciente del kernel del host.",
-        "En la segunda combinó fallos presentes en la biblioteca <em>libslirp</em> de la distribución.",
-        "En la tercera descubrió por sí mismo tres vulnerabilidades de día cero, las encadenó con otra debilidad ya corregida en upstream pero no distribuida, y construyó un exploit funcional y fiable.",
-        "El modelo operó de forma casi completamente autónoma durante varias horas, investigando, descartando caminos fallidos y generando su propio código de explotación.",
-        "La conclusión del informe es: una máquina virtual convencional ya no resulta suficiente para contener agentes de inteligencia artificial con capacidades avanzadas, por lo que deben tratarse como amenazas persistentes y se recomienda el uso de entornos de virtualización con menor superficie de ataque."
       ]
     }
   ]
