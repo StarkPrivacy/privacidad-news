@@ -1,6 +1,37 @@
 {
-  "updated": "2026-09-10T11:46:32Z",
+  "updated": "2026-09-10T15:34:44Z",
   "articles": [
+    {
+      "id": 1683,
+      "title": "Un senador de EEUU pide a la NSA que actualice su guía sobre VPN",
+      "date": "2026-09-10T14:02:09+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "El senador Ron Wyden ha enviado una carta reclamando a la NSA que revise su guía de ciberseguridad sobre VPN comerciales, a las que considera insuficientes frente a la vigilancia de actores estatales. Se apoya en un memo del Congressional…",
+      "image": "media/1683.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1683",
+      "body": [
+        "Un senador de EEUU pide a la NSA que actualice su guía sobre VPN",
+        "El senador Ron Wyden ha enviado una carta reclamando a la NSA que revise su guía de ciberseguridad sobre VPN comerciales, a las que considera insuficientes frente a la vigilancia de actores estatales.",
+        "Se apoya en un memo del Congressional Research Service que advierte de que las VPN de un solo salto siguen siendo vulnerables al análisis de tráfico: quien controle o vigile suficiente infraestructura de internet puede correlacionar las conexiones de entrada y salida de un mismo servidor VPN y reconstruir la navegación de un usuario, sin necesidad de romper ningún cifrado.",
+        "Wyden argumenta que empleados públicos, contratistas de defensa, periodistas y defensores de derechos humanos confían en estas herramientas creyendo que ofrecen un anonimato que en realidad no garantizan, y pide que la NSA sea transparente sobre esas limitaciones en lugar de dar por buena cualquier VPN comercial.",
+        "Como alternativas más robustas frente a este tipo de vigilancia, señala los sistemas multi salto, como Tor, NymVPN o iCloud Private Relay de Apple, que dificultan mucho más la correlación de tráfico al repartir la conexión entre varios saltos independientes."
+      ],
+      "locked": false,
+      "sources": [
+        "https://www.techradar.com/vpn/vpn-privacy-security/us-senator-demands-nsa-update-vpn-guidance-over-foreign-spying-risks"
+      ],
+      "body_html": [
+        "<strong>Un senador de EEUU pide a la NSA que actualice su guía sobre VPN</strong>",
+        "El senador Ron Wyden ha enviado una carta reclamando a la <a href=\"https://www.techradar.com/vpn/vpn-privacy-security/us-senator-demands-nsa-update-vpn-guidance-over-foreign-spying-risks\" target=\"_blank\" rel=\"noopener\">NSA que revise su guía de ciberseguridad sobre VPN comerciales</a>, a las que considera insuficientes frente a la vigilancia de actores estatales.",
+        "Se apoya en un memo del Congressional Research Service que advierte de que las VPN de un solo salto siguen siendo vulnerables al análisis de tráfico: quien controle o vigile suficiente infraestructura de internet puede correlacionar las conexiones de entrada y salida de un mismo servidor VPN y reconstruir la navegación de un usuario, sin necesidad de romper ningún cifrado.",
+        "Wyden argumenta que empleados públicos, contratistas de defensa, periodistas y defensores de derechos humanos confían en estas herramientas creyendo que ofrecen un anonimato que en realidad no garantizan, y pide que la NSA sea transparente sobre esas limitaciones en lugar de dar por buena cualquier VPN comercial.",
+        "Como alternativas más robustas frente a este tipo de vigilancia, señala los sistemas multi salto, como Tor, NymVPN o iCloud Private Relay de Apple, que dificultan mucho más la correlación de tráfico al repartir la conexión entre varios saltos independientes."
+      ]
+    },
     {
       "id": 1682,
       "title": "Tarjeta sin KYC, gasta fácil y rápidamente",
@@ -647,33 +678,6 @@
         "No se ha dado una explicación pública detallada sobre por qué se contempló inicialmente esa modificación.",
         "Sí se mantendrá un ajuste distinto: las nuevas direcciones asociadas a Iniciar sesión con Apple migrarán a @private.icloud.com más adelante en 2026 (El servicio ya sabría que el usuario se autentica mediante Apple, así que no es algo especialmente relevante).",
         "Hide My Email, en cambio, seguirá utilizando @icloud.com."
-      ]
-    },
-    {
-      "id": 1661,
-      "title": "La mayoría de servicios de Proton se encuentran caídos en estos momentos para la mayoría de sus usuarios, desde hace más de 20 minutos",
-      "date": "2026-08-26T22:34:34+00:00",
-      "category": "Servicios",
-      "tags": "proton servicios",
-      "excerpt": "⚠️ La mayoría de servicios de Proton se encuentran caídos en estos momentos para la mayoría de sus usuarios, desde hace más de 20 minutos",
-      "image": "media/1661.jpg",
-      "youtube_id": null,
-      "has_media": true,
-      "in_feed": true,
-      "source_url": "https://t.me/StarkPrivacy/1661",
-      "body": [
-        "⚠️ La mayoría de servicios de Proton se encuentran caídos en estos momentos para la mayoría de sus usuarios, desde hace más de 20 minutos"
-      ],
-      "locked": false,
-      "sources": [
-        "https://status.proton.me/"
-      ],
-      "body_html": [
-        "⚠️ La mayoría de servicios de Proton se encuentran <a href=\"https://status.proton.me/\" target=\"_blank\" rel=\"noopener\">caídos en estos momentos</a> para la mayoría de sus usuarios, desde hace más de 20 minutos"
-      ],
-      "images": [
-        "media/1661.jpg",
-        "media/1661-2.jpg"
       ]
     }
   ]
