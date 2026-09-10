@@ -1,7 +1,45 @@
 {
-  "updated": "2026-09-10T15:34:44Z",
+  "updated": "2026-09-10T18:40:23Z",
   "source": "https://t.me/StarkPrivacy",
   "articles": [
+    {
+      "id": 1684,
+      "title": "Tor continua mejorando su VPN en teléfonos",
+      "date": "2026-09-10T16:27:34+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "Tor VPN Beta amplía la protección de Tor en Android más allá de su navegador, al redirigir el tráfico de las aplicaciones a través de la red Tor con circuitos aislados por aplicación. El Proyecto Tor anunció el ayer 9 de septiembre una…",
+      "image": "media/1684.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1684",
+      "body": [
+        "Tor continua mejorando su VPN en teléfonos",
+        "Tor VPN Beta amplía la protección de Tor en Android más allá de su navegador, al redirigir el tráfico de las aplicaciones a través de la red Tor con circuitos aislados por aplicación.",
+        "El Proyecto Tor anunció el ayer 9 de septiembre una mayor distribución de su app.",
+        "A diferencia de una VPN convencional, que suele enviar todo el tráfico por un único túnel, Tor VPN crea un circuito Tor independiente para cada aplicación, con su propia dirección IP de salida. El objetivo es dificultar que un observador de red relacione la actividad de una aplicación con la de otra, en la línea de las protecciones contra el rastreo cruzado de Tor Browser.",
+        "El usuario decide qué aplicaciones pasan por Tor; la interfaz reciente incluye búsqueda para gestionar listas extensas.",
+        "Respecto a la censura, la versión 1.4.0 beta incorporó puentes WebTunnel, que hacen que el tráfico de Tor se asemeje a una conexión web cifrada habitual. Las pruebas de usabilidad revelaron que algunos usuarios elegían un nodo de salida cuando en realidad necesitaban un puente; por ello, ahora hay que conectarse primero a Tor antes de seleccionar una salida.",
+        "La aplicación se basa en Arti (implementación de Tor en Rust) y en la capa de red Onionmasq, con compilaciones reproducibles.",
+        "Una auditoría de Cure53 de junio de 2025 no halló fallos fundamentales en el establecimiento del túnel ni en el enrutamiento, aunque sí problemas de DNS, validación de entradas y riesgos de denegación de servicio que el proyecto afirma estar corrigiendo.",
+        "Sigue siendo software beta y no pretende competir en velocidad con las VPN comerciales, evidentemente. El trabajo previsto incluye mejor elusión, usabilidad y funciones de rendimiento (como control de congestión) en Arti. En entornos censurados conviene configurar puentes, no limitarse a cambiar el país de salida."
+      ],
+      "locked": false,
+      "sources": [
+        "https://cyberinsider.com/tor-vpn-beta-brings-isolated-app-by-app-tor-routing-to-android/"
+      ],
+      "body_html": [
+        "<strong>Tor continua mejorando su VPN en teléfonos<br></strong><br>Tor VPN Beta amplía la protección de Tor en Android más allá de su navegador, al <a href=\"https://cyberinsider.com/tor-vpn-beta-brings-isolated-app-by-app-tor-routing-to-android/\" target=\"_blank\" rel=\"noopener\">redirigir el tráfico de las aplicaciones a través de la red Tor</a> con circuitos aislados por aplicación.",
+        "El Proyecto Tor anunció el ayer 9 de septiembre una mayor distribución de su app.",
+        "A diferencia de una VPN convencional, que suele enviar todo el tráfico por un único túnel, Tor VPN crea un circuito Tor independiente para cada aplicación, con su propia dirección IP de salida. El objetivo es dificultar que un observador de red relacione la actividad de una aplicación con la de otra, en la línea de las protecciones contra el rastreo cruzado de Tor Browser.",
+        "El usuario decide qué aplicaciones pasan por Tor; la interfaz reciente incluye búsqueda para gestionar listas extensas.",
+        "Respecto a la censura, la versión 1.4.0 beta incorporó puentes WebTunnel, que hacen que el tráfico de Tor se asemeje a una conexión web cifrada habitual. Las pruebas de usabilidad revelaron que algunos usuarios elegían un nodo de salida cuando en realidad necesitaban un puente; por ello, ahora hay que conectarse primero a Tor antes de seleccionar una salida.",
+        "La aplicación se basa en Arti (implementación de Tor en Rust) y en la capa de red Onionmasq, con compilaciones reproducibles.",
+        "Una auditoría de Cure53 de junio de 2025 no halló fallos fundamentales en el establecimiento del túnel ni en el enrutamiento, aunque sí problemas de DNS, validación de entradas y riesgos de denegación de servicio que el proyecto afirma estar corrigiendo.",
+        "Sigue siendo software beta y no pretende competir en velocidad con las VPN comerciales, evidentemente. El trabajo previsto incluye mejor elusión, usabilidad y funciones de rendimiento (como control de congestión) en Arti. En entornos censurados conviene configurar puentes, no limitarse a cambiar el país de salida."
+      ]
+    },
     {
       "id": 1683,
       "title": "Un senador de EEUU pide a la NSA que actualice su guía sobre VPN",
