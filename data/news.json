@@ -1,7 +1,42 @@
 {
-  "updated": "2026-09-11T06:02:43Z",
+  "updated": "2026-09-11T11:26:11Z",
   "source": "https://t.me/StarkPrivacy",
   "articles": [
+    {
+      "id": 1685,
+      "title": "Los modelos asiáticos cada vez más fuertes y opensource, DeepSeek 4.1 Flash",
+      "date": "2026-09-11T08:48:54+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "DeepSeek, la empresa china de inteligencia artificial, ha publicado hoy su último modelo: V4.1 Flash. Se trata de un sistema multimodal (entiende texto e imágenes), de pesos abiertos (Por así decirlo, de código abierto) y con licencia MIT…",
+      "image": "media/1685.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1685",
+      "body": [
+        "Los modelos asiáticos cada vez más fuertes y opensource, DeepSeek 4.1 Flash",
+        "DeepSeek, la empresa china de inteligencia artificial, ha publicado hoy su último modelo: V4.1 Flash. Se trata de un sistema multimodal (entiende texto e imágenes), de pesos abiertos (Por así decirlo, de código abierto) y con licencia MIT. Es un modelo de gran tamaño, pero no emplea toda su capacidad en cada consulta: reserva una parte menor para leer la entrada y otra algo mayor para generar la respuesta. Puede trabajar con contextos extremadamente largos y analizar imágenes de forma nativa.",
+        "Los archivos del modelo están disponibles en Hugging Face y también puede usarse a través de la API, bajo el nombre deepseek-flash. DeepSeek retirará el modelo anterior, V4-Pro, y desviará esas peticiones a V4.1 Flash a un precio más bajo.",
+        "Pero espera, porque se comienza a comparar con Claude Fable 5.1, de Anthropic, y GPT-6 Astra, de OpenAI, son modelos de frontera (Lo mejorcito) cerrados: no se descargan ni se instalan en servidores propios.",
+        "Cada uno tiene un perfil distinto. Fable 5.1 suele destacar en razonamiento prolongado, trabajo de conocimiento y código listo para integrarse en un proyecto. Su precio de referencia ronda los 10 dólares por millón de tokens de entrada y 50 dólares por millón de tokens de salida.",
+        "Astra suele ir por delante cuando el sistema debe manejar un ordenador, navegar, abordar tareas de ciberseguridad o resolver matemáticas muy exigentes.",
+        "Ambos suelen situarse en lo más alto en benchmarks generales y pero cuestan varias veces más que DeepSeek, muchas veces más, ahí es donde está destacando especialmente, en la potencia que tiene en comparación con su precio y más comparándolo con sus \"competidores\"."
+      ],
+      "locked": false,
+      "sources": [
+        "https://x.com/deepseek_ai/status/2097930608790167907?s=20"
+      ],
+      "body_html": [
+        "<strong>Los modelos asiáticos cada vez más fuertes y opensource, DeepSeek 4.1 Flash</strong>",
+        "DeepSeek, la empresa china de inteligencia artificial, ha publicado hoy <a href=\"https://x.com/deepseek_ai/status/2097930608790167907?s=20\" target=\"_blank\" rel=\"noopener\">su último modelo: V4.1 Flash</a>. Se trata de un sistema multimodal (entiende texto e imágenes), de pesos abiertos (Por así decirlo, de código abierto) y con licencia MIT. Es un modelo de gran tamaño, pero no emplea toda su capacidad en cada consulta: reserva una parte menor para leer la entrada y otra algo mayor para generar la respuesta. Puede trabajar con contextos extremadamente largos y analizar imágenes de forma nativa.",
+        "Los archivos del modelo están disponibles en Hugging Face y también puede usarse a través de la API, bajo el nombre deepseek-flash. DeepSeek retirará el modelo anterior, V4-Pro, y desviará esas peticiones a V4.1 Flash a un precio más bajo.",
+        "Pero espera, porque se comienza a comparar con Claude Fable 5.1, de Anthropic, y GPT-6 Astra, de OpenAI, son modelos de frontera (Lo mejorcito) cerrados: no se descargan ni se instalan en servidores propios.",
+        "Cada uno tiene un perfil distinto. Fable 5.1 suele destacar en razonamiento prolongado, trabajo de conocimiento y código listo para integrarse en un proyecto. Su precio de referencia ronda los 10 dólares por millón de tokens de entrada y 50 dólares por millón de tokens de salida.",
+        "Astra suele ir por delante cuando el sistema debe manejar un ordenador, navegar, abordar tareas de ciberseguridad o resolver matemáticas muy exigentes.",
+        "Ambos suelen situarse en lo más alto en benchmarks generales y pero cuestan varias veces más que DeepSeek, muchas veces más, ahí es donde está destacando especialmente, en la potencia que tiene en comparación con su precio y más comparándolo con sus &quot;competidores&quot;."
+      ]
+    },
     {
       "id": 1684,
       "title": "Tor continua mejorando su VPN en teléfonos",
