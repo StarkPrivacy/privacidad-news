@@ -1,6 +1,54 @@
 {
-  "updated": "2026-09-13T15:27:49Z",
+  "updated": "2026-09-13T18:19:44Z",
   "articles": [
+    {
+      "id": 1688,
+      "title": "OpenAI y Anthropic quieren regular el ritmo de desarrollo de la Inteligencia Artificial",
+      "date": "2026-09-13T16:40:08+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "Los máximos responsables de OpenAI y Anthropic, Sam Altman y Dario Amodei, coincidieron ayer sábado en la necesidad de “marcar el ritmo de los modelos frontera” de la inteligencia artificial, es decir, de no acelerar las capacidades de los…",
+      "image": "media/1688.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1688",
+      "body": [
+        "OpenAI y Anthropic quieren regular el ritmo de desarrollo de la Inteligencia Artificial",
+        "Los máximos responsables de OpenAI y Anthropic, Sam Altman y Dario Amodei, coincidieron ayer sábado en la necesidad de “marcar el ritmo de los modelos frontera” de la inteligencia artificial, es decir, de no acelerar las capacidades de los modelos más avanzados más allá de lo que permitan las salvaguardas de seguridad.",
+        "Amodei, consejero delegado de Anthropic, publicó el ensayo We Must Pace the Frontier, sostiene que el sector debe avanzar a un ritmo equilibrado para que las medidas de alineación y control puedan mantenerse al día.",
+        "Como primer paso de un plan en tres fases, Anthropic se comprometió de forma unilateral a dar a evaluadores independientes un acceso permanente de nivel de empleado a sus sistemas, con el fin de verificar el cumplimiento de las medidas de seguridad, informar de incidentes y evaluar la alineación de los modelos durante el entrenamiento.",
+        "Altman, consejero delegado de OpenAI (la empresa detrás de ChatGPT), respondió que comparte el diagnóstico y que su compañía hará lo mismo: “Comprometerse a contar con evaluadores independientes con acceso similar al de un empleado es una gran idea, y nosotros haremos lo mismo. Pronto daremos más detalles”. Añadió que el ritmo de los modelos frontera (más avanzado) ha sido un tema central de las conversaciones internas de OpenAI en las últimas semanas.",
+        "Ahora mismo un compromiso voluntario de transparencia y verificación externa entre dos de los laboratorios más relevantes del sector en Estados Unidos.",
+        "Amodei propone, además, coordinación entre empresas de \"países democráticos\" y, a más largo plazo, algún tipo de \"entendimiento global\".",
+        "Queda por ver si más empresas se suman a ello y los gobiernos convierten estas medidas en ley.",
+        "Personalmente, me parece que puede haber diversos motivos detrás:",
+        "Una forma de comenzar a regular a la competencia a futuro ahora que se encuentran en una posición más cómoda y ventajosa frente al resto que quizás deban enfrentar regulaciones que ellos no afrontaron.",
+        "Otra razón peude ser que los costes se les están empezando a ir de las manos",
+        "Quizás realmente les asuste lo que sus modelos pueden llegar a hacer",
+        "Y por último, para que también se regule contra China, pues les pisan cada vez más los talones."
+      ],
+      "locked": false,
+      "sources": [
+        "https://x.com/sama/status/2098811563415150910?s=20",
+        "https://darioamodei.com/post/we-must-pace-the-frontier"
+      ],
+      "body_html": [
+        "<strong>OpenAI y Anthropic quieren regular el ritmo de desarrollo de la Inteligencia Artificial</strong>",
+        "Los máximos responsables de OpenAI y Anthropic, Sam Altman y Dario Amodei, coincidieron ayer sábado en la necesidad de “<a href=\"https://x.com/sama/status/2098811563415150910?s=20\" target=\"_blank\" rel=\"noopener\">marcar el ritmo de los modelos frontera</a>” de la inteligencia artificial, es decir, de no acelerar las capacidades de los modelos más avanzados más allá de lo que permitan las salvaguardas de seguridad.",
+        "Amodei, consejero delegado de Anthropic, publicó el ensayo <a href=\"https://darioamodei.com/post/we-must-pace-the-frontier\" target=\"_blank\" rel=\"noopener\">We Must Pace the Frontier</a>, sostiene que el sector debe avanzar a un ritmo equilibrado para que las medidas de alineación y control puedan mantenerse al día.",
+        "Como primer paso de un plan en tres fases, Anthropic se comprometió de forma unilateral a dar a evaluadores independientes un acceso permanente de nivel de empleado a sus sistemas, con el fin de verificar el cumplimiento de las medidas de seguridad, informar de incidentes y evaluar la alineación de los modelos durante el entrenamiento.",
+        "Altman, consejero delegado de OpenAI (la empresa detrás de ChatGPT), respondió que comparte el diagnóstico y que su compañía hará lo mismo: <em>“Comprometerse a contar con evaluadores independientes con acceso similar al de un empleado es una gran idea, y nosotros haremos lo mismo. Pronto daremos más detalles”</em>. Añadió que el ritmo de los modelos frontera (más avanzado) ha sido un tema central de las conversaciones internas de OpenAI en las últimas semanas.",
+        "Ahora mismo un compromiso voluntario de transparencia y verificación externa entre dos de los laboratorios más relevantes del sector en Estados Unidos.",
+        "Amodei propone, además, coordinación entre empresas de &quot;países democráticos&quot; y, a más largo plazo, algún tipo de &quot;entendimiento global&quot;.",
+        "Queda por ver si más empresas se suman a ello y los gobiernos convierten estas medidas en ley.",
+        "Personalmente, me parece que puede haber diversos motivos detrás:",
+        "Una forma de  comenzar a regular a la competencia a futuro ahora que se encuentran en una posición más cómoda y ventajosa frente al resto que quizás deban enfrentar regulaciones que ellos no afrontaron.",
+        "Otra razón peude ser que los costes se les están empezando a ir de las manos",
+        "Quizás realmente les asuste lo que sus modelos pueden llegar a hacer",
+        "Y por último, para que también se regule contra China, pues les pisan cada vez más los talones."
+      ]
+    },
     {
       "id": 1687,
       "title": "Revolut la lia tras entregar información de ciertos usuarios de interés para atacantes tras responder un falso requerimiento legal",
@@ -661,36 +709,6 @@
         "<blockquote>En estos momentos estamos solucionando algunos fallos de hardware residuales que probablemente estén relacionados con los daños sufridos a raíz del incidente de sobrecalentamiento de la semana pasada. Por el momento, estamos operando a capacidad reducida, mientras nuestros ingenieros trabajan para poner en marcha infraestructura adicional. Pedimos disculpas por el desafortunado momento en que se ha producido este incidente y por cualquier interrupción o inconveniente que esto os haya podido causar.<br><br>Sep 01, 2026 - 16:42 CEST</blockquote>",
         "Sería la segunda caída en un breve periodo de tiempo.",
         "Si bien la caída no es completa, se reportan notables intentos fallidos de acceso."
-      ]
-    },
-    {
-      "id": 1666,
-      "title": "El intento de bloqueo de VPNs en Rusia afecta a GrapheneOS",
-      "date": "2026-08-31T12:14:05+00:00",
-      "category": "Herramientas",
-      "tags": "google grapheneos herramientas vpn",
-      "excerpt": "Desde finales de mayo de 2026, Rusia filtra el espacio IP de varios proveedores de alojamiento mediante una lista blanca de dominios para HTTP y TLS SNI. El objetivo aparente es bloquear servicios VPN. GrapheneOS no figura en esa lista…",
-      "image": "media/1666.jpg",
-      "youtube_id": null,
-      "has_media": true,
-      "in_feed": true,
-      "source_url": "https://t.me/StarkPrivacy/1666",
-      "body": [
-        "📱 El intento de bloqueo de VPNs en Rusia afecta a GrapheneOS",
-        "Desde finales de mayo de 2026, Rusia filtra el espacio IP de varios proveedores de alojamiento mediante una lista blanca de dominios para HTTP y TLS SNI. El objetivo aparente es bloquear servicios VPN. GrapheneOS no figura en esa lista, por lo que sus servicios dejaron de ser accesibles a través de DataPacket (Fráncfort) y, más tarde, de Cherry Servers (Ámsterdam).",
-        "El proyecto ha redirigido el tráfico ruso a Zare (Londres), el último servidor patrocinado en Europa del que dispone. Si también resulta filtrado, utilizará Xenyth en Toronto, donde opera su propio espacio de direcciones IP. GrapheneOS no espera un bloqueo directo de sus servicios, aunque considera improbable su inclusión en la lista blanca. El acceso a través de IPs de grandes proveedores de nube se irá degradando de forma progresiva.",
-        "El DNS autoritativo, alojado en redes anycast con ASN e IPs propias, no se ha visto afectado. El sitio web, las actualizaciones del sistema, el repositorio de aplicaciones y el resto de servicios principales deberían volver a funcionar en Rusia.",
-        "Si el bloqueo se extiende, los usuarios pueden configurar las comprobaciones de conectividad en modo “Standard” para utilizar los servidores de Google y mantener la detección automática de redes con Internet."
-      ],
-      "locked": false,
-      "sources": [
-        "https://x.com/GrapheneOS/status/2094169461137748259?s=20"
-      ],
-      "body_html": [
-        "<strong>📱</strong><strong> El intento de bloqueo de VPNs en Rusia afecta a GrapheneOS<br></strong><br>Desde finales de mayo de 2026, Rusia filtra el espacio IP de varios proveedores de alojamiento mediante una lista blanca de dominios para HTTP y TLS SNI. <a href=\"https://x.com/GrapheneOS/status/2094169461137748259?s=20\" target=\"_blank\" rel=\"noopener\">El objetivo aparente es bloquear servicios VPN</a>. GrapheneOS no figura en esa lista, por lo que sus servicios dejaron de ser accesibles a través de DataPacket (Fráncfort) y, más tarde, de Cherry Servers (Ámsterdam).",
-        "El proyecto ha redirigido el tráfico ruso a Zare (Londres), el último servidor patrocinado en Europa del que dispone. Si también resulta filtrado, utilizará Xenyth en Toronto, donde opera su propio espacio de direcciones IP. GrapheneOS no espera un bloqueo directo de sus servicios, aunque considera improbable su inclusión en la lista blanca. El acceso a través de IPs de grandes proveedores de nube se irá degradando de forma progresiva.",
-        "El DNS autoritativo, alojado en redes anycast con ASN e IPs propias, no se ha visto afectado. El sitio web, las actualizaciones del sistema, el repositorio de aplicaciones y el resto de servicios principales deberían volver a funcionar en Rusia.",
-        "Si el bloqueo se extiende, los usuarios pueden configurar las comprobaciones de conectividad en modo “Standard” para utilizar los servidores de Google y mantener la detección automática de redes con Internet."
       ]
     }
   ]

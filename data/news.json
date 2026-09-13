@@ -1,7 +1,55 @@
 {
-  "updated": "2026-09-13T15:27:49Z",
+  "updated": "2026-09-13T18:19:44Z",
   "source": "https://t.me/StarkPrivacy",
   "articles": [
+    {
+      "id": 1688,
+      "title": "OpenAI y Anthropic quieren regular el ritmo de desarrollo de la Inteligencia Artificial",
+      "date": "2026-09-13T16:40:08+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "Los máximos responsables de OpenAI y Anthropic, Sam Altman y Dario Amodei, coincidieron ayer sábado en la necesidad de “marcar el ritmo de los modelos frontera” de la inteligencia artificial, es decir, de no acelerar las capacidades de los…",
+      "image": "media/1688.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1688",
+      "body": [
+        "OpenAI y Anthropic quieren regular el ritmo de desarrollo de la Inteligencia Artificial",
+        "Los máximos responsables de OpenAI y Anthropic, Sam Altman y Dario Amodei, coincidieron ayer sábado en la necesidad de “marcar el ritmo de los modelos frontera” de la inteligencia artificial, es decir, de no acelerar las capacidades de los modelos más avanzados más allá de lo que permitan las salvaguardas de seguridad.",
+        "Amodei, consejero delegado de Anthropic, publicó el ensayo We Must Pace the Frontier, sostiene que el sector debe avanzar a un ritmo equilibrado para que las medidas de alineación y control puedan mantenerse al día.",
+        "Como primer paso de un plan en tres fases, Anthropic se comprometió de forma unilateral a dar a evaluadores independientes un acceso permanente de nivel de empleado a sus sistemas, con el fin de verificar el cumplimiento de las medidas de seguridad, informar de incidentes y evaluar la alineación de los modelos durante el entrenamiento.",
+        "Altman, consejero delegado de OpenAI (la empresa detrás de ChatGPT), respondió que comparte el diagnóstico y que su compañía hará lo mismo: “Comprometerse a contar con evaluadores independientes con acceso similar al de un empleado es una gran idea, y nosotros haremos lo mismo. Pronto daremos más detalles”. Añadió que el ritmo de los modelos frontera (más avanzado) ha sido un tema central de las conversaciones internas de OpenAI en las últimas semanas.",
+        "Ahora mismo un compromiso voluntario de transparencia y verificación externa entre dos de los laboratorios más relevantes del sector en Estados Unidos.",
+        "Amodei propone, además, coordinación entre empresas de \"países democráticos\" y, a más largo plazo, algún tipo de \"entendimiento global\".",
+        "Queda por ver si más empresas se suman a ello y los gobiernos convierten estas medidas en ley.",
+        "Personalmente, me parece que puede haber diversos motivos detrás:",
+        "Una forma de comenzar a regular a la competencia a futuro ahora que se encuentran en una posición más cómoda y ventajosa frente al resto que quizás deban enfrentar regulaciones que ellos no afrontaron.",
+        "Otra razón peude ser que los costes se les están empezando a ir de las manos",
+        "Quizás realmente les asuste lo que sus modelos pueden llegar a hacer",
+        "Y por último, para que también se regule contra China, pues les pisan cada vez más los talones."
+      ],
+      "locked": false,
+      "sources": [
+        "https://x.com/sama/status/2098811563415150910?s=20",
+        "https://darioamodei.com/post/we-must-pace-the-frontier"
+      ],
+      "body_html": [
+        "<strong>OpenAI y Anthropic quieren regular el ritmo de desarrollo de la Inteligencia Artificial</strong>",
+        "Los máximos responsables de OpenAI y Anthropic, Sam Altman y Dario Amodei, coincidieron ayer sábado en la necesidad de “<a href=\"https://x.com/sama/status/2098811563415150910?s=20\" target=\"_blank\" rel=\"noopener\">marcar el ritmo de los modelos frontera</a>” de la inteligencia artificial, es decir, de no acelerar las capacidades de los modelos más avanzados más allá de lo que permitan las salvaguardas de seguridad.",
+        "Amodei, consejero delegado de Anthropic, publicó el ensayo <a href=\"https://darioamodei.com/post/we-must-pace-the-frontier\" target=\"_blank\" rel=\"noopener\">We Must Pace the Frontier</a>, sostiene que el sector debe avanzar a un ritmo equilibrado para que las medidas de alineación y control puedan mantenerse al día.",
+        "Como primer paso de un plan en tres fases, Anthropic se comprometió de forma unilateral a dar a evaluadores independientes un acceso permanente de nivel de empleado a sus sistemas, con el fin de verificar el cumplimiento de las medidas de seguridad, informar de incidentes y evaluar la alineación de los modelos durante el entrenamiento.",
+        "Altman, consejero delegado de OpenAI (la empresa detrás de ChatGPT), respondió que comparte el diagnóstico y que su compañía hará lo mismo: <em>“Comprometerse a contar con evaluadores independientes con acceso similar al de un empleado es una gran idea, y nosotros haremos lo mismo. Pronto daremos más detalles”</em>. Añadió que el ritmo de los modelos frontera (más avanzado) ha sido un tema central de las conversaciones internas de OpenAI en las últimas semanas.",
+        "Ahora mismo un compromiso voluntario de transparencia y verificación externa entre dos de los laboratorios más relevantes del sector en Estados Unidos.",
+        "Amodei propone, además, coordinación entre empresas de &quot;países democráticos&quot; y, a más largo plazo, algún tipo de &quot;entendimiento global&quot;.",
+        "Queda por ver si más empresas se suman a ello y los gobiernos convierten estas medidas en ley.",
+        "Personalmente, me parece que puede haber diversos motivos detrás:",
+        "Una forma de  comenzar a regular a la competencia a futuro ahora que se encuentran en una posición más cómoda y ventajosa frente al resto que quizás deban enfrentar regulaciones que ellos no afrontaron.",
+        "Otra razón peude ser que los costes se les están empezando a ir de las manos",
+        "Quizás realmente les asuste lo que sus modelos pueden llegar a hacer",
+        "Y por último, para que también se regule contra China, pues les pisan cada vez más los talones."
+      ]
+    },
     {
       "id": 1687,
       "title": "Revolut la lia tras entregar información de ciertos usuarios de interés para atacantes tras responder un falso requerimiento legal",
