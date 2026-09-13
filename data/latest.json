@@ -1,6 +1,62 @@
 {
-  "updated": "2026-09-13T06:13:12Z",
+  "updated": "2026-09-13T11:56:11Z",
   "articles": [
+    {
+      "id": 1687,
+      "title": "Revolut la lia tras entregar información de ciertos usuarios de interés para atacantes tras responder un falso requerimiento legal",
+      "date": "2026-09-13T09:45:50+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "Revolut confirmó ayer 12 de septiembre de 2026 que entregó datos sensibles de un número “limitado” de clientes a un tercero no autorizado, después de atender solicitudes fraudulentas enviadas desde un correo alojado en el dominio legítimo…",
+      "image": "media/1687.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1687",
+      "body": [
+        "Revolut la lia tras entregar información de ciertos usuarios de interés para atacantes tras responder un falso requerimiento legal",
+        "Revolut confirmó ayer 12 de septiembre de 2026 que entregó datos sensibles de un número “limitado” de clientes a un tercero no autorizado, después de atender solicitudes fraudulentas enviadas desde un correo alojado en el dominio legítimo de un organismo gubernamental.",
+        "No se trata de una intrusión en sus servidores ni nada por el estilo, sino de un error garrafal. Lo que falló, como casi siempre, fue el factor humano al pensar que estos requerimientos se responderían por un simple email.",
+        "Según el aviso enviado a los afectados y las declaraciones de la compañía a Reuters, TechCrunch y Bloomberg, un tercero creó o usó un buzón dentro de la infraestructura de correo de una autoridad pública. El mensaje llevaba credenciales de autenticación de dominio válidas (pasó controles del tipo SPF, DKIM y DMARC). Revolut lo trató como un requerimiento auténtico y remitió la información. Más tarde (tarde) contactó con el organismo por otra vía, constató que la solicitud no era suya y bloqueó la dirección.",
+        "La empresa describe el caso como una “estafa sofisticada de suplantación externa”. No ha identificado el organismo, ni el país, ni cuántos clientes están afectados. Tampoco ha precisado si el buzón fue secuestrado o si alguien con acceso interno al dominio lo utilizó.",
+        "La cronología de los hechos son los siguientes:",
+        "Los avisos a clientes comenzaron a llegar el viernes 11 de septiembre de 2026. Mark Karpelès, exconsejero delegado de Mt. Gox (Empresa de criptomonedas muy conocidas por ser de las primeras) y uno de los afectados, recibió un correo con el asunto de actualización urgente de seguridad sobre las 21:59 UTC de ese día y publicó extractos el sábado 12. El famoso investigador de estafas con criptomonedas ZachXBT difundió el caso el mismo sábado.",
+        "Revolut confirmó los hechos ese día a varios medios, a primera hora del día 12 aún no había comunicado oficial en su cuenta principal.",
+        "El aviso a clientes, reproducido por varios medios, indica que la información remitida pudo incluir:",
+        "· Nombre completo, fecha de nacimiento y ocupación · Dirección postal, correo electrónico y teléfono · Copias de pasaporte o permiso de conducir · Selfie de verificación de identidad · IBAN, estado de la cuenta, fecha de apertura y referencias de monedero · Extractos, registros de retiradas e historial completo de transacciones, incluido Bitcoin",
+        "Una situación cuanto menos preocupante.",
+        "Revolut sostiene que no se compartió la telemetría biométrica facial (la plantilla que el sistema extrae de la foto), ni contraseñas, PIN, claves privadas, números de tarjeta ni fondos pero vaya, sí pudo salir la propia fotografía de verificación. La combinación de documentos KYC con el historial de Bitcoin permite, en la práctica, vincular una identidad real con actividad on-chain.",
+        "La compañía habla de un grupo “limitado” o “muy limitado” de clientes y afirma haberles escrito de forma directa. ZachXBT apunta a que el envío parece selectivo y orientado a perfiles de alto patrimonio aunque esa hipótesis no está confirmada por Revolut.",
+        "Pero sería algo aún más serio, pues hablamos de posible compromiso físico de personas por su patrimonio.",
+        "Tras detectarlo, bloqueó la dirección y avisó al organismo afectado, a las fuerzas de seguridad, a las autoridades de protección de datos y a los reguladores financieros. Declara que sus sistemas y el dinero de los clientes no se han visto comprometidos, y que aplicó medidas de protección precautorias a las cuentas afectadas.",
+        "No es un simple \"hack\" o \"phishig\" es un fallo del procedimiento con el que los bancos atienden requerimientos legales: si el correo nace en un dominio oficial y autentica bien, el control técnico no basta.",
+        "Para identificarte como cliente, debes pasar un proceso de identificación (KYC), sin embargo, la veracidad de quien está detrás de la pantalla para la solicitud de esos mismos datos, parece algo más suave...",
+        "Recuerda, te dirán siempre que el KYC es por tu bien."
+      ],
+      "locked": false,
+      "sources": [
+        "https://cybersecuritynews.com/revolut-data-breach/"
+      ],
+      "body_html": [
+        "<strong>Revolut la lia tras entregar información de ciertos usuarios de interés para atacantes tras responder un falso requerimiento legal<br></strong><br>Revolut confirmó ayer 12 de septiembre de 2026 que <a href=\"https://cybersecuritynews.com/revolut-data-breach/\" target=\"_blank\" rel=\"noopener\">entregó datos sensibles de un número “limitado” de clientes</a> a un tercero no autorizado, después de atender solicitudes fraudulentas enviadas desde un correo alojado en el dominio legítimo de un organismo gubernamental.",
+        "No se trata de una intrusión en sus servidores ni nada por el estilo, sino de un error garrafal. Lo que falló, como casi siempre, fue el factor humano al pensar que estos requerimientos se responderían por un simple email.",
+        "Según el aviso enviado a los afectados y las declaraciones de la compañía a Reuters, TechCrunch y Bloomberg, un tercero creó o usó un buzón dentro de la infraestructura de correo de una autoridad pública. El mensaje llevaba credenciales de autenticación de dominio válidas (pasó controles del tipo SPF, DKIM y DMARC). Revolut lo trató como un requerimiento auténtico y remitió la información. Más tarde (tarde) contactó con el organismo por otra vía, constató que la solicitud no era suya y bloqueó la dirección.",
+        "La empresa describe el caso como una “estafa sofisticada de suplantación externa”. No ha identificado el organismo, ni el país, ni cuántos clientes están afectados. Tampoco ha precisado si el buzón fue secuestrado o si alguien con acceso interno al dominio lo utilizó.",
+        "La cronología de los hechos son los siguientes:",
+        "Los avisos a clientes comenzaron a llegar el viernes 11 de septiembre de 2026. Mark Karpelès, exconsejero delegado de Mt. Gox (Empresa de criptomonedas muy conocidas por ser de las primeras) y uno de los afectados, recibió un correo con el asunto de actualización urgente de seguridad sobre las 21:59 UTC de ese día y publicó extractos el sábado 12. El famoso investigador de estafas con criptomonedas ZachXBT difundió el caso el mismo sábado.",
+        "Revolut confirmó los hechos ese día a varios medios, a primera hora del día 12 aún no había comunicado oficial en su cuenta principal.",
+        "El aviso a clientes, reproducido por varios medios, indica que la información remitida pudo incluir:",
+        "· Nombre completo, fecha de nacimiento y ocupación<br>· Dirección postal, correo electrónico y teléfono<br>· Copias de pasaporte o permiso de conducir<br>· Selfie de verificación de identidad<br>· IBAN, estado de la cuenta, fecha de apertura y referencias de monedero<br>· Extractos, registros de retiradas e historial completo de transacciones, incluido Bitcoin",
+        "Una situación cuanto menos preocupante.",
+        "Revolut sostiene que no se compartió la telemetría biométrica facial (la plantilla que el sistema extrae de la foto), ni contraseñas, PIN, claves privadas, números de tarjeta ni fondos pero vaya, sí pudo salir la propia fotografía de verificación. La combinación de documentos KYC con el historial de Bitcoin permite, en la práctica, vincular una identidad real con actividad on-chain.",
+        "La compañía habla de un grupo “limitado” o “muy limitado” de clientes y afirma haberles escrito de forma directa. ZachXBT apunta a que el envío parece selectivo y orientado a perfiles de alto patrimonio aunque esa hipótesis no está confirmada por Revolut.",
+        "Pero sería algo aún más serio, pues hablamos de posible compromiso físico de personas por su patrimonio.",
+        "Tras detectarlo, bloqueó la dirección y avisó al organismo afectado, a las fuerzas de seguridad, a las autoridades de protección de datos y a los reguladores financieros. Declara que sus sistemas y el dinero de los clientes no se han visto comprometidos, y que aplicó medidas de protección precautorias a las cuentas afectadas.",
+        "No es un simple &quot;hack&quot; o &quot;phishig&quot; es un fallo del procedimiento con el que los bancos atienden requerimientos legales: si el correo nace en un dominio oficial y autentica bien, el control técnico no basta.",
+        "Para identificarte como cliente, debes pasar un proceso de identificación (KYC), sin embargo, la veracidad de quien está detrás de la pantalla para la solicitud de esos mismos datos, parece algo más suave...",
+        "Recuerda, te dirán siempre que el KYC es por tu bien."
+      ]
+    },
     {
       "id": 1685,
       "title": "Los modelos asiáticos cada vez más fuertes y opensource, DeepSeek 4.1 Flash",
@@ -635,51 +691,6 @@
         "El proyecto ha redirigido el tráfico ruso a Zare (Londres), el último servidor patrocinado en Europa del que dispone. Si también resulta filtrado, utilizará Xenyth en Toronto, donde opera su propio espacio de direcciones IP. GrapheneOS no espera un bloqueo directo de sus servicios, aunque considera improbable su inclusión en la lista blanca. El acceso a través de IPs de grandes proveedores de nube se irá degradando de forma progresiva.",
         "El DNS autoritativo, alojado en redes anycast con ASN e IPs propias, no se ha visto afectado. El sitio web, las actualizaciones del sistema, el repositorio de aplicaciones y el resto de servicios principales deberían volver a funcionar en Rusia.",
         "Si el bloqueo se extiende, los usuarios pueden configurar las comprobaciones de conectividad en modo “Standard” para utilizar los servidores de Google y mantener la detección automática de redes con Internet."
-      ]
-    },
-    {
-      "id": 1665,
-      "title": "Xbox podría abrazar más el formato físico mientras que Sony evidenciaría que le dan igual sus usuarios",
-      "date": "2026-08-30T17:39:30+00:00",
-      "category": "Productos",
-      "tags": "microsoft productos sony xbox",
-      "excerpt": "Según se ha rumores recogidos en un podcast de Eurogamer España, algunos editores habrían comentado que Sony podría estar reconsiderando la fecha establecida sobre la digitalización absoluta de su plataforma. Al parecer en un inicio sería…",
-      "image": "media/1665.jpg",
-      "youtube_id": null,
-      "has_media": true,
-      "in_feed": true,
-      "source_url": "https://t.me/StarkPrivacy/1665",
-      "body": [
-        "👾 Xbox podría abrazar más el formato físico mientras que Sony evidenciaría que le dan igual sus usuarios",
-        "Según se ha rumores recogidos en un podcast de Eurogamer España, algunos editores habrían comentado que Sony podría estar reconsiderando la fecha establecida sobre la digitalización absoluta de su plataforma.",
-        "Al parecer en un inicio sería en 2028, pero podría retrasarse 1-2 años. El motivo sería lo que Microsoft estaría comunicando a las editoras respecto a Project Helix, su próxima generación de consolas y alguna amenaza.",
-        "Microsoft, según esas mismas fuentes no verificadas, estaría indicando a los publishers que Helix será “100 % físico”, con la posibilidad de convertir copias físicas en licencias digitales, luego lo explico más en detalle.",
-        "Sony temería que esa postura deje un hueco competitivo: jugadores y algunos estudios descontentos con la desaparición de los discos podrían decantarse por Xbox.",
-        "El artículo añade otro rumor: un estudio de videojuegos importante (no identificado; se descarta que sea Rockstar) habría comunicado a Sony que podría no lanzar uno de sus títulos más grandes en PlayStation si no se garantiza una edición física, y que en ese caso priorizaría las plataformas de Microsoft y Nintendo.",
-        "Se dice que podría se CD Projekt Red, con su juego \"The Witcher 4\". Pues la compañía siempre ha tenido una clara postura sobre la posesión de los juegos, siendo conocida por vender juegos sin DRM, es decir, pudiendo ser dueño real de juegos incluso en formato digital.",
-        "Se trata de rumores no confirmados. Microsoft no ha declarado de forma oficial que Project Helix vaya a incluir lector de discos; de hecho, su CEO Asha Sharma evitó responder a esa pregunta en Gamescom y enfatizó la necesidad de eficiencia y asequibilidad.",
-        "Lo que sí ha anunciado Xbox es un programa de conversión de disco a digital (conocido internamente como Positron), que comenzará a probarse con Insiders a finales de agosto de 2026.",
-        "De ser cierta la noticia, estaría evidenciando algo: A Sony no le importan sus jugadores pues toda la presión ejercida hubiese valido para nada, sino que le preocupa que a causa de no tener ciertos juegos en el catálogo, perdiese potenciales clientes.",
-        "También que Xbox vería un potencial % de jugadores que se vería \"huérfanos\".",
-        "Pero lo más importante, que la presión de la gente realmente se nota y tiene efecto."
-      ],
-      "locked": false,
-      "sources": [
-        "https://mp1st.com/news/rumor-sony-reportedly-reconsidering-delaying-digital-only-plans-due-to-xbox-pushing-for-100-physical-strategy-for-xbox"
-      ],
-      "body_html": [
-        "👾<strong> Xbox podría abrazar más el formato físico mientras que Sony evidenciaría que le dan igual sus usuarios</strong>",
-        "Según se ha rumores recogidos en un podcast de Eurogamer España, algunos editores habrían comentado que <a href=\"https://mp1st.com/news/rumor-sony-reportedly-reconsidering-delaying-digital-only-plans-due-to-xbox-pushing-for-100-physical-strategy-for-xbox\" target=\"_blank\" rel=\"noopener\">Sony podría estar reconsiderando la fecha establecida sobre la digitalización absoluta de su plataforma</a>.",
-        "Al parecer en un inicio sería en 2028, pero podría retrasarse 1-2 años. El motivo sería lo que Microsoft estaría comunicando a las editoras respecto a Project Helix, su próxima generación de consolas y alguna amenaza.",
-        "Microsoft, según esas mismas fuentes no verificadas, estaría indicando a los publishers que Helix será “100 % físico”, con la posibilidad de convertir copias físicas en licencias digitales, luego lo explico más en detalle.",
-        "Sony temería que esa postura deje un hueco competitivo: jugadores y algunos estudios descontentos con la desaparición de los discos podrían decantarse por Xbox.",
-        "El artículo añade otro rumor: un estudio de videojuegos importante (no identificado; se descarta que sea Rockstar) habría comunicado a Sony que podría no lanzar uno de sus títulos más grandes en PlayStation si no se garantiza una edición física, y que en ese caso priorizaría las plataformas de Microsoft y Nintendo.",
-        "Se dice que podría se CD Projekt Red, con su juego &quot;The Witcher 4&quot;. Pues la compañía siempre ha tenido una clara postura sobre la posesión de los juegos, siendo conocida por vender juegos sin DRM, es decir, pudiendo ser dueño real de juegos incluso en formato digital.",
-        "Se trata de rumores no confirmados. Microsoft no ha declarado de forma oficial que Project Helix vaya a incluir lector de discos; de hecho, su CEO Asha Sharma evitó responder a esa pregunta en Gamescom y enfatizó la necesidad de eficiencia y asequibilidad.",
-        "Lo que sí ha anunciado Xbox es un programa de conversión de disco a digital (conocido internamente como Positron), que comenzará a probarse con Insiders a finales de agosto de 2026.",
-        "De ser cierta la noticia, estaría evidenciando algo:<br>A Sony no le importan sus jugadores pues toda la presión ejercida hubiese valido para nada, sino que le preocupa que a causa de no tener ciertos juegos en el catálogo, perdiese potenciales clientes.",
-        "También que Xbox vería un potencial % de jugadores que se vería &quot;huérfanos&quot;.",
-        "Pero lo más importante, que la presión de la gente realmente se nota y tiene efecto."
       ]
     }
   ]
