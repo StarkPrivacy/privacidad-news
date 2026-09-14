@@ -1,7 +1,86 @@
 {
-  "updated": "2026-09-14T10:56:53Z",
+  "updated": "2026-09-14T16:45:09Z",
   "source": "https://t.me/StarkPrivacy",
   "articles": [
+    {
+      "id": 1692,
+      "title": "Exponen recopilación de datos de LG, pero LG lo califica de \"fake news\"",
+      "date": "2026-09-14T16:16:36+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "El canal de Steve Burke lleva meses examinando el ecosistema de televisores y monitores de LG, incluidos modelos OLED de las series G5 y G6, y ha publicado tanto un reportaje de investigación de más de dos horas como un vídeo de respuesta…",
+      "image": "media/1692.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1692",
+      "body": [
+        "Exponen recopilación de datos de LG, pero LG lo califica de \"fake news\"",
+        "El canal de Steve Burke lleva meses examinando el ecosistema de televisores y monitores de LG, incluidos modelos OLED de las series G5 y G6, y ha publicado tanto un reportaje de investigación de más de dos horas como un vídeo de respuesta titulado «LG Says We're Fake News», en el que desmonta el comunicado de la compañía.",
+        "Según la investigación, las televisiones envían de forma reiterada información de ubicación bastante precisa: el modelo del aparato, la ciudad, el estado, las coordenadas de latitud y longitud, la calle más cercana y el código postal.",
+        "Parte de esos datos se extraen a través del puerto HDMI y se refuerza con el identificador BSSID de las redes Wi-Fi cercanas mediante la tecnología ACR (reconocimiento automático de contenido). El tráfico observado alcanza unos veinte paquetes por minuto. El sistema ACR no se limita a las aplicaciones propias del televisor: identifica también lo que entra por HDMI, incluso cuando el aparato se usa como monitor de un ordenador.",
+        "Cuando las funciones de voz están activadas, el micrófono captura audio ambiental. LG negó en un primer momento cualquier grabación o almacenamiento y después matizó que no graba ni almacena si el usuario no ha activado esas funciones. Las televisiones además escanean la red local y reportan los dispositivos conectados.",
+        "Los investigadores documentaron vulnerabilidades que permiten elevación de privilegios y acceso root, y sostienen que la marca no las ha corregido con la rapidez esperable. Parte de los datos de ACR aparece vinculada a empresas de publicidad sanitaria que promocionan medicamentos, lo que choca con la afirmación posterior de LG de que la recopilación no se destina a fines publicitarios. Ejecutivos de la división publicitaria de la compañía habrían empleado expresiones como «own the glass» y «own the living room» al vender el valor de esos datos a anunciantes.",
+        "Algunas estimaciones hablan de más de doscientos millones de televisores LG conectados en el mundo.",
+        "LG emitió un comunicado en el que afirma que las acusaciones de Gamers Nexus «no son ciertas» y que todo se realiza con el consentimiento del usuario. El canal considera que la empresa no aportó pruebas técnicas que refuten lo observado y que ha ido modificando su relato: de una negación total de grabación a una condicional, y de una negación del uso publicitario del ACR a un reconocimiento de que sí se recogen datos, aunque «no para fines publicitarios».",
+        "Gamers Nexus ha invitado a un abogado a examinar los términos de servicio, que superan las decenas de miles de palabras, y argumenta que el consentimiento que se obtiene resulta difícil de comprender para el usuario medio, especialmente en lo que respecta a menores o a la posible cesión de información a autoridades.",
+        "El canal pide mayor transparencia y cambios regulatorios.",
+        "Este tipo de telemetría no es exclusivo de LG ni mucho menos, otros fabricantes de Smart TV recogen datos de visionado y hábitos. Lo que distingue el caso, según Gamers Nexus y los medios que lo han cubierto, es la combinación de localización precisa a través de HDMI, el alcance del ACR incluso en entradas externas, las vulnerabilidades no parcheadas y el tono de la respuesta corporativa.",
+        "Quienes deseen reducir la exposición pueden desactivar las funciones de voz, el ACR y las opciones de personalización de anuncios en webOS, o utilizar el televisor sin conexión a internet, aunque los investigadores advierten que esas medidas no eliminan por completo la telemetría."
+      ],
+      "locked": false,
+      "sources": [
+        "https://elchapuzasinformatico.com/2026/09/gamers-nexus-critica-lg/"
+      ],
+      "body_html": [
+        "<strong>Exponen recopilación de datos de LG, pero LG lo califica de &quot;fake news&quot;<br></strong><br>El canal de Steve Burke lleva meses examinando el ecosistema de televisores y monitores de LG, incluidos modelos OLED de las series G5 y G6, y ha publicado tanto un reportaje de investigación de más de dos horas como un vídeo de respuesta titulado «LG Says We&#x27;re Fake News», en el que desmonta el comunicado de la compañía.",
+        "Según la investigación, las televisiones envían de forma reiterada información de ubicación bastante precisa: el modelo del aparato, la ciudad, el estado, las coordenadas de latitud y longitud, la calle más cercana y el código postal.",
+        "Parte de esos datos se extraen a través del puerto HDMI y se refuerza con el identificador BSSID de las redes Wi-Fi cercanas mediante la tecnología ACR (reconocimiento automático de contenido). El tráfico observado alcanza unos veinte paquetes por minuto. El sistema ACR no se limita a las aplicaciones propias del televisor: identifica también lo que entra por HDMI, incluso cuando el aparato se usa como monitor de un ordenador.",
+        "Cuando las funciones de voz están activadas, el micrófono captura audio ambiental. LG negó en un primer momento cualquier grabación o almacenamiento y después matizó que no graba ni almacena si el usuario no ha activado esas funciones. Las televisiones además escanean la red local y reportan los dispositivos conectados.",
+        "Los investigadores documentaron vulnerabilidades que permiten elevación de privilegios y acceso root, y sostienen que la marca no las ha corregido con la rapidez esperable. Parte de los datos de ACR aparece vinculada a empresas de publicidad sanitaria que promocionan medicamentos, lo que choca con la afirmación posterior de LG de que la recopilación no se destina a fines publicitarios. Ejecutivos de la división publicitaria de la compañía habrían empleado expresiones como «own the glass» y «own the living room» al vender el valor de esos datos a anunciantes.",
+        "Algunas estimaciones hablan de más de doscientos millones de televisores LG conectados en el mundo.",
+        "LG emitió un comunicado en el que afirma que las acusaciones de Gamers Nexus «no son ciertas» y que todo se realiza con el consentimiento del usuario. El canal considera que la <a href=\"https://elchapuzasinformatico.com/2026/09/gamers-nexus-critica-lg/\" target=\"_blank\" rel=\"noopener\">empresa no aportó pruebas técnicas</a> que refuten lo observado y que ha ido modificando su relato: de una negación total de grabación a una condicional, y de una negación del uso publicitario del ACR a un reconocimiento de que sí se recogen datos, aunque «no para fines publicitarios».",
+        "Gamers Nexus ha invitado a un abogado a examinar los términos de servicio, que superan las decenas de miles de palabras, y argumenta que el consentimiento que se obtiene resulta difícil de comprender para el usuario medio, especialmente en lo que respecta a menores o a la posible cesión de información a autoridades.",
+        "El canal pide mayor transparencia y cambios regulatorios.",
+        "Este tipo de telemetría no es exclusivo de LG ni mucho menos, otros fabricantes de Smart TV recogen datos de visionado y hábitos. Lo que distingue el caso, según Gamers Nexus y los medios que lo han cubierto, es la combinación de localización precisa a través de HDMI, el alcance del ACR incluso en entradas externas, las vulnerabilidades no parcheadas y el tono de la respuesta corporativa.",
+        "Quienes deseen reducir la exposición pueden desactivar las funciones de voz, el ACR y las opciones de personalización de anuncios en webOS, o utilizar el televisor sin conexión a internet, aunque los investigadores advierten que esas medidas no eliminan por completo la telemetría."
+      ]
+    },
+    {
+      "id": 1691,
+      "title": "Suiza por el buen camino de la privacidad, una vez más. A por su soberanía digital",
+      "date": "2026-09-14T14:27:05+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "La Cancillería Federal informó al Consejo Federal de los resultados de un estudio de viabilidad (PoC BOSS) realizado con 172 empleados de distintos departamentos. El estudio concluyó que una suite de oficina de código abierto, basada…",
+      "image": "media/1691.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1691",
+      "body": [
+        "Suiza por el buen camino de la privacidad, una vez más. A por su soberanía digital",
+        "La Cancillería Federal informó al Consejo Federal de los resultados de un estudio de viabilidad (PoC BOSS) realizado con 172 empleados de distintos departamentos. El estudio concluyó que una suite de oficina de código abierto, basada principalmente en openDesk (plataforma desarrollada por el centro alemán ZenDiS),, es en principio adecuada para procesos administrativos estándar: edición de documentos, correo electrónico, calendario, almacenamiento de archivos y colaboración. Solo detectaron limitaciones en videoconferencias de muchas personas.",
+        "A partir de esos resultados, la Cancillería ha puesto en marcha un programa para construir una plataforma de trabajo “soberana” que funcionará en paralelo con Microsoft 365, no como sustitución inmediata de todo el parque. El objetivo de la primera fase es que, a finales de 2027, unos 3.000 empleados seleccionados (los que participan en procesos de negocio especialmente críticos) puedan utilizar las funciones básicas de oficina (correo, calendario, documentos, presentaciones, telefonía y audio/vídeo) a través de esta solución de código abierto",
+        "El coste estimado de esta fase inicial es de 9 millones de francos suizos, financiados con créditos parlamentarios destinados a una plataforma soberana suiza de automatización de oficina.",
+        "El programa se enmarca en la estrategia de soberanía digital y de resiliencia ante crisis: se busca reducir la dependencia de un único proveedor extranjero, disponer de una alternativa de contingencia si Microsoft 365 dejara de estar disponible y recabar experiencias en el uso de otro software.",
+        "La decisión sobre una eventual migración a mayor escala (el Gobierno federal dispone de unas 47.000–54.000 estaciones de trabajo) se tomará más adelante, una vez evaluados costes, integración con las numerosas aplicaciones especializadas ligadas a la arquitectura de Microsoft y resultados del piloto.",
+        "Por separado, el Departamento Digital de las Fuerzas Armadas suizas avanza a un ritmo más rápido y prevé completar la sustitución de Microsoft 365 por openDesk en determinadas unidades sensibles para el próximo octubre de 2026."
+      ],
+      "locked": false,
+      "sources": [
+        "https://www.bk.admin.ch/en/boss-poc-feasibility-study",
+        "https://www.admin.ch/de/newnsb/EgX1XHIfGtUN"
+      ],
+      "body_html": [
+        "<strong>Suiza por el buen camino de la privacidad, una vez más. A por su soberanía digital<br></strong><br>La Cancillería Federal informó al Consejo Federal de los resultados de un <a href=\"https://www.bk.admin.ch/en/boss-poc-feasibility-study\" target=\"_blank\" rel=\"noopener\">estudio de viabilidad (PoC BOSS)</a> realizado con 172 empleados de distintos departamentos. El estudio concluyó que una suite de oficina de código abierto, basada principalmente en openDesk (plataforma desarrollada por el centro alemán ZenDiS),, es en principio <a href=\"https://www.admin.ch/de/newnsb/EgX1XHIfGtUN\" target=\"_blank\" rel=\"noopener\">adecuada para procesos administrativos estándar</a>: edición de documentos, correo electrónico, calendario, almacenamiento de archivos y colaboración. Solo detectaron limitaciones en videoconferencias de muchas personas.",
+        "A partir de esos resultados, la Cancillería ha puesto en marcha un programa para construir una plataforma de trabajo “soberana” que funcionará en paralelo con Microsoft 365, no como sustitución inmediata de todo el parque. El objetivo de la primera fase es que, a finales de 2027, unos 3.000 empleados seleccionados (los que participan en procesos de negocio especialmente críticos) puedan utilizar las funciones básicas de oficina (correo, calendario, documentos, presentaciones, telefonía y audio/vídeo) a través de esta solución de código abierto",
+        "El coste estimado de esta fase inicial es de 9 millones de francos suizos, financiados con créditos parlamentarios destinados a una plataforma soberana suiza de automatización de oficina.",
+        "El programa se enmarca en la estrategia de soberanía digital y de resiliencia ante crisis: se busca reducir la dependencia de un único proveedor extranjero, disponer de una alternativa de contingencia si Microsoft 365 dejara de estar disponible y recabar experiencias en el uso de otro software.",
+        "La decisión sobre una eventual migración a mayor escala (el Gobierno federal dispone de unas 47.000–54.000 estaciones de trabajo) se tomará más adelante, una vez evaluados costes, integración con las numerosas aplicaciones especializadas ligadas a la arquitectura de Microsoft y resultados del piloto.",
+        "Por separado, el Departamento Digital de las Fuerzas Armadas suizas avanza a un ritmo más rápido y prevé completar la sustitución de Microsoft 365 por openDesk en determinadas unidades sensibles para el próximo octubre de 2026."
+      ]
+    },
     {
       "id": 1690,
       "title": "19 entidades piden a la UE acabar con los avisos repetitivos de cookies",
