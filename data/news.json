@@ -1,7 +1,42 @@
 {
-  "updated": "2026-09-14T05:23:31Z",
+  "updated": "2026-09-14T10:56:53Z",
   "source": "https://t.me/StarkPrivacy",
   "articles": [
+    {
+      "id": 1690,
+      "title": "19 entidades piden a la UE acabar con los avisos repetitivos de cookies",
+      "date": "2026-09-14T09:23:07+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "Kill the Cookie Banner es una iniciativa impulsada por de 19 organizaciones de la sociedad civil, empresas y entidades académicas. Recientemente remitieron una carta abierta al Parlamento Europeo, al Consejo y a la Comisión Europea para…",
+      "image": "media/1690.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1690",
+      "body": [
+        "19 entidades piden a la UE acabar con los avisos repetitivos de cookies",
+        "Kill the Cookie Banner es una iniciativa impulsada por de 19 organizaciones de la sociedad civil, empresas y entidades académicas. Recientemente remitieron una carta abierta al Parlamento Europeo, al Consejo y a la Comisión Europea para que la Unión Europea ponga fin a los avisos repetitivos de cookies.",
+        "La propuesta consiste en que el usuario configure una sola vez sus preferencias de privacidad (aceptar, rechazar o limitar el seguimiento) en el navegador o en el dispositivo y qu esa decisión se transmita de forma automática a sitios web y aplicaciones, de manera comparable a cómo el navegador ya comunica el idioma.",
+        "El objetivo es que las páginas respeten esa elección sin volver a interrumpir al usuario, hasta que el usuario lo modifique y sin nuevas preguntas ni rodeos técnicos ni nada por el estilo. También contempla decisiones diferenciadas según el responsable del tratamiento y la finalidad, y un estándar europeo interoperable inspirado en mecanismos como Global Privacy Control (GPC) y Advanced Data Protection Control (ADPC).",
+        "El instrumento jurídico que defienden es el artículo 88b del proyecto Ómnibus Digital, que daría fuerza legal a esas señales automatizadas. Según la coalición y noyb, presiones como las de Google, entre otros, han contribuido a que varios Estados bloqueen la medida y a que el Consejo la retirara de su posición. En el Parlamento existen enmiendas para mantenerla y reforzarla.",
+        "Las entidades que propulsan todo son:",
+        "The European Consumer Organisation (BEUC) Check My Ads Civil Liberties Union for Europe European Digital Rights (EDRi) Electronic Frontier Foundation (EFF) Enforce noyb Stichting Data Bescherming Nederland AI Accountability Lab ApTI Centro / iniciativa de humanismo digital (Digital Humanism) CECU (Federación de Consumidores y Usuarios) Data Rights EKO Forbrukerrådet Homo Digitalis Kobler Sustainable Computing Lab Que Choisir Ensemble"
+      ],
+      "locked": false,
+      "sources": [
+        "https://killthecookiebanner.eu/",
+        "https://elchapuzasinformatico.com/2026/09/kill-the-cookie-banner/"
+      ],
+      "body_html": [
+        "<strong>19 entidades piden a la UE acabar con los avisos repetitivos de cookies<br></strong><br><a href=\"https://killthecookiebanner.eu/\" target=\"_blank\" rel=\"noopener\">Kill the Cookie Banner</a> es una iniciativa impulsada por de 19 organizaciones de la sociedad civil, empresas y entidades académicas. Recientemente remitieron una carta abierta al Parlamento Europeo, al Consejo y a la Comisión Europea para que la Unión Europea <a href=\"https://elchapuzasinformatico.com/2026/09/kill-the-cookie-banner/\" target=\"_blank\" rel=\"noopener\">ponga fin a los avisos repetitivos de cookies</a>.",
+        "La propuesta consiste en que el usuario configure una sola vez sus preferencias de privacidad (aceptar, rechazar o limitar el seguimiento) en el navegador o en el dispositivo y qu esa decisión se transmita de forma automática a sitios web y aplicaciones, de manera comparable a cómo el navegador ya comunica el idioma.",
+        "El objetivo es que las páginas respeten esa elección sin volver a interrumpir al usuario, hasta que el usuario lo modifique y sin nuevas preguntas ni rodeos técnicos ni nada por el estilo. También contempla decisiones diferenciadas según el responsable del tratamiento y la finalidad, y un estándar europeo interoperable inspirado en mecanismos como Global Privacy Control (GPC) y Advanced Data Protection Control (ADPC).",
+        "El instrumento jurídico que defienden es el artículo 88b del proyecto Ómnibus Digital, que daría fuerza legal a esas señales automatizadas. Según la coalición y noyb, presiones como las de Google, entre otros, han contribuido a que varios Estados bloqueen la medida y a que el Consejo la retirara de su posición. En el Parlamento existen enmiendas para mantenerla y reforzarla.",
+        "Las entidades que propulsan todo son:",
+        "The European Consumer Organisation (BEUC)<br>Check My Ads<br>Civil Liberties Union for Europe<br>European Digital Rights (EDRi)<br>Electronic Frontier Foundation (EFF)<br>Enforce<br>noyb<br>Stichting Data Bescherming Nederland<br>AI Accountability Lab<br>ApTI<br>Centro / iniciativa de humanismo digital (Digital Humanism)<br>CECU (Federación de Consumidores y Usuarios)<br>Data Rights<br>EKO<br>Forbrukerrådet<br>Homo Digitalis<br>Kobler<br>Sustainable Computing Lab<br>Que Choisir Ensemble"
+      ]
+    },
     {
       "id": 1688,
       "title": "OpenAI y Anthropic quieren regular el ritmo de desarrollo de la Inteligencia Artificial",
