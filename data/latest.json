@@ -1,6 +1,27 @@
 {
-  "updated": "2026-09-15T17:15:04Z",
+  "updated": "2026-09-15T20:16:14Z",
   "articles": [
+    {
+      "id": 1694,
+      "title": "Publicación #1694",
+      "date": "2026-09-15T13:55:17+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "",
+      "image": "media/1694.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1694",
+      "body": [],
+      "locked": false,
+      "images": [
+        "media/1694.jpg",
+        "media/1694-2.jpg",
+        "media/1694-3.jpg",
+        "media/1694-4.jpg"
+      ]
+    },
     {
       "id": 1693,
       "title": "Quienes atacaron Revolut, van más allá. \"ImNotAVillain\" se hacen llamar.",
@@ -698,35 +719,6 @@
         "<strong>🪪 California blinda la verificación de edad… a nivel de sistema operativo<br></strong><br>La AB 1856 pasó por la Asamblea de California casi sin oposición (69-0) y solo espera la firma de Newsom. Suaviza algunos puntos de la ley anterior, pero deja intacto lo importante: <a href=\"https://reclaimthenet.org/california-ab-1856-operating-system-age-signals\" target=\"_blank\" rel=\"noopener\">tu sistema operativo tendrá que pedirte la edad al configurar el móvil</a>, y esa etiqueta viajará en tiempo real a tiendas de apps y desarrolladores. Los sistemas libres (licencias tipo GNU) se libran.",
         "Fechas ya puestas: cuentas nuevas desde enero de 2027, las que ya existen desde julio de 2027.",
         "Lo relevante aquí no es tanto la ley en sí, sino el nivel al que opera: verificar edad app por app es una cosa, hacerlo desde el propio sistema operativo es otra muy distinta. Convierte al dispositivo entero en la fuente de tu identidad. Y con el peso que tiene California marcando tendencia regulatoria en EE.UU., esto probablemente no se queda ahí."
-      ]
-    },
-    {
-      "id": 1671,
-      "title": "Cuando la vigilancia policial se cruza con el aborto y una IA redacta el informe",
-      "date": "2026-09-03T14:10:58+00:00",
-      "category": "",
-      "tags": "",
-      "excerpt": "En Texas, la oficina del sheriff del condado de Johnson usó Flock (la red de cámaras lectoras de matrículas que ya cubre más de 80.000 puntos en EE.UU.) para dar con una mujer que se había tomado una píldora abortiva por su cuenta. La…",
-      "image": "media/1671.jpg",
-      "youtube_id": null,
-      "has_media": true,
-      "in_feed": true,
-      "source_url": "https://t.me/StarkPrivacy/1671",
-      "body": [
-        "🚔 Cuando la vigilancia policial se cruza con el aborto y una IA redacta el informe",
-        "En Texas, la oficina del sheriff del condado de Johnson usó Flock (la red de cámaras lectoras de matrículas que ya cubre más de 80.000 puntos en EE.UU.) para dar con una mujer que se había tomado una píldora abortiva por su cuenta. La denuncia venía de su expareja. Ni siquiera había delito que perseguir bajo la ley texana actual, pero el rastreo se hizo de todas formas.",
-        "Y aquí viene la parte que da más que pensar: parte del informe policial no lo escribió un humano, sino la IA \"Draft One\" de Axon, generando resúmenes legales a partir del audio de la bodycam. Vigilancia masiva y automatización policial trabajando en equipo, en un caso que toca directamente la salud femenina.",
-        "Flock lo niega y dice que todo fue por la \"seguridad\" de la mujer. Los papeles policiales cuentan otra cosa."
-      ],
-      "locked": false,
-      "sources": [
-        "https://www.404media.co/texas-police-used-ai-to-write-report-about-using-flock-to-search-for-woman-who-had-abortion/"
-      ],
-      "body_html": [
-        "<strong>🚔 Cuando la vigilancia policial se cruza con el aborto  y una IA redacta el informe</strong>",
-        "En Texas, la oficina del sheriff del condado de Johnson usó Flock (la red de cámaras lectoras de matrículas que ya cubre más de 80.000 puntos en EE.UU.) para <a href=\"https://www.404media.co/texas-police-used-ai-to-write-report-about-using-flock-to-search-for-woman-who-had-abortion/\" target=\"_blank\" rel=\"noopener\">dar con una mujer que se había tomado una píldora abortiva</a> por su cuenta. La denuncia venía de su expareja. Ni siquiera había delito que perseguir bajo la ley texana actual, pero el rastreo se hizo de todas formas.",
-        "Y aquí viene la parte que da más que pensar: parte del informe policial no lo escribió un humano, sino la IA &quot;Draft One&quot; de Axon, generando resúmenes legales a partir del audio de la bodycam. Vigilancia masiva y automatización policial trabajando en equipo, en un caso que toca directamente la salud femenina.",
-        "Flock lo niega y dice que todo fue por la &quot;seguridad&quot; de la mujer. Los papeles policiales cuentan otra cosa."
       ]
     }
   ]
