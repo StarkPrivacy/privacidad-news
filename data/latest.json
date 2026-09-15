@@ -1,6 +1,26 @@
 {
-  "updated": "2026-09-15T20:16:14Z",
+  "updated": "2026-09-15T22:55:34Z",
   "articles": [
+    {
+      "id": 1695,
+      "title": "Publicación #1695",
+      "date": "2026-09-15T13:55:17+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "",
+      "image": "media/1695.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1695",
+      "body": [],
+      "locked": false,
+      "images": [
+        "media/1695.jpg",
+        "media/1695-2.jpg",
+        "media/1695-3.jpg"
+      ]
+    },
     {
       "id": 1694,
       "title": "Publicación #1694",
@@ -691,34 +711,6 @@
         "Citizen Lab sitúa la infección entre diciembre de 2025 y enero de 2026. Apple cerró después el agujero con iOS 18.4.1. No es un caso aislado: forma parte de una campaña contra al menos catorce estudiantes, activistas y figuras de la oposición serbia iniciada a comienzos de 2026, coincidiendo con el proceso electoral de marzo en el país.",
         "La fundación SHARE, especializada en derechos digitales, la califica como la mayor ola de vigilancia documentada en Serbia hasta la fecha: doce personas han acudido ya a peritos forenses digitales tras recibir avisos de amenaza directamente de Apple.",
         "Investigaciones paralelas de Citizen Lab y Amnistía Internacional encontraron además una variante local del malware, bautizada NoviSpy, instalada en dispositivos Android; en varios casos, la infección se produjo mientras el propietario del teléfono estaba bajo custodia policial, lo que apunta a acceso físico directo además del ataque remoto."
-      ]
-    },
-    {
-      "id": 1672,
-      "title": "California blinda la verificación de edad… a nivel de sistema operativo",
-      "date": "2026-09-03T17:49:20+00:00",
-      "category": "",
-      "tags": "",
-      "excerpt": "La AB 1856 pasó por la Asamblea de California casi sin oposición (69-0) y solo espera la firma de Newsom. Suaviza algunos puntos de la ley anterior, pero deja intacto lo importante: tu sistema operativo tendrá que pedirte la edad al…",
-      "image": "media/1672.jpg",
-      "youtube_id": null,
-      "has_media": true,
-      "in_feed": true,
-      "source_url": "https://t.me/StarkPrivacy/1672",
-      "body": [
-        "🪪 California blinda la verificación de edad… a nivel de sistema operativo",
-        "La AB 1856 pasó por la Asamblea de California casi sin oposición (69-0) y solo espera la firma de Newsom. Suaviza algunos puntos de la ley anterior, pero deja intacto lo importante: tu sistema operativo tendrá que pedirte la edad al configurar el móvil, y esa etiqueta viajará en tiempo real a tiendas de apps y desarrolladores. Los sistemas libres (licencias tipo GNU) se libran.",
-        "Fechas ya puestas: cuentas nuevas desde enero de 2027, las que ya existen desde julio de 2027.",
-        "Lo relevante aquí no es tanto la ley en sí, sino el nivel al que opera: verificar edad app por app es una cosa, hacerlo desde el propio sistema operativo es otra muy distinta. Convierte al dispositivo entero en la fuente de tu identidad. Y con el peso que tiene California marcando tendencia regulatoria en EE.UU., esto probablemente no se queda ahí."
-      ],
-      "locked": false,
-      "sources": [
-        "https://reclaimthenet.org/california-ab-1856-operating-system-age-signals"
-      ],
-      "body_html": [
-        "<strong>🪪 California blinda la verificación de edad… a nivel de sistema operativo<br></strong><br>La AB 1856 pasó por la Asamblea de California casi sin oposición (69-0) y solo espera la firma de Newsom. Suaviza algunos puntos de la ley anterior, pero deja intacto lo importante: <a href=\"https://reclaimthenet.org/california-ab-1856-operating-system-age-signals\" target=\"_blank\" rel=\"noopener\">tu sistema operativo tendrá que pedirte la edad al configurar el móvil</a>, y esa etiqueta viajará en tiempo real a tiendas de apps y desarrolladores. Los sistemas libres (licencias tipo GNU) se libran.",
-        "Fechas ya puestas: cuentas nuevas desde enero de 2027, las que ya existen desde julio de 2027.",
-        "Lo relevante aquí no es tanto la ley en sí, sino el nivel al que opera: verificar edad app por app es una cosa, hacerlo desde el propio sistema operativo es otra muy distinta. Convierte al dispositivo entero en la fuente de tu identidad. Y con el peso que tiene California marcando tendencia regulatoria en EE.UU., esto probablemente no se queda ahí."
       ]
     }
   ]
