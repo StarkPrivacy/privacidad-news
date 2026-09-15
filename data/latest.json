@@ -1,6 +1,46 @@
 {
-  "updated": "2026-09-15T12:33:44Z",
+  "updated": "2026-09-15T17:15:04Z",
   "articles": [
+    {
+      "id": 1693,
+      "title": "Quienes atacaron Revolut, van más allá. \"ImNotAVillain\" se hacen llamar.",
+      "date": "2026-09-15T13:55:17+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "Ya hay un nombre. El grupo que se hace llamar IAmNotAVillain pasó de la reivindicación a la extorsión pública y a filtrar expedientes nominativos. Han empezado a publicar en Telegram (y en un sitio propio, iamnotavillain.xyz) copias de…",
+      "image": "media/1693.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1693",
+      "body": [
+        "Quienes atacaron Revolut, van más allá. \"ImNotAVillain\" se hacen llamar.",
+        "Ya hay un nombre. El grupo que se hace llamar IAmNotAVillain pasó de la reivindicación a la extorsión pública y a filtrar expedientes nominativos.",
+        "Han empezado a publicar en Telegram (y en un sitio propio, iamnotavillain.xyz) copias de pasaportes y selfies KYC de personas concretas, entre ellas el tenista Alexander Shevchenko y Felix Römer, de Gamdom. Afirman que seguirán soltando material cada día si Revolut no paga.",
+        "Varios medios cifran la exigencia en 10.000 bitcoin y sería bastante irónico, porque si llegan a pagar, dudo que verifiquen el ID de la otra persona en esa transacción hehe.",
+        "La parte más grave (y aún no verificada por las autoridades) es que el actor sostiene que no se limitó a suplantar un dominio oficial: que durante unos seis meses habría tenido acceso a sistemas de varias unidades de las fuerzas del orden italianas (incluido el canal PEC) y que desde ahí envió las peticiones a Revolut.",
+        "Reivindica unos 147 GB del lado italiano (documentos internos, calendarios y material personal, según su propio relato). Viminale, ACN y Polizia di Stato no han confirmado esa intrusión. Las capturas que circulan no bastan para darla por cierta parece ser.",
+        "Sobre el perímetro de clientes: Revolut mantiene que es un número “muy limitado” y ha notificado a unas 680 personas. El grupo habla de algo más de 700, con concentración en Suiza y Francia y presencia en una treintena de países. El patrón de los nombres que han salido encaja con un foco en perfiles de alto patrimonio y actividad cripto, no con un volcado masivo de la base.",
+        "Revolut sigue insistiendo en que no hubo compromiso de sus sistemas ni de fondos y el ICO británico ya está estudiando el caso."
+      ],
+      "locked": false,
+      "body_html": [
+        "<strong>Quienes atacaron Revolut, van más allá. &quot;ImNotAVillain&quot; se hacen llamar.<br></strong><br>Ya hay un nombre. El grupo que se hace llamar IAmNotAVillain pasó de la reivindicación a la extorsión pública y a filtrar expedientes nominativos.",
+        "Han empezado a publicar en Telegram (y en un sitio propio, iamnotavillain.xyz) copias de pasaportes y selfies KYC de personas concretas, entre ellas el tenista Alexander Shevchenko y Felix Römer, de Gamdom. Afirman que seguirán soltando material cada día si Revolut no paga.",
+        "Varios medios cifran la exigencia en 10.000 bitcoin y sería bastante irónico, porque si llegan a pagar, dudo que verifiquen el ID de la otra persona en esa transacción hehe.",
+        "La parte más grave (y aún no verificada por las autoridades) es que el actor sostiene que no se limitó a suplantar un dominio oficial: que durante unos seis meses habría tenido acceso a sistemas de varias unidades de las fuerzas del orden italianas (incluido el canal PEC) y que desde ahí envió las peticiones a Revolut.",
+        "Reivindica unos 147 GB del lado italiano (documentos internos, calendarios y material personal, según su propio relato). Viminale, ACN y Polizia di Stato no han confirmado esa intrusión. Las capturas que circulan no bastan para darla por cierta parece ser.",
+        "Sobre el perímetro de clientes: Revolut mantiene que es un número “muy limitado” y ha notificado a unas 680 personas. El grupo habla de algo más de 700, con concentración en Suiza y Francia y presencia en una treintena de países. El patrón de los nombres que han salido encaja con un foco en perfiles de alto patrimonio y actividad cripto, no con un volcado masivo de la base.",
+        "Revolut sigue insistiendo en que no hubo compromiso de sus sistemas ni de fondos y el ICO británico ya está estudiando el caso."
+      ],
+      "images": [
+        "media/1693.jpg",
+        "media/1693-2.jpg",
+        "media/1693-3.jpg",
+        "media/1693-4.jpg",
+        "media/1693-5.jpg"
+      ]
+    },
     {
       "id": 1692,
       "title": "Exponen recopilación de datos de LG, pero LG lo califica de \"fake news\"",
@@ -688,47 +728,6 @@
         "Y aquí viene la parte que da más que pensar: parte del informe policial no lo escribió un humano, sino la IA &quot;Draft One&quot; de Axon, generando resúmenes legales a partir del audio de la bodycam. Vigilancia masiva y automatización policial trabajando en equipo, en un caso que toca directamente la salud femenina.",
         "Flock lo niega y dice que todo fue por la &quot;seguridad&quot; de la mujer. Los papeles policiales cuentan otra cosa."
       ]
-    },
-    {
-      "id": 1670,
-      "title": "Un fallo de WhatsApp permite acceder a fotografías en determinados móviles Android bloqueados",
-      "date": "2026-09-02T16:29:43+00:00",
-      "category": "",
-      "tags": "",
-      "excerpt": "El problema, descubierto por el investigador José Rodríguez, necesita acceso físico al teléfono y que se atienda una videollamada entrante desde la pantalla de bloqueo. No se trata de un ataque remoto ni requiere la instalación de software…",
-      "image": "media/1670.jpg",
-      "youtube_id": null,
-      "has_media": true,
-      "in_feed": true,
-      "source_url": "https://t.me/StarkPrivacy/1670",
-      "body": [
-        "Un fallo de WhatsApp permite acceder a fotografías en determinados móviles Android bloqueados",
-        "El problema, descubierto por el investigador José Rodríguez, necesita acceso físico al teléfono y que se atienda una videollamada entrante desde la pantalla de bloqueo. No se trata de un ataque remoto ni requiere la instalación de software adicional, códigos o conocimientos técnicos avanzados.",
-        "El fallo se produce al utilizar la integración de las herramientas de Meta AI en los efectos de videollamada.",
-        "En los terminales afectados, al seleccionar la opción de editar una fotografía mediante “Crear con Meta AI” en la pestaña de fondos, la aplicación abre la galería del dispositivo sin solicitar PIN, contraseña, huella dactilar ni reconocimiento facial.",
-        "El investigador ha publicado una demostración en vídeo y ha comunicado el hallazgo tanto a Meta como a Google. Hasta el momento no existe comunicado oficial de ninguna de las dos compañías, ni identificador CVE ni parche anunciado.",
-        "Las pruebas realizadas confirman el comportamiento en un Google Pixel 6 Pro con Android 17 (incluido el último parche de seguridad) y en un OPPO K13 con ColorOS 16. En cambio, un Samsung Galaxy S25 Ultra con One UI 8.5 bloquea el acceso y exige autenticación.",
-        "Los iPhone no se ven afectados porque WhatsApp emplea CallKit de Apple, lo que impide acceder a los efectos de la aplicación desde la pantalla de bloqueo.",
-        "La incidencia depende de cómo cada fabricante gestiona los permisos y las actividades iniciadas desde la pantalla de bloqueo.",
-        "Mientras no se publique una corrección, se recomienda no dejar el teléfono bloqueado al alcance de terceros y mantener actualizados tanto WhatsApp como el sistema operativo Android."
-      ],
-      "locked": false,
-      "sources": [
-        "https://x.com/VBarraquito/status/2094729843761922276",
-        "https://elchapuzasinformatico.com/2026/09/fallo-whatsapp-acceder-fotos-moviles-android-bloqueados/"
-      ],
-      "body_html": [
-        "<strong>Un fallo de WhatsApp permite acceder a fotografías en determinados móviles Android bloqueados<br></strong><br>El problema, <a href=\"https://x.com/VBarraquito/status/2094729843761922276\" target=\"_blank\" rel=\"noopener\">descubierto por el investigador José Rodríguez</a>, necesita acceso físico al teléfono y que se atienda una videollamada entrante desde la pantalla de bloqueo. <a href=\"https://elchapuzasinformatico.com/2026/09/fallo-whatsapp-acceder-fotos-moviles-android-bloqueados/\" target=\"_blank\" rel=\"noopener\">No se trata de un ataque remoto ni requiere la instalación</a> de software adicional, códigos o conocimientos técnicos avanzados.",
-        "El fallo se produce al utilizar la integración de las herramientas de Meta AI en los efectos de videollamada.",
-        "En los terminales afectados, al seleccionar la opción de editar una fotografía mediante “Crear con Meta AI” en la pestaña de fondos, la aplicación abre la galería del dispositivo sin solicitar PIN, contraseña, huella dactilar ni reconocimiento facial.",
-        "El investigador ha publicado una demostración en vídeo y ha comunicado el hallazgo tanto a Meta como a Google. Hasta el momento no existe comunicado oficial de ninguna de las dos compañías, ni identificador CVE ni parche anunciado.",
-        "Las pruebas realizadas confirman el comportamiento en un Google Pixel 6 Pro con Android 17 (incluido el último parche de seguridad) y en un OPPO K13 con ColorOS 16. En cambio, un Samsung Galaxy S25 Ultra con One UI 8.5 bloquea el acceso y exige autenticación.",
-        "Los iPhone no se ven afectados porque WhatsApp emplea CallKit de Apple, lo que impide acceder a los efectos de la aplicación desde la pantalla de bloqueo.",
-        "La incidencia depende de cómo cada fabricante gestiona los permisos y las actividades iniciadas desde la pantalla de bloqueo.",
-        "Mientras no se publique una corrección, se recomienda no dejar el teléfono bloqueado al alcance de terceros y mantener actualizados tanto WhatsApp como el sistema operativo Android."
-      ],
-      "video_thumb": "media/1670.jpg",
-      "video_external": true
     }
   ]
 }
