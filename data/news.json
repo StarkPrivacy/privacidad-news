@@ -1,7 +1,40 @@
 {
-  "updated": "2026-09-16T10:16:04Z",
+  "updated": "2026-09-16T15:00:11Z",
   "source": "https://t.me/StarkPrivacy",
   "articles": [
+    {
+      "id": 1698,
+      "title": "Detenido tras decirle a ChatGPT que tenía intención de matar a su hijo de 8 años",
+      "date": "2026-09-16T13:44:25+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "El 19 de junio de 2026, la policía arrestó al hombre en São Gabriel da Palha, estado de Espírito Santo. Según la investigación, durante casi dos meses un agricultor brasileño de 36 años intercambió mensajes con la inteligencia artificial…",
+      "image": "media/1698.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1698",
+      "body": [
+        "Detenido tras decirle a ChatGPT que tenía intención de matar a su hijo de 8 años",
+        "El 19 de junio de 2026, la policía arrestó al hombre en São Gabriel da Palha, estado de Espírito Santo. Según la investigación, durante casi dos meses un agricultor brasileño de 36 años intercambió mensajes con la inteligencia artificial en los que decía tener el deseo de asesinar a su hijo, atacar a otras personas y quitarse la vida.",
+        "OpenAI alertó al FBI, que a su vez notificó a las autoridades brasileñas.",
+        "El sospechoso tenía poco contacto con el menor, más allá del pago de la pensión alimenticia. Los investigadores consideran que el resentimiento por esos pagos pudo ser un factor. En su propiedad se hallaron cuatro botellas con sustancias no identificadas y una cuerda con nudo. La policía también indica que habló de posibles ataques a escuelas, iglesias y agentes, e investigó sustancias tóxicas.",
+        "El hombre niega haber tenido intención de dañar a su hijo. Fue puesto en libertad el 13 de agosto, tras 54 días de detención, debido a retrasos en la investigación. No enfrenta cargos formales por el momento, pero el caso sigue abierto. Está sujeto a vigilancia electrónica y tiene prohibido contactar con el niño o con la madre. Las autoridades analizan su teléfono y los objetos incautados para determinar si dio pasos concretos, ya que en el derecho penal brasileño el delito se configura en la fase de ejecución.",
+        "Su abogado sostiene que conversar con una inteligencia artificial no constituye delito si no se concreta ninguna acción. Expertos en derecho penal y digital señalan que el caso plantea un dilema: OpenAI denunció un “riesgo creíble e inminente de daño”, pero no entregó las respuestas del chatbot, lo que genera dudas sobre el contexto completo de la conversación. Se trata de uno de los pocos precedentes en Brasil de una denuncia de este tipo por parte de la empresa."
+      ],
+      "locked": false,
+      "sources": [
+        "https://www.bbc.com/mundo/articles/cxnvlg14e1p8o"
+      ],
+      "body_html": [
+        "<strong>Detenido tras decirle a ChatGPT que tenía intención de matar a su hijo de 8 años</strong>",
+        "El 19 de junio de 2026, la policía arrestó al hombre en São Gabriel da Palha, estado de Espírito Santo. Según la investigación, durante casi dos meses un agricultor brasileño de 36 años intercambió mensajes con la inteligencia artificial en los que decía tener el deseo de asesinar a su hijo, atacar a otras personas y quitarse la vida.",
+        "<a href=\"https://www.bbc.com/mundo/articles/cxnvlg14e1p8o\" target=\"_blank\" rel=\"noopener\">OpenAI alertó al FBI, que a su vez notificó a las autoridades brasileñas</a>.",
+        "El sospechoso tenía poco contacto con el menor, más allá del pago de la pensión alimenticia. Los investigadores consideran que el resentimiento por esos pagos pudo ser un factor. En su propiedad se hallaron cuatro botellas con sustancias no identificadas y una cuerda con nudo. La policía también indica que habló de posibles ataques a escuelas, iglesias y agentes, e investigó sustancias tóxicas.",
+        "El hombre niega haber tenido intención de dañar a su hijo. Fue puesto en libertad el 13 de agosto, tras 54 días de detención, debido a retrasos en la investigación. No enfrenta cargos formales por el momento, pero el caso sigue abierto. Está sujeto a vigilancia electrónica y tiene prohibido contactar con el niño o con la madre. Las autoridades analizan su teléfono y los objetos incautados para determinar si dio pasos concretos, ya que en el derecho penal brasileño el delito se configura en la fase de ejecución.",
+        "Su abogado sostiene que conversar con una inteligencia artificial no constituye delito si no se concreta ninguna acción. Expertos en derecho penal y digital señalan que el caso plantea un dilema: OpenAI denunció un “riesgo creíble e inminente de daño”, pero no entregó las respuestas del chatbot, lo que genera dudas sobre el contexto completo de la conversación. Se trata de uno de los pocos precedentes en Brasil de una denuncia de este tipo por parte de la empresa."
+      ]
+    },
     {
       "id": 1697,
       "title": "Publicación #1697",

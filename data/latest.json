@@ -1,6 +1,39 @@
 {
-  "updated": "2026-09-16T10:16:04Z",
+  "updated": "2026-09-16T15:00:11Z",
   "articles": [
+    {
+      "id": 1698,
+      "title": "Detenido tras decirle a ChatGPT que tenía intención de matar a su hijo de 8 años",
+      "date": "2026-09-16T13:44:25+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "El 19 de junio de 2026, la policía arrestó al hombre en São Gabriel da Palha, estado de Espírito Santo. Según la investigación, durante casi dos meses un agricultor brasileño de 36 años intercambió mensajes con la inteligencia artificial…",
+      "image": "media/1698.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1698",
+      "body": [
+        "Detenido tras decirle a ChatGPT que tenía intención de matar a su hijo de 8 años",
+        "El 19 de junio de 2026, la policía arrestó al hombre en São Gabriel da Palha, estado de Espírito Santo. Según la investigación, durante casi dos meses un agricultor brasileño de 36 años intercambió mensajes con la inteligencia artificial en los que decía tener el deseo de asesinar a su hijo, atacar a otras personas y quitarse la vida.",
+        "OpenAI alertó al FBI, que a su vez notificó a las autoridades brasileñas.",
+        "El sospechoso tenía poco contacto con el menor, más allá del pago de la pensión alimenticia. Los investigadores consideran que el resentimiento por esos pagos pudo ser un factor. En su propiedad se hallaron cuatro botellas con sustancias no identificadas y una cuerda con nudo. La policía también indica que habló de posibles ataques a escuelas, iglesias y agentes, e investigó sustancias tóxicas.",
+        "El hombre niega haber tenido intención de dañar a su hijo. Fue puesto en libertad el 13 de agosto, tras 54 días de detención, debido a retrasos en la investigación. No enfrenta cargos formales por el momento, pero el caso sigue abierto. Está sujeto a vigilancia electrónica y tiene prohibido contactar con el niño o con la madre. Las autoridades analizan su teléfono y los objetos incautados para determinar si dio pasos concretos, ya que en el derecho penal brasileño el delito se configura en la fase de ejecución.",
+        "Su abogado sostiene que conversar con una inteligencia artificial no constituye delito si no se concreta ninguna acción. Expertos en derecho penal y digital señalan que el caso plantea un dilema: OpenAI denunció un “riesgo creíble e inminente de daño”, pero no entregó las respuestas del chatbot, lo que genera dudas sobre el contexto completo de la conversación. Se trata de uno de los pocos precedentes en Brasil de una denuncia de este tipo por parte de la empresa."
+      ],
+      "locked": false,
+      "sources": [
+        "https://www.bbc.com/mundo/articles/cxnvlg14e1p8o"
+      ],
+      "body_html": [
+        "<strong>Detenido tras decirle a ChatGPT que tenía intención de matar a su hijo de 8 años</strong>",
+        "El 19 de junio de 2026, la policía arrestó al hombre en São Gabriel da Palha, estado de Espírito Santo. Según la investigación, durante casi dos meses un agricultor brasileño de 36 años intercambió mensajes con la inteligencia artificial en los que decía tener el deseo de asesinar a su hijo, atacar a otras personas y quitarse la vida.",
+        "<a href=\"https://www.bbc.com/mundo/articles/cxnvlg14e1p8o\" target=\"_blank\" rel=\"noopener\">OpenAI alertó al FBI, que a su vez notificó a las autoridades brasileñas</a>.",
+        "El sospechoso tenía poco contacto con el menor, más allá del pago de la pensión alimenticia. Los investigadores consideran que el resentimiento por esos pagos pudo ser un factor. En su propiedad se hallaron cuatro botellas con sustancias no identificadas y una cuerda con nudo. La policía también indica que habló de posibles ataques a escuelas, iglesias y agentes, e investigó sustancias tóxicas.",
+        "El hombre niega haber tenido intención de dañar a su hijo. Fue puesto en libertad el 13 de agosto, tras 54 días de detención, debido a retrasos en la investigación. No enfrenta cargos formales por el momento, pero el caso sigue abierto. Está sujeto a vigilancia electrónica y tiene prohibido contactar con el niño o con la madre. Las autoridades analizan su teléfono y los objetos incautados para determinar si dio pasos concretos, ya que en el derecho penal brasileño el delito se configura en la fase de ejecución.",
+        "Su abogado sostiene que conversar con una inteligencia artificial no constituye delito si no se concreta ninguna acción. Expertos en derecho penal y digital señalan que el caso plantea un dilema: OpenAI denunció un “riesgo creíble e inminente de daño”, pero no entregó las respuestas del chatbot, lo que genera dudas sobre el contexto completo de la conversación. Se trata de uno de los pocos precedentes en Brasil de una denuncia de este tipo por parte de la empresa."
+      ]
+    },
     {
       "id": 1697,
       "title": "Publicación #1697",
@@ -649,40 +682,6 @@
         "El motivo no es económico ni una presión regulatoria, es más simple: mantener esa infraestructura duplicaba un trabajo que ya hace bien otra organización, Quad9, la fundación sin ánimo de lucro detrás de uno de los resolutores DNS centrados en privacidad más usados del mundo. En vez de seguir compitiendo por el mismo terreno, <a href=\"https://cyberinsider.com/mullvad-to-shut-down-public-encrypted-dns-servers-back-quad9-instead/\" target=\"_blank\" rel=\"noopener\">según el propio anuncio de Mullvad</a>, la compañía prefiere retirarse y destinar recursos económicos a fortalecer a Quad9.",
         "Para quien use Mullvad Browser con la configuración de fábrica, el cambio pasará desapercibido, la migración a Quad9 se hace sola. Quien haya tocado la configuración de DNS a mano (en el sistema operativo, en el router, en una app o en el propio navegador) sí tendrá que mover sus ajustes antes del 2 de noviembre, igual que quienes usen los perfiles de configuración de iOS o macOS de Mullvad, que dejarán de funcionar ese día. Si solo usas su VPN tal cual, sin haber tocado nada de DNS, no cambia nada para ti, ese tráfico ya se resuelve dentro de su propia red.",
         "Detrás de lo que parece un simple recorte hay una decisión poco habitual en este sector, una empresa privada prescindiendo de un servicio propio para reforzar a un tercero independiente y sin ánimo de lucro."
-      ]
-    },
-    {
-      "id": 1675,
-      "title": "Buscaba un navegador \"de privacidad\" y acabó dándole el control de su PC a un desconocido",
-      "date": "2026-09-04T16:51:45+00:00",
-      "category": "",
-      "tags": "",
-      "excerpt": "Investigadores de Intezer han destapado una campaña de malware que se hace pasar, precisamente, por un navegador orientado a la privacidad. Un empleado escribió \".con\" en vez de \".com\" buscando el manual de un ratón recién comprado, y…",
-      "image": "media/1675.jpg",
-      "youtube_id": null,
-      "has_media": true,
-      "in_feed": true,
-      "source_url": "https://t.me/StarkPrivacy/1675",
-      "body": [
-        "Buscaba un navegador \"de privacidad\" y acabó dándole el control de su PC a un desconocido",
-        "Investigadores de Intezer han destapado una campaña de malware que se hace pasar, precisamente, por un navegador orientado a la privacidad.",
-        "Un empleado escribió \".con\" en vez de \".com\" buscando el manual de un ratón recién comprado, y Google le mostró un anuncio patrocinado que, tras pasar por varios intermediarios publicitarios, llevaba a una web que promocionaba ese supuesto navegador privado.",
-        "Tras superar un CAPTCHA (puro teatro para dar legitimidad), la víctima descarga un instalador en formato MSIX, el mismo empaquetado que usa Microsoft para dar confianza a las apps, que aquí sirve para camuflar el malware casi sin levantar alertas en los antivirus.",
-        "Ese navegador, construido con NW.js, esconde un motor capaz de generar pulsaciones de teclado y movimientos de ratón sintéticos, es decir, controlar el ordenador como si alguien lo manejara con las manos puestas encima, algo parecido a un USB Rubber Ducky pero operado a distancia.",
-        "Espera a que el equipo lleve al menos siete minutos inactivo y mueve las ventanas fuera de la pantalla visible para no ser detectado.",
-        "Lo más inquietante es la trayectoria de esta operación, con infraestructura activa desde al menos 2016, que antes ya había suplantado a WhatsApp, Instagram, Messenger o Tinder.",
-        "Por un error propio, los atacantes dejaron al descubierto parte de su equipo de trabajo, con herramientas como Telegram, una VPN y VS Code."
-      ],
-      "locked": false,
-      "body_html": [
-        "<strong>Buscaba un navegador &quot;de privacidad&quot; y acabó dándole el control de su PC a un desconocido</strong>",
-        "Investigadores de Intezer han <strong>destapado una campaña de malware</strong> que se hace pasar, precisamente, por un navegador orientado a la privacidad.",
-        "Un empleado escribió &quot;.con&quot; en vez de &quot;.com&quot; buscando el manual de un ratón recién comprado, y Google le mostró un anuncio patrocinado que, tras pasar por varios intermediarios publicitarios, llevaba a una web que promocionaba ese supuesto navegador privado.",
-        "Tras superar un CAPTCHA (puro teatro para dar legitimidad), la víctima descarga un instalador en formato MSIX, el mismo empaquetado que usa Microsoft para dar confianza a las apps, que aquí sirve para camuflar el malware casi sin levantar alertas en los antivirus.",
-        "Ese navegador, construido con NW.js, esconde un motor capaz de generar pulsaciones de teclado y movimientos de ratón sintéticos, es decir, controlar el ordenador como si alguien lo manejara con las manos puestas encima, algo parecido a un USB Rubber Ducky pero operado a distancia.",
-        "Espera a que el equipo lleve al menos siete minutos inactivo y mueve las ventanas fuera de la pantalla visible para no ser detectado.",
-        "Lo más inquietante es la trayectoria de esta operación, con infraestructura activa desde al menos 2016, que antes ya había suplantado a WhatsApp, Instagram, Messenger o Tinder.",
-        "Por un error propio, los atacantes dejaron al descubierto parte de su equipo de trabajo, con herramientas como Telegram, una VPN y VS Code."
       ]
     }
   ]
