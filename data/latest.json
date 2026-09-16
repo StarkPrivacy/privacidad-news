@@ -1,6 +1,25 @@
 {
-  "updated": "2026-09-15T22:55:34Z",
+  "updated": "2026-09-16T00:55:43Z",
   "articles": [
+    {
+      "id": 1696,
+      "title": "Publicación #1696",
+      "date": "2026-09-15T13:55:17+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "",
+      "image": "media/1696.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1696",
+      "body": [],
+      "locked": false,
+      "images": [
+        "media/1696.jpg",
+        "media/1696-2.jpg"
+      ]
+    },
     {
       "id": 1695,
       "title": "Publicación #1695",
@@ -680,37 +699,6 @@
         "El acuerdo obliga a Meta a implementar en el plazo de un año sistemas de &quot;estimación de edad&quot; que clasifican a cada usuario en una de tres franjas (menor de 13, entre 13 y 17, o adulto). El problema es la fiabilidad de esos sistemas, los propios métodos de Meta pueden fallar hasta en un 14% de los casos al calcular la edad de adolescentes de 16 y 17 años durante el primer año, y hasta un 7% en el grupo de 13 a 15.",
         "Y aquí está lo importante, cualquier persona que no complete esa verificación en 14 días será tratada como menor, según el propio texto, &quot;independientemente de la edad que haya declarado&quot;.",
         "Es decir, el acuerdo no solo trae restricciones para menores (bloqueo nocturno, límite de dos horas diarias, sin notificaciones en horario escolar), también empuja a todos los usuarios, tengan la edad que tengan, hacia un sistema donde demostrar quién eres pasa a ser la opción por defecto para navegar sin restricciones."
-      ]
-    },
-    {
-      "id": 1673,
-      "title": "Pegasus infecta con un exploit zero-click el móvil de un activista serbio",
-      "date": "2026-09-03T18:00:48+00:00",
-      "category": "",
-      "tags": "",
-      "excerpt": "El teléfono de un estudiante activista prodemocracia en Serbia fue comprometido con Pegasus, el spyware comercial de NSO Group, a través de una vulnerabilidad en iMessage que no exigía ninguna interacción por parte de la víctima: bastaba…",
-      "image": "media/1673.jpg",
-      "youtube_id": null,
-      "has_media": true,
-      "in_feed": true,
-      "source_url": "https://t.me/StarkPrivacy/1673",
-      "body": [
-        "Pegasus infecta con un exploit zero-click el móvil de un activista serbio",
-        "El teléfono de un estudiante activista prodemocracia en Serbia fue comprometido con Pegasus, el spyware comercial de NSO Group, a través de una vulnerabilidad en iMessage que no exigía ninguna interacción por parte de la víctima: bastaba con recibir el mensaje para quedar infectado.",
-        "Citizen Lab sitúa la infección entre diciembre de 2025 y enero de 2026. Apple cerró después el agujero con iOS 18.4.1. No es un caso aislado: forma parte de una campaña contra al menos catorce estudiantes, activistas y figuras de la oposición serbia iniciada a comienzos de 2026, coincidiendo con el proceso electoral de marzo en el país.",
-        "La fundación SHARE, especializada en derechos digitales, la califica como la mayor ola de vigilancia documentada en Serbia hasta la fecha: doce personas han acudido ya a peritos forenses digitales tras recibir avisos de amenaza directamente de Apple.",
-        "Investigaciones paralelas de Citizen Lab y Amnistía Internacional encontraron además una variante local del malware, bautizada NoviSpy, instalada en dispositivos Android; en varios casos, la infección se produjo mientras el propietario del teléfono estaba bajo custodia policial, lo que apunta a acceso físico directo además del ataque remoto."
-      ],
-      "locked": false,
-      "sources": [
-        "https://cyberinsider.com/pegasus-zero-click-attack-infects-serbian-activists-iphone/"
-      ],
-      "body_html": [
-        "<strong>Pegasus infecta con un exploit zero-click el móvil de un activista serbio</strong>",
-        "El teléfono de un estudiante activista prodemocracia en Serbia fue comprometido con<a href=\"https://cyberinsider.com/pegasus-zero-click-attack-infects-serbian-activists-iphone/\" target=\"_blank\" rel=\"noopener\"> Pegasus, el spyware comercial de NSO Group</a>, a través de una vulnerabilidad en iMessage que no exigía ninguna interacción por parte de la víctima: bastaba con recibir el mensaje para quedar infectado.",
-        "Citizen Lab sitúa la infección entre diciembre de 2025 y enero de 2026. Apple cerró después el agujero con iOS 18.4.1. No es un caso aislado: forma parte de una campaña contra al menos catorce estudiantes, activistas y figuras de la oposición serbia iniciada a comienzos de 2026, coincidiendo con el proceso electoral de marzo en el país.",
-        "La fundación SHARE, especializada en derechos digitales, la califica como la mayor ola de vigilancia documentada en Serbia hasta la fecha: doce personas han acudido ya a peritos forenses digitales tras recibir avisos de amenaza directamente de Apple.",
-        "Investigaciones paralelas de Citizen Lab y Amnistía Internacional encontraron además una variante local del malware, bautizada NoviSpy, instalada en dispositivos Android; en varios casos, la infección se produjo mientras el propietario del teléfono estaba bajo custodia policial, lo que apunta a acceso físico directo además del ataque remoto."
       ]
     }
   ]
