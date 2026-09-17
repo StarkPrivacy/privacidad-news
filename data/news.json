@@ -1,7 +1,48 @@
 {
-  "updated": "2026-09-17T14:25:53Z",
+  "updated": "2026-09-17T18:30:30Z",
   "source": "https://t.me/StarkPrivacy",
   "articles": [
+    {
+      "id": 1699,
+      "title": "Apple quiere que el iPhone demuestre que una foto es real",
+      "date": "2026-09-17T16:37:14+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "Reference Image, el nuevo modo de cámara del iPhone 18 Pro, firma los píxeles dentro del sensor para combatir los montajes con IA. Pero su punto débil aparece justo en las fotografías que más importan. Apple ha detallado en su blog de…",
+      "image": "media/1699.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1699",
+      "body": [
+        "Apple quiere que el iPhone demuestre que una foto es real",
+        "Reference Image, el nuevo modo de cámara del iPhone 18 Pro, firma los píxeles dentro del sensor para combatir los montajes con IA. Pero su punto débil aparece justo en las fotografías que más importan.",
+        "Apple ha detallado en su blog de seguridad cómo funciona Reference Image, un modo opcional que se estrena en la cámara principal del iPhone 18 Pro y el iPhone 18 Pro Max. Su objetivo es demostrar que una imagen no ha sido generada ni retocada con IA, en un momento en que parecer una fotografía ya no prueba nada.",
+        "La compañía se desmarca así del estándar C2PA, que usan Nikon, Sony, Leica, Adobe o Google en el Pixel 10. Según Apple, ese sistema añade los datos de procedencia después de la captura y puede comprometerse sin que nadie lo detecte.",
+        "Al activar el modo, el sensor firma la imagen en bruto en el mismo instante de la captura, antes de que intervenga ningún software. Unos sellos criptográficos marcan cuándo se hizo la foto. Después, el archivo viaja a la nube privada de Apple, que verifica las firmas, revela la imagen y le añade una firma resistente a futuros ordenadores cuánticos.",
+        "Si detecta un fraude, Apple puede anular fotos concretas o todas las de un sensor. El sistema tampoco exige identificar al fotógrafo, impide relacionar públicamente las fotos de una misma cámara y mantiene la imagen oculta incluso para la propia Apple.",
+        "La debilidad está en la escala. Con millones de iPhone en circulación, a un falsificador le basta con comprometer unos pocos para producir tantas imágenes \"auténticas\" como quiera. Por eso el uso más delicado es el que más interesa al periodismo: creer una imagen impactante solo porque lleva el sello de Apple. Es cuestión de tiempo que circulen montajes con apariencia de verificados.",
+        "La privacidad complica también las cosas. Si una falsificación pudiera vincularse públicamente a la cámara que la firmó, bastaría con desactivarla. Al ocultar ese vínculo, localizar el equipo comprometido es mucho más difícil. Además, Apple no aclara del todo quién puede hacer ese rastreo. Todo apunta a que solo la compañía podría seguir una imagen hasta la cámara hackeada, un modelo de utilidad dudosa que genera sus propios riesgos.",
+        "Su terreno natural no son las grandes exclusivas, sino las gestiones cotidianas con poco dinero en juego. Por ejemplo en un pequeño accidente de tráfico en el que la aseguradora prefiere recibir fotos a enviar un perito. Hackear la cámara sería posible, pero no compensaría el esfuerzo. Y si la cámara estuviera asociada a su propietario, el riesgo de fraude sería todavía menor.",
+        "Una idea ambiciosa que puede resultar interesante para \"pequeños desastres\" pero que no debería tomarse como algo definitivo en situaciones y con personas de alto riesgo/exposición/peligro."
+      ],
+      "locked": false,
+      "sources": [
+        "https://security.apple.com/blog/apple-reference-image/"
+      ],
+      "body_html": [
+        "<strong>Apple quiere que el iPhone demuestre que una foto es real</strong>",
+        "Reference Image, el nuevo modo de cámara del iPhone 18 Pro, firma los píxeles dentro del sensor para combatir los montajes con IA. Pero su punto débil aparece justo en las fotografías que más importan.",
+        "Apple ha <a href=\"https://security.apple.com/blog/apple-reference-image/\" target=\"_blank\" rel=\"noopener\">detallado en su blog de seguridad</a> cómo funciona Reference Image, un modo opcional que se estrena en la cámara principal del iPhone 18 Pro y el iPhone 18 Pro Max. Su objetivo es demostrar que una imagen no ha sido generada ni retocada con IA, en un momento en que parecer una fotografía ya no prueba nada.",
+        "La compañía se desmarca así del estándar C2PA, que usan Nikon, Sony, Leica, Adobe o Google en el Pixel 10. Según Apple, ese sistema añade los datos de procedencia después de la captura y puede comprometerse sin que nadie lo detecte.",
+        "Al activar el modo, el sensor firma la imagen en bruto en el mismo instante de la captura, antes de que intervenga ningún software. Unos sellos criptográficos marcan cuándo se hizo la foto. Después, el archivo viaja a la nube privada de Apple, que verifica las firmas, revela la imagen y le añade una firma resistente a futuros ordenadores cuánticos.",
+        "Si detecta un fraude, Apple puede anular fotos concretas o todas las de un sensor. El sistema tampoco exige identificar al fotógrafo, impide relacionar públicamente las fotos de una misma cámara y mantiene la imagen oculta incluso para la propia Apple.",
+        "La debilidad está en la escala. Con millones de iPhone en circulación, a un falsificador le basta con comprometer unos pocos para producir tantas imágenes &quot;auténticas&quot; como quiera. Por eso el uso más delicado es el que más interesa al periodismo: creer una imagen impactante solo porque lleva el sello de Apple. Es cuestión de tiempo que circulen montajes con apariencia de verificados.",
+        "La privacidad complica también las cosas. Si una falsificación pudiera vincularse públicamente a la cámara que la firmó, bastaría con desactivarla. Al ocultar ese vínculo, localizar el equipo comprometido es mucho más difícil. Además, Apple no aclara del todo quién puede hacer ese rastreo. Todo apunta a que solo la compañía podría seguir una imagen hasta la cámara hackeada, un modelo de utilidad dudosa que genera sus propios riesgos.",
+        "Su terreno natural no son las grandes exclusivas, sino las gestiones cotidianas con poco dinero en juego. Por ejemplo en un pequeño accidente de tráfico en el que la aseguradora prefiere recibir fotos a enviar un perito. Hackear la cámara sería posible, pero no compensaría el esfuerzo. Y si la cámara estuviera asociada a su propietario, el riesgo de fraude sería todavía menor.",
+        "Una idea ambiciosa que puede resultar interesante para &quot;pequeños desastres&quot; pero que no debería tomarse como algo definitivo en situaciones y con personas de alto riesgo/exposición/peligro."
+      ]
+    },
     {
       "id": 1698,
       "title": "Detenido tras decirle a ChatGPT que tenía intención de matar a su hijo de 8 años",

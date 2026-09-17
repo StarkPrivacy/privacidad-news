@@ -1,6 +1,47 @@
 {
-  "updated": "2026-09-17T14:25:53Z",
+  "updated": "2026-09-17T18:30:30Z",
   "articles": [
+    {
+      "id": 1699,
+      "title": "Apple quiere que el iPhone demuestre que una foto es real",
+      "date": "2026-09-17T16:37:14+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "Reference Image, el nuevo modo de cámara del iPhone 18 Pro, firma los píxeles dentro del sensor para combatir los montajes con IA. Pero su punto débil aparece justo en las fotografías que más importan. Apple ha detallado en su blog de…",
+      "image": "media/1699.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1699",
+      "body": [
+        "Apple quiere que el iPhone demuestre que una foto es real",
+        "Reference Image, el nuevo modo de cámara del iPhone 18 Pro, firma los píxeles dentro del sensor para combatir los montajes con IA. Pero su punto débil aparece justo en las fotografías que más importan.",
+        "Apple ha detallado en su blog de seguridad cómo funciona Reference Image, un modo opcional que se estrena en la cámara principal del iPhone 18 Pro y el iPhone 18 Pro Max. Su objetivo es demostrar que una imagen no ha sido generada ni retocada con IA, en un momento en que parecer una fotografía ya no prueba nada.",
+        "La compañía se desmarca así del estándar C2PA, que usan Nikon, Sony, Leica, Adobe o Google en el Pixel 10. Según Apple, ese sistema añade los datos de procedencia después de la captura y puede comprometerse sin que nadie lo detecte.",
+        "Al activar el modo, el sensor firma la imagen en bruto en el mismo instante de la captura, antes de que intervenga ningún software. Unos sellos criptográficos marcan cuándo se hizo la foto. Después, el archivo viaja a la nube privada de Apple, que verifica las firmas, revela la imagen y le añade una firma resistente a futuros ordenadores cuánticos.",
+        "Si detecta un fraude, Apple puede anular fotos concretas o todas las de un sensor. El sistema tampoco exige identificar al fotógrafo, impide relacionar públicamente las fotos de una misma cámara y mantiene la imagen oculta incluso para la propia Apple.",
+        "La debilidad está en la escala. Con millones de iPhone en circulación, a un falsificador le basta con comprometer unos pocos para producir tantas imágenes \"auténticas\" como quiera. Por eso el uso más delicado es el que más interesa al periodismo: creer una imagen impactante solo porque lleva el sello de Apple. Es cuestión de tiempo que circulen montajes con apariencia de verificados.",
+        "La privacidad complica también las cosas. Si una falsificación pudiera vincularse públicamente a la cámara que la firmó, bastaría con desactivarla. Al ocultar ese vínculo, localizar el equipo comprometido es mucho más difícil. Además, Apple no aclara del todo quién puede hacer ese rastreo. Todo apunta a que solo la compañía podría seguir una imagen hasta la cámara hackeada, un modelo de utilidad dudosa que genera sus propios riesgos.",
+        "Su terreno natural no son las grandes exclusivas, sino las gestiones cotidianas con poco dinero en juego. Por ejemplo en un pequeño accidente de tráfico en el que la aseguradora prefiere recibir fotos a enviar un perito. Hackear la cámara sería posible, pero no compensaría el esfuerzo. Y si la cámara estuviera asociada a su propietario, el riesgo de fraude sería todavía menor.",
+        "Una idea ambiciosa que puede resultar interesante para \"pequeños desastres\" pero que no debería tomarse como algo definitivo en situaciones y con personas de alto riesgo/exposición/peligro."
+      ],
+      "locked": false,
+      "sources": [
+        "https://security.apple.com/blog/apple-reference-image/"
+      ],
+      "body_html": [
+        "<strong>Apple quiere que el iPhone demuestre que una foto es real</strong>",
+        "Reference Image, el nuevo modo de cámara del iPhone 18 Pro, firma los píxeles dentro del sensor para combatir los montajes con IA. Pero su punto débil aparece justo en las fotografías que más importan.",
+        "Apple ha <a href=\"https://security.apple.com/blog/apple-reference-image/\" target=\"_blank\" rel=\"noopener\">detallado en su blog de seguridad</a> cómo funciona Reference Image, un modo opcional que se estrena en la cámara principal del iPhone 18 Pro y el iPhone 18 Pro Max. Su objetivo es demostrar que una imagen no ha sido generada ni retocada con IA, en un momento en que parecer una fotografía ya no prueba nada.",
+        "La compañía se desmarca así del estándar C2PA, que usan Nikon, Sony, Leica, Adobe o Google en el Pixel 10. Según Apple, ese sistema añade los datos de procedencia después de la captura y puede comprometerse sin que nadie lo detecte.",
+        "Al activar el modo, el sensor firma la imagen en bruto en el mismo instante de la captura, antes de que intervenga ningún software. Unos sellos criptográficos marcan cuándo se hizo la foto. Después, el archivo viaja a la nube privada de Apple, que verifica las firmas, revela la imagen y le añade una firma resistente a futuros ordenadores cuánticos.",
+        "Si detecta un fraude, Apple puede anular fotos concretas o todas las de un sensor. El sistema tampoco exige identificar al fotógrafo, impide relacionar públicamente las fotos de una misma cámara y mantiene la imagen oculta incluso para la propia Apple.",
+        "La debilidad está en la escala. Con millones de iPhone en circulación, a un falsificador le basta con comprometer unos pocos para producir tantas imágenes &quot;auténticas&quot; como quiera. Por eso el uso más delicado es el que más interesa al periodismo: creer una imagen impactante solo porque lleva el sello de Apple. Es cuestión de tiempo que circulen montajes con apariencia de verificados.",
+        "La privacidad complica también las cosas. Si una falsificación pudiera vincularse públicamente a la cámara que la firmó, bastaría con desactivarla. Al ocultar ese vínculo, localizar el equipo comprometido es mucho más difícil. Además, Apple no aclara del todo quién puede hacer ese rastreo. Todo apunta a que solo la compañía podría seguir una imagen hasta la cámara hackeada, un modelo de utilidad dudosa que genera sus propios riesgos.",
+        "Su terreno natural no son las grandes exclusivas, sino las gestiones cotidianas con poco dinero en juego. Por ejemplo en un pequeño accidente de tráfico en el que la aseguradora prefiere recibir fotos a enviar un perito. Hackear la cámara sería posible, pero no compensaría el esfuerzo. Y si la cámara estuviera asociada a su propietario, el riesgo de fraude sería todavía menor.",
+        "Una idea ambiciosa que puede resultar interesante para &quot;pequeños desastres&quot; pero que no debería tomarse como algo definitivo en situaciones y con personas de alto riesgo/exposición/peligro."
+      ]
+    },
     {
       "id": 1698,
       "title": "Detenido tras decirle a ChatGPT que tenía intención de matar a su hijo de 8 años",
@@ -651,37 +692,6 @@
         "Pero el cambio más importante llegará con RCS. Aunque GrapheneOS ya permite utilizar RCS actualmente mediante Google Messages, el proyecto quiere que su propia aplicación de Mensajería pueda gestionar este estándar de comunicación. El objetivo es que los usuarios puedan disfrutar de RCS sin tener que depender de la aplicación de Google, incluyendo las funciones de mensajería moderna que ofrece este protocolo.",
         "La transición será progresiva. GrapheneOS planea implementar inicialmente en su aplicación las partes de RCS que actualmente gestiona Google Messages para, posteriormente, avanzar hacia una implementación propia que pueda apoyarse directamente en los servicios de los operadores compatibles. De esta manera, la aplicación podría convertirse en una alternativa mucho más independiente para los usuarios que buscan utilizar GrapheneOS sin recurrir a aplicaciones de Google.",
         "Con esta renovación, GrapheneOS no solo pretende ofrecer una aplicación de Mensajería con un diseño más moderno, sino también eliminar una de las dependencias más importantes que todavía existen en su ecosistema. La combinación de nueva interfaz, mejoras internas y RCS propio convierte a esta aplicación en uno de los próximos cambios más relevantes del proyecto."
-      ]
-    },
-    {
-      "id": 1676,
-      "title": "Mullvad da un paso atrás en su DNS público y apuesta por reforzar a Quad9",
-      "date": "2026-09-05T06:46:06+00:00",
-      "category": "",
-      "tags": "",
-      "excerpt": "Mullvad, uno de los proveedores de VPN con más peso dentro de la comunidad de privacidad, va a cerrar sus servidores públicos de DNS cifrado el próximo 2 de noviembre. Los ofrecía desde 2022, de forma gratuita, tanto para sus propios…",
-      "image": "media/1676.jpg",
-      "youtube_id": null,
-      "has_media": true,
-      "in_feed": true,
-      "source_url": "https://t.me/StarkPrivacy/1676",
-      "body": [
-        "Mullvad da un paso atrás en su DNS público y apuesta por reforzar a Quad9",
-        "Mullvad, uno de los proveedores de VPN con más peso dentro de la comunidad de privacidad, va a cerrar sus servidores públicos de DNS cifrado el próximo 2 de noviembre. Los ofrecía desde 2022, de forma gratuita, tanto para sus propios usuarios de VPN como para cualquiera que quisiera resolver sus consultas DNS sin pasar por su proveedor de internet. A partir de esa fecha, ese servicio deja de existir.",
-        "El motivo no es económico ni una presión regulatoria, es más simple: mantener esa infraestructura duplicaba un trabajo que ya hace bien otra organización, Quad9, la fundación sin ánimo de lucro detrás de uno de los resolutores DNS centrados en privacidad más usados del mundo. En vez de seguir compitiendo por el mismo terreno, según el propio anuncio de Mullvad, la compañía prefiere retirarse y destinar recursos económicos a fortalecer a Quad9.",
-        "Para quien use Mullvad Browser con la configuración de fábrica, el cambio pasará desapercibido, la migración a Quad9 se hace sola. Quien haya tocado la configuración de DNS a mano (en el sistema operativo, en el router, en una app o en el propio navegador) sí tendrá que mover sus ajustes antes del 2 de noviembre, igual que quienes usen los perfiles de configuración de iOS o macOS de Mullvad, que dejarán de funcionar ese día. Si solo usas su VPN tal cual, sin haber tocado nada de DNS, no cambia nada para ti, ese tráfico ya se resuelve dentro de su propia red.",
-        "Detrás de lo que parece un simple recorte hay una decisión poco habitual en este sector, una empresa privada prescindiendo de un servicio propio para reforzar a un tercero independiente y sin ánimo de lucro."
-      ],
-      "locked": false,
-      "sources": [
-        "https://cyberinsider.com/mullvad-to-shut-down-public-encrypted-dns-servers-back-quad9-instead/"
-      ],
-      "body_html": [
-        "<strong>Mullvad da un paso atrás en su DNS público y apuesta por reforzar a Quad9</strong>",
-        "Mullvad, uno de los proveedores de VPN con más peso dentro de la comunidad de privacidad, va a cerrar sus servidores públicos de DNS cifrado el próximo 2 de noviembre. Los ofrecía desde 2022, de forma gratuita, tanto para sus propios usuarios de VPN como para cualquiera que quisiera resolver sus consultas DNS sin pasar por su proveedor de internet. A partir de esa fecha, ese servicio deja de existir.",
-        "El motivo no es económico ni una presión regulatoria, es más simple: mantener esa infraestructura duplicaba un trabajo que ya hace bien otra organización, Quad9, la fundación sin ánimo de lucro detrás de uno de los resolutores DNS centrados en privacidad más usados del mundo. En vez de seguir compitiendo por el mismo terreno, <a href=\"https://cyberinsider.com/mullvad-to-shut-down-public-encrypted-dns-servers-back-quad9-instead/\" target=\"_blank\" rel=\"noopener\">según el propio anuncio de Mullvad</a>, la compañía prefiere retirarse y destinar recursos económicos a fortalecer a Quad9.",
-        "Para quien use Mullvad Browser con la configuración de fábrica, el cambio pasará desapercibido, la migración a Quad9 se hace sola. Quien haya tocado la configuración de DNS a mano (en el sistema operativo, en el router, en una app o en el propio navegador) sí tendrá que mover sus ajustes antes del 2 de noviembre, igual que quienes usen los perfiles de configuración de iOS o macOS de Mullvad, que dejarán de funcionar ese día. Si solo usas su VPN tal cual, sin haber tocado nada de DNS, no cambia nada para ti, ese tráfico ya se resuelve dentro de su propia red.",
-        "Detrás de lo que parece un simple recorte hay una decisión poco habitual en este sector, una empresa privada prescindiendo de un servicio propio para reforzar a un tercero independiente y sin ánimo de lucro."
       ]
     }
   ]
