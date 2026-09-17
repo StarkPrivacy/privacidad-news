@@ -1,7 +1,33 @@
 {
-  "updated": "2026-09-17T18:30:30Z",
+  "updated": "2026-09-17T21:42:01Z",
   "source": "https://t.me/StarkPrivacy",
   "articles": [
+    {
+      "id": 1700,
+      "title": "KYC: Kill Your Customer",
+      "date": "2026-09-17T18:38:56+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "Hablemos sobre el caso revolut y la última frase que ha dejado el principal actor de todo esto: \"Transfiere 3.000.000 $ / 6000 XMR… de lo contrario todos los datos se venderán y tendrás sangre en tus manos\"",
+      "image": "",
+      "youtube_id": "9a95qbKFvw0",
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1700",
+      "body": [
+        "KYC: Kill Your Customer",
+        "Hablemos sobre el caso revolut y la última frase que ha dejado el principal actor de todo esto:",
+        "\"Transfiere 3.000.000 $ / 6000 XMR… de lo contrario todos los datos se venderán y tendrás sangre en tus manos\"",
+        "https://youtu.be/9a95qbKFvw0"
+      ],
+      "locked": false,
+      "body_html": [
+        "<strong>KYC: Kill Your Customer</strong>",
+        "Hablemos sobre el caso revolut y la última frase que ha dejado el principal actor de todo esto:",
+        "<em>&quot;</em>Transfiere <em>3.000.000 $</em> / 6000 XMR<em>… de lo contrario todos los datos se venderán y tendrás sangre en tus manos&quot;</em>",
+        "https://youtu.be/9a95qbKFvw0"
+      ]
+    },
     {
       "id": 1699,
       "title": "Apple quiere que el iPhone demuestre que una foto es real",
