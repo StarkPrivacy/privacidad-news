@@ -1,6 +1,36 @@
 {
-  "updated": "2026-09-21T20:42:50Z",
+  "updated": "2026-09-21T23:44:43Z",
   "articles": [
+    {
+      "id": 1702,
+      "title": "Se muestran las imágenes del próximo Motorola, que soportará GrapheneOS",
+      "date": "2026-09-21T22:22:47+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "Motorola ha lanzado hace unas horas imágenes de su próximo dispositivo. Parece que hará un rediseño bastante arriesgado en su buque insignia \"Motorola Signature\" y si todo va como parece, será el nuevo dispositivo compatible con…",
+      "image": "media/1702.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1702",
+      "body": [
+        "Se muestran las imágenes del próximo Motorola, que soportará GrapheneOS",
+        "Motorola ha lanzado hace unas horas imágenes de su próximo dispositivo.",
+        "Parece que hará un rediseño bastante arriesgado en su buque insignia \"Motorola Signature\" y si todo va como parece, será el nuevo dispositivo compatible con GrapheneOS, el sistema movil más seguro que existe."
+      ],
+      "locked": false,
+      "body_html": [
+        "<strong>Se muestran las imágenes del próxim</strong>o<strong> Motorola, que soportará GrapheneOS</strong>",
+        "Motorola ha lanzado hace unas horas imágenes de su próximo dispositivo.",
+        "Parece que hará un rediseño bastante arriesgado en su buque insignia &quot;Motorola Signature&quot; y si todo va como parece, será el nuevo dispositivo compatible con GrapheneOS, el sistema movil más seguro que existe."
+      ],
+      "images": [
+        "media/1702.jpg",
+        "media/1702-2.jpg",
+        "media/1702-3.jpg",
+        "media/1702-4.jpg"
+      ]
+    },
     {
       "id": 1701,
       "title": "Muse, el nuevo agente de Meta y su interés por tu información",
@@ -652,40 +682,6 @@
         "Añadió que Anthropic <em>“está haciendo lo mejor que puede”</em>, pero que <em>“aún no tenemos un plan para resolver el alineamiento de la superinteligencia y no estamos claramente en camino de lograrlo”</em>.",
         "La dimisión de Coxon no es el primer caso de este tipo en Anthropic. En febrero, Mrinank Sharma, entonces responsable del equipo de investigación de salvaguardas, dejó la compañía con una carta en la que afirmaba que <em>“el mundo está en peligro”</em>, no solo por la inteligencia artificial o las armas biológicas, sino por <em>“una serie de crisis interconectadas”</em>. Sharma anunció que se dedicaría a la escritura y al estudio de la poesía.",
         "¿Tú que opinas?"
-      ]
-    },
-    {
-      "id": 1680,
-      "title": "Ya disponible privacidad/me",
-      "date": "2026-09-08T15:59:04+00:00",
-      "category": "",
-      "tags": "",
-      "excerpt": "Está web será tu \"hub\" de privacidad de confianza en español. Encontrarás ciertos lugares de especial interés que van a salir próximamente y permitirán una mejora sustancial en el aprendizaje y desarrollo de la privacidad de cualquier…",
-      "image": "media/1680.jpg",
-      "youtube_id": null,
-      "has_media": true,
-      "in_feed": true,
-      "source_url": "https://t.me/StarkPrivacy/1680",
-      "body": [
-        "Ya disponible privacidad/me",
-        "Está web será tu \"hub\" de privacidad de confianza en español.",
-        "Encontrarás ciertos lugares de especial interés que van a salir próximamente y permitirán una mejora sustancial en el aprendizaje y desarrollo de la privacidad de cualquier persona.",
-        "Recomiendo que os la guardéis en marcadores, si estás leyendo esto, estoy seguro de que te gustará lo que está por llegar.",
-        "Gracias a todos los miembros de boringprivacy.io y a aquellas personas que me apoyan siempre, hacen que esto sea posible. Lo mejor está por llegar.",
-        "https://privacidad.me"
-      ],
-      "locked": false,
-      "sources": [
-        "https://privacidad.me",
-        "https://t.co/H6WGbgF3TE"
-      ],
-      "body_html": [
-        "<strong>Ya disponible privacidad/me</strong>",
-        "Está web será tu &quot;hub&quot; de privacidad de confianza en español.",
-        "Encontrarás ciertos lugares de especial interés que van a salir próximamente y permitirán una mejora sustancial en el aprendizaje y desarrollo de la privacidad de cualquier persona.",
-        "Recomiendo que os la guardéis en marcadores, si estás leyendo esto, estoy seguro de que te gustará lo que está por llegar.",
-        "Gracias a todos los miembros de boringprivacy.io y a aquellas personas que me apoyan siempre, hacen que esto sea posible. Lo mejor está por llegar.",
-        "<a href=\"https://t.co/H6WGbgF3TE\" target=\"_blank\" rel=\"noopener\">https://privacidad.me</a>"
       ]
     }
   ]
