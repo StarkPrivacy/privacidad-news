@@ -1,7 +1,38 @@
 {
-  "updated": "2026-09-21T16:43:14Z",
+  "updated": "2026-09-21T20:42:50Z",
   "source": "https://t.me/StarkPrivacy",
   "articles": [
+    {
+      "id": 1701,
+      "title": "Muse, el nuevo agente de Meta y su interés por tu información",
+      "date": "2026-09-21T18:51:18+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "Muse, la nueva app de Meta se lanzó el pasado 8 de septiembre de 2026 como aplicación para iOS y Android, en su propia web y a través de WhatsApp. Es como un agente de IA pero no se limita a responder preguntas: ejecuta tareas en segundo…",
+      "image": "media/1701.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1701",
+      "body": [
+        "Muse, el nuevo agente de Meta y su interés por tu información",
+        "Muse, la nueva app de Meta se lanzó el pasado 8 de septiembre de 2026 como aplicación para iOS y Android, en su propia web y a través de WhatsApp. Es como un agente de IA pero no se limita a responder preguntas: ejecuta tareas en segundo plano, como enviar correos, reservar viajes, gestionar la bandeja de entrada, buscar ofertas o realizar compras. La experiencia es más de hablar con un \"asistente\" que no con un \"chatbot\". El sistema trata de ser lo más cercano y realista a una interacción humana y continúa trabajando mientras el usuario se ocupa de otras cosas. En su primera semana superó las 900.000 descargas, según Sensor Tower.",
+        "Tras varios días de uso, se concluye que la herramienta se muestra más insistente en ampliar el acceso a información personal que en completar de forma fiable las tareas encomendadas. El agente sugiere con frecuencia conectar fuentes sensibles: correo electrónico, cuenta bancaria, pasaporte y licencia de conducir (incluido el aviso de caducidad), supervisión de mensajes entrantes y fotografías de comidas para estimar calorías. En una prueba, el autor pidió un sándwich de una panadería de San Francisco; Muse visitó el sitio, añadió el producto al carrito y solicitó una tarjeta de crédito a través de Stripe para finalizar la compra.",
+        "Los usuarios quedan inscritos por defecto en el uso de sus interacciones para entrenar los modelos de inteligencia artificial de Meta. La empresa afirma que esos datos se “sanean” para eliminar información identificable, aunque no detalla el procedimiento.",
+        "Meta responde que Muse es “el primer agente de IA personal construido para todos, con protecciones integradas y controles que ponen a las personas absolutamente a cargo de cómo lo usan”. Un portavoz, Emil Vazquez, calificó de “absurda” cualquier sugerencia de que no se diseñó con ese criterio. La compañía planea, más adelante en 2026, una versión “Confidential VM” que, según afirma, impediría incluso a Meta acceder a los datos del entorno virtual de cada usuario. En la arquitectura actual (Secure VM y el supervisor Sentinel), las credenciales no quedan a la vista del modelo, pero el acceso técnico por parte de Meta sigue siendo posible, aunque la política interna lo prohíba."
+      ],
+      "locked": false,
+      "sources": [
+        "https://www.wired.com/story/metas-muse-is-better-at-surveilling-than-helping-me/?utm_brand=wired&utm_social-type=owned&utm_source=twitter&utm_medium=social&utm_campaign=aud-dev"
+      ],
+      "body_html": [
+        "<strong>Muse, el nuevo agente de Meta y su interés por tu información</strong>",
+        "Muse, la nueva app de Meta se lanzó el pasado 8 de septiembre de 2026 como aplicación para iOS y Android, en su propia web y a través de WhatsApp. Es como un agente de IA pero no se limita a responder preguntas: ejecuta tareas en segundo plano, como enviar correos, reservar viajes, gestionar la bandeja de entrada, buscar ofertas o realizar compras. La experiencia es más de hablar con un &quot;asistente&quot; que no con un &quot;chatbot&quot;. El sistema trata de ser lo más cercano y realista a una interacción humana y continúa trabajando mientras el usuario se ocupa de otras cosas. En su primera semana superó las 900.000 descargas, según Sensor Tower.",
+        "Tras varios días de uso, se concluye que la herramienta <a href=\"https://www.wired.com/story/metas-muse-is-better-at-surveilling-than-helping-me/?utm_brand=wired&amp;utm_social-type=owned&amp;utm_source=twitter&amp;utm_medium=social&amp;utm_campaign=aud-dev\" target=\"_blank\" rel=\"noopener\">se muestra más insistente en ampliar el acceso a información personal</a> que en completar de forma fiable las tareas encomendadas. El agente sugiere con frecuencia conectar fuentes sensibles: correo electrónico, cuenta bancaria, pasaporte y licencia de conducir (incluido el aviso de caducidad), supervisión de mensajes entrantes y fotografías de comidas para estimar calorías. En una prueba, el autor pidió un sándwich de una panadería de San Francisco; Muse visitó el sitio, añadió el producto al carrito y solicitó una tarjeta de crédito a través de Stripe para finalizar la compra.",
+        "Los usuarios quedan inscritos por defecto en el uso de sus interacciones para entrenar los modelos de inteligencia artificial de Meta. La empresa afirma que esos datos se “sanean” para eliminar información identificable, aunque no detalla el procedimiento.",
+        "Meta responde que Muse es “el primer agente de IA personal construido para todos, con protecciones integradas y controles que ponen a las personas absolutamente a cargo de cómo lo usan”. Un portavoz, Emil Vazquez, calificó de “absurda” cualquier sugerencia de que no se diseñó con ese criterio. La compañía planea, más adelante en 2026, una versión “Confidential VM” que, según afirma, impediría incluso a Meta acceder a los datos del entorno virtual de cada usuario. En la arquitectura actual (Secure VM y el supervisor Sentinel), las credenciales no quedan a la vista del modelo, pero el acceso técnico por parte de Meta sigue siendo posible, aunque la política interna lo prohíba."
+      ]
+    },
     {
       "id": 1700,
       "title": "KYC: Kill Your Customer",
