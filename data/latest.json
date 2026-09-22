@@ -1,6 +1,47 @@
 {
-  "updated": "2026-09-22T20:28:22Z",
+  "updated": "2026-09-22T23:14:39Z",
   "articles": [
+    {
+      "id": 1706,
+      "title": "Motorola Signature 27, el nuevo teléfono tope de gama compatible con GrapheneOS",
+      "date": "2026-09-22T22:17:57+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "Motorola ha presentado hoy su nuevo dispositivo y por una cosa u otra no ha dejado indiferente a nadie. Y antes de pasar a los datos técnicos del mismo, quiero comentar algo de especial relevancia para la privacidad. Cuando se confirme que…",
+      "image": "media/1706.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1706",
+      "body": [
+        "Motorola Signature 27, el nuevo teléfono tope de gama compatible con GrapheneOS",
+        "Motorola ha presentado hoy su nuevo dispositivo y por una cosa u otra no ha dejado indiferente a nadie.",
+        "Y antes de pasar a los datos técnicos del mismo, quiero comentar algo de especial relevancia para la privacidad.",
+        "Cuando se confirme que se podrá instalar GrapheneOS, el salto es mayúsculo. Estamos hablando de que un teléfono con las mejores prestaciones móviles es compatible con el sistema. Y esto no es un detalle menor, pues la privacidad en ocasiones ha tenido que conformarse con características \"suficientes\", pero rara vez con algo que es la punta de lanza, lo cual es un gran avance.",
+        "Queda esperar un anuncio oficial sobre la compatibilidad de este modelo presentado con GrapheneOS, aunque es algo que por anuncios posteriores se entiende que así será.",
+        "Dicho esto, las prestaciones más relevantes son:",
+        "Procesador: Qualcomm Snapdragon 8 Gen 6 Pantalla: 6.8 Pulgadas, LTPO AMOLED, 165hz, Super HD Memoria: 12/16GB RAM Cámaras: Principal de 50MP Sony LYTIA 910, Teleobjetivo 200MP, Super Zoom 100x y Dolby Vision Almacenamiento: 256GB / 512GB / 1TB Batería (Rumor): 6000mAh aprox silicio-carbono, 90W cable / 50W inalámbrica Audio: firmado por Bang & Olufsen Sistema: Android 17 Stock / GrapheneOS",
+        "Hay otras características menores que quizás os puedan interesar como su refrigeración y aún faltan algunos datos por conocer, pero desde luego es prometedor.",
+        "Sí, el teléfono no será económico, pero se espera que con el tiempo los requisitos para tener GrapheneOS se cumplan en teléfono más asequibles, hasta entonces solo tendremos la gama \"a\" de Pixel."
+      ],
+      "locked": false,
+      "sources": [
+        "https://www.motorola.com/es/es/motorola-signature/motorola-signature-2027"
+      ],
+      "body_html": [
+        "<strong>Motorola Signature 27, el nuevo teléfono tope de gama compatible con GrapheneOS</strong>",
+        "Motorola ha <a href=\"https://www.motorola.com/es/es/motorola-signature/motorola-signature-2027\" target=\"_blank\" rel=\"noopener\">presentado hoy su nuevo dispositivo</a> y por una cosa u otra no ha dejado indiferente a nadie.",
+        "Y antes de pasar a los datos técnicos del mismo, quiero comentar algo de especial relevancia para la privacidad.",
+        "Cuando se confirme que se podrá instalar GrapheneOS, el salto es mayúsculo. Estamos hablando de que un teléfono con las mejores prestaciones móviles es compatible con el sistema. Y esto no es un detalle menor, pues la privacidad en ocasiones ha tenido que conformarse con características &quot;suficientes&quot;, pero rara vez con algo que es la punta de lanza, lo cual es un gran avance.",
+        "Queda esperar un anuncio oficial sobre la compatibilidad de este modelo presentado con GrapheneOS, aunque es algo que por anuncios posteriores se entiende que así será.",
+        "Dicho esto, las prestaciones más relevantes son:",
+        "<strong>Procesador:</strong> Qualcomm Snapdragon 8 Gen 6<br><strong>Pantalla: </strong>6.8 Pulgadas, LTPO AMOLED, 165hz, Super HD<br><strong>Memoria: </strong>12/16GB RAM<br><strong>Cámaras:</strong> Principal de 50MP Sony LYTIA 910, Teleobjetivo 200MP, Super Zoom 100x y Dolby Vision<br><strong>Almacenamiento:</strong> 256GB / 512GB / 1TB<br><strong>Batería (Rumor): </strong>6000mAh aprox silicio-carbono, 90W cable / 50W inalámbrica<br><strong>Audio: </strong>firmado por Bang &amp; Olufsen<br><strong>Sistema: </strong>Android 17 Stock / GrapheneOS",
+        "Hay otras características menores que quizás os puedan interesar como su refrigeración y aún faltan algunos datos por conocer, pero desde luego es prometedor.",
+        "Sí, el teléfono no será económico, pero se espera que con el tiempo los requisitos para tener GrapheneOS se cumplan en teléfono más asequibles, hasta entonces solo tendremos la gama &quot;a&quot; de Pixel."
+      ],
+      "video_thumb": "media/1706.jpg",
+      "video_external": true
+    },
     {
       "id": 1705,
       "title": "Publicación #1705",
@@ -582,44 +623,6 @@
         "Cada uno tiene un perfil distinto. Fable 5.1 suele destacar en razonamiento prolongado, trabajo de conocimiento y código listo para integrarse en un proyecto. Su precio de referencia ronda los 10 dólares por millón de tokens de entrada y 50 dólares por millón de tokens de salida.",
         "Astra suele ir por delante cuando el sistema debe manejar un ordenador, navegar, abordar tareas de ciberseguridad o resolver matemáticas muy exigentes.",
         "Ambos suelen situarse en lo más alto en benchmarks generales y pero cuestan varias veces más que DeepSeek, muchas veces más, ahí es donde está destacando especialmente, en la potencia que tiene en comparación con su precio y más comparándolo con sus &quot;competidores&quot;."
-      ]
-    },
-    {
-      "id": 1684,
-      "title": "Tor continua mejorando su VPN en teléfonos",
-      "date": "2026-09-10T16:27:34+00:00",
-      "category": "",
-      "tags": "",
-      "excerpt": "Tor VPN Beta amplía la protección de Tor en Android más allá de su navegador, al redirigir el tráfico de las aplicaciones a través de la red Tor con circuitos aislados por aplicación. El Proyecto Tor anunció el ayer 9 de septiembre una…",
-      "image": "media/1684.jpg",
-      "youtube_id": null,
-      "has_media": true,
-      "in_feed": true,
-      "source_url": "https://t.me/StarkPrivacy/1684",
-      "body": [
-        "Tor continua mejorando su VPN en teléfonos",
-        "Tor VPN Beta amplía la protección de Tor en Android más allá de su navegador, al redirigir el tráfico de las aplicaciones a través de la red Tor con circuitos aislados por aplicación.",
-        "El Proyecto Tor anunció el ayer 9 de septiembre una mayor distribución de su app.",
-        "A diferencia de una VPN convencional, que suele enviar todo el tráfico por un único túnel, Tor VPN crea un circuito Tor independiente para cada aplicación, con su propia dirección IP de salida. El objetivo es dificultar que un observador de red relacione la actividad de una aplicación con la de otra, en la línea de las protecciones contra el rastreo cruzado de Tor Browser.",
-        "El usuario decide qué aplicaciones pasan por Tor; la interfaz reciente incluye búsqueda para gestionar listas extensas.",
-        "Respecto a la censura, la versión 1.4.0 beta incorporó puentes WebTunnel, que hacen que el tráfico de Tor se asemeje a una conexión web cifrada habitual. Las pruebas de usabilidad revelaron que algunos usuarios elegían un nodo de salida cuando en realidad necesitaban un puente; por ello, ahora hay que conectarse primero a Tor antes de seleccionar una salida.",
-        "La aplicación se basa en Arti (implementación de Tor en Rust) y en la capa de red Onionmasq, con compilaciones reproducibles.",
-        "Una auditoría de Cure53 de junio de 2025 no halló fallos fundamentales en el establecimiento del túnel ni en el enrutamiento, aunque sí problemas de DNS, validación de entradas y riesgos de denegación de servicio que el proyecto afirma estar corrigiendo.",
-        "Sigue siendo software beta y no pretende competir en velocidad con las VPN comerciales, evidentemente. El trabajo previsto incluye mejor elusión, usabilidad y funciones de rendimiento (como control de congestión) en Arti. En entornos censurados conviene configurar puentes, no limitarse a cambiar el país de salida."
-      ],
-      "locked": false,
-      "sources": [
-        "https://cyberinsider.com/tor-vpn-beta-brings-isolated-app-by-app-tor-routing-to-android/"
-      ],
-      "body_html": [
-        "<strong>Tor continua mejorando su VPN en teléfonos<br></strong><br>Tor VPN Beta amplía la protección de Tor en Android más allá de su navegador, al <a href=\"https://cyberinsider.com/tor-vpn-beta-brings-isolated-app-by-app-tor-routing-to-android/\" target=\"_blank\" rel=\"noopener\">redirigir el tráfico de las aplicaciones a través de la red Tor</a> con circuitos aislados por aplicación.",
-        "El Proyecto Tor anunció el ayer 9 de septiembre una mayor distribución de su app.",
-        "A diferencia de una VPN convencional, que suele enviar todo el tráfico por un único túnel, Tor VPN crea un circuito Tor independiente para cada aplicación, con su propia dirección IP de salida. El objetivo es dificultar que un observador de red relacione la actividad de una aplicación con la de otra, en la línea de las protecciones contra el rastreo cruzado de Tor Browser.",
-        "El usuario decide qué aplicaciones pasan por Tor; la interfaz reciente incluye búsqueda para gestionar listas extensas.",
-        "Respecto a la censura, la versión 1.4.0 beta incorporó puentes WebTunnel, que hacen que el tráfico de Tor se asemeje a una conexión web cifrada habitual. Las pruebas de usabilidad revelaron que algunos usuarios elegían un nodo de salida cuando en realidad necesitaban un puente; por ello, ahora hay que conectarse primero a Tor antes de seleccionar una salida.",
-        "La aplicación se basa en Arti (implementación de Tor en Rust) y en la capa de red Onionmasq, con compilaciones reproducibles.",
-        "Una auditoría de Cure53 de junio de 2025 no halló fallos fundamentales en el establecimiento del túnel ni en el enrutamiento, aunque sí problemas de DNS, validación de entradas y riesgos de denegación de servicio que el proyecto afirma estar corrigiendo.",
-        "Sigue siendo software beta y no pretende competir en velocidad con las VPN comerciales, evidentemente. El trabajo previsto incluye mejor elusión, usabilidad y funciones de rendimiento (como control de congestión) en Arti. En entornos censurados conviene configurar puentes, no limitarse a cambiar el país de salida."
       ]
     }
   ]
