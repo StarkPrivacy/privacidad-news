@@ -1,6 +1,21 @@
 {
-  "updated": "2026-09-22T07:56:14Z",
+  "updated": "2026-09-22T13:00:31Z",
   "articles": [
+    {
+      "id": 1705,
+      "title": "Publicación #1705",
+      "date": "2026-09-21T22:22:48+00:00",
+      "category": "",
+      "tags": "",
+      "excerpt": "",
+      "image": "media/1705.jpg",
+      "youtube_id": null,
+      "has_media": true,
+      "in_feed": true,
+      "source_url": "https://t.me/StarkPrivacy/1705",
+      "body": [],
+      "locked": false
+    },
     {
       "id": 1704,
       "title": "Publicación #1704",
@@ -605,37 +620,6 @@
         "La aplicación se basa en Arti (implementación de Tor en Rust) y en la capa de red Onionmasq, con compilaciones reproducibles.",
         "Una auditoría de Cure53 de junio de 2025 no halló fallos fundamentales en el establecimiento del túnel ni en el enrutamiento, aunque sí problemas de DNS, validación de entradas y riesgos de denegación de servicio que el proyecto afirma estar corrigiendo.",
         "Sigue siendo software beta y no pretende competir en velocidad con las VPN comerciales, evidentemente. El trabajo previsto incluye mejor elusión, usabilidad y funciones de rendimiento (como control de congestión) en Arti. En entornos censurados conviene configurar puentes, no limitarse a cambiar el país de salida."
-      ]
-    },
-    {
-      "id": 1683,
-      "title": "Un senador de EEUU pide a la NSA que actualice su guía sobre VPN",
-      "date": "2026-09-10T14:02:09+00:00",
-      "category": "",
-      "tags": "",
-      "excerpt": "El senador Ron Wyden ha enviado una carta reclamando a la NSA que revise su guía de ciberseguridad sobre VPN comerciales, a las que considera insuficientes frente a la vigilancia de actores estatales. Se apoya en un memo del Congressional…",
-      "image": "media/1683.jpg",
-      "youtube_id": null,
-      "has_media": true,
-      "in_feed": true,
-      "source_url": "https://t.me/StarkPrivacy/1683",
-      "body": [
-        "Un senador de EEUU pide a la NSA que actualice su guía sobre VPN",
-        "El senador Ron Wyden ha enviado una carta reclamando a la NSA que revise su guía de ciberseguridad sobre VPN comerciales, a las que considera insuficientes frente a la vigilancia de actores estatales.",
-        "Se apoya en un memo del Congressional Research Service que advierte de que las VPN de un solo salto siguen siendo vulnerables al análisis de tráfico: quien controle o vigile suficiente infraestructura de internet puede correlacionar las conexiones de entrada y salida de un mismo servidor VPN y reconstruir la navegación de un usuario, sin necesidad de romper ningún cifrado.",
-        "Wyden argumenta que empleados públicos, contratistas de defensa, periodistas y defensores de derechos humanos confían en estas herramientas creyendo que ofrecen un anonimato que en realidad no garantizan, y pide que la NSA sea transparente sobre esas limitaciones en lugar de dar por buena cualquier VPN comercial.",
-        "Como alternativas más robustas frente a este tipo de vigilancia, señala los sistemas multi salto, como Tor, NymVPN o iCloud Private Relay de Apple, que dificultan mucho más la correlación de tráfico al repartir la conexión entre varios saltos independientes."
-      ],
-      "locked": false,
-      "sources": [
-        "https://www.techradar.com/vpn/vpn-privacy-security/us-senator-demands-nsa-update-vpn-guidance-over-foreign-spying-risks"
-      ],
-      "body_html": [
-        "<strong>Un senador de EEUU pide a la NSA que actualice su guía sobre VPN</strong>",
-        "El senador Ron Wyden ha enviado una carta reclamando a la <a href=\"https://www.techradar.com/vpn/vpn-privacy-security/us-senator-demands-nsa-update-vpn-guidance-over-foreign-spying-risks\" target=\"_blank\" rel=\"noopener\">NSA que revise su guía de ciberseguridad sobre VPN comerciales</a>, a las que considera insuficientes frente a la vigilancia de actores estatales.",
-        "Se apoya en un memo del Congressional Research Service que advierte de que las VPN de un solo salto siguen siendo vulnerables al análisis de tráfico: quien controle o vigile suficiente infraestructura de internet puede correlacionar las conexiones de entrada y salida de un mismo servidor VPN y reconstruir la navegación de un usuario, sin necesidad de romper ningún cifrado.",
-        "Wyden argumenta que empleados públicos, contratistas de defensa, periodistas y defensores de derechos humanos confían en estas herramientas creyendo que ofrecen un anonimato que en realidad no garantizan, y pide que la NSA sea transparente sobre esas limitaciones en lugar de dar por buena cualquier VPN comercial.",
-        "Como alternativas más robustas frente a este tipo de vigilancia, señala los sistemas multi salto, como Tor, NymVPN o iCloud Private Relay de Apple, que dificultan mucho más la correlación de tráfico al repartir la conexión entre varios saltos independientes."
       ]
     }
   ]
